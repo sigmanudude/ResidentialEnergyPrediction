@@ -1,0 +1,1241 @@
+File layout for File Section E-G (Records are comma-delimited.  First line contains a list of variables on the file.  The remaining lines contain the values of the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File Section 5 only.
+
+
+FUELH2O  'Fuel used for heating water, washing or bathing'   Columns 34-35
+ZFUELH2O 'Imputation Flag for FUELH2O'                       Columns 37
+WHEATOTH 'Main equipment also heat water for apartments'     Columns 39  
+ZWHEATOT 'Imputation Flag for WHEATOTH'                      Columns 41
+WHEATSIZ 'Size of household's main water heater tank'        Columns 43
+ZWHEATSI 'Imputation Flag for WHEATSIZ'                      Columns 45
+WHEATAGE 'How old is your household's main water heater'     Columns 47-48   
+ZWHEATAG 'Imputation Flag for WHEATAGE'                      Columns 50
+UAUXH2OF 'Household use any other fuel for heating water'    Columns 52 
+ZUAUXH2O 'Imputation Flag for UAUXH2OF'                      Columns 54 
+FAUXH2O  'What is this additional water heating fuel'        Columns 56-57  
+AIRCOND  'Do you have air conditioning equipment at home'    Columns 59  
+COOLTYPE 'What kind of air-conditioning equipment you have'  Columns 61 
+ZCOOLTYP 'Imputation Flag for COOLTYPE'                      Columns 63 
+DUCTS    'Have ducts to carry warm air for space heating'    Columns 65  
+ACHOUSE  'Air-conditioning equipment cool, all the rooms'    Columns 67  
+ZACHOUSE 'Imputation Flag for ACHOUSE'			       Columns 69 
+ACROOMS  'rooms cooled by air-conditioning during summer'    Columns 71-72  
+ZACROOMS 'Imputation Flag for ACROOMS'			       Columns 74 
+CENACHP  'Is your central AC system a heat pump'             Columns 76 
+ZCENACHP 'Imputation Flag for CENACHP'			       Columns 78 
+AGECENAC 'How old is your household's central AC equipment'  Columns 80-81 
+ZAGECENA 'Imputation Flag for AGECENAC'			       Columns 83
+USECENAC 'How household uses central AC during the summer'   Columns 85  
+ZUSECENA 'Imputation Flag for USECENAC'			       Columns 87
+ACOTHERS 'The central AC also cool apartments, condos..'     Columns 89  
+ZACOTHER 'Imputation Flag for ACOTHERS'			       Columns 91
+NUMBERAC 'Number of window or wall AC units in your home'    Columns 93  
+ZNUMBERA 'Imputation Flag for NUMBERAC'			       Columns 95
+WWACAGE  'How old is household's most-used window/wall unit' Columns 97-98 
+ZWWACAGE 'Imputation Flag for WWACAGE'			       Columns 100
+USEWWAC  'How household uses window AC during the summer'    Columns 102  
+ZUSEWWAC 'Imputation Flag for USEWWAC'			       Columns 104
+TREESHAD 'Any large trees shade home from afternoon sun'     Columns 106  
+ZTREESHA 'Imputation Flag for TREESHAD'			       Columns 108
+LGT12    'Lights are turned on more than 12 hours per day'   Columns 110-111  
+ZLGT12   'Imputation Flag for LGT12'			       Columns 113 
+LGT4     'Lights on between 4 hours and 12 hours per day'    Columns 115-116  
+ZLGT4    'Imputation Flag for LGT4' 			       Columns 118
+LGT1     'Lights on between 1 hours and 4 hours per day'     Columns 120-121  
+ZLGT1    'Imputation Flag for LGT1' 			       Columns 123
+OUTLGTNT 'Are any outdoor lights left on all night'          Columns 125
+ZOUTLGTN 'Imputation Flag for OUTLGTNT' 			       Columns 127
+GASLIGHT 'Any of these lights use natural gas'               Columns 129 
+ZGASLIGH 'Imputation Flag for GASLIGHT' 			       Columns 131
+SLDDRS   'Sliding glass door go from heated area to outside' Columns 133 
+DOOR1SUM 'Number of sliding glass doors'                     Columns 135 
+WINDOWS  'Number of windows'                                 Columns 137
+ADQINSUL 'Respondent perception of home insulation'          Columns 139 
+ZADQINSU 'Imputation Flag for ADQINSUL'                      Columns 141  
+DRAFTY   'How often find your home too drafty during winter' Columns 143  
+
+
+Codebook for File section 5
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            166          3,900,000
+     2              1                  Q
+     3             76          1,700,000
+     7             42          1,000,000
+     8             24            600,000
+     9          4,513         99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+
+
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1          1,087         20,300,000
+     2          1,047         24,500,000
+     3          1,489         38,900,000
+     4          1,199         23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+
+The remaining variables are on File Section 4 only.
+
+FUELH2O  'Fuel used for heating water, washing or bathing'   Columns 34-35
+
+     Question E-1
+     
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or propane)
+     3 = Fuel oil
+     4 = Kerosene
+     5 = Electricity
+     7 = Wood
+     8 = Solar
+     9 = District steam
+    10 = Coal
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        2,543         58,000,000
+       2          160          2,900,000
+       3          276          4,600,000
+       4            5                  Q
+       5        1,811         40,800,000
+       7            4                  Q       
+       8           14            300,000
+       9            4                  Q
+      10            1                  Q
+      95            4                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZFUELH2O 'Imputation Flag for FUELH2O'                       Columns 37
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,734        104,900,000
+       1           88          2,100,000
+
+WHEATOTH 'Main equipment also heat water for apartments'     Columns 39  
+
+     Question E-2
+     
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,295         95,000,000
+       1          523         11,900,000
+       9            4                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZWHEATOT 'Imputation Flag for WHEATOTH'                      Columns 41
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,793        106,300,000
+       2           29            700,000
+
+
+WHEATSIZ 'Size of household's main water heater tank'        Columns 43
+
+     Question E-3
+     
+     1 = Small (30 gallons or less)
+     2 = Medium (31 to 49 gallons)
+     3 = Large (50 gallons or more)
+     5 = Two separate water heaters
+     0 = Don't have a separate water heater
+     6 = Don't know
+     9 = No Answer/Not Applicable    
+    
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+       0          390          8,000,000
+       1          556         12,500,000
+       2        2,231         49,900,000
+       3        1,233         27,200,000
+       5           86          2,000,000
+       6          322          7,400,000
+       9            4                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+ZWHEATSI 'Imputation Flag for WHEATSIZ'                      Columns 45
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,816        106,800,000
+       2            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+WHEATAGE 'How old is your household's main water heater'     Columns 47-48   
+
+     Question E-4
+
+     1 = Less than 2 years old
+     2 = 2 to 4 years old
+     3 = 5 to 9 years old
+     4 = 10 to 19 years old
+     5 = 20 years or older
+     0 = Don't have a separate water heater
+    96 = Don't know
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          390          8,000,000
+       1          533         11,800,000
+       2          786         17,800,000
+       3        1,139         25,900,000
+       4          989         22,100,000
+       5          398          8,200,000
+      96          583         13,200,000
+      99            4                  Q
+
+
+ZWHEATAG 'Imputation Flag for WHEATAGE'                      Columns 50
+
+   0 = Not Imputed
+   1 = Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,810        106,700,000
+       1            7                  Q
+       2            5                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+
+UAUXH2OF 'Household use any other fuel for heating water'    Columns 52 
+
+     Question E-5
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,750        105,500,000
+       1           68          1,400,000
+       9            4                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZUAUXH2O 'Imputation Flag for UAUXH2OF'                      Columns 54 
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,785        106,200,000
+       2           37            800,000
+
+
+FAUXH2O  'What is this additional water heating fuel'        Columns 56-57  
+
+     Question E-5a
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or propane)
+     3 = Fuel oil
+     5 = Electricity
+     7 = Wood
+     8 = Solar
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            7                  Q
+       2            1                  Q
+       3            6                  Q
+       5           39            800,000
+       7            6                  Q
+       8            9                  Q
+      99        4,754        105,500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+AIRCOND  'Do you have air conditioning equipment at home'    Columns 59  
+
+
+     Question F-1
+
+     1 = Yes
+     0 = No
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,271         24,100,000
+       1        3,551         82,900,000
+
+COOLTYPE 'What kind of air-conditioning equipment you have'  Columns 61 
+
+     Question F-2
+
+     1 = A central system
+     2 = Individual units in the window or walls
+     3 = Both central and individual units
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        2,339         57,800,000
+       2        1,173         24,200,000
+       3           39            800,000
+       9        1,271         24,100,000
+
+
+
+ZCOOLTYP 'Imputation Flag for COOLTYPE'                      Columns 63 
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        107,000,000
+       1            2                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+DUCTS    'Have ducts to carry warm air for space heating'    Columns 65  
+
+     Question F-2a
+
+     1 = Yes
+     0 = No
+     6 = Don't know
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           25            500,000
+       1          103          2,200,000
+       6           28            600,000
+       9        4,666        103,800,000
+
+                  
+ACHOUSE  'Air-conditioning equipment cool, all the rooms'    Columns 67  
+
+     Question F-3
+
+     0 = None of the rooms cooled
+     1 = All the rooms
+     2 = Only some of the rooms    
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           87          2,100,000
+       1        2,429         58,800,000
+       2        1,035         22,000,000
+       9        1,271         24,100,000
+
+
+ZACHOUSE 'Imputation Flag for ACHOUSE'			       Columns 69 
+
+   0 = Not Imputed
+   1 = Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,767        105,700,000
+       1            8                  Q
+       2           47          1,100,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ACROOMS  'rooms cooled by air-conditioning during summer'    Columns 71-72  
+
+     Question F-3a
+
+     0-95 = Number of rooms cooled by AC
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,358         26,200,000
+       1          281          5,700,000
+       2          306          6,600,000
+       3          402          9,200,000
+       4          509         12,000,000
+       5          615         15,200,000
+       6          573         13,300,000
+       7          346          8,100,000
+       8          268          6,600,000
+       9          100          2,500,000
+      10           35            800,000
+      11           21            600,000
+      12            3                  Q
+      13            2                  Q
+      14            3                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZACROOMS 'Imputation Flag for ACROOMS'			       Columns 74 
+
+   0 = Not Imputed
+   1 = Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,771        105,800,000
+       1            4                  Q
+       2           47          1,100,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+CENACHP  'Is your central AC system a heat pump'             Columns 76 
+
+     Question F-4
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,926         47,100,000
+       1          452         11,600,000
+       9        2,444         48,400,000
+
+
+ZCENACHP 'Imputation Flag for CENACHP'			       Columns 78 
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,784        105,900,000
+       2           38          1,100,000
+
+
+AGECENAC 'How old is your household's central AC equipment'  Columns 80-81 
+
+     Question F-5
+
+     1 = Less than 2 years old
+     2 = 2 to 4 years old
+     3 = 5 to 9 years old
+     4 = 10 to 19 years old
+     5 = 20 years or older
+    96 = Don't know
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          258          6,200,000
+       2          417         10,300,000
+       3          616         15,700,000
+       4          638         15,500,000
+       5          258          6,200,000
+      96          191          4,700,000
+      99        2,444         48,400,000
+
+
+ZAGECENA 'Imputation Flag for AGECENAC'			       Columns 83
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,816        106,900,000
+       1            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+USECENAC 'How household uses central AC during the summer'   Columns 85  
+
+     Question F-6
+
+     0 = Not use at all
+     1 = Turned on only a few days or nights
+     2 = Turned on quite a bit
+     3 = Turned on just about all summer
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           54          1,400,000
+       1          707         16,800,000
+       2          486         12,100,000
+       3        1,131         28,400,000
+       9        2,444         48,400,000
+
+
+ZUSECENA 'Imputation Flag for USECENAC'			       Columns 87
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,811        106,700,000
+       2           11            300,000
+
+
+ACOTHERS 'The central AC also cool apartments, condos..'     Columns 89  
+
+     Question F-7
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,319         57,200,000
+       1           59          1,400,000
+       9        2,444         48,400,000
+
+
+ZACOTHER 'Imputation Flag for ACOTHERS'			       Columns 91
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,811        106,700,000
+       2           11            300,000
+
+
+NUMBERAC 'Number of window or wall AC units in your home'    Columns 93  
+
+     Question F-8
+
+     o-15 = Number of window or wall AC units
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,610         81,900,000
+       1          683         14,100,000
+       2          377          7,900,000
+       3          111          2,300,000
+       4           28            600,000
+       5            8                  Q
+       6            1                  Q
+       7            2                  Q
+       8            2                  Q
+     
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZNUMBERA 'Imputation Flag for NUMBERAC'			       Columns 95
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       1            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+WWACAGE  'How old is household's most-used window/wall unit' Columns 97-98 
+
+   Question F-9
+
+     1 = Less than 2 years old
+     2 = 2 to 4 years old 
+     3 = 5 to 9 years old
+     4 = 10 to 19 years old 
+     5 = 20 years or older 
+    96 = Don't know    
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          155          3,200,000
+       2          267          5,600,000
+       3          334          6,800,000
+       4          233          4,600,000
+       5          106          2,400,000
+      96          117          2,500,000
+      99        3,610         81,900,000
+
+
+ZWWACAGE 'Imputation Flag for WWACAGE'			       Columns 100
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       1            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+USEWWAC  'How household uses window AC during the summer'    Columns 102  
+
+     Question F-10
+
+     0 = Not used at all
+     1 = Turned on only a few days or nights
+     2 = Turned on quite a bit
+     3 = Turned on just about all summer
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           41            900,000
+       1          691         14,100,000
+       2          254          5,200,000
+       3          226          4,900,000
+       9        3,610         81,900,000
+
+
+ZUSEWWAC 'Imputation Flag for USEWWAC'			       Columns 104
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,808        106,600,000
+       2           14            400,000
+
+
+TREESHAD 'Any large trees shade home from afternoon sun'     Columns 106  
+
+     Question F-11
+
+     1 = Yes
+     0 = No
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,342         53,000,000
+       1        2,480         54,000,000
+
+
+ZTREESHA 'Imputation Flag for TREESHAD'			       Columns 108
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+
+LGT12    'Lights are turned on more than 12 hours per day'   Columns 110-111  
+
+     Question G-1a
+
+     0-40 = Indoor light on more than 12 hours
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,694         81,100,000
+       1          641         14,400,000
+       2          289          6,800,000
+       3          103          2,400,000
+       4           51          1,300,000
+       5           17            400,000
+       6            9                  Q
+       7            3                  Q
+       8            7                  Q
+       9            2                  Q
+      10            1                  Q
+      11            1                  Q
+      12            4                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZLGT12   'Imputation Flag for LGT12'			       Columns 113 
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,811        106,800,000
+       2           11            200,000
+
+LGT4     'Lights on between 4 hours and 12 hours per day'    Columns 115-116
+
+     Question G-1b 
+
+     0-40 = Indoor light on 4 to 12 hours
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,432         30,200,000
+       1        1,107         25,200,000
+       2        1,124         25,500,000
+       3          573         12,700,000
+       4          315          7,200,000
+       5          104          2,400,000
+       6           83          1,800,000
+       7           14            300,000
+       8           26            600,000
+       9            8                  Q
+      10           15            500,000
+      11            4                  Q
+      12           10            200,000
+      14            1                  Q
+      15            5                  Q
+      20            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZLGT4    'Imputation Flag for LGT4' 			       Columns 118
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,811        106,800,000
+       2           11            200,000
+
+
+LGT1     'Lights on between 1 hours and 4 hours per day'     Columns 120-121
+
+     Question G-1c 
+
+     0-40 = Indoor light on 1 to 4 hours
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          470         10,200,000
+       1        1,346         30,100,000
+       2        1,391         30,700,000
+       3          751         16,600,000
+       4          464         10,500,000
+       5          161          3,600,000
+       6          114          2,500,000
+       7           32            700,000
+       8           35            900,000
+       9            6                  Q
+      10           29            600,000
+      11            2                  Q
+      12           10            200,000
+      14            2                  Q
+      15            7                  Q
+      27            1                  Q
+      40            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZLGT1    'Imputation Flag for LGT1' 			       Columns 123
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,804        106,600,000
+       2           18            400,000
+
+
+OUTLGTNT 'Are any outdoor lights left on all night'          Columns 125
+
+     Question G-2 
+
+     0 = No
+     1 = Yes
+  
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,723         82,500,000
+       1        1,099         24,500,000
+
+
+ZOUTLGTN 'Imputation Flag for OUTLGTNT' 			       Columns 127
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,900,000
+       2            5                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+GASLIGHT 'Any of these lights use natural gas'               Columns 129 
+
+     Question G-2a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,078         24,000,000
+       1           21            500,000
+       9        3,723         82,500,000
+
+
+ZGASLIGH 'Imputation Flag for GASLIGHT' 			       Columns 131
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,900,000
+       2            5                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+SLDDRS   'Sliding glass door go from heated area to outside' Columns 133 
+
+     Question G-3
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,301         70,700,000
+       1        1,521         36,300,000
+
+
+DOOR1SUM 'Number of sliding glass doors'                     Columns 135 
+
+     Question G-3a
+
+    0-10 = Number of sliding doors
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,301         70,700,000
+       1        1,207         28,400,000
+       2          224          5,600,000
+       3           62          1,500,000
+       4           18            500,000
+       5            3                  Q
+       6            5                  Q
+       7            1                  Q
+       8            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+WINDOWS  'Number of windows'                                 Columns 137
+
+     Question G-4
+
+    1 = 1 or 2
+    2 = 3 to 5
+    3 = 6 to 9
+    4 = 10 to 19
+    5 = 20 or 29
+    6 = 30 or more
+    0 = None
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            7                  Q
+       1          124          3,300,000
+       2          506         11,800,000
+       3        1,188         26,900,000
+       4        2,299         49,800,000
+       5          509         11,000,000
+       6          189          3,900,000
+Q = Data withheld because fewer than 10 observation in the category.
+ADQINSUL 'Respondent perception of home insulation'          Columns 139
+
+     Question G-5
+
+    1 = Well insulated
+    2 = Adequately insulated
+    3 = Poorly insulated
+    4 = No insulated
+    6 = Don't know
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        1,882         42,600,000
+       2        1,947         43,100,000
+       3          904         19,400,000
+       4           47            900,000
+       6           42            900,000
+
+
+ZADQINSU 'Imputation Flag for ADQINSUL'                      Columns 141  
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,822    107,000,000
+
+
+DRAFTY   'How often find your home too drafty during winter' Columns 143  
+
+     Question G-6
+
+    1 = All the time
+    2 = Most of the time
+    3 = Some of the time
+    4 = Never
+    6 = Don't know
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          284          5,900,000
+       2          298          6,400,000
+       3        1,607         34,600,000
+       4        2,426         55,300,000
+       6          207          4,700,000
+
