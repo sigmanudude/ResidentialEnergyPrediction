@@ -1,0 +1,1545 @@
+File layout for File Section 4 (Records are comma-delimited.  First line contains a list of variables on the file.  The remaining lines contain the values of the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File Section 4 only.
+
+
+FUELHEAT 'Main fuel used for heating home'                   Columns 34-35
+DNTHEAT  'Have any heating equipment, Use it or not'         Columns 37
+ZDNTHEAT 'Imputation Flag for DNTHEAT'                       Columns 39
+FUELHTPS 'Fuel that could be used to heat home'              Columns 41-42 
+EQUIPM   'Type of heating equipment provides the heat'       Columns 44-45
+ZEQUIPM  'Imputation Flag for EQUIPM'                        Columns 47
+EQUIPAGE 'How old is equipment identified in D-2 heat system'Columns 49-50  
+ZEQUIPAG 'Imputation Flag for EQUIPAGE'                      Columns 52
+HEATOTH  'Main heating system also heat other apartments'    Columns 54
+ZHEATOTH 'Imputation Flag for HEATOTH'                       Columns 56
+EQUIPAUX 'Use any other types of equipment to heat home'     Columns 58 
+ZEQUIPAU 'Imputation Flag for EQUIPAUX'                      Columns 60
+REVERSE  'Sec Ht Eqp Heat pump'                              Columns 62 
+WARMAIR  'Sec Ht Eqp Central warm-air furnace with ducts'    Columns 64 
+STEAMR   'Sec Ht Eqp Steam system with radiators/convectors' Columns 66 
+PERMELEC 'Sec Ht Eqp Built-in electric units in each room'   Columns 68 
+PIPELESS 'Sec Ht Eqp Built-in floor/wall pipeless furnace'   Columns 70 
+ROOMHEAT 'Sec Ht Eqp Built-in room heater burning'           Columns 72 
+WOODKILN 'Sec Ht Eqp Heating stove burning wood, coal, coke' Columns 74 
+CARRYEL  'Sec Ht Eqp Portable electric heaters'              Columns 76 
+CARRYKER 'Sec Ht Eqp Portable kerosene heaters'              Columns 78 
+CHIMNEY  'Sec Ht Eqp Fireplace'                              Columns 80 
+RANGE    'Sec Ht Eqp Cooking stove'                          Columns 82 
+DIFEQUIP 'Sec Ht Eqp Some other equipment'                   Columns 84 
+DKEQUIP  'Sec Ht Eqp Don't know'                             Columns 86 
+ELECAUX  'Secondary heating fuel - Electricity'              Columns 88 
+UGASAUX  'Secondary heating fuel - Natural Gas'              Columns 90 
+LPGAUX   'Secondary heating fuel - LPG'                      Columns 92 
+FOILAUX  'Secondary heating fuel - Fuel Oil'                 Columns 94 
+KEROAUX  'Secondary heating fuel - Kerosene'                 Columns 96 
+WOODAUX  'Secondary heating fuel - Wood'                     Columns 98 
+SOLARAUX 'Secondary heating fuel - Solar'                    Columns 100 
+OTHERAUX 'Secondary heating fuel - Other'                    Columns 102
+DKAUX    'Secondary heating fuel - Don't know'               Columns 104 
+FURNFUEL 'What fuel used in secondary warm air furnace'      Columns 106-107 
+RADFUEL  'What fuel used in secondary boiler for radiator'   Columns 109-110 
+DIFFUEL  'What fuel used in secondary other equipment'       Columns 112-113 
+PIPEFUEL 'What fuel used in secondary pipelines furnace'     Columns 115-116
+RMHTFUEL 'What fuel used in secondary room heater'           Columns 118-119
+HSFUEL   'What fuel used in secondary heating stove'         Columns 121-122 
+FPFUEL   'What fuel used in secondary fireplace'             Columns 124-125
+NGFPFLUE 'Does this fireplace have a flue to the outside'    Columns 127
+USENGFP  'During the winter how often use gas fireplace'     Columns 129
+RNGFUEL  'What fuel used in secondary cooking stove' 	       Columns 131 
+EQMAMT   'How much heat main heating equipment provides'     Columns 133
+ACTSOLAR 'Does your solar heating system require pump or fan'Columns 135
+THERMAIN 'Have a thermostat controls main heating equipment' Columns 137 
+PROTHERM 'Is that thermostat programmable'                   Columns 139 
+ZPROTHER 'Imputation Flag for PROTHERM'			       Columns 141
+TEMPHOME 'Setting During the day when someone is home'       Columns 143-144
+TEMPGONE 'Setting During the day when no one is home'        Columns 146-147
+TEMPNITE 'Setting During sleeping hours'                     Columns 149-150 
+HEATROOM 'Did you heat all rooms last winter'                Columns 152 
+ZHEATROO 'Imputation Flag for HEATROOM'                      Columns 154
+HEATNOT  'How many of rooms were not heated last winter'     Columns 156-157 
+ZHEATNOT 'Imputation Flag for HEATNOT'                       Columns 159
+OTHNOHT  'Any other spaces were not heated last winter'      Columns 161 
+ZOTHNOHT 'Imputation Flag for OTHNOHT'                       Columns 163 
+OTHSPAC1 'First other space not heated'                      Columns 165-166 
+OTHSPAC2 'Second other space not heated'                     Columns 168-169 
+
+
+Codebook for File section 4
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            166          3,900,000
+     2              1                  Q
+     3             76          1,700,000
+     7             42          1,000,000
+     8             24            600,000
+     9          4,513         99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+
+
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1          1,087         20,300,000
+     2          1,047         24,500,000
+     3          1,489         38,900,000
+     4          1,199         23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+
+The remaining variables are on File Section 4 only.
+
+FUELHEAT 'Main fuel used for heating home'                   Columns 34-35
+
+     Question D-1
+     
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or propane)
+     3 = Fuel oil
+     4 = Kerosene
+     5 = Electricity
+     7 = Wood
+     8 = Solar
+     9 = District steam
+    10 = Coal
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        2,599         59,100,000
+       2          267          4,900,000
+       3          478          8,000,000
+       4           42            800,000
+       5        1,264         30,900,000
+       7          108          2,000,000
+       8            2                  Q
+       9            7                  Q
+      10            3                  Q
+      99           52          1,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+DNTHEAT  'Have any heating equipment, Use it or not'         Columns 37
+
+     Question D-1a
+
+     1 = Have equipment, but don't use it
+     2 = Don't have any heating equipment
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           20  		   400,000
+       2           32            500,000
+       9        4,770        106,000,000
+
+
+ZDNTHEAT 'Imputation Flag for DNTHEAT'                       Columns 39
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+FUELHTPS 'Fuel that could be used to heat home'              Columns 41-42 
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or propane)
+     3 = Fuel oil
+     5 = Electricity
+     7 = Wood
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,770        106,000,000
+       1           10            200,000
+       2            1                  Q
+       3            1                  Q
+       5            7                  Q
+       7            1                  Q
+      99           32            500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+EQUIPM   'Type of heating equipment provides the heat'       Columns 44-45
+
+     Question D-2
+     
+     4 = Heat pump
+     3 = Central warm-air furnace with ducts
+     2 = Steam/hot water system with radiators
+     5 = Built-in electric units installed in walls
+     6 = Built-in floor/wall pipeless furnace
+     7 = Built-in heater burning gas, oil, kerosene
+     8 = Heating stove burning wood, coal, coke
+    10 = Portable electric heaters
+    11 = Portable kerosene heaters
+     9 = Fireplace
+    12 = Cooking stove used to heat and cook
+    14 = Geothermal heat pump
+    21 = Equipment not listed
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       2           688        13,000,000
+       3         2,824        64,700,000
+       4           399        10,400,000
+       5           297         6,100,000
+       6           164         3,600,000
+       7           217         4,400,000
+       8            80         1,500,000
+       9            24           500,000
+      10            59         1,400,000
+      11            11           300,000
+      12            23           500,000
+      14             3                 Q
+      21             1                 Q
+      99            32           500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZEQUIPM  'Imputation Flag for EQUIPM'                        Columns 47
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,802        106,600,000
+       1           20            400,000
+
+
+EQUIPAGE 'How old is equipment identified in D-2 heat system'Columns 49-50  
+
+     Question D-3
+
+     1 = Less than 2 years old
+     2 = 2 to 4 years old
+     3 = 5 to 9 years old
+     4 = 10 to 19 years old
+     5 = 20 years or older
+    96 = Don't know
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          392          8,700,000
+       2          590         13,400,000
+       3          914         21,500,000
+       4        1,083         24,200,000
+       5        1,257         26,600,000
+      96          554         12,000,000
+      99           32            500,000
+
+
+ZEQUIPAG 'Imputation Flag for EQUIPAGE'                      Columns 52
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,807        106,600,000
+       1           15            300,000
+
+
+HEATOTH  'Main heating system also heat other apartments'    Columns 54
+
+     Question D-4
+
+     1 = Yes
+     0 = No
+     6 = Don't know
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,458         99,200,000
+       1          331          7,200,000
+       6            1                  Q
+       9           32            500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZHEATOTH 'Imputation Flag for HEATOTH'                       Columns 56
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,800        106,500,000
+       2           22            500,000
+
+
+EQUIPAUX 'Use any other types of equipment to heat home'     Columns 58 
+
+     Question D-5
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,181         72,500,000
+       1        1,609         34,000,000
+       9           32            500,000
+
+
+ZEQUIPAU 'Imputation Flag for EQUIPAUX'                      Columns 60
+  
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,816        106,900,000
+       2            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+REVERSE  'Sec Ht Eqp Heat pump'                              Columns 62 
+
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,737        105,300,000
+       1           53          1,200,000
+       9           32            500,000
+
+                  
+WARMAIR  'Sec Ht Eqp Central warm-air furnace with ducts'    Columns 64 
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,701        104,700,000
+       1           89          1,800,000
+       9           32            500,000
+
+
+STEAMR   'Sec Ht Eqp Steam system with radiators/convectors' Columns 66 
+
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,783        106,300,000
+       1            7                  Q
+       9           32            500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+PERMELEC 'Sec Ht Eqp Built-in electric units in each room'   Columns 68
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,671        104,000,000
+       1          119          2,400,000
+       9           32            500,000
+
+
+PIPELESS 'Sec Ht Eqp Built-in floor/wall pipeless furnace'   Columns 70
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,771        106,100,000
+       1           19            400,000
+       9           32            500,000
+
+
+ROOMHEAT 'Sec Ht Eqp Built-in room heater burning'           Columns 72
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,680        104,300,000
+       1          110          2,200,000
+       9           32            500,000
+
+
+WOODKILN 'Sec Ht Eqp Heating stove burning wood, coal, coke' Columns 74
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,613        103,400,000
+       1          177          3,100,000
+       9           32            500,000
+
+
+CARRYEL  'Sec Ht Eqp Portable electric heaters'              Columns 76
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,225         94,600,000
+       1          565         11,900,000
+       9           32            500,000
+
+
+  CARRYEL  'Portable electric heaters'                         Columns 76 
+
+   Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+CARRYKER 'Sec Ht Eqp Portable kerosene heaters'              Columns 78
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,709        104,700,000
+       1           81          1,800,000
+       9           32            500,000
+
+CHIMNEY  'Sec Ht Eqp Fireplace'                              Columns 80
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,197         93,100,000
+       1          593         13,400,000
+       9           32            500,000
+
+
+RANGE    'Sec Ht Eqp Cooking stove'                          Columns 82
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,756        105,700,000
+       1           34            700,000
+       9           32            500,000
+
+DIFEQUIP 'Sec Ht Eqp Some other equipment'                   Columns 84
+
+
+     Question D-5a
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,760        105,900,000
+       1           30            500,000
+       9           32            500,000
+
+
+DKEQUIP  'Sec Ht Eqp Don't know'                             Columns 86
+
+
+     Question D-5a
+
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,790        106,500,000
+       9           32            500,000
+
+
+ELECAUX  'Secondary heating fuel - Electricity'              Columns 88
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,041         90,700,000
+       1          749         15,800,000
+       9           32            500,000
+
+
+UGASAUX  'Secondary heating fuel - Natural Gas'              Columns 90
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,553        100,900,000
+       1          237          5,600,000
+       9           32            500,000
+
+
+LPGAUX   'Secondary heating fuel - LPG'                      Columns 92 
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       4,681         104,400,000
+       1         109           2,000,000
+       9          32             500,000
+
+
+FOILAUX  'Secondary heating fuel - Fuel Oil'                 Columns 94 
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,767        106,000,000
+       1           23            500,000
+       9           32            500,000
+
+
+KEROAUX  'Secondary heating fuel - Kerosene'                 Columns 96
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,702        104,600,000
+       1           88          1,900,000
+       9           32            500,000
+
+
+WOODAUX  'Secondary heating fuel - Wood'                     Columns 98 
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,190         94,000,000
+       1          600         12,400,000
+       9           32            500,000
+
+
+SOLARAUX 'Secondary heating fuel - Solar'                    Columns 100 
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,771        106,200,000
+       1           19            300,000
+       9           32            500,000
+
+OTHERAUX 'Secondary heating fuel - Other'                    Columns 102 
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,789        106,400,000
+       1            1                  Q
+       9           32            500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+
+DKAUX    'Secondary heating fuel - Don't know'               Columns 104 
+
+     Question D-5a1 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,790        106,500,000
+       9           32            500,000
+
+FURNFUEL 'What fuel used in secondary warm air furnace'      Columns 106-107 
+
+
+     Question D-5a1 
+
+      1 = Natural gas from underground pipes
+      2 = Bottled gas (LPG or propane)
+      3 = Fuel oil    
+      5 = Electricity
+      7 = Wood
+     10 = Coal    
+     99 = No Answer/Not Applicable    
+      
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           35            700,000
+       2           16            300,000
+       3           12            200,000
+       5           17            400,000
+       7            7                  Q
+      10            2                  Q
+      99        4,733        105,200,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+RADFUEL  'What fuel used in secondary boiler for radiator'   Columns 109-110
+
+     Question D-5a1 
+
+      1 = Natural gas from underground pipes
+      2 = Bottled gas (LPG or propane)
+      3 = Fuel oil    
+      5 = Electricity
+      7 = Wood
+     99 = No Answer/Not Applicable    
+      
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            1                  Q
+       2            1                  Q
+       3            2                  Q
+       5            2                  Q
+       7            1                  Q
+      99        4,815        106,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+DIFFUEL  'What fuel used in secondary other equipment'       Columns 112-113
+
+     Question D-5a1 
+
+      3 = Fuel oil    
+      5 = Electricity
+      7 = Wood
+      8 = Solar
+     21 = Other
+     99 = No Answer/Not Applicable    
+      
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       3            1                  Q
+       5            2                  Q
+       7            7                  Q
+       8           19            300,000
+      21            1                  Q
+      99        4,792        106,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+PIPEFUEL 'What fuel used in secondary pipelines furnace'     Columns 115-116
+
+
+     Question D-5a2
+
+      1 = Natural gas from underground pipes
+      2 = Bottled gas (LPG or propane)
+      4 = Kerosene    
+      5 = Electricity
+      7 = Wood
+     99 = No Answer/Not Applicable    
+    
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            7                  Q
+       2            9                  Q
+       4            1                  Q
+       5            1                  Q
+       7            1                  Q
+      99        4,803        106,600,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+RMHTFUEL 'What fuel used in secondary room heater'           Columns 118-119
+
+     Question D-5a3
+
+      1 = Natural gas from underground pipes
+      2 = Bottled gas (LPG or propane)
+      3 = Fuel oil 
+      4 = Kerosene    
+     99 = No Answer/Not Applicable    
+    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           48          1,000,000
+       2           48            900,000
+       3            8                  Q
+       4            6                  Q
+      99        4,712        104,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+HSFUEL   'What fuel used in secondary heating stove'         Columns 121-122 
+
+     Question D-5a3
+
+      7 = Wood
+     10 = Coal    
+     99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       7          173          3,000,000
+      10            4                  Q
+      99        4,645        103,900,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+FPFUEL   'What fuel used in secondary fireplace'             Columns 124-125
+
+     Question D-5a5
+
+      1 = Natural gas from underground pipes
+      2 = Bottled gas (LPG or propane)
+      7 = Wood
+     10 = Coal    
+     99 = No Answer/Not Applicable    
+       
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1         127           3,300,000
+       2          35             700,000
+       7         428           9,400,000
+      10           3                   Q
+      99       4,229          93,600,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+NGFPFLUE 'Does this fireplace have a flue to the outside'    Columns 127
+
+   Question D-5a5a
+   
+      1 = Flue to the outside
+      2 = Flueless
+      6 = Don't know
+      9 = No Answer/Not Applicable    
+
+               Number         Weighted               Of             Number of
+    Value     Observations   Households
+      1          117          2,800,000
+      2           35            900,000
+      6           10            200,000
+      9        4,660        103,100,000
+
+
+USENGFP  'During the winter how often use gas fireplace'     Columns 129
+
+     Question D-5a5b
+
+     1 = Most days
+     2 = About once a week
+     3 = Fewer than 4 times each month
+     6 = Don't know
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           60          1,300,000
+       2           42          1,100,000
+       3           50          1,200,000
+       6           10            200,000
+       9        4,660        103,100,000
+
+
+RNGFUEL  'What fuel used in secondary cooking stove' 	       Columns 131
+
+     Question D-5a6
+
+      1 = Natural gas from underground pipes
+      2 = Bottled gas (LPG or propane)
+      5 = Electricity    
+      9 = No Answer/Not Applicable    
+
+               Number         Weighted               Of             Number of
+     Value     Observations   Households
+       1           23            500,000
+       2            5                  Q
+       5            6                  Q
+       9        4,788        106,200,000
+ 
+
+EQMAMT   'How much heat main heating equipment provides'     Columns 133
+
+     Question D-6
+
+     1 = Almost all
+     2 = About three-fourths
+     3 = Close to half of all your heat
+     6 = Don't know
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        4,312         96,900,000
+       2          221          4,300,000
+       3          185          3,700,000
+       6           72          1,500,000
+       9           32            500,000
+
+
+ACTSOLAR 'Does your solar heating system require pump or fan' Columns 135
+
+     Question D-7
+
+     0 = No
+     1 = Yes
+     6 = Don't know
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            6                  Q
+       1            1                  Q
+       6           14            200,000
+       9        4,801        106,700,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+THERMAIN 'Have a thermostat controls main heating equipment' Columns 137 
+
+     Question D-7
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          678         14,800,000
+       1        4,112         91,600,000
+       9           32            500,000
+
+
+PROTHERM 'Is that thermostat programmable'                   Columns 139 
+
+     Question D-8a
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,018         66,500,000
+       1        1,094         25,100,000       9          710         15,400,000
+    
+
+ZPROTHER 'Imputation Flag for PROTHERM'			       Columns 141
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,811        106,700,000
+       2           11            200,000
+
+ 
+TEMPHOME 'Setting During the day when someone is home'       Columns 143-144
+
+     Question D-9a
+
+     40-94 = Temp when someone home
+        95 = Heat turned off
+        96 = Don't know
+        97 = Did not live in unit last winter
+        98 = Refused
+        99 = No Answer/Not Applicable
+        
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      40            1                  Q
+      50            8                  Q
+      55           11            200,000
+      56            1                  Q
+      57            1                  Q
+      58            7                  Q
+      59            2                  Q
+      60           99          2,000,000
+      62           44            800,000
+      63           24            500,000
+      64           35            700,000
+      65          311          6,300,000
+      66           60          1,400,000
+      67           75          1,600,000
+      68          913         19,300,000
+      69          119          2,700,000
+      70        1,171         25,700,000
+      71           66          1,600,000
+      72          558         13,100,000      73           78          1,800,000
+      74          106          2,500,000
+      75          353          8,400,000
+      76           66          1,500,000
+      77           16            400,000
+      78          143          3,400,000
+      79           10            300,000
+      80           84          1,900,000
+      81            1                  Q
+      82            2                  Q
+      84            1                  Q
+      85            4                  Q
+      90            2                  Q
+      94            2                  Q
+      95           95          2,200,000
+      96          123          2,800,000
+      97          189          4,400,000
+      98            9                  Q
+      99           32            500,000    
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+ 
+TEMPGONE 'Setting During the day when no one is home'        Columns 146-147
+
+     Question D-9b
+
+     40-94 = Enter degrees Fahrenheit
+        95 = Heat turned off
+        96 = Don't know
+        97 = Did not live in unit last winter
+        98 = Refused
+        99 = No Answer/Not Applicable
+ 
+             Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      40           16            400,000
+      45            3                  Q
+      49            1                  Q
+      50           88          1,800,000
+      51            1                  Q
+      53            2                  Q
+      55          112          2,500,000
+      56            3                  Q
+      57            2                  Q
+      58           31            600,000
+      59            7                  Q
+      60          430          8,900,000
+      61            6                  Q
+      62          105          2,100,000
+      63           40            800,000
+      64           83          1,700,000
+      65          617         13,400,000
+      66           85          2,000,000
+      67           54          1,200,000
+      68          722         15,800,000
+      69           89          2,100,000
+      70          692         15,200,000
+      71           22            500,000
+      72          318          7,300,000
+      73           42          1,000,000
+      74           54          1,300,000
+      75          183          4,800,000
+      76           34            800,000
+      77            8                  Q
+      78           67          1,600,000
+      79            4                  Q
+      80           38            900,000
+      81            1                  Q
+      82            1                  Q
+      84            1                  Q
+      85            1                  Q
+      90            2                  Q
+      94            2                  Q
+      95          468         10,700,000
+      96          157          3,600,000
+      97          189          4,400,000
+      98            9                  Q
+      99           32            500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+TEMPNITE 'Setting During sleeping hours'                     Columns 149-150 
+
+     Question D-9c
+
+     40-94 = Night temp
+        95 = Heat turned off
+        96 = Don't know
+        97 = Did not live in unit last winter
+        98 = Refused
+        99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      40            8                  Q
+      45            2                  Q
+      50           46            900,000
+      51            1                  Q
+      54            2                  Q
+      55           97          2,100,000
+      56            6                  Q
+      57            1                  Q
+      58           43            900,000
+      59            7                  Q 
+      60          376          7,800,000
+      61            5                  Q
+      62          119          2,300,000
+      63           37            700,000
+      64           95          1,800,000
+      65          640         13,300,000
+      66           91          2,200,000
+      67           66          1,400,000
+      68          805         17,600,000
+      69           83          2,000,000
+      70          784         17,500,000
+      71           25            700,000
+      72          327          7,700,000
+      73           46          1,100,000      74           52          1,200,000
+      75          207          5,400,000
+      76           35            800,000
+      77           11            300,000
+      78           76          1,800,000
+      79            4                  Q
+      80           54          1,300,000
+      84            1                  Q
+      85            2                  Q
+      90            1                  Q
+      94            2                  Q
+      95          314          7,300,000
+      96          121          2,700,000
+      97          189          4,400,000
+      98            9                  Q
+      99           32            500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+HEATROOM 'Did you heat all rooms last winter'                Columns 152 
+
+     Question D-10
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          936         20,800,000
+       1        3,854         85,700,000
+       9           32            500,000
+
+ZHEATROO 'Imputation Flag for HEATROOM'                      Columns 154
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,633        102,600,000
+       2          189          4,400,000
+
+HEATNOT  'How many of rooms were not heated last winter'     Columns 156-157 
+
+     Question D-10a
+
+     0-23 = Number of rooms not heated 
+       99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,854         85,700,000
+       1          282          6,100,000
+       2          299          6,500,000
+       3          187          4,300,000
+       4           89          2,000,000
+       5           44          1,000,000
+       6           24            600,000
+       7            4                  Q  
+       8            5                  Q
+       9            1                  Q
+      13            1                  Q
+      99           32            500,000
+     Q = Data withheld because fewer than 10 observation in the category.
+
+ZHEATNOT 'Imputation Flag for HEATNOT'                       Columns 159
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,633        102,600,000
+       2          189          4,400,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+OTHNOHT  'Any other spaces were not heated last winter'      Columns 161 
+
+     Question D-10d
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,750        105,600,000
+       1           40            900,000
+       9           32            500,000
+
+ZOTHNOHT 'Imputation Flag for OTHNOHT'                       Columns 163 
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households 
+       0        4,781        106,100,000
+       2           41            900,000
+
+OTHSPAC1 'First other space not heated'                      Columns 165-166 
+
+     Question D-10b1
+
+     1 = Unfinished rooms/storage rooms
+     2 = Laundry room
+     3 = Foyer/mud room/entryway/vestibule
+    95 = Other
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           14            300,000
+       2           16            400,000
+       3            9                  Q
+      95            1                  Q
+      99        4,782        106,100,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+OTHSPAC2 'Second other space not heated'                     Columns 168-169 
+
+     Question D-10b1
+
+    98 = Refused
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      98           40            900,000
+      99        4,782        106,100,000
+

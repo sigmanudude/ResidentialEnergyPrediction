@@ -1,0 +1,694 @@
+File layout for File Section I (Records are comma-delimited.  First line contains a list of variables on the file.  The remaining lines contain the values of the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File 7 Section I only.
+
+
+SIGNFORM 'Authorization form signed'                        Columns 34
+KFUELOT  'Household fuel bills cover non-households uses'   Columns 36
+PURPOSE1 'First non-household use mentioned'                Columns 38
+PURPOSE2 'Second non-household use mentioned'               Columns 40
+FARM     'Bills include farm/machine use'                   Columns 42
+TENANT   'Bills cover fuel of other HH'                     Columns 44
+BUSINESS 'Bills cover business/office'                      Columns 46
+OTHERUSE 'Bills cover fuel for other use'                   Columns 48
+BILLPUR1 'First fuel with non-household use'                Columns 50
+BILLPUR2 'Second fuel with non-household use'               Columns 52
+BILLPUR3 'Third fuel with non-residential use'              Columns 54
+BILLPUR4 'Fourth fuel with non-residential use'             Columns 56
+BILLUG   'Natural gas used for other purposes'              Columns 58
+BLPUSE   'LPG used for other purposes'                      Columns 60
+BILLFOIL 'Fuel oil used for other purposes'                 Columns 62
+BILLKER  'Kerosene used for other purposes'                 Columns 64
+BILLEL   'Electricity used for other purposes'              Columns 66
+BILLUGP  'Amount of Natural gas used for other purposes'    Columns 68
+BILLLGP  'Amount of LPG used for other purposes'            Columns 70
+BILLPOLP 'Amount of fuel oil used for other purposes'       Columns 72
+BILLKERP 'Amount of kerosene used for other purposes'       Columns 74
+BILLELP  'Amount of electricity used for other purposes'    Columns 76
+
+
+Codebook for File section 6
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            166          3,900,000
+     2              1                  Q
+     3             76          1,700,000
+     7             42          1,000,000
+     8             24            600,000
+     9          4,513         99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+
+
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1          1,087         20,300,000
+     2          1,047         24,500,000
+     3          1,489         38,900,000
+     4          1,199         23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+
+The remaining variables are on File Section 4 only.
+
+SIGNFORM 'Authorization form signed'                        Columns 34
+
+     Question I-1 
+
+     1 = Authorization form signed
+     0 = Authorization form not signed 
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          720         16,100,000
+       1        3,869         85,700,000
+       9          233          5,100,000
+
+
+KFUELOT  'Household fuel bills cover non-households uses'   Columns 36
+
+     Question I-12 
+
+     1 = Yes
+     0 = No
+     5 = Mail questionnaire
+     8 = Refused 
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,626         80,200,000
+       1           34            600,000
+       5          166          3,900,000
+       8            1                  Q
+       9          995         22,300,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+PURPOSE1 'First non-household use mentioned'                Columns 38
+
+     Question I-12a 
+
+     1 = Farm or building machinery
+     2 = The house or apartment of another house
+     3 = A business or office
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           11            200,000
+       2           12            200,000
+       3           11            200,000
+
+
+PURPOSE2 'Second non-household use mentioned'               Columns 40
+
+     Question I-12a 
+
+     2 = The house or apartment of another house
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       2            2                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+FARM     'Bills include farm/machine use'                   Columns 42
+
+     Question I-12a 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           23            400,000
+       1           11            200,000
+       9        4,788        106,400,000
+
+
+TENANT   'Bills cover fuel of other HH'                     Columns 44
+
+     Question I-12a 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           20            400,000
+       1           14            200,000
+       9        4,788        106,400,000
+
+
+BUSINESS 'Bills cover business/office'                      Columns 46
+
+     Question I-12a 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           23            300,000
+       1           11            200,000
+       9        4,788        106,400,000
+
+
+OTHERUSE 'Bills cover fuel for other use'                   Columns 48
+
+     Question I-12a 
+
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           34            600,000
+       9        4,788        106,400,000
+
+BILLPUR1 'First fuel with non-household use'                Columns 50
+
+     Question I-12b 
+
+     1 = Natural gas (from underground pipes)
+     2 = Bottled gas (LPG or propane)
+     3 = Fuel oil
+     5 = Electricity    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            5                  Q
+       2            3                  Q
+       3           11            200,000
+       5           15            300,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+BILLPUR2 'Second fuel with non-household use'               Columns 52
+
+     Question I-12b 
+
+     3 = Fuel oil
+     5 = Electricity    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       3            1                  Q
+       5            8                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLPUR3 'Third fuel with non-residential use'              Columns 54
+
+     Question I-12b 
+
+     4 = Kerosene
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       4            1                  Q
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLPUR4 'Fourth fuel with non-residential use'             Columns 56
+
+     Question I-12b 
+
+     5 = Electricity
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       5            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLUG   'Natural gas used for other purposes'              Columns 58
+
+     Question I-12b 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           29            500,000
+       1            5                  Q
+       9        4,788        106,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BLPUSE   'LPG used for other purposes'                      Columns 60
+
+     Question I-12b 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           31            500,000
+       1            3                  Q
+       9        4,788        106,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLFOIL 'Fuel oil used for other purposes'                 Columns 62
+
+     Question I-12b 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           22            400,000
+       1           12            200,000
+       9        4,788        106,400,000
+
+
+BILLKER  'Kerosene used for other purposes'                 Columns 64
+
+     Question I-12b 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           33            600,000
+       1            1                  Q
+       9        4,788        106,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLEL   'Electricity used for other purposes'              Columns 66
+
+     Question I-12b 
+
+     1 = Yes
+     0 = No
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           10            200,000
+       1           24            400,000
+       9        4,788        106,400,000
+
+
+BILLUGP  'Amount of Natural gas used for other purposes'    Columns 68
+
+     Question I-12b1 
+
+     0 = Very little (1-4%)
+     1 = Some (5-33%)
+     2 = About half (34-66%)
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            1                  Q
+       1            2                  Q
+       2            1                  Q
+       9        4,818        106,900,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLLGP   'Amount of LPG used for other purposes'           Columns 70
+
+     Question I-12b2 
+
+     1 = Some (5-33%)
+     2 = About half (34-66%)
+     4 = Most of it (96-99%)
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            1                  Q
+       2            1                  Q
+       4            1                  Q
+       9        4,819        107,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLPOLP 'Amount of fuel oil used for other purposes'       Columns 72
+
+     Question I-12b3 
+
+     0 = Very little (1-4%)
+     1 = Some (5-33%)
+     2 = About half (34-66%)
+     3 = About three-quarters (67-95%)
+     6 = Don't know    
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            3                  Q
+       1            3                  Q
+       2            3                  Q
+       3            2                  Q
+       6            1                  Q
+       9        4,810        106,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLKERP 'Amount of kerosene used for other purposes'       Columns 74
+
+     Question I-12b3 
+
+     4 = Most of it (96-99%)
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       4            1                  Q
+       9        4,821        107,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BILLELP  'Amount of electricity used for other purposes'    Columns 76
+
+     Question I-12b3 
+
+     0 = Very little (1-4%)
+     1 = Some (5-33%)
+     2 = About half (34-66%)
+     3 = About three-quarters (67-95%)
+     6 = Don't know    
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            1                  Q
+       1           13            200,000
+       2            5                  Q
+       3            3                  Q
+       6            1                  Q
+       9        4,799        106,600,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+

@@ -1,0 +1,1194 @@
+File layout for File Section J (Records are comma-delimited.  First line contains a list of variables on the file.  The remaining lines contain the values of the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File 8 Section J only.
+
+
+NHSLDMEM 'How many people normally live in this household'  Columns 34-35
+ZNHSLDME 'Imputation Flag for NHSLDMEM'                     Columns 37
+YEARS3   'How many are adults 65 or older'                  Columns 39
+ZYEARS3  'Imputation Flag for YEARS3'                       Columns 41
+YEARS4   'How many are adults 75 or older'                  Columns 43
+ZYEARS4  'Imputation Flag for YEARS4'                       Columns 45
+YEARS1   'How many are infants under the age of 1'          Columns 47
+ZYEARS1  'Imputation Flag for YEARS1'                       Columns 49
+YEARS2   'How many are children between ages of 1 and 12'   Columns 51
+ZYEARS2  'Imputation Flag for YEARS2'                       Columns 53
+YEARS5   'How many are between ages 13 and 64 years old'    Columns 55-56
+HBUSNESS 'Do you operate a home-based business or service'  Columns 58
+ZHBUSNES 'Imputation Flag for HBUSNESS'                     Columns 60
+OTHBUS1  'First mention: what kind of business or service'  Columns 62-63
+OTHBUS2  'Second mention: what kind of business or service' Columns 65-66
+OTHWORK  'Any other kind of activity use a lot more energy' Columns 68
+ZOTHWORK 'Imputation Flag for OTHWORK'                      Columns 70
+OTHACT1  'First mention what that activity is'              Columns 72-73
+OTHACT2  'Second mention what that activity is'             Columns 75-76
+ATHOME   'Is someone at home all day on a typical weekday'  Columns 78
+ZATHOME  'Imputation Flag for ATHOME'                       Columns 80
+DRIVECAR 'Any other members use of any cars, trucks, SUVs'  Columns 82
+ZDRIVECA 'Imputation Flag for DRIVRCAR'                     Columns 84
+VEHICLES 'How many vehicles does your household have'       Columns 86-87
+DRIVEMON 'How many people drive on a fairly regular basis'  Columns 89-90
+HHINTRO  'Are you a householder'                            Columns 92
+HHSEX    'Are you/is the householder a male or a female'    Columns 94
+HHAGE    'How old are you/is the householder'               Columns 96-97
+EMPLOYHH 'How would you describe employment status'         Columns 99
+SPOUSE   'Household living with a spouse/partner'           Columns 101
+SDESCENT 'Householder Hispanic or Latino'                   Columns 103
+ZSDESCEN 'Imputation Flag for SDESCENT'                     Columns 105
+ORIGIN1  'First mention describe the householder's race'    Columns 107-108
+ZORIGIN1 'Imputation Flag for ORIGIN1'                      Columns 110
+ORIGIN2  'Second mention describe the householder's race'   Columns 112-113
+ORIGIN3  'Third mention describe the householder's race'    Columns 115-116
+MONEYPY  'Total combined income in the past 12 months'      Columns 118-119
+ZMONEYPY 'Imputation Flag for MONEYPY'                      Columns 121
+POOR100  'Below 100 percent of poverty'                     Columns 123
+POOR125  'Below 125 percent of poverty'                     Columns 125
+POOR150  'Below 150 percent of poverty'                     Columns 127
+LIHEAP   'LIHEAP eligibility flag'                          Columns 129
+
+
+Codebook for File section J/F8
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            166          3,900,000
+     2              1                  Q
+     3             76          1,700,000
+     7             42          1,000,000
+     8             24            600,000
+     9          4,513         99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+
+
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1          1,087         20,300,000
+     2          1,047         24,500,000
+     3          1,489         38,900,000
+     4          1,199         23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily
+     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+
+The remaining variables are on File Section 4 only.
+
+
+NHSLDMEM 'How many people normally live in this household'  Columns 34-35
+
+     Question J-1
+
+     1-15 = Number that live in household
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        1,122         28,200,000
+       2        1,644         35,100,000
+       3          801         17,000,000
+       4          727         15,600,000
+       5          337          7,100,000
+       6          125          2,600,000
+       7           30            600,000
+       8           21            500,000
+       9            6                  Q
+      10            6                  Q
+      12            2                  Q
+      15            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZNHSLDME 'Imputation Flag for NHSLDMEM'                     Columns 37
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,808        106,600,000
+       1           14            400,000
+
+
+YEARS3   'How many are adults 65 or older'                  Columns 39
+
+     Question J-1a
+
+     0-15 = Number of adults 65 or older
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,607         80,000,000
+       1          792         18,100,000
+       2          417          8,800,000
+       3            5                  Q
+       6            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZYEARS3  'Imputation Flag for YEARS3'                       Columns 41
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,816        106,900,000
+       1            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+YEARS4   'How many are adults 75 or older'                  Columns 43
+
+     Question J-1a1
+
+     0-15 = Number of adults 75 or older
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,223         93,800,000
+       1          464         10,300,000
+       2          134          2,900,000
+       6            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZYEARS4  'Imputation Flag for YEARS4'                       Columns 45
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,816        106,900,000
+       1            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+YEARS1   'How many are infants under the age of 1'          Columns 47
+
+     Question J-1b
+
+     0-15 = Number of infants under age 1
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,646        103,200,000
+       1          168          3,600,000
+       2            8                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZYEARS1  'Imputation Flag for YEARS1'                       Columns 49
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,900,000
+       1            5                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+YEARS2   'How many are children between ages of 1 and 12'   Columns 51
+
+     Question J-1c
+
+     0-15 = Number of children between 1 and 12
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,505         79,300,000
+       1          640         13,400,000
+       2          466          9,800,000
+       3          164          3,400,000
+       4           35            800,000
+       5            7                  Q
+       6            4                  Q
+       7            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZYEARS2  'Imputation Flag for YEARS2'                       Columns 53
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,816        106,900,000
+       1            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+YEARS5   'How many are between ages 13 and 64 years old'    Columns 55-56
+
+     Question J-1d
+
+     0-15 = Remaining adults between 13 and 64
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          888         20,200,000
+       1          993         24,000,000
+       2        1,855         39,700,000
+       3          666         14,200,000
+       4          315          6,600,000
+       5           72          1,600,000
+       6           22            500,000
+       7            6                  Q
+       8            3                  Q
+      10            1                  Q
+      15            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+HBUSNESS 'Do you operate a home-based business or service'  Columns 58
+
+     Question J-2
+
+     1 = Yes
+     0 = No
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,469         99,400,000
+       1          353          7,600,000
+
+
+ZHBUSNES  'Imputation Flag for HBUSNESS'                    Columns 60
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,800,000
+       2            5                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+OTHBUS1  'First mention: what kind of business or service'  Columns 62-63
+
+     Question J-2a
+
+     1 = Computer/web/internet
+     2 = Sales/accounting/financial/real estate
+     3 = Writing/publishing/design/architecture
+     4 = Farming/ranch/fisheries/animal care
+     5 = Landscape/lawn & gardening
+     6 = Property management
+     7 = Carpentry/construction/contracting
+     8 = Automotive
+     9 = Trucking
+    10 = Medical/health services
+    11 = Maintenance/cleaning
+    12 = Beauty/hair services
+    13 = Child care/schooling
+    14 = Crafts/painting
+    15 = Service provider/personal instructor
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          21             500,000
+       2          95           2,100,000
+       3          30             800,000
+       4          35             600,000
+       5          12             200,000
+       6          13             200,000
+       7          46             900,000
+       8           4                   Q
+       9           8                   Q
+      10          20             400,000
+      11          13             300,000
+      12           7                   Q
+      13          24             500,000
+      14          19             400,000
+      15           6                   Q
+      99       4,469          99,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+OTHBUS2  'Second mention: what kind of business or service' Columns 65-66
+
+     Question J-2a
+
+     1 = Computer/web/internet
+     2 = Sales/accounting/financial/real estate
+     3 = Writing/publishing/design/architecture
+     4 = Farming/ranch/fisheries/animal care
+     5 = Landscape/lawn & gardening
+     6 = Property management
+     7 = Carpentry/construction/contracting
+     8 = Automotive
+     9 = Trucking
+    10 = Medical/health services
+    11 = Maintenance/cleaning
+    12 = Beauty/hair services
+    13 = Child care/schooling
+    14 = Crafts/painting
+    15 = Service provider/personal instructor
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       2            2                  Q
+       3            2                  Q
+       4            1                  Q
+       7            1                  Q
+      14            3                  Q
+      99        4,813        106,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+OTHWORK  'Any other kind of activity use a lot more energy' Columns 68
+
+     Question J-3
+
+     1 = Yes
+     0 = No
+     6 = Don't know
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,742        105,200,000
+       1           78          1,700,000
+       6            2                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZOTHWORK 'Imputation Flag for OTHWORK'                      Columns 70
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+OTHACT1  'First mention what that activity is'              Columns 72-73
+
+     Question J-3a
+
+     1 = Medical equipment
+     2 = Power tools/woodworking/work shop
+     3 = Garage/mechanical work
+     4 = Office/business use
+     5 = Music/sound equipment
+     6 = Other hobbies/crafts
+     8 = (De)humidifier/pumps/filters/fans
+    10 = Tanning/exercise equipment
+    11 = Farm use
+    12 = Welding equipment
+    14 = Kiln
+    15 = Gardening
+    95 = Other
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           15            300,000
+       2           15            300,000
+       3            4                  Q
+       4           13            300,000
+       5            2                  Q
+       6            6                  Q
+       8            4                  Q
+      10            2                  Q
+      11            4                  Q
+      12            4                  Q
+      14            3                  Q 
+      15            4                  Q
+      95            2                  Q
+      99        4,744        105,300,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+OTHACT2  'Second mention what that activity is'             Columns 75-76
+
+     Question J-3a
+
+     8 = (De)humidifier/pumps/filters/fans
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       8            1                  Q
+      99        4,821        107,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ATHOME   'Is someone at home all day on a typical weekday'  Columns 78
+
+     Question J-4
+
+     1 = Yes
+     0 = No
+     6 = Don't know    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,365         53,900,000
+       1        2,454         53,000,000
+       6            3                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZATHOME  'Imputation Flag for ATHOME'                       Columns 80
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,814        106,800,000
+       2            8                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+DRIVECAR 'Any other members use of any cars, trucks, SUVs'  Columns 82
+
+     Question J-5
+
+     1 = Yes
+     0 = No
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          509         11,600,000
+       1        4,313         95,400,000
+
+
+ZDRIVECA 'Imputation Flag for DRIVRCAR'                     Columns 84
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,815        106,800,000
+       2            7                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+VEHICLES 'How many vehicles does your household have'       Columns 86-87
+
+     Question J-5a
+
+  0-10 = Number of vehicles
+    98 = Refused    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          502         11,500,000
+       1        1,552         36,000,000
+       2        1,825         40,100,000
+       3          668         13,900,000
+       4          187          3,800,000
+       5           55          1,100,000
+       6           16            300,000
+       7            5                  Q
+       8            3                  Q
+       9            1                  Q
+      10            1                  Q
+      98            7                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+DRIVEMON 'How many people drive on a fairly regular basis'  Columns 89-90
+
+     Question J-6
+
+  0-15 = Number of people that drive
+    96 = Don't know
+    98 = Refused    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          385          9,000,000
+       1        1,518         35,600,000
+       2        2,354         50,300,000
+       3          432          9,100,000
+       4          110          2,300,000
+       5           13            300,000
+       6            1                  Q
+       7            1                  Q
+      96            2                  Q
+      98            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+HHINTRO  'Are you a householder'                            Columns 92
+
+     Question J-7
+
+     1 = Yes
+     0 = No
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          108          2,400,000
+       1        4,714        104,600,000
+
+
+HHSEX    'Are you/is the householder a male or a female'    Columns 94
+
+     Question J-8
+
+     1 = Female
+     2 = Male
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        2,717         59,100,000
+       2        2,105         47,800,000
+
+
+HHAGE    'How old are you/is the householder'               Columns 96-97
+
+     Question J-9
+
+     16-95 = Age of householder
+        96 = Don't know
+        97 = Refused
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      16            1                  Q
+      17            3                  Q
+      18            6                  Q
+      19           23            500,000
+      20           31            700,000
+      21           62          1,200,000
+      22           58          1,300,000
+      23           42            800,000
+      24           64          1,300,000
+      25           65          1,500,000
+      26           59          1,400,000
+      27           52          1,100,000
+      28           80          1,700,000
+      29           64          1,400,000
+      30           80          1,800,000
+      31           99          2,200,000
+      32           80          1,800,000
+      33           99          2,100,000
+      34           78          1,800,000
+      35           99          2,300,000
+      36           98          2,200,000
+      37           98          2,100,000
+      38          101          2,400,000
+      39           99          2,000,000
+      40          107          2,300,000
+      41          122          2,700,000
+      42          112          2,500,000
+      43           93          2,000,000
+      44           88          1,900,000
+      45          122          2,600,000
+      46          110          2,400,000
+      47           89          2,000,000
+      48           74          1,600,000
+      49           86          1,800,000
+      50          107          2,400,000
+      51           86          2,100,000
+      52           84          1,800,000
+      53           70          1,500,000
+      54           98          2,400,000
+      55           71          1,500,000
+      56           67          1,500,000
+      57           87          1,800,000
+      58           76          1,700,000
+      59           60          1,300,000
+      60           74          1,600,000
+      61           51          1,100,000
+      62           61          1,400,000
+      63           50          1,200,000
+      64           64          1,400,000
+      65           75          1,800,000
+      66           54          1,200,000
+      67           40            900,000
+      68           74          1,800,000
+      69           48            900,000
+      70           67          1,500,000
+      71           56          1,200,000
+      72           50          1,100,000
+      73           63          1,400,000
+      74           36            800,000
+      75           46          1,000,000
+      76           48          1,000,000
+      77           44          1,000,000
+      78           41            900,000
+      79           38            800,000
+      80           55          1,300,000
+      81           33            700,000
+      82           36            800,000
+      83           29            600,000
+      84           28            600,000
+      85           23            600,000
+      86           14            300,000
+      87            8                  Q
+      88            7                  Q
+      89           13            300,000
+      90           12            300,000
+      91            9                  Q
+      92            7                  Q
+      93            6                  Q
+      94            2                  Q
+      95            2                  Q
+      96           10            200,000
+      97           98          2,300,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+EMPLOYHH 'How would you describe employment status'         Columns 89
+
+     Question J-9
+
+        1 = Employed full-time
+        2 = Employed part-time
+        0 = Not employed
+        6 = Don't know
+        8 = Refused
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,825         40,100,000
+       1        2,493         55,900,000
+       2          492         10,700,000
+       6            1                  Q
+       8           11            200,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+SPOUSE   'Household living with a spouse/partner'           Columns 101
+
+     Question J-11
+
+     1 = Yes
+     0 = No
+     8 = Refused
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          772         16,100,000
+       1        2,921         62,600,000
+       8            7                  Q
+       9        1,122         28,200,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+SDESCENT 'Householder Hispanic or Latino'                   Columns 103
+
+     Question J-12
+
+     1 = Yes
+     0 = No
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,353         96,900,000
+       1          469         10,100,000
+
+
+ZSDESCEN 'Imputation Flag for SDESCENT'                     Columns 105
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,812        106,800,000
+       1           10            200,000
+
+ORIGIN1  'First mention describe the householder's race'    Columns 107-108
+
+     Question J-13
+
+     1 = White
+     2 = Black or American Black
+     3 = American Indian or Alaskan Native
+     5 = Other
+     7 = Hispanic
+    41 = Asian
+    42 = Native Hawaiian or other Pacific Islander
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        3,766         82,900,000
+       2          535         13,000,000
+       3           38            700,000
+       5           61          1,300,000
+       7          267          5,700,000
+      41          138          3,000,000
+      42           17            400,000
+
+
+ZORIGIN1 'Imputation Flag for ORIGIN1'                      Columns 110
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,807        106,700,000
+       1           15            300,000
+
+
+ORIGIN2  'Second mention describe the householder's race'   Columns 112-113
+
+     Question J-13
+
+     1 = White
+     2 = Black or American Black
+     3 = American Indian or Alaskan Native
+     5 = Other
+     7 = Hispanic
+    41 = Asian
+    42 = Native Hawaiian or other Pacific Islander
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           10            200,000
+       2            5                  Q
+       3           20            500,000
+       5            4                  Q
+       7           22            400,000
+      41            3                  Q
+      42            2                  Q
+      99        4,756        105,600,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ORIGIN3  'Third mention describe the householder's race'    Columns 115-116
+
+     Question J-13
+
+     3 = American Indian or Alaskan Native
+     5 = Other
+    99 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       3            1                  Q
+       5            1                  Q
+      99        4,820        107,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+MONEYPY  'Total combined income in the past 12 months'      Columns 118-119
+
+     Question J-14
+
+     1 = Less than $5,000
+     2 = $5,000 to $9,999
+     3 = $10,000 to $14,999
+     4 = $15,000 to $19,999
+     5 = $20,000 to $29,999
+     6 = $30,000 TO $39,999
+     7 = $40,000 TO $49,999
+     8 = $50,000 TO $74,999
+     9 = $75,000 TO $99,999
+    10 = $100,000 or more    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          152          3,400,000
+       2          328          7,600,000
+       3          363          7,700,000
+       4          409          8,900,000
+       5          647         14,000,000
+       6          623         13,900,000
+       7          596         13,200,000
+       8          989         21,700,000
+       9          356          8,100,000
+      10          359          8,600,000
+
+
+ZMONEYPY 'Imputation Flag for MONEYPY'                      Columns 121
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,335         95,800,000
+       1          487         11,200,000
+
+
+POOR100  'Below 100 percent of poverty'                     Columns 123
+
+     1 = Poor 100%
+     0 = Nonpoor    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,146         92,000,000
+       1          676         15,000,000
+
+
+POOR125  'Below 125 percent of poverty'                     Columns 125
+
+     1 = Poor 125%
+     0 = Nonpoor    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,903         86,900,000
+       1          919         20,100,000
+
+
+POOR150  'Below 150 percent of poverty'                     Columns 127
+
+     1 = Poor 150%
+     0 = Nonpoor    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,603         80,500,000
+       1        1,219         26,500,000
+
+
+LIHEAP   'LIHEAP eligibility flag'                          Columns 129
+
+     1 = Eligible
+     0 = Not eligible    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,251         73,200,000
+       1        1,571         33,800,000
+
+

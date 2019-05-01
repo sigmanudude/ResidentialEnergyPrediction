@@ -1,0 +1,1568 @@
+File layout for File 1 (Records are comma-delimited.  First line contains a
+list of variables on the file.  The remaining lines contain the values of
+the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File 1 only.
+
+
+NUMFLRS  'Number Floors in Apartment Building'              Columns 34-35
+ZNUMFLRS 'Imputation Flag for NUMFLRS'                      Columns 37
+NUMAPTS  'Interviewer Rprted Num of Units in Apt Building'  Columns 39-41
+ZNUMAPTS 'Imputation Flag for NUMAPTS'                      Columns 43
+CNFRMHUQ 'Agreement with type of housing unit recorded'     Columns 45
+ALTHUQ   'Alternative type of housing unit'                 Columns 47 
+REVHUQ   'How final TYPEHUQ was determined'                 Columns 49
+STORIES  'Reported Stories in Housing Unit'                 Columns 51-52
+CELLAR   'Home Has Basement'                                Columns 54
+ZCELLAR  'Imputation Flag for CELLAR'                       Columns 56
+CRAWL    'Home Has Crawl Space'                             Columns 58
+ZCRAWL   'Imputation Flag for CRAWL'                        Columns 60
+CONCRETE 'Home Has Concrete Slab'                           Columns 62
+ZCONCRET 'Imputation Flag for CONCRETE'                     Columns 64
+PCTBSTHT 'Portion of basement that is heated'               Columns 66
+ZPCTBSTH 'Imputation Flag for PCTBSTHT'                     Columns 68
+BASEHEAT 'Basement/crawl Space heated'                      Columns 70
+ZBASEHEA 'Imputation Flag for BASEHEAT'                     Columns 72
+BASEUSE  'Apt occupants have exclusive use of basement'     Columns 74
+ZBASEUSE 'Imputation Flag for BASEUSE'                      Columns 76
+TYPEHUQ4 'Mobile home have permanently attached structures' Columns 78
+ZTYPEHQ4 'Imputation Flag for TYPEHUQ4'                     Columns 80
+NCOMBATH 'Number of Complete Baths'                         Columns 82
+NHAFBATH 'Number of Half Baths'                             Columns 84
+BEDROOMS 'Number of bedrooms'                               Columns 86
+ZBEDROOM 'Imputation Flag for BEDROOMS'                     Columns 88
+OTHROOMS 'Number of Other Rooms'                            Columns 90
+ZOTHROOM 'Imputation Flag for OTHROOMS'                     Columns 92
+ATTIC    'Home has attic'                                   Columns 94
+ZATTIC   'Imputation Flag for ATTIC'                        Columns 96
+ATTICFIN 'Part of the attic finished'                       Columns 98
+ZATTICFI 'Imputation Flag for ATTICFIN'                     Columns 100
+ATTCHEAT 'How much of the attic is warm'                    Columns 102
+ZATTCHEA 'Imputation Flag for ATTCHEAT'                     Columns 104
+PCTATTHT 'Portion of the attic is warm'                     Columns 106
+ATTICUSE 'Apt occupants have exclusive use of attic'        Columns 108
+ZATTICUS 'Imputation Flag for ATTICUSE'                     Columns 110
+PRKGPLC1 'Home has Garage or Carport'                       Columns 112
+GARSIZE  'Size of attached garage'                          Columns 114  
+GARAGE1C 'One-Car attached Garage Present'                  Columns 116
+GARAGE2C 'Two-Car attached Garage Present'                  Columns 118
+GARAGE3C '3/More Car attached Garage present'               Columns 120
+CARPORT  'Covered Carport Present'                          Columns 122
+GARGLOC  'The garage is detached from or part of the home'  Columns 124
+GARGHEAT 'The garage is warm enough to work'                Columns 126
+ZGARGHEA 'Imputation Flag for GARGHEAT'                     Columns 128
+PRKGPLC2 'Home has a detached Garage or Carport'            Columns 130
+GARSIZ2A 'Size of first detached garage                     Columns 132  
+GARSIZ2B 'Size of second detached garage                    Columns 134  
+KOWNRENT 'Dwelling owned or rented'                         Columns 136
+ZKOWNREN 'Imputation Flag for KOWNRENT'                     Columns 138
+HUPROJ   'Reside in Public Housing Project'                 Columns 140
+ZHUPROJ  'Imputation Flag for HUPROJ'                       Columns 142
+RENTHELP 'Household receives a rent subsidy'                Columns 144
+KOWNCOND 'Home is part of a condominium or cooperative'     Columns 146
+CONDCOOP 'If KOWNCOND, is a condominium or cooperative'     Columns 148
+ZCONDCOO 'Imputation Flag for CONDCOOP'                     Columns 150
+YEARMADE 'Year Home Built'                                  Columns 152-153
+ZYEARMAD 'Imputation Flag for YEARMADE'                     Columns 155 
+OCCUPY   'Moved in After 12-31-98'                          Columns 157
+OCCUPYY  'Year Moved into Home'                             Columns 159
+OCCUPYM  'Month Moved Into Home'                            Columns 161-162
+URBRUR   'Reported type of neighborhood'                    Columns 164
+ZURBRUR  'Imputation Flag for URBRUR'                       Columns 166
+UGASHERE 'Natural gas from underground pipe available'      Columns 168
+ZUGASHER 'Imputation Flag for UGASHERE'                     Columns 170
+
+Codebook for File 1
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           166            3,900,000
+     2             1                    Q
+     3            76            1,700,000
+     7            42            1,000,000
+     8            24              600,000
+     9         4,513           99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+
+
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         1,087           20,300,000
+     2         1,047           24,500,000
+     3         1,489           38,900,000
+     4         1,199           23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily
+     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+The remaining variables are on File 1 only.
+
+NUMFLRS  'Number Floors in Apartment Building'              Columns 34-35
+     Numerical Variable 
+     Variable length  2
+     Question A-2
+
+     15 = 8 or more floors
+     99 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1 to 7      626          15,500,000
+          15      66           1,500,000 
+          99   4,130          90,000,000
+
+ZNUMFLRS  'Imputation Flag for NUMFLRS'                     Columns 37
+     Categorical Variable
+     Variable length: 1
+     
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         4,821         107,000,000
+     2             1                   Q
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+NUMAPTS 'Interviewer Rprted Num of Units in Apt Building'   Columns 39-41
+     Numerical Variable
+     Variable length 3
+
+     100 = 51 or more units
+     999 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     5 to 50     537           13,300,000
+     100         155            3,700,000
+     999       4,130           90,000,000
+
+ZNUMAPTS 'Imputation Flag for NUMAPTS'                      Columns 43
+     Categorical Variable
+     Variable length: 1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,768         105,700,000
+      2           54           1,300,000
+
+CNFRMHUQ 'Agreement with type of housing unit recorded'     Columns 45
+     Categorical Variable
+     Variable length: 1
+     Question A-3
+
+     0 = No
+
+     1 = Yes
+     6 = Don't know
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            36             800,000
+     1         4,785         106,200,000
+     6             1                   Q
+
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+ALTHUQ   'Alternative type of housing unit'                 Columns 47
+     Categorical Variable
+     Variable length: 1
+     Question A-3a
+
+     1 = a Mobile home
+     2 = Single-family detached house
+     3 = a Single-family attached house
+     4 = an Apartment building with 2-4 units
+     5 = an Apartment building 5 or more units
+     6 = Don't know 
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1             1                   Q
+     2            21             500,000
+     3             2                   Q
+     4             9                   Q
+     5             2                   Q
+     6             1                   Q
+     9         4,786         106,200,000
+
+                     
+REVHUQ   'How final TYPEHUQ was determined'                 Columns 49
+     Categorical Variable
+     Variable length: 1
+     Question A-3a1
+
+     1 = Use household's Definition
+     2 = Use RECS Definition 
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            19             400,000
+     2            17             300,000
+     9         4,786         106,200,000
+
+STORIES  'Reported Stories in Housing Unit'                 Columns 51-52
+     Categorical Variable 
+     Variable length  1
+     Question A-4   
+
+     1 = One-Story
+     2 = Two-Stories
+     3 = Three or More Stories
+     4 = Split-Level
+     5 = Some Other Type
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     10        2,210          48,700,000
+     20        1,403          30,400,000
+     31          119           2,400,000
+     32           10             300,000
+     40           61           1,300,000
+     50            2                   Q
+     99        1,017          23,800,000
+     
+     Q = Data withheld because fewer than 10 observation in the category.
+
+CELLAR  'Home Has Basement'                                 Columns 54
+     Categorical Variable 
+     Variable length  1
+     Question A-5-1
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         1,917           44,000,000
+     1         1,888           39,100,000
+     9         1,017           23,800,000
+
+ZCELLAR  'Imputation Flag for CELLAR'                       Columns 56
+     Categorical Variable
+     Variable length: 1
+     
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,810         106,800,000
+      2           12             200,000
+                  
+
+CRAWL  'Home Has Crawl Space'                               Columns 58
+     Categorical Variable 
+     Variable length  1
+     Question A-5-2
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         2,673           59,000,000
+     1         1,132           24,200,000
+     9         1,017           23,800,000
+
+
+ZCRAWL  'Imputation Flag for CRAWL'                         Columns 60
+     Categorical Variable
+     Variable length: 1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       4,801         106,500,000
+       2          21             400,000
+
+
+CONCRETE 'Home Has Concrete Slab'                           Columns 62
+     Categorical Variable 
+     Variable length  1
+     Question A-5-3
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         2,569           53,700,000
+     1         1,236           29,500,000
+     9         1,017           23,800,000
+
+
+ZCONCRET 'Imputation Flag for CONCRETE'                     Columns 64
+     Categorical Variable
+     Variable length: 1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,784         106,200,000
+      2           38             800,000
+
+PCTBSTHT 'Portion of basement that is heated'               Columns 66
+     Categorical Variable 
+     Variable length  1
+     Question A-5a1
+
+     0 = Very little (1-4%)
+     1 = Some (5-33%)
+     2 = About half (34-66%)
+     3 = About three-quarters (67-95%)
+     4 = Most of it (96-99%)
+     9 = not applicable
+       
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            26             600,000
+     1            70           1,400,000
+     2           121           2,500,000
+     3            64           1,100,000
+     4            22             500,000
+     9         4,519         100,800,000
+
+
+ZPCTBSTH 'Imputation Flag for PCTBSTHT'                     Columns 68
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,820         107,000,000
+      2            2                   Q                     
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+BASEHEAT 'Basement/crawl Space heated'                      Columns 70
+     Categorical Variable 
+     Variable length  1
+     Question A-5a
+
+     0 = None
+     1 = All
+     2 = Part
+     9 = Not applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           521          10,800,000
+
+     1         1,061          22,100,000
+     2           303           6,200,000
+     9         2,937          67,900,000
+
+ZBASEHEA 'Imputation Flag for BASEHEAT'                     Columns 72
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+
+     Value     Observations   Households
+      0        4,805         106,600,000
+      2           17             300,000
+
+
+BASEUSE  'Apt occupants have exclusive use of basement'     Columns 74 
+     Categorical Variable 
+     Variable length  1
+     Question A-5b
+
+     0 = None
+     1 = All
+     2 = Part
+     6 = Don't know 
+     9 = Not applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            59           1,300,000
+     1         1,767          36,700,000
+     2            54           1,000,000
+     6             8                   Q
+     9         2,934          67,800,000
+ Q = Data withheld because fewer than 10 observation in the category.
+
+ZBASEUSE 'Imputation Flag for BASEUSE'                      Columns 76 
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,813         106,800,000
+      2            9                   Q            
+Q = Data withheld because fewer than 10 observation in the category.
+
+TYPEHUQ4 'Mobile home have permanently attached structures' Columns 78
+     Categorical Variable 
+     Variable length  1
+     Question A-6
+
+     0 = No
+     1 = Yes
+     9 = Not applicable
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           266           5,700,000
+     1            59           1,100,000
+     9         4,497         100,200,000
+                     
+ZTYPEHQ4 'Imputation Flag for TYPEHUQ4'                     Columns 80
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,820         107,000,000
+      2            2                   Q    
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+NCOMBATH 'Number of Complete Baths'                         Columns 82
+     Numerical Variable 
+     Variable length 1
+     Question A-7
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            16             300,000
+     1         2,703          58,200,000
+     2         1,792          41,200,000
+     3           263           6,200,000
+     4            40             900,000
+     5             6                   Q
+     7             2                   Q
+                     
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+
+NHAFBATH 'Number of Half Baths'                             Columns 84
+     Numerical Variable 
+     Variable length  1
+     Question A-8
+ 
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,486          76,600,000
+     1         1,233          27,900,000
+     2           101           2,400,000
+     3             2                   Q
+    
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+BEDROOMS 'Number of bedrooms'                               Columns 86
+     Numerical Variable 
+     Variable length  1
+     Question A-9
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            36             900,000
+     1           530          12,700,000
+     2         1,339          29,500,000
+     3         1,996          44,100,000
+     4           765          16,500,000
+     5           125           2,700,000
+     6            26             600,000
+     7             4                   Q
+     9             1                   Q
+                     
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZBEDROOM 'Imputation Flag for BEDROOMS'                     Columns 88
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+      0        4,821         107,000,000
+      1            1                   Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+OTHROOMS 'Number of Other Rooms'                            Columns 90
+
+     Numerical Variable 
+     Variable length  1
+     Question A-10
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           186           4,200,000
+     2         1,773          39,400,000
+     3         1,576          35,000,000
+     4           844          18,400,000
+     5           312           6,900,000
+     6            81           1,800,000
+     7            36             900,000
+     8             8                   Q
+     9             6                   Q
+                 
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZOTHROOM 'Imputation Flag for OTHROOMS'                     Columns 92
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   1 = Imputed
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,820         106,900,000
+      1            2                   Q     
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ATTIC    'Home has attic'                                   Columns 94
+     Categorical Variable 
+     Variable length  1
+     Question A-11
+
+     0 = No
+     1 = Yes
+     9 = Not applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households 
+     0         2,708          58,600,000
+     1         1,097          24,600,000
+     9         1,017          23,800,000
+
+
+ZATTIC   'Imputation Flag for ATTIC'                        Columns 96
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households 
+       0       4,812         106,800,000
+       2          10             200,000
+     
+
+ATTICFIN 'Part of the attic finished'                       Columns 98
+     Categorical Variable 
+     Variable length  1
+     Question A-11a
+
+
+     0 = No
+     1 = Yes
+     9 = Not applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           937          21,100,000
+     1           160           3,500,000
+     9         3,725          82,400,000
+
+
+ZATTICFI 'Imputation Flag for ATTICFIN'                     Columns 100
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,816         106,900,000
+      2            6                   Q        
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+ATTCHEAT 'How much of the attic is warm'                    Columns 102
+     Categorical Variable 
+     Variable length  1
+     Question A-11b
+
+     0 = None 
+     1 = All
+     2 = Part 
+     9 = Not applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           889          20,100,000
+     1           125           2,700,000
+     2            83           1,800,000
+     9         3,725          82,400,000
+
+
+ZATTCHEA 'Imputation Flag for ATTCHEAT'                     Columns 104
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+      0        4,790         106,300,000
+      2           32             600,000
+                     
+
+PCTATTHT 'Portion of the attic is warm'                     Columns 106 
+     Categorical Variable 
+     Variable length  1
+     Question A-11b1
+
+     0 = Very little (1-4%)
+     1 = Some (5-33%) 
+     2 = About half (34-66%) 
+     3 = About three-quarters (67-95%) 
+     4 = Most of it (96-99%) 
+     9 = Not applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            33             700,000
+     1            24             600,000
+     2            18             300,000
+     3             5                   Q
+     4             3                   Q
+     9         4,739         105,200,000
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ATTICUSE 'Apt occupants have exclusive use of attic'        Columns 108
+     Categorical Variable 
+     Variable length  1
+     Question A-11c
+
+     0 = None 
+     1 = All
+     2 = Part 
+     9 = Not applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            32             500,000
+     1         1,054          23,800,000
+     2            11             200,000
+     9         3,725          82,400,000
+
+
+ZATTICUS 'Imputation Flag for ATTICUSE'                     Columns 110
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,818         106,900,000
+      2            4                   Q           
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+PRKGPLC1 'Home has Garage or Carport'                       Columns 112
+
+     Categorical Variable 
+     Variable length  1
+     Question A-12
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         2,058          43,300,000
+     1         1,628          37,100,000
+     9         1,136          26,500,000
+
+GARSIZE  'Size of attached garage'                          Columns 114
+     Categorical Variable 
+     Variable length  1
+     Question A-
+
+   1 = One-Car Garage
+   2 = Two-Car Garage
+   3 = Three-or-More-Car Garage
+   9 = No Answer
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+      1          476          10,800,000
+      2        1,060          24,100,000
+      3           92           2,300,000
+      9        3,194          69,800,000
+              
+GARAGE1C 'One-Car attached Garage Present'                  Columns 116
+     Categorical Variable 
+     Variable length  1
+     Question A-12a-1
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         4,346          96,200,000
+     1           476          10,800,000
+
+
+GARAGE2C 'Two-Car attached Garage Present'                  Columns 118     
+     Categorical Variable 
+     Variable length  1
+     Question A-12a-2
+
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,762          82,900,000
+     1         1,060          24,100,000
+
+GARAGE3C '3/More Car attached Garage present'               Columns 120     
+     Categorical Variable 
+     Variable length  1
+     Question A-12a-3
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         4,730         104,700,000
+     1            92           2,300,000
+                     
+     
+CARPORT  'Covered Carport Present'                          Columns 122
+     Categorical Variable 
+     Variable length  1
+     Question A-12a-4
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         4,627         102,700,000
+     1           195           4,300,000
+   
+GARGLOC  'The garage is detached from or part of the home'  Columns 124
+     Categorical Variable 
+     Variable length  1
+     Question A-12a1
+
+     1 = Detached from the home
+     2 = Part of the basement 
+     3 = Part of the first floor 
+     4 = Some other location
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           229           4,700,000
+     2         1,352          31,400,000
+     3            47           1,000,000
+     9         3,194          69,800,000
+
+
+GARGHEAT 'The garage is warm enough to work'                 Columns 126  
+     Categorical Variable 
+     Variable length  1
+     Question A-2a2
+
+     0 = No
+     1 = Yes
+     9 = Not applicable
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         1,196          26,900,000
+     1           426          10,200,000
+     9         3,200          69,900,000
+
+
+ZGARGHEA 'Imputation Flag for GARGHEAT'                      Columns 128  
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,815         106,800,000
+      2            7                   Q
+               
+Q = Data withheld because fewer than 10 observation in the category.
+
+PRKGPLC2 'Home has a detached Garage or Carport'            Columns 130
+     Categorical Variable 
+     Variable length  1
+     Question A-
+
+   1 = Yes
+   0 = No
+   6 = Don't Know
+   8 = Refused
+   9 = No Answer
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        1,036          22,100,000
+      1        1,022          21,200,000
+      9        2,764          63,600,000
+
+GARSIZ2A 'Size of first detached garage                     Columns 132  
+     Categorical Variable 
+     Variable length  1
+     Question A-
+
+   1 = One-Car Garage
+   2 = Two-Car Garage
+   3 = Three-or-More-Car Garage
+   4 = Carport
+   6 = Don't Know
+   8 = Refused
+   9 = No Answer
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           337           6,900,000
+     2           430           8,700,000
+     3            66           1,400,000
+     4           189           4,200,000
+     9         3,800          85,800,000
+
+GARSIZ2B 'Size of second detached garage                    Columns 134
+     Categorical Variable 
+     Variable length  1
+     Question A-
+
+   1 = One-Car Garage
+   2 = Two-Car Garage
+   3 = Three-or-More-Car Garage
+   4 = Carport
+   6 = Don't Know
+   8 = Refused
+   9 = No Answer
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            1                    Q
+     3            1                    Q
+     4            6                    Q
+     9         4814          106,800,000
+  
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+KOWNRENT 'Dwelling owned or rented'                         Columns 136
+     Categorical Variable 
+     Variable length  1
+     Question A-13A
+
+     1 = Own/Buying
+     2 = Rent
+     3 = Occupied Without Payment of Rent
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         3,310          72,700,000
+     2         1,448          33,000,000
+     3            64           1,300,000
+
+
+
+ZKOWNREN 'Imputation Flag for KOWNRENT'                     Columns 138
+     Categorical Variable 
+     Variable length  1
+   
+   0 = Not Imputed
+   1 = Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,819         106,900,000
+      1            3                   Q
+
+  Q = Data withheld because fewer than 10 observation in the category.
+
+
+
+HUPROJ  'Reside in Public Housing Project'                  Columns 140
+     Categorical Variable 
+     Variable length  1
+     Question A-13a
+
+     0 = No
+     1 = Yes
+     6 = Don't know
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         1,325          30,000,000
+     1           173           3,900,000
+     6            14             400,000
+     9         3,310          72,700,000
+
+
+ZHUPROJ 'Reside in Public Housing Project'                  Columns 142
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,819         106,900,000
+      2            3                   Q
+         
+Q = Data withheld because fewer than 10 observation in the category.
+
+RENTHELP 'Household receives a rent subsidy'                Columns 144
+     Categorical Variable 
+     Variable length  1
+     Question A-13a1
+
+
+     0 = No
+     1 = Yes
+     6 = Don't know
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         1,227          27,900,000
+     1           105           2,300,000
+     6             5                   Q
+     9         3,485          76,700,000
+ Q = Data withheld because fewer than 10 observation in the category.
+
+KOWNCOND 'Home is part of a condominium or cooperative'     Columns 146
+     Categorical Variable 
+     Variable length  1
+     Question A-14
+
+     0 = No
+     1 = Yes
+     6 = Don't know
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         4,626         101,600,000
+     1           174           4,800,000
+     6            22             500,000
+
+
+CONDCOOP 'If KOWNCOND, is a condominium or cooperative'     Columns 148
+     Categorical Variable 
+     Variable length  1
+     Question A-14a
+
+     1 = Condominium
+     2 = Cooperative
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1          129      3,700,000
+
+     2           45      1,100,000
+     9        4,648    102,200,000
+
+
+ZCONDCOO 'Imputation Flag for CONDCOOP'                     Columns 150
+     Categorical Variable 
+     Variable length  1
+  
+   0 = Not Imputed
+   2 = EIA Imputed
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,821         107,000,000
+      2            1                   Q
+       
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+YEARMADE 'Year Home Built'                                  Columns 152-153 
+                                                                                         Categorical Variable 
+     Variable length  2
+     Question A-15
+
+     1 = Before 1940
+     2 = 1940-49
+     3 = 1950-59
+     4 = 1960-69
+     5 = 1970-79
+     6 = 1980
+     7 = 1981-89
+     8 = 1990
+     9 = 1991-95
+     10 = 1996-98
+     11 = 1999
+     12 = 2000
+     13 = 2001
+     96 = Don't know
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           922          19,000,000
+     2           362           7,600,000
+     3           666          14,200,000
+     4           636          13,800,000
+     5           853          18,800,000
+     6           128           3,000,000
+     7           649          15,300,000
+     8            79           1,900,000
+     9           279           7,300,000
+     10          157           4,100,000
+     11           54           1,200,000
+     12           31             800,000
+     13            6                   Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZYEARMAD 'Imputation Flag for YEARMADE'                     Columns 155
+     Categorical Variable 
+     Variable length  1
+  
+   0 = Not Imputed
+   1 = Imputed
+
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,339          96,400,000
+      1          483          10,500,000
+
+
+OCCUPY  'Moved in After 12-31-98'                           Columns 157
+
+     Categorical Variable 
+     Variable length  1
+     Question A-15a
+
+     0 = No
+     1 = Yes
+     6 = Don't Know
+     
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,509          77,200,000
+     1         1,311          29,800,000
+     6             2                   Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+OCCUPYY  'Year Moved into Home'                             Columns 159
+     Categorical Variable 
+     Variable length  1
+     Question A-15a1
+
+     1 = 1999   
+     2 = 2000   
+     3 = 2001   
+     6 = Don't Know    
+     9 = Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           450           9,900,000
+     2           566          13,100,000
+     3           292           6,700,000
+     6             3                   Q
+     9         3,511          77,200,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+OCCUPYM 'Month Moved Into Home'                             Columns 161-162
+     Categorical Variable 
+     Variable length 2
+     Question A-15a2
+
+     1 = January
+     2 = February
+     3 = March
+     4 = April
+     5 = May
+     6 = June
+     7 = July
+     8 = August
+     9 = September
+     10 = October
+     11 = November
+     12 = December
+     96 = Don't Know
+     99 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           108           2,400,000
+     2           100           2,300,000
+     3           120           2,800,000
+     4           119           2,600,000
+     5           110           2,600,000
+     6           138           3,200,000
+     7            92           1,900,000
+     8           128           3,000,000
+     9           109           2,600,000
+     10           94           2,000,000
+     11           93           2,200,000
+     12           89           2,000,000
+     96           11             200,000
+     99        3,511          77,200,000
+
+
+URBRUR 'Reported type of neighborhood'                      Columns 164
+     Categorical Variable 
+     Variable length  1
+     Question A-16
+
+          different than RECS93
+          (1993 RECS used interviewer observation)
+
+     1 = City
+     2 = Town
+     3 = Suburbs
+     4 = Rural
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         2,215          49,900,000
+     2           866          18,000,000
+     3           840          21,200,000
+     4           901          17,900,000
+
+
+ZURBRUR 'Imputation Flag for URBRUR'                        Columns 166
+     Categorical Variable 
+     Variable length  1
+  
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,815         106,800,000
+      1            7                   Q
+           
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+UGASHERE 'Natural gas from underground pipe available'      Columns 168
+     Categorical Variable 
+     Variable length  1
+     Question A-17
+
+     0 = No
+     1 = Yes
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         1,391          29,300,000
+     1         3,431          77,700,000
+
+
+ZUGASHER 'Imputation Flag for UGASHERE'                     Columns 170
+     Categorical Variable 
+     Variable length  1
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   1 = Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0        4,636         102,900,000
+      1          184           4,100,000
+      2            2                   Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
