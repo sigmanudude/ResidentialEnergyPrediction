@@ -1,0 +1,155 @@
+Cols,Type,Descr
+DOEID,Character,Unique identifier for each respondent
+REGIONC,Numeric,Census Region
+DIVISION,Numeric,Census Division
+TYPEHUQ,Numeric,Type of housing unit
+CELLAR,Numeric,Housing unit over a basement
+ZCELLAR,Numeric,Imputation flag for CELLAR
+STORIES,Numeric,Number of stories in a single-family home
+KOWNRENT,Numeric,Own or rent
+BEDROOMS,Numeric,Number of bedrooms
+NCOMBATH,Numeric,Number of full bathrooms
+NHAFBATH,Numeric,Number of half bathrooms
+OTHROOMS,Numeric,Number of other rooms
+DOOR1SUM,Numeric,Number of sliding glass doors
+WINDOWS,Numeric,Number of windows
+ADQINSUL,Numeric,Level of insulation
+SWIMPOOL,Numeric,Swimming pool
+POOL,Numeric,Heated swimming pool
+FUELPOOL,Numeric,Fuel used for heating swimming pool
+RECBATH,Numeric,Hot tub
+ZRECBATH,Numeric,Imputation flag for RECBATH
+FUELTUB,Numeric,Fuel used for heating hot tub
+NUMFRIG,Numeric,Number of refrigerators used
+SIZRFRI1,Numeric,Size of most-used refrigerator
+TYPERFR1,Numeric,Door arrangement of most-used refrigerator
+AGERFRI1,Numeric,Age of most-used refrigerator
+ICE,Numeric,Through-the-door ice on most-used refrigerator
+SIZRFRI2,Numeric,Size of second most-used refrigerator
+TYPERFR2,Numeric,Door arrangement of second most-used refrigerator
+AGERFRI2,Numeric,Age of second most-used refrigerator
+NUMFREEZ,Numeric,Number of separate freezers used
+UPRTFRZR,Numeric,Door arrangement of most-used freezer
+SIZFREEZ,Numeric,Size of most-used freezer
+AGEFRZR,Numeric,Age of most-used freezer
+ZAGEFRZR,Numeric,Imputation flag for AGEFRZR
+STOVEN,Numeric,Number of stoves
+OVENUSE,Numeric,Frequency of use of oven part of stove
+ZOVENUSE,Numeric,Imputation flag for OVENUSE
+STOVE,Numeric,Number of separate cooktops
+OVEN,Numeric,Number of separate ovens
+MICRO,Numeric,Microwave oven used
+ZMICRO,Numeric,Imputation flag for MICRO
+AMTMICRO,Numeric,Frequency of microwave use
+NUMMEAL,Numeric,Frequency hot meals are cooked
+ZNUMMEAL,Numeric,Imputation flag for NUMMEAL
+DISHWASH,Numeric,Have dishwasher
+DWASHUSE,Numeric,Frequency of dishwasher use
+CWASHER,Numeric,Have clothes washer in home
+WASHLOAD,Numeric,Frequency of clothes washer use
+DRYER,Numeric,Have clothes dryer in home
+DRYRFUEL,Numeric,Fuel used by clothes dryer
+DRYRUSE,Numeric,Frequency of clothes dryer use
+ZDRYRUSE,Numeric,Imputation flag for DRYRUSE
+TVCOLOR,Numeric,Number of televisions used
+DNTHEAT,Numeric,"No space heating equipment, or unused space heating equipment"
+EQUIPM,Numeric,Main space heating equipment type
+ZEQUIPM,Numeric,Imputation flag for EQUIPM
+FUELHEAT,Numeric,Main space heating fuel
+EQUIPAGE,Numeric,Age of main space heating equipment
+THERMAIN,Numeric,Any thermostats
+TEMPHOME,Numeric,Winter temperature when someone is home during the day
+TEMPGONE,Numeric,Winter temperature when no one is home during the day
+TEMPNITE,Numeric,Winter temperature at night
+EQUIPAUX,Numeric,Secondary space heating equipment used
+BASEHEAT,Numeric,Heating used in basement
+AIRCOND,Numeric,Air conditioning equipment used
+COOLTYPE,Numeric,Type of air conditioning equipment used
+CENACHP,Numeric,Central air conditioner is a heat pump
+ZCENACHP,Numeric,Imputation flag for CENACHP
+AGECENAC,Numeric,Age of central air conditioner
+USECENAC,Numeric,Central air conditioner household behavior
+NUMBERAC,Numeric,Number of individual air conditioning units used
+WWACAGE,Numeric,Age of most-used individual air conditioning unit
+ZWWACAGE,Numeric,Imputation flag for WWACAGE
+USEWWAC,Numeric,Most-used individual air conditioning unit household behavior
+ZUSEWWAC,Numeric,Imputation flag for USEWWAC
+NUMCFAN,Numeric,Number of ceiling fans used
+FUELH2O,Numeric,Fuel used by main water heater
+ZFUELH2O,Numeric,Imputation flag for FUELH2O
+WHEATAGE,Numeric,Main water heater age
+WHEATSIZ,Numeric,Main water heater size
+HHSEX,Numeric,Respondent sex
+HHAGE,Numeric,Respondent age
+EMPLOYHH,Numeric,Respondent employment status
+SDESCENT,Numeric,Respondent is Hispanic or Latino
+NHSLDMEM,Numeric,Number of household members
+ATHOME,Numeric,Number of weekdays someone is at home
+ZATHOME,Numeric,Imputation flag for ATHOME
+MONEYPY,Numeric,Annual gross household income for the last year
+ZMONEYPY,Numeric,Imputation flag for MONEYPY
+USEEL,Numeric,Electricity used
+ELWARM,Numeric,Electricity used for space heating
+ELCOOL,Numeric,Electricity used for air conditioning
+ELWATER,Numeric,Electricity used for water heating
+ELFOOD,Numeric,Electricity used for cooking
+ELOTHER,Numeric,"Electricity used, other than for space heating, water heating, air conditioning, or cooking"
+USENG,Numeric,Natural gas used
+UGWARM,Numeric,Natural gas used for space heating
+UGWATER,Numeric,Natural gas used for water heating
+UGCOOK,Numeric,Natural gas used for cooking
+UGOTH,Numeric,"Natural gas used, other than for space heating, water heating, or cooking"
+USELP,Numeric,Propane used
+LPWARM,Numeric,Propane used for space heating
+LPWATER,Numeric,Propane used for water heating
+LPCOOK,Numeric,Propane used for cooking
+LPOTHER,Numeric,"Propane used, other than for space heating, water heating, or cooking"
+USEFO,Numeric,Fuel oil used
+FOWARM,Numeric,Fuel oil used for space heating
+FOWATER,Numeric,Fuel oil used for water heating
+USEWOOD,Numeric,Wood used (cordwood or pellets)
+WOODLOGS,Numeric,Wood logs (cordwood) used
+WDPELLET,Numeric,Wood pellets used
+WDOTHER,Numeric,"Type of wood used other than logs, pellets, or scraps"
+WDWARM,Numeric,Wood (cordwood or pellets) used for space heating
+WDWATER,Numeric,Wood (cordwood or pellets) used for water heating
+USESOLAR,Numeric,Solar used
+SOLWATER,Numeric,Solar used for water heating
+SOLOTHER,Numeric,"Solar used, other than for water heating"
+NWEIGHT,Numeric,Final sample weight
+KWH,Numeric,"Total site electricity usage, in kilowatthours, 2015"
+BTUEL,Numeric,"Total site electricity usage, in thousand Btu, 2015"
+BTUELSPH,Numeric,"Electricity usage for space heating, main and secondary, in thousand Btu, 2015"
+BTUELCOL,Numeric,"Electricity usage for air conditioning (central systems and individual units), in thousand Btu, 2015"
+BTUELWTH,Numeric,"Electricity usage for water heating, main and secondary, in thousand Btu, 2015"
+BTUELRFG,Numeric,"Electricity usage for all refrigerators, in thousand Btu, 2015"
+DOLLAREL,Numeric,"Total electricity cost, in dollars, 2015"
+DOLELSPH,Numeric,"Electricity cost for space heating, main and secondary, in dollars, 2015"
+DOLELCOL,Numeric,"Electricity cost for air conditioning (central systems and individual units), in dollars, 2015"
+DOLELWTH,Numeric,"Electricity cost for water heating, main and secondary, in dollars, 2015"
+DOLELRFG,Numeric,"Electricity cost for all refrigerators, in dollars, 2015"
+CUFEETNG,Numeric,"Total natural gas usage, in hundred cubic feet, 2015"
+BTUNG,Numeric,"Total natural gas usage, in thousand Btu, 2015"
+BTUNGSPH,Numeric,"Natural gas usage for space heating, main and secondary, in thousand Btu, 2015"
+BTUNGWTH,Numeric,"Natural gas usage for water heating, main and secondary, in thousand Btu, 2015"
+DOLLARNG,Numeric,"Total natural gas cost, in dollars, 2015"
+DOLNGSPH,Numeric,"Natural Gas cost for space heating, main and secondary, in dollars, 2015"
+DOLNGWTH,Numeric,"Natural gas cost for water heating, main and secondary, in dollars, 2015"
+GALLONLP,Numeric,"Total propane usage, in gallons, 2015"
+BTULP,Numeric,"Total propane usage, in thousand Btu, 2015"
+BTULPSPH,Numeric,"Propane usage for space heating, main and secondary, in thousand Btu, 2015"
+BTULPWTH,Numeric,"Propane usage for water heating, main and secondary, in thousand Btu, 2015"
+DOLLARLP,Numeric,"Total cost of propane, in dollars, 2015"
+DOLLPSPH,Numeric,"Propane cost for space heating, main and secondary, in dollars, 2015"
+DOLLPWTH,Numeric,"Propane cost for water heating, main and secondary, in dollars, 2015"
+GALLONFO,Numeric,"Total fuel oil/kerosene usage, in gallons, 2015"
+BTUFO,Numeric,"Total fuel oil/kerosene usage, in thousand Btu, 2015"
+BTUFOSPH,Numeric,"Fuel oil/kerosene usage for space heating, main and secondary, in thousand Btu, 2015"
+BTUFOWTH,Numeric,"Fuel oil/kerosene usage for water heating, main and secondary, in thousand Btu, 2015"
+DOLLARFO,Numeric,"Total cost of fuel oil/kerosene, in dollars, 2015"
+DOLFOSPH,Numeric,"Fuel oil/kerosene cost for space heating, main and secondary, in dollars, 2015"
+DOLFOWTH,Numeric,"Fuel oil/kerosene cost for water heating, main and secondary, in dollars, 2015"
+PERIODEL,Numeric,Number of days covered by Energy Supplier Survey electricity billing data and used to calculate annual consumption and expenditures
+PERIODNG,Numeric,Number of days covered by Energy Supplier Survey natural gas billing data and used to calculate annual consumption and expenditures
+PERIODFO,Numeric,Number of days covered by Energy Supplier Survey fuel oil/kerosene billing data and used to calculate annual consumption and expenditures
+PERIODLP,Numeric,Number of days covered by Energy Supplier Survey propane billing data and used to calculate annual consumption and expenditures
