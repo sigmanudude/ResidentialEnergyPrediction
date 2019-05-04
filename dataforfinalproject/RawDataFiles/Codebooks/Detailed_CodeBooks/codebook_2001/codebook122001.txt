@@ -1,0 +1,804 @@
+ File layout for File 12 (Records are comma-delimited.  First line contains a list of variables on the file.  The remaining lines contain the values of the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+
+Variables in File 12 only.
+
+DOLLARKR 'Estimated Kerosene Cost In Dollars'               Columns 34-37
+DOLLAREL 'Estimated Cost Of Electricity In Dollars'         Columns 39-42
+DOLLARNG 'Estimated Cost Of Natural Gas In Dollars'         Columns 44-47
+DOLLARFO 'Estimated Cost Of Fuel Oil In Dollars'            Columns 49-52
+DOLLARLP 'Estimated Cost Of LPG In Dollars'                 Columns 54-57
+DOLELSPH 'Electric Space Heat Use (Estimated) In Dollars'   Columns 59-62
+DOLNGSPH 'Natural Gas Space Heat Use (Estimated) In Dollars'Columns 64-67 
+DOLFOSPH 'Fuel Oil Space Heat Use (Estimated) In Dollars'   Columns 69-72
+DOLLPSPH 'LPG Space Heat Use (Estimated) In Dollars'        Columns 74-77
+DOLKRSPH 'Kerosene Space Heat Use (Estimated) In Dollars'   Columns 79-82
+DOLELWTH 'Electric Water Heating Use (Estimated) In Dollars'Columns 84-87 
+DOLNGWTH 'Natural Gas Water Heat Use (Estimated) In Dollars'Columns 89-92 
+DOLFOWTH 'Fuel Oil Water Heat Use (Estimated) In Dollars'   Columns 94-97
+DOLLPWTH 'LPG Water Heat Use (Estimated) In Dollars'        Columns 99-102
+DOLKRWTH 'Kerosene Water Heat Use (Estimated) In Dollars'   Columns 104-106
+DOLELAPL 'Electric Appliance Use (Estimated) In Dollars'    Columns 108-111
+DOLNGAPL 'Natural Gas Appliance Use (Estimated) In Dollars' Columns 113-116
+DOLFOAPL 'Fuel Oil Appliance Use (Estimated) In Dollars'    Columns 118-119
+DOLLPAPL 'LPG Appliance Use (Estimated) In Dollars'         Columns 121-124
+DOLKRAPL 'Kerosene Appliance Use (Estimated) In Dollars'    Columns 126-129 
+DOLELCOL 'Electric AC Use (Estimated) In Dollars'           Columns 131-134
+DOLELRFG 'Electric Refrigerator Use (Estimated) In Dollars' Columns 136-138
+DOLELFZZ 'Electric Freezer Use (Estimated) In Dollars'      Columns 140-142
+DOLELDWH 'Electric Dishwasher Use (Estimated) In Dollars'   Columns 144-146
+DOLELCDR 'Electric Clothes Dryer Use (Estimated) In Dollars'Columns 148-150
+
+
+Codebook for File 12
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            166          3,900,000
+     2              1                  Q
+     3             76          1,700,000
+     7             42          1,000,000
+     8             24            600,000
+     9          4,513         99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1          1,087         20,300,000
+     2          1,047         24,500,000
+     3          1,489         38,900,000
+     4          1,199         23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily
+
+     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+
+
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+The remaining variables are on File Section 12 only.
+
+
+DOLLARKR 'Estimated Kerosene Cost In Dollars'               Columns 34-37
+     Numerical Variable 
+     Variable length 4
+
+          DOLLARKR is the cost in dollars of kerosene bought.  The amount that the household uses may vary from the amount that they bought.
+
+          DOLLARKR is based upon one of the following:
+               1.   The respondent's estimate of the dollar amount spent in 12
+               months prior to the interview.  See variables PRICEKER and
+               TOTPAYKR on File 6.
+
+               2.   Supplier data on the amount sold to the household in 2001.
+
+               3.   Regression estimate.
+
+          The variable ORIGKRC on file 10 summarizes the source of the data for
+     DOLLARKR.
+
+          The variable USEKERO on File 6 can be used to determine if a household
+     uses kerosene.   
+
+               Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum
+     of        DOLLARKR       DOLLARKR       Value of  Value of
+     USEKERO   Is Zero        Is Positive    DOLLARKR  DOLLARKR
+
+     0         4683               0             0          0
+     1            0             159          1101          1
+
+
+DOLLAREL 'Estimated Cost Of Electricity In Dollars'         Columns 39-42
+     Numerical Variable 
+     Variable length 4
+
+     DOLLAREL is based upon one of the following:
+          
+          1.   Utility records.
+          2.   Regression estimate.
+
+          The variable ORIGELC on file 10 summarizes the source of the data for
+     DOLLAREL.
+
+          The variable USEEL on File 6 can be used to determine if a household
+     uses electricity.   
+
+               Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum
+     of        DOLLAREL       DOLLAREL       Value of  Value of
+     USEEL     Is Zero        Is Positive    DOLLAREL  DOLLAREL
+
+     0             1              0               0           0
+     1             1           4820            4755           0
+
+
+DOLLARNG 'Estimated Cost Of Natural Gas In Dollars'         Columns 44-47
+     Numerical Variable 
+     Variable length 4
+
+     DOLLARNG is based upon one of the following:
+          
+          1.   Utility records.
+          2.   Regression estimate.
+
+          The variable ORIGNGC on file 10 summarizes the source of the data for
+     DOLLARNG.
+
+          The variable USENG on File 6 can be used to determine if a household
+     uses Natural gas.   
+
+
+               Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum
+     of        DOLLARNG       DOLLARNG       Value of  Value of
+     USENG     Is Zero        Is Positive    DOLLARNG  DOLLARNG
+
+     0          1883              0              0            0
+     1             1           2938           5385            0
+
+
+DOLLARFO 'Estimated Cost Of Fuel Oil In Dollars'            Columns 49-52
+     Numerical Variable 
+     Variable length 4
+
+     DOLLARFO is based upon one of the following:
+
+          1.   Supplier data on the amount delivered to the household in
+               2001.
+          2.   Regression estimate.
+
+          The variable ORIGFOC On file 10 summarizes the source of the data for
+     DOLLARFO.
+
+          The variable USEFO on File 6 can be used to determine if a household
+     uses kerosene.   
+
+               Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum
+     of        DOLLARFO       DOLLARFO       Value of  Value of
+     USEFO     Is Zero        Is Positive    DOLLARFO  DOLLARFO
+
+     0          4313              0              0       0
+     1             6            503           2476       0
+
+          The 6 cases where USEFO equals 1 and DOLLARFO equals 0 occur when the
+     household uses fuel oil but did not report buying fuel oil in the 12
+     months prior to the interview or the supplier reported that they did not
+     deliver fuel oil to the household during 2001.
+ 
+DOLLARLP 'Estimated Cost Of LPG In Dollars'                 Columns 54-57
+     Numerical Variable 
+     Variable length 4
+
+     DOLLARLP is based upon one of the following:
+          1.   Supplier data on the amount delivered to the household in
+               2001.
+          2.   Regression estimate.
+
+          The variable ORIGLPC On file 10 summarizes the source of the data for
+     DOLLARLP.
+
+          The variable USELP on File 6 can be used to determine if a household
+     uses kerosene.   
+
+               Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum
+     of        DOLLARLP       DOLLARLP       Value of  Value of
+     USELP     Is Zero        Is Positive    DOLLARLP  DOLLARLP
+
+     0          4813              0              0       0
+     1             6            498           3822       0
+
+          The 6 cases where USELP equals 1 and DOLLARLP equals 0 occur when the
+     household uses LPG but did not report buying LPG in the 12 months prior
+     to the interview or the supplier reported that they did not deliver LPG
+     to the household during 2001.
+  
+The remaining variables are estimates of expenditures by end use.  
+
+For each household that responded to the 2001 RECS, the annual energy
+expenditures for five end-use categories-- space heating, water heating, air-
+conditioning, refrigerators, and general appliance usage--were estimated. 
+The end-use estimates were produced for each of the five main energy sources:
+electricity, natural gas, fuel oil, kerosene, and liquefied petroleum gas
+(LPG).  The end-use expenditures were not based on data produced by placing
+meters on individual appliances; rather, they were obtained by estimating how
+much of the total annual expenditures for each energy source can be
+attributed to each of the end-use categories for each household by using a
+regression technique.  
+
+The regression technique was used to first estimate the percent of energy
+consumption by energy source and end use.  Next these percents were used to
+determine the corresponding amount spent on each end-use by each household.  
+
+The end-use estimates were normalized so that the sum of the end-use
+estimates was equal to the actual or imputed yearly expenditures for each
+energy source used by the household.
+
+In particular:
+     DOLLAREL  = DOLELSPH + DOLELWTH + DOLELAPL + DOLELCOL + DOLELRFG
+     DOLLARNG  = DOLNGSPH + DOLNGWTH + DOLNGAPL + DOLNGCOL
+     DOLLARFO  = DOLFOSPH + DOLFOWTH + DOLFOAPL
+     DOLLARLP  = DOLLPSPH + DOLLPWTH + DOLLPAPL
+     DOLLARKR  = DOLKRSPH + DOLKRWTH + DOLKRAPL
+
+For all energy sources, the space-heating component was defined as all energy
+used to generate heat by space-heating equipment.  The equipment could be the
+main space-heating equipment or secondary space-heating equipment.  Hence,
+for all energy sources, a household could have had a positive amount of
+energy assigned to the space-heating component even if the energy source was
+not used as the main space-heating energy source.
+
+The component for water heating was defined as all energy used to heat water
+for hot running water, as well as water heated at point sources (such as
+stoves or auxiliary water-heating equipment) for bathing, cleaning and other
+noncooking applications of hot water.  Energy used at point sources to heat
+water for cooking and hot drinks was considered part of the general appliance
+component, as was energy used to heat water for a swimming pool, hot tub,
+spa, or Jacuzzi. 
+
+For electricity, end use estimates were also made for freezers, dishwashers, and clothes dryers.  The estimates are DOLELFRZ, DOLELDWH, and DOLELCDR.  DOLELAPL also includes these end uses, hence DOLELAPL equals the sum of DOLELFRZ, DOLELDWH, and DOLELCDR plus the expenditures for lights and other numerous appliances.  The electricity used in refrigerators is not included in DOLELAPL.  DOLELAPL includes all electricity expenditures except electricity use for space heating, water heating, air conditioning, and refrigerators.  This includes electricity used for freezers, cooking, dishwashers, clothes dryers, lights, TV's, VCR's, stereos, coffee makers, power tools, pool heaters, furnace fans, home computers, and many more uses.
+
+DOLELSPH 'Electric Space Heat Use (Estimated) In Dollars'   Columns 59-62
+     Numerical Variable 
+     Variable length 4
+
+          For the 1987 and subsequent RECS, the electricity regression equation
+     assigned the electricity associated with the operation of fans in any
+     central forced-air heating equipment was assigned to the electricity
+     appliance component and not to the space-heating component.  Hence, if
+     ELWARM = 0 then DOLELSPH = 0.
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLELSPH       DOLELSPH       Value of  Value of
+     USEEL     ELWARM    Is Zero        Is Positive    DOLELSPH  DOLELSPH
+
+     0         0             1              0                0          0
+     1         0          2921              0                0          0
+     1         1            13           1997             1867          0
+
+          
+DOLNGSPH 'Natural Gas Space Heat Use (Estimated) In Dollars' Columns 64-67
+     Numerical Variable 
+     Variable length 4
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLNGSPH       DOLNGSPH       Value of  Value of
+     USENG     UGWARM    Is Zero        Is Positive    DOLNGSPH  DOLNGSPH
+
+     0         0          1883              0                0          0
+     1         0           264              0                0          0
+     1         1            11           2664             4454          0
+ 
+DOLFOSPH 'Fuel Oil Space Heat Use (Estimated) In Dollars'   Columns 69-72  
+     Numerical Variable 
+     Variable length 4
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLFOSPH       DOLFOSPH       Value of  Value of
+     USEFO     FOWARM    Is Zero        Is Positive    DOLFOSPH  DOLFOSPH
+
+     0         0          4313              0                0          0
+     1         0             9              0                0          0
+     1         1             7            493             2337          0
+
+ 
+DOLLPSPH 'LPG Space Heat Use (Estimated) In Dollars'        Columns 74-77
+     Numerical Variable 
+     Variable length 4
+
+                         Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLLPSPH       DOLLPSPH       Value of  Value of
+     USELP     LPWARM    Is Zero        Is Positive    DOLLPSPH  DOLLPSPH
+
+     0         0          4318              0                0          0
+     1         0           149              0                0          0
+     1         1             6            349             2996          0
+ 
+DOLKRSPH 'Kerosene Space Heat Use (Estimated) In Dollars'   Columns 79-82
+     Numerical Variable 
+     Variable length 4
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLKRSPH       DOLKRSPH       Value of  Value of
+     USEKERO   KRWARM    Is Zero        Is Positive    DOLKRSPH  DOLKRSPH
+
+     0         0          4683              0                0          0
+     1         0            10              0                0          0
+     1         1             0            129             1101          2
+
+DOLELWTH 'Electric Water Heating Use (Estimated) In Dollars' Columns 84-87
+     Numerical Variable 
+     Variable length 4
+
+                         Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLELWTH       DOLELWTH       Value of  Value of
+     USEEL     ELWATER   Is Zero        Is Positive    DOLELWTH  DOLELWTH
+
+     0         0             1              0                0          0
+     1         0          2972              0                0          0
+     1         1            38           1811             1251          0
+
+DOLNGWTH 'Natural Gas Water Heat Use (Estimated) In Dollars' Columns 89-92
+     Numerical Variable 
+     Variable length 4
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLNGWTH       DOLNGWTH       Value of  Value of
+     USENG     UGWATER   Is Zero        Is Positive    DOLNGWTH  DOLNGWTH
+
+     0         0          1883              0                0          0
+     1         0           389              0                0          0
+     1         1             0           2550             1450         14
+ 
+DOLFOWTH 'Fuel Oil Water Heat Use (Estimated) In Dollars'   Columns 94-97
+     Numerical Variable 
+     Variable length 4
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLFOWTH       DOLFOWTH       Value of  Value of
+     USEFO     FOWATER   Is Zero        Is Positive    DOLFOWTH  DOLFOWTH
+
+     0         0          4313              0                0         0
+     1         0           277              0                0         0
+     1         1             3            279              953         0
+ 
+DOLLPWTH 'LPG Water Heat Use (Estimated) In Dollars'        Columns 99-102
+     Numerical Variable 
+     Variable length 4
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLLPWTH       DOLLPWTH       Value of  Value of
+     USELP     LPWATER   Is Zero        Is Positive    DOLLPWTH  DOLLPWTH
+
+     0         0          4318              0                0         0
+     1         0           343              0                0         0
+     1         1             0            161              717        17
+ 
+DOLKRWTH 'Kerosene Water Heat Use (Estimated) In Dollars'   Columns 104-106
+     Numerical Variable 
+     Variable length 3
+
+                              Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLKRWTH       DOLKRWTH       Value of  Value of
+     USEKERO   KRWATER   Is Zero        Is Positive    DOLKRWTH  DOLKRWTH
+
+     0         0          4683              0                0         0
+     1         0           134              0                0         0
+     1         1             0              5              251        52
+
+DOLELAPL 'Electric Appliance Use (Estimated) In Dollars'    Columns 108-111
+     Numerical Variable 
+     Variable Length 4
+     Includes DOLELFZZ DOLELCOK DOLELDWH DOLELCDR 
+
+                    Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum
+     of        DOLELAPL       DOLELAPL       Value of  Value of
+     USEEL     Is Zero        Is Positive    DOLELAPL  DOLELAPL
+
+     0             1              0                0         0
+     1             1           4820             3009         0
+
+DOLNGAPL 'Natural Gas Appliance Use (Estimated) In Dollars' Columns 113-116
+     Numerical Variable 
+     Variable length 3
+
+                    Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum            
+     of        DOLNGAPL       DOLNGAPL       Value of  Value of
+     USENG     Is Zero        Is Positive    DOLNGAPL  DOLNGAPL
+
+     0          1883              0                0         0
+     1          1096           1843             1198         0
+
+ 
+DOLFOAPL 'Fuel Oil Appliance Use (Estimated) In Dollars'    Columns 118-119
+     Numerical Variable
+     Variable length 2
+
+               Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum            
+     of        DOLFOAPL       DOLFOAPL       Value of  Value of
+     USEFO     Is Zero        Is Positive    DOLFOAPL  DOLFOAPL
+
+     0          4313              0                0         0
+     1           508              1                1         0
+
+          All four cases where DOLFOAPL was positive correspond to cases where
+     fuel oil was used to heat water for a hot tub, spa, or Jacuzzi.
+ 
+DOLLPAPL 'LPG Appliance Use (Estimated) In Dollars'         Columns 121-124
+     Numerical Variable 
+     Variable length 3
+
+               Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum            
+     of        DOLLPAPL       DOLLPAPL       Value of  Value of
+     USELP     Is Zero        Is Positive    DOLLPAPL  DOLLPAPL
+
+     0          4318              0                0         0
+     1           193            311             3822         0
+
+DOLKRAPL 'Kerosene Appliance Use (Estimated) In Dollars'    Column 126-129
+     Numerical Variable 
+     Variable length 1
+
+                    Number of      Number of
+               Observations   Observations
+     Value     Where          Where          Maximum   Minimum            
+     of        DOLKRAPL       DOLKRAPL       Value of  Value of
+     USEKERO   Is Zero        Is Positive    DOLKRAPL  DOLKRAPL
+
+     0          4683              0                0         0
+     1           120             10              600         0
+
+DOLELCOL 'Electric AC Use (Estimated) In Dollars'           Columns 131-134
+     Numerical Variable 
+     Variable length 4
+
+                         Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLELCOL       DOLELCOL       Value of  Value of
+     USEEL     AIRCOND   Is Zero        Is Positive    DOLELCOL  DOLELCOL
+
+     0         0             1              0                0          0
+     1         0          1270              0                0          0
+     1         1            87           3464             1580          0
+
+
+DOLELRFG 'Electric Refrigerator Use (Estimated) In Dollars' Columns 136-138
+     Numerical Variable 
+     Variable length 3
+
+     The one case where USEEL = 0 and NUMFRIG = 1 corresponds to a case where
+     the household uses kerosene but does not use electricity.  
+
+                                                  Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLELRFG       DOLELRFG       Value of  Value of
+     USEEL     NUMFRIG   Is Zero        Is Positive    DOLELRFG  DOLELRFG
+
+     0         2             1              0                0          0
+     1         0             8              0                0          0
+     1         1             2           3974              638          0
+     1         2             0            783              757         20
+     1         3             0             54              921        114
+ 
+DOLELFZZ 'Electric Freezer Use (Estimated) In Dollars'      Columns 140-142
+     Numerical Variable 
+     Variable Length 3
+     Is A Subset Of DOLELAPL
+
+                         Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLELFZZ       DOLELFZZ       Value of  Value of
+     USEEL     SEPFREEZ  Is Zero        Is Positive    DOLELFZZ  DOLELFZZ
+
+     0         0             1              0                0          0
+     1         0          3155              0                0          0
+     1         1           124           1542              546          0
+
+
+DOLELDWH 'Electric Dishwasher Use (Estimated) In Dollars'   Columns 144-146
+     Numerical Variable 
+     Variable length 3
+
+                         Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLELDWH       DOLELDWH       Value of  Value of
+     USEEL     DISHWASH  Is Zero        Is Positive    DOLELDWH  DOLELDWH
+
+     0         0             1              0                0          0
+     1         0          2335              0                0          0
+     1         1           397           2089              273          0
+ 
+
+DOLELCDR  'Electric Clothes Dryer Use (Estimated) In Dollars' Columns 148-150
+     Numerical Variable 
+     Variable length 3
+
+     The 122 cases where the household has an electric dryer yet DOLELCDR = 0
+     correspond to cases where the household reported that they used their
+     dryer infrequently (DRYRUSE = 3).
+
+                         Number of      Number of
+                         Observations   Observations
+     Value     Value     Where          Where          Maximum   Minimum
+     of        of        DOLELCDR       DOLELCDR       Value of  Value of
+     USEEL     DRYRFUEL  Is Zero        Is Positive    DOLELCDR  DOLELCDR
+
+     0         0             1              0                0          0
+     1         0          2006              0                0          0
+     1         1           122           2693              525          0
+

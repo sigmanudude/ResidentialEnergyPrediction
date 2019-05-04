@@ -1,0 +1,1974 @@
+File layout for File Section 2 (Records are comma-delimited.  First line contains a list of variables on the file.  The remaining lines contain the values of the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File Section 2 only.
+
+
+STOVEN   'Stove that has both burners and one or two ovens'  Columns 34
+STOVE    'Separate build-in range top or burners'            Columns 36
+ZSTOVE   'Imputation Flag for STOVE'				 Columns 38	
+OVEN     'Separate built-in oven'                            Columns 40
+ZOVEN    'Imputation Flag for OVEN'					 Columns 42  	
+TOPGRILL 'Built-in or stove-top grill'                       Columns 44 
+MULTSTV  'More than one stove with both burners and oven'    Columns 46
+STOVENFU 'Stove use the same fuel for both burners and oven' Columns 48
+STOVENAB 'What fuel do the burners use'                      Columns 50
+STOVENAO 'What fuel does the oven use'                       Columns 52
+STOVENA  'What fuel does your stove use'                     Columns 54
+MULTRANG 'More than one separate built-in range top'         Columns 56
+STOVEA   'Fuel for separate built-in range top'			 Columns 58
+ZSTOVEA  'Imputation Flag for STOVEA'				 Columns 60
+MULTOVEN 'More than one separate built-in oven'			 Columns 62
+OVENA    'What fuel does your separate built-in oven use'    Columns 64
+ZOVENA   'Imputation Flag for OVENA'				 Columns 66
+STGRILA  'What fuel does your built-in stove-top grill use'  Columns 68
+OVENUSE  'How often you use your oven'                       Columns 70
+ZOVENUSE 'Imputation Flag for OVENUSE'				 Columns 72
+OVENCLN  'Does your oven have a self-cleaning feature'       Columns 74
+ZOVENCLN 'Imputation Flag for OVENCLN'				 Columns 76
+TYPECLN  'Type of oven cleaning'                             Columns 78
+ZTYPECLN  'Imputation Flag for TYPECLN'                      Columns 80
+MICRO     'Use a microwave Oven to do any cooking'		 Columns 82
+ZMICRO    'Imputation Flag for MICRO'                        Columns 84
+AMTMICRO  'How often is microwave used'                      Columns 86
+ZAMTMICR  'Imputation Flag for AMTMICRO'                     Columns 88
+NUMMEAL   'How often hot meals are usually cooked'           Columns 90
+ZNUMMEAL  'Imputation Flag for NUMMEAL'                      Columns 92
+COFFEE    'Do you use any electric coffee makers'	       Columns 94
+ZCOFFEE   'Imputation Flag for COFFEE'				 Columns 96
+COFFFRQ   'How often you make coffee'                        Columns 98-99
+ZCOFFFRQ  'Imputation Flag for COFFFRQ'                      Columns 101
+COFPOTON  'How long do you leave the warmer on'              Columns 103
+ZCOFPOTO  'Imputation Flag for COFPOTON'                     Columns 105
+TOASTER   'Do use any electric toaster ovens'                Columns 107
+ZTOASTER  'Imputation Flag for TOASTER'                      Columns 109
+TSTRFRQ   'How often you use your electric toaster oven'     Columns 111-112
+FUELFOOD  'Which fuels is used most for cooking'             Columns 114-115
+ZFUELFOO  'Imputation Flag for FUELFOOD'                     Columns 117
+NUMFRIG   'How many refrigerators do you use in your home'   Columns 119
+TYPERFR1  'Type of first refrigerators'                      Columns 121
+ZTYPERFR1 'Imputation Flag for TYPERFR1'                     Columns 123
+DOORSFR1  'Are those doors side-by-side or top-to-bottom'    Columns 125
+ZDOORSFR1 'Imputation Flag for DOORSFR1'                     Columns 127
+SIZRFRI1  'Size of first refrigerator'                       Columns 129
+ZSIZRFRI1 'Imputation Flag for SIZRFRI1'                     Columns 131
+REFRIGT1  'First refrigerator manual of frost-free'          Columns 133
+ZREFRIGT1 'Imputation Flag for REFRIGT1'                     Columns 135
+ICE       'Does refrigerator have through-the-door ice'      Columns 137
+ZICE      'Imputation Flag for ICE'                          Columns 139
+AGERFRI1  'How old is first refrigerator'                    Columns 141-142
+ZAGERFRI  'Imputation Flag for AGERFRI1'                     Columns 144
+TYPERFR2  'Type of second refrigerator'                      Columns 146
+DOORSFR2  'Are those doors side-by-side or top-and-bottom'   Columns 148
+SIZRFRI2  'Size of second refrigerator'                      Columns 150
+ZSIZRFRI2 'Imputation Flag for SIZRFRI2'                     Columns 152
+REFRIGT2  'Second refrigerator manual of frost-free'         Columns 154
+ZREFRIGT2 'Imputation Flag for REFRIGT2'                     Columns 156
+MONRFRI2  'Months second refrigerator turned on'             Columns 158-159
+ZMONRFRI2 'Imputation Flag for MONRFRI2'                     Columns 161
+AGERFRI2  'How old is second refrigerator'                   Columns 163-164
+TYPERFR3  'Type of third refrigerator'                       Columns 166
+DOORSFR3  'Are those doors side-by-side or top-and-bottom'   Columns 168
+SIZRFRI3  'Size of third refrigerator'                       Columns 170
+REFRIGT3  'Third refrigerator manual or frost-free'          Columns 172
+MONRFRI3  'Months third refrigerator turned on'              Columns 174-175
+ZMONRFRI3 'Imputation Flag for MONRFRI3'                     Columns 177
+AGERFRI3  'How old is third refrigerator'                    Columns 179-180
+SEPFREEZ  'Does your household use a separate freezer'       Columns 182
+ZSEPFREE  'Imputation Flag for SEPFREEZ'                     Columns 184
+NUMFREEZ  'How many separate freezers are used in your home' Columns 186
+ZNUMFREE  'Imputation Flag for NUMFREEZ'                     Columns 188
+UPRTFRZR  'What model freezer is this'                       Columns 190
+SIZFREEZ  'Size of this freezer'                             Columns 192
+FREEZER   'What type of defrosting does this freezer have'   Columns 194
+ZFREEZER  'Imputation Flag for FREEZER'                      Columns 196
+AGEFRZR   'How old is this freezer'                          Columns 198-199
+ZAGEFRZR  'Imputation Flag for AGEFRZR'                      Columns 201
+DISHWASH  'Does your household use an automatic dishwasher'  Columns 203
+ZDISHWAS  'Imputation Flag for DISHWASH'                     Columns 205
+DWASHUSE  'How often automatic dishwasher used'              Columns 207-208
+ 
+
+
+Codebook for File section B
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           166            3,900,000
+     2             1                    Q
+     3            76            1,700,000
+     7            42            1,000,000
+     8            24              600,000
+     9         4,513           99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+
+
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         1,087           20,300,000
+     2         1,047           24,500,000
+     3         1,489           38,900,000
+     4         1,199           23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily
+     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+
+The remaining variables are on File Section 2 only.
+
+STOVEN   'Stove that has both burners and one or two ovens'  Columns 34
+     Categorical Variable     
+     Variable length  1
+     Question B-1
+     
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0          670          15,700,000
+      1        4,152          91,300,000
+
+STOVE    'Separate build-in range top or burners'            Columns 36
+     Categorical Variable
+     Variable length: 1
+     Question B-1     
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       4,190          92,200,000
+       1         632          14,800,000
+
+
+ZSTOVE   'Imputation Flag for STOVE'				 Columns 38	
+     Categorical Variable
+     Variable length: 1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+        0       4,705         104,400,000
+        2         117           2,600,000
+
+
+OVEN     'Separate built-in oven'                            Columns 40
+     Categorical Variable
+     Variable length 1
+     Question B-1
+     
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+        0      4,347          96,100,000
+        1        475          10,900,000
+
+
+ZOVEN    'Imputation Flag for OVEN'					 Columns 42  	
+     Categorical Variable
+     Variable length: 1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+        0       4,716         104,600,000
+        2         106           2,400,000
+
+TOPGRILL 'Built-in or stove-top grill'                       Columns 44 
+     Categorical Variable
+     Variable length: 1
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,693         104,000,000
+       1          129           2,900,000
+
+MULTSTV  'More than one stove with both burners and oven'    Columns 46
+
+     Categorical Variable
+     Variable length: 1
+     Question B-1a
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,958         87,000,000
+       1          194          4,300,000
+       9          670         15,700,000
+
+
+STOVENFU 'Stove use the same fuel for both burners and oven' Columns 48
+
+     Categorical Variable
+     Variable length: 1
+     Question B-1b
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           24              500,000
+     1        4,128           90,800,000
+     9          670           15,700,000
+
+
+STOVENAB 'What fuel do the burners use'                      Columns 50
+
+     Categorical Variable
+     Variable length: 1
+     Question B-1b1
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or Propane)
+     5 = Electricity
+     9 = No Answer/Not Applicable
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      1           15             300,000
+      2            4                   Q
+      5            5                   Q  
+      9        4,798         106,500,000
+     
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+STOVENAO 'What fuel does the oven use'                       Columns 52
+     Categorical Variable
+     Variable length: 1
+     Question B-1b2
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or Propane)
+     5 = Electricity
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      1            4                   Q
+      2            1                   Q
+      5           19             400,000
+      9        4,798         106,500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+STOVENA  'What fuel does your stove use'                     Columns 54
+
+     Categorical Variable
+     Variable length: 1
+     Question B-1b3
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or Propane)
+     5 = Electricity
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        1,411         32,100,000
+       2          229          3,900,000
+       5        2,488         54,800,000
+       9          694         16,100,000
+
+                  
+MULTRANG 'More than one separate built-in range top'         Columns 56
+     Categorical Variable
+     Variable length: 1
+     Question B-1c1
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+      0          491          11,600,000
+      1           24             600,000
+      9        4,307          94,900,000
+
+
+STOVEA   'Fuel for separate built-in range top'			 Columns 58
+     Categorical Variable
+     Variable length: 1
+     Question B-1d
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or Propane)
+     5 = Electricity
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1       1,609          36,700,000
+       2         269           4,700,000
+       5       2,891          64,200,000
+       9          53           1,300,000
+
+
+ZSTOVEA  'Imputation Flag for STOVEA'				 Columns 60
+     Categorical Variable
+     Variable length: 1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,707        104,400,000
+       2          115          2,600,000
+
+
+MULTOVEN 'More than one separate built-in oven'			 Columns 62
+     Categorical Variable
+     Variable length: 1
+     Question B-1e
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          295          6,700,000
+       1           74          1,800,000
+       9        4,453         98,400,000
+
+
+OVENA    'What fuel does your separate built-in oven use'    Columns 64
+     Categorical Variable
+     Variable length: 1
+     Question B-1f
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or Propane)
+     5 = Electricity
+     9 = No Answer/Not Applicable
+
+       
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1       1,510          34,300,000
+       2         251           4,400,000
+       5       2,840          63,000,000
+       9         221           5,300,000
+
+
+ZOVENA   'Imputation Flag for OVENA'				 Columns 66
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       4,718         104,600,000
+       2         104           2,400,000
+
+
+STGRILA  'What fuel does your built-in stove-top grill use'  Columns 68
+     Categorical Variable
+     Variable length: 1
+     Question B-1g
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or Propane)
+     5 = Electricity
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           44          1,000,000
+       2           13            200,000
+       5           72          1,800,000
+       9        4,693        104,000,000
+
+
+OVENUSE  'How often you use your oven'                       Columns 70
+     Categorical Variable
+     Variable length: 1
+     Question B-2
+
+     1 = More than once a day
+     2 = Once a day
+     3 = Between once a day and once a week 
+     4 = Once a week 
+     5 = Less than once a week 
+     8 = Refused
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          375          8,600,000
+       2          819         17,400,000
+       3        1,523         33,100,000
+       4          694         15,600,000
+       5        1,086         24,600,000
+       8          104          2,400,000
+       9          221          5,300,000
+
+
+ZOVENUSE 'Imputation Flag for OVENUSE'				 Columns 72
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,709        104,500,000
+       2          113          2,500,000
+
+
+OVENCLN  'Does your oven have a self-cleaning feature'       Columns 74
+
+     Categorical Variable
+     Variable length: 1
+     Question B-3
+
+     0 = No
+     1 = Yes
+     6 = Don't know
+     8 = Refused
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,283         50,100,000
+       1        2,171         48,200,000
+       6           43          1,100,000
+       8          104          2,400,000
+       9          221          5,300,000
+
+
+ZOVENCLN 'Imputation Flag for OVENCLN'				 Columns 76
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+               Value     Observations   Households
+                 0        4,718        104,600,000
+                 2          104          2,400,000
+ 
+
+TYPECLN  'Type of oven cleaning'                             Columns 78
+     Categorical Variable
+     Variable length: 1
+     Question B-3a
+
+     1 = Continuous cleaning
+     2 = Manually start the cleaning cycle
+     6 = Don't know
+     8 = Refused
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          444         10,000,000
+       2        1,679         37,000,000
+       6           48          1,200,000
+       8          104          2,400,000
+       9        2,547         56,400,000
+    
+
+ZTYPECLN  'Imputation Flag for TYPECLN'                      Columns 80
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,718        104,600,000
+       2          104          2,400,000
+                     
+ 
+MICRO     'Use a microwave Oven to do any cooking'		 Columns 82
+     Categorical Variable
+     Variable length: 1
+     Question B-4
+
+     0 = No
+     1 = Yes
+     6 = Don't know
+     8 = Refused
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         672          14,800,000
+       1       4,150          92,100,000
+    
+ 
+ZMICRO    'Imputation Flag for MICRO'                        Columns 84
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       4,821         107,000,000
+       2           1                   Q
+                     
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+AMTMICRO  'How often is microwave used'                      Columns 86
+     Categorical Variable
+     Variable length: 1
+     Question B-4a
+
+     1 = Most or all
+     2 = About half
+     3 = Some or very little 
+     4 = Used only for snacks, defrosting, or reheating food 
+     6 = Don't know 
+     8 = Refused
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          337          8,200,000
+       2          853         19,300,000
+       3          997         22,400,000
+       4        1,963         42,200,000
+       9          672         14,800,000
+
+
+ZAMTMICR  'Imputation Flag for AMTMICRO'                     Columns 88
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+
+       0        4,821        107,000,000
+       2            1                  Q
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+NUMMEAL   'How often hot meals are usually cooked'           Columns 90
+
+     Categorical Variable
+     Variable length: 1
+     Question B-5
+
+     0 = Doesn't cook/never cooks
+     1 = Three or more times a day
+     2 = two times a day 
+     3 = Once a day 
+     4 = A few times each week 
+     5 = About once a week
+     6 = Less than once a week
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           46          1,200,000
+       1          349          7,500,000
+       2        1,238         26,800,000
+       3        1,988         43,300,000
+       4          928         21,700,000
+       5          167          4,000,000
+       6          106          2,400,000
+
+
+ZNUMMEAL  'Imputation Flag for NUMMEAL'                      Columns 92
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+COFFEE    'Do you use any electric coffee makers'	       Columns 94
+     Categorical Variable 
+     Variable length  1
+     Question B-6
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households 
+       0       1,817          41,500,000
+       1       3,005          65,500,000
+ZCOFFEE   'Imputation Flag for COFFEE'				 Columns 96
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households 
+       0        4,821        107,000,000
+       2            1                  Q
+     
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+COFFFRQ   'How often you make coffee'                        Columns 98-99
+
+     Categorical Variable 
+     Variable length  2
+     Question B-6a
+
+     1 = Three or more times a day
+     2 = two times a day 
+     3 = Once a day 
+     4 = A few times each week 
+     5 = About once a week
+     6 = Less than once a week
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1         118           2,400,000
+       2         283           5,900,000
+       3       1,528          33,600,000
+       4         427           9,400,000
+       5         239           5,200,000
+       6         410           9,000,000
+      99       1,817          41,500,000
+
+
+ZCOFFFRQ  'Imputation Flag for COFFFRQ'                      Columns 101
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+COFPOTON  'How long do you leave the warmer on'              Columns 103
+     Categorical Variable 
+     Variable length  1
+     Question B-6b
+
+     1 = Turn it off right away
+     2 = Less than fifteen minutes
+     3 = Fifteen minutes to 1 hour
+     4 = More than 1 hour
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          876         18,800,000
+       2          444         10,000,000
+       3        1,108         24,600,000
+       4          577         12,100,000
+       9        1,817         41,500,000
+
+
+ZCOFPOTO  'Imputation Flag for COFPOTON'                     Columns 105
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,814        106,800,000
+       2            8                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+                     
+
+TOASTER   'Do use any electric toaster ovens'                Columns 107
+
+     Categorical Variable 
+     Variable length  1
+     Question B-7
+
+     0 = No
+     1 = Yes 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,213         70,900,000
+       1        1,609         36,100,000
+
+
+ZTOASTER  'Imputation Flag for TOASTER'                      Columns 109
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+TSTRFRQ   'How often you use your electric toaster oven'     Columns 111-112
+
+     Categorical Variable 
+     Variable length  2
+     Question B-7a
+
+     1 = Three or more times a day
+     2 = two times a day 
+     3 = Once a day 
+     4 = A few times each week 
+     5 = About once a week
+     6 = Less than once a week
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          44           1,000,000
+       2         115           2,700,000
+       3         370           8,200,000
+       4         530          11,900,000
+       5         200           4,300,000
+       6         350           7,900,000
+      99       3,213          70,900,000
+
+
+FUELFOOD  'Which fuels is used most for cooking'             Columns 114-115
+     Categorical Variable 
+     Variable length  2
+     Question B-8
+
+     1 = Natural gas from underground pipes
+     2 = Bottled gas (LPG or propane)
+     5 = Electricity
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        1,610         36,800,000
+       2          271          4,800,000
+       5        2,922         65,000,000
+      99           19            400,000
+
+
+ZFUELFOO  'Imputation Flag for FUELFOOD'                     Columns 117
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   1 = Imputed
+   2 = EIA derived answer based upon other variables
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           83          1,800,000
+       1            1                  Q
+       2        4,738        105,100,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+NUMFRIG   'How many refrigerators do you use in your home'   Columns 119
+
+     Categorical Variable 
+     Variable length  1
+     Question B-9
+     
+     0 = None
+     1 = One
+     2 = Two
+     3 = Three or more
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            8                  Q
+       1        3,976         88,700,000
+       2          784         16,900,000
+       3           54          1,200,000
+
+
+TYPERFR1  'Type of first refrigerators'                      Columns 121
+     Categorical Variable 
+     Variable length  1
+     Question B-10a
+
+   1 = Full-size with one door
+   2 = Full-size with two doors
+   3 = Half or quarter size
+   4 = Some other kind
+   9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          257          5,700,000
+       2        4,514        100,200,000
+       3           29            700,000
+       4           14            300,000
+       9            8                  Q
+
+ Q = Data withheld because fewer than 10 observation in the category.
+ZTYPERFR1 'Imputation Flag for TYPERFR1'                     Columns 123
+ 
+    Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,821       107,000,000
+       2             1                 Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+DOORSFR1  'Are those doors side-by-side or top-to-bottom'    Columns 125
+  
+     Categorical Variable 
+     Variable length  1
+     Question B-10a1
+
+     1 = Side-by-side
+     2 = Top and bottom
+     3 = Other
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        1,196         27,100,000
+       2        3,315         73,000,000
+       3            3                  Q
+       9          308          6,800,000
+
+ ZDOORSFR1 'Imputation Flag for DOORSFR1'                     Columns 127
+    
+     Categorical Variable 
+     Variable length  1
+     Not imputed for Nonresponse
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,820       106,900,000
+       2             2                 Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+SIZRFRI1  'Size of first refrigerator'                       Columns 129
+
+     Categorical Variable 
+     Variable length  1
+     Question B-10b
+
+     1 = Very small (10 cubic feet or less)
+     2 = Small (11 to 14 cubic feet)
+     3 = Medium (15 to 18 cubic feet)
+     4 = Large (19 to 22 cubic feet)
+     5 = Very large (more than 32 cubic feet)
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           27            600,000
+       2          266          5,700,000
+       3        2,377         52,200,000
+       4        1,917         43,000,000
+       5          227          5,300,000
+       9            8                  Q     
+
+Q = Data withheld because fewer than 10 observation in the category.
+                     
+ZSIZRFRI1 'Imputation Flag for SIZRFRI1'                     Columns 131
+
+    Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,811       106,800,000
+       2            11           200,000
+
+
+REFRIGT1  'First refrigerator manual of frost-free'          Columns 133    
+     Categorical Variable 
+     Variable length  1
+     Question B-10c
+
+     1 = Manual
+     2 = Frost free
+     3 = No working freezer section
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          460          9,900,000
+       2        4,352         96,900,000
+       3            2                  Q
+       9            8                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZREFRIGT1 'Imputation Flag for REFRIGT1'                     Columns 135
+
+    Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,805       106,600,000
+       2            17           400,000
+
+
+ICE       'Does refrigerator have through-the-door ice'      Columns 137
+     Categorical Variable 
+     Variable length  1
+     Question B-10d
+
+     0 = No
+     1 = Yes  
+     9 = No Answer/Not Applicable
+ 
+                    Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       3,852          84,800,000
+       1         962          22,100,000
+       9           8                   Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZICE      'Imputation Flag for ICE'                          Columns 139
+
+    Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       4,821         107,000,000
+       2           1                   Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+AGERFRI1  'How old is first refrigerator'                    Columns 141-142
+
+     Categorical Variable 
+     Variable length  2
+     Question B-10e
+
+     1 = Less than 2 years old
+     2 = 2 to 4 years old
+     3 = 5 to 9 years old
+     4 = 10 to 19 years old
+     5 = 20 years or older
+    96 = Don't know
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          642         14,500,000
+       2          917         20,700,000
+       3        1,392         31,100,000
+       4        1,226         26,700,000
+       5          334          7,100,000
+      96          303          6,700,000
+      99            8                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+ZAGERFRI  'Imputation Flag for AGERFRI1'                     Columns 144
+
+     Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   1 = Imputed
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,818        106,800,000
+       1            4                  Q
+               
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+TYPERFR2  'Type of second refrigerator'                      Columns 146
+
+     Categorical Variable 
+     Variable length  1
+     Question B-11a
+
+   1 = Full-size with one door
+   2 = Full-size with two doors
+   3 = Half or quarter size
+   4 = Some other kind
+   9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          132          2,800,000
+       2          570         12,400,000
+       3          124          2,700,000
+       4           12            300,000
+       9        3,984         88,900,000
+
+
+DOORSFR2  'Are those doors side-by-side or top-and-bottom'   Columns 148
+
+     Categorical Variable 
+     Variable length  1
+     Question B-11a1
+   1 = Side-by-side
+   2 = Top and bottom
+   9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           87          1,800,000
+       2          483         10,500,000
+       9        4,252         94,600,000
+
+
+
+SIZRFRI2  'Size of second refrigerator'                      Columns 150
+     Categorical Variable 
+     Variable length  1
+     Question B-11b
+
+     1 = Very small (10 cubic feet or less)
+     2 = Small (11 to 14 cubic feet)
+     3 = Medium (15 to 18 cubic feet)
+     4 = Large (19 to 22 cubic feet)
+     5 = Very large (more than 32 cubic feet)
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          117          2,500,000
+       2          142          3,200,000
+       3          363          7,700,000
+       4          197          4,200,000
+       5           19            400,000
+       9        3,984         88,900,000
+  
+
+ZSIZRFRI2 'Imputation Flag for SIZRFRI2'                     Columns 152
+
+    Categorical Variable 
+     Variable length  1
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,821       107,000,000
+       2             1                 Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+REFRIGT2  'Second refrigerator manual of frost-free'         Columns 154
+     Categorical Variable 
+     Variable length  1
+     Question B-11c
+     
+     1 = Manual
+     2 = Frost free
+     3 = No working freezer section
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          305          6,400,000
+       2          527         11,600,000
+       3            6                  Q
+       9        3,984         88,900,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+ZREFRIGT2 'Imputation Flag for REFRIGT2'                     Columns 156
+
+     Categorical Variable 
+     Variable length  1
+   
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,820       107,000,000
+       2             2                 Q
+
+  Q = Data withheld because fewer than 10 observation in the category.
+
+                    
+MONRFRI2  'Months second refrigerator turned on'             Columns 158-159
+
+     Numerical Variable 
+     Variable length  2
+     Question B-11d
+
+     01-12 = Months refrigerator 2 rurned on (0-12)
+        99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            8                  Q
+       1           14            300,000
+       2           18            400,000
+       3           13            300,000
+       4            7                  Q
+       5            6                  Q
+       6           20            400,000
+       7            2                  Q
+       8            2                  Q
+       9            2                  Q
+      10            5                  Q
+      11            5                  Q
+      12          736         15,900,000
+      99        3,984         88,900,000
+  Q = Data withheld because fewer than 10 observation in the category.
+
+
+  
+ZMONRFRI2 'Imputation Flag for MONRFRI2'                     Columns 161
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,821       107,000,000
+       2             1                 Q
+         
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+AGERFRI2  'How old is second refrigerator'                   Columns 163-164
+
+     Categorical Variable 
+     Variable length  2
+     Question B-11e
+
+     01 = Less than 2 years old
+     02 = 2 to 4 years old
+     03 = 5 to 9 years old
+     04 = 10 to 19 years old
+     05 = 20 years or older
+     96 = Don't know
+     99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           46          1,100,000
+       2           79          1,800,000
+       3          189          4,300,000
+       4          313          6,700,000
+       5          193          3,900,000
+      96           18            300,000
+      99        3,984         88,900,000
+
+
+TYPERFR3  'Type of third refrigerator'                       Columns 166
+
+     Categorical Variable 
+     Variable length  1
+     Question B-12a
+
+     1 = Full-size with one door
+     2 = Full-size with two doors
+     3 = Half or quarter size
+     4 = Some other kind
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            6                  Q
+       2           29            600,000
+       3           15            400,000
+       4            4                  Q
+       9        4,768        105,800,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+DOORSFR3  'Are those doors side-by-side or top-and-bottom'   Columns 168
+
+     Categorical Variable 
+     Variable length  1
+     Question B-12a1
+
+     1 = Side-by-side
+     2 = Top and botom
+     3 = Other
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            2                  Q
+       2           25            500,000
+       3            2                  Q
+       9        4,793        106,400,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+SIZRFRI3  'Size of third refrigerator'                       Columns 170
+
+     Categorical Variable 
+     Variable length  1
+     Question B-12b
+
+     1 = Very small (10 cubic feet or less)
+     2 = Small (11 to 14 cubic feet)
+     3 = Medium (15 to 18 cubic feet)
+     4 = Large (19 to 22 cubic feet)
+     5 = Very large (more than 32 cubic feet)
+     9 = No Answer/Not Applicable
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           15            300,000
+       2           10            200,000
+       3           17            400,000
+       4           12            200,000
+       9        4,768        105,800,000
+       
+
+REFRIGT3  'Third refrigerator manual or frost-free'          Columns 172
+     Categorical Variable 
+     Variable length  1
+     Question B-12c 
+
+     1 = Manual
+     2 = Frost-free
+     3 = No working freezer section
+     9 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           25            500,000
+       2           28            600,000
+       3            1                  Q
+       9        4,768        105,800,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+MONRFRI3  'Months third refrigerator turned on'              Columns 174-175
+
+Numerical Variable 
+      Variable length  2
+      Question B-12d 
+
+      1 = Months refrigerator 3 turned on (0-12)
+     99 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0            2                  Q  
+       1            1                  Q
+       2            3                  Q
+       3            4                  Q
+       5            1                  Q
+       6            3                  Q
+      10            1                  Q
+      12           39            800,000
+      99        4,768        105,800,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+ZMONRFRI3 'Imputation Flag for MONRFRI3'                     Columns 177
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+              Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0         4,821       107,000,000
+       2             1                 Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+AGERFRI3  'How old is third refrigerator'                    Columns 179-180
+
+     Categorical Variable 
+     Variable length  2
+     Question B-12e
+   
+     1 = Less than 2 years old
+     2 = 2 to 4 years old
+     3 = 5 to 9 years old
+     4 = 10 to 19 years old
+     5 = 20 years or older
+    99 = No Answer/Not Applicable
+     
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            3                  Q 
+       2            3                  Q
+       3           14            300,000
+       4           21            500,000
+       5           13            200,000
+      99        4,768        105,800,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+SEPFREEZ  'Does your household use a separate freezer'       Columns 182
+     Categorical Variable 
+     Variable length  1
+     Question B-13
+
+     1 = Yes   
+     0 = No   
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,156         72,800,000
+       1        1,666         34,200,000
+
+
+ZSEPFREE  'Imputation Flag for SEPFREEZ'                     Columns 184
+
+     Categorical Variable 
+     Variable length  1
+  
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,815        106,800,000
+       2            7                  Q
+           
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+NUMFREEZ  'How many separate freezers are used in your home' Columns 186
+
+     Categorical Variable 
+     Variable length  1
+     Question B-13a
+
+     0 = None
+     1 = One
+     2 = Two
+     3 = Three or more
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,156         72,800,000
+       1        1,487         30,800,000
+       2          165          3,100,000
+       3           14            300,000
+
+
+ZNUMFREE  'Imputation Flag for NUMFREEZ'                     Columns 188
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,815        106,800,000
+       2            7                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+UPRTFRZR  'What model freezer is this'                       Columns 190
+
+     Categorical Variable 
+     Variable length  1
+     Question B-14a
+
+     1 = An upright
+     2 = A chest-type
+     9 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          851     17,800,000
+       2          815     16,500,000
+       9        3,156     72,800,000
+
+
+SIZFREEZ  'Size of this freezer'                             Columns 192
+
+     Categorical Variable 
+     Variable length  1
+     Question B-14b
+
+     1 = Very small (10 cubic feet or less)
+     2 = Small (11 to 14 cubic feet)
+     3 = Medium (15 to 18 cubic feet)
+     4 = Large (19 to 22 cubic feet)
+     5 = Very large (more than 32 cubic feet)
+     9 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   
+       1          124         2,500,000
+       2          401         8,200,000
+       3          646        13,300,000
+       4          418         8,700,000
+       5           77         1,600,000
+       9        3,156        72,800,000
+
+
+FREEZER   'What type of defrosting does this freezer have'   Columns 194
+
+     Categorical Variable 
+     Variable length  1
+     Question B-14c
+
+     1 = Manual
+     2 = Frost free
+     9 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   
+       1        1,080        22,000,000
+       2          586        12,200,000
+       9        3,156        72,800,000
+
+
+ZFREEZER  'Imputation Flag for FREEZER'                      Columns 196
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,900,000
+       2            5                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+AGEFRZR   'How old is this freezer'                          Columns 198-199
+
+     Categorical Variable 
+     Variable length  2
+     Question B-14d
+
+     1 = Less than 2 years old
+     2 = 2 to 4 years old
+     3 = 5 to 9 years old
+     4 = 10 to 19 years old
+     5 = 20 years or older
+    96 = Don't know
+    99 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   
+       1         149          3,100,000
+       2         220          4,600,000
+       3         335          6,800,000
+       4         564         11,700,000
+       5         366          7,300,000
+      96          32            600,000
+      99       3,156         72,800,000
+
+
+ZAGEFRZR  'Imputation Flag for AGEFRZR'                      Columns 201
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       1            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+DISHWASH  'Does your household use an automatic dishwasher'  Columns 203
+
+     Categorical Variable 
+     Variable length  1
+     Question B-15
+
+     1 = Yes
+     0 = No
+ 
+               Number         Weighted
+               Of             Number of
+     Value     Observations   
+       0        2,336        50,300,000
+       1        2,486        56,700,000
+
+
+ZDISHWAS  'Imputation Flag for DISHWASH'                     Columns 205
+
+     Categorical Variable 
+     Variable length  1
+ 
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,818        106,900,000
+       2            4                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+DWASHUSE  'How often automatic dishwasher used'              Columns 207-208
+
+     Categorical Variable 
+     Variable length  2
+     Question B-15a
+
+     11 = Less than once each week
+     12 = Once each week
+     13 = 2 or 3 times a week
+     20 = 4 to 6 times a week
+     30 = At least once each day
+     99 = No Answer/Not Applicable
+ 
+               Number         Weighted
+               Of             Number of
+     Value     Observations   
+      11          397         9,400,000
+      12          315         7,500,000
+      13          785        17,800,000
+      20          511        11,700,000
+      30          478        10,400,000
+      99        2,336        50,300,000
+
+
+

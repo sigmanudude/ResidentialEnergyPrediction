@@ -1,0 +1,1850 @@
+File layout for File 6 (Records are comma-delimited.  First line contains a
+list of variables on the file.  The remaining lines contain the values of the
+variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-97 TO 12-97'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-97 TO 12-97'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File 6 only.
+
+ELFOOD 'Uses Electric For Cooking'                          Columns 34
+ELOTHER 'Uses Electric For Other'                           Columns 36
+ELWARM 'Uses Electric For Heating Home'                     Columns 38
+ELWATER 'Uses Electric For HOT Water'                       Columns 40
+ELCOOL 'Uses Electric For A/C'                              Columns 42
+FOWARM 'Uses Fuel Oil To Heat Home'                         Columns 44
+FOWATER 'Uses Fuel Oil TO Heat Water'                       Columns 46
+KROTHER 'Uses Kerosene For Other PURPOSE'                   Columns 48
+KRWARM 'Uses Kerosene TO Heat Home'                         Columns 50
+KRWATER 'Uses Kerosene TO Heat Water'                       Columns 52
+LPCOOK 'Uses LPG To Cook Inside'                            Columns 54
+LPOTHER 'Uses LPG For Other Purpose'                        Columns 56
+LPWARM 'Uses LPG TO Heat Home'                              Columns 58
+LPWATER 'Uses LPG TO Heat Water'                            Columns 60
+OTHCOOK 'Other Fuel Used To Cook'                           Columns 62
+SOLOTHER 'Uses Solar For Other Purpose'                     Columns 64
+SOLPOOL 'Uses Solar To Heat Pool Heater'                    Columns 66
+SOLWARM 'Uses Solar To Heat Home'                           Columns 68
+SOLWATER 'Uses Solar TO Heat Water'                         Columns 70
+UGCOOK 'Uses Natural Gas For Cooking'                       Columns 72
+UGOTH 'Uses Natural Gas For Other Appliances'               Columns 74
+UGWARM 'Uses Natural Gas For Heating Home'                  Columns 76
+UGWATER 'Uses Natural Gas For Hot Water'                    Columns 78
+USEEL 'HOUSEHOLD Uses Electricity'                          Columns 80
+USEFO 'Household Uses Fuel Oil'                             Columns 82
+USEKERO 'Household Uses Kerosene'                           Columns 84
+USELP 'Household Uses LPG'                                  Columns 86
+USENG 'Household Uses Utility gas'                          Columns 88
+USEOTH 'Other Fuel Used By Household'                       Columns 90
+USESOLAR 'Household Uses Solar'                             Columns 92
+USEWOOD 'Household Uses Wood'                               Columns 94
+WDOTHER 'Uses Wood For Other Purpose'                       Columns 96
+WDWARM 'Uses Wood TO Heat Home'                             Columns 98
+WDWATER 'Uses Wood TO Heat Water'                           Columns 100
+PELHEAT 'Who Pays Electric For Home Heat'                   Columns 102
+PELAC 'Who Pays Electric For A/C'                           Columns 104
+PELHOTWA 'Who Pays Electric For Hot Water'                  Columns 106
+PELCOOK 'Who Pays Electric For Cooking'                     Columns 108
+PELLIGHT 'Who Pays Electric For Lights/Appliances'          Columns 110
+PGASHEAT 'Who Pays Natural Gas For Home Heat'               Columns 112
+PGASHTWA 'Who Pays Natural Gas For Hot Water'               Columns 114
+PUGCOOK 'Who Pays Natural Gas To Cook'                      Columns 116
+PUGOTH 'Who Pays Natural Gas For Appliances'                Columns 118
+PAYFO 'Who Pays For Fuel Oil'                               Columns 120
+PAYLPG 'Who Pays For Bottled Gas'                           Columns 122
+DEREG 'Able To Select Fuel Supplier'                        Columns 124
+ZDEREG 'Imputation Flag for DEREG'                          Columns 126
+WCHFUEL 'Fuel Household Can Shop For'                       Columns 128-129
+ZWCHFUEL 'Imputation Flag for WCHFUEL'                      Columns 131
+LPGDELV 'LPG Delivered To Your Home'                        Columns 133
+NDIFLPCO 'Number Companies Deliver LPG'                     Columns 135-136
+NLPDELNC 'Number LPG Deliveries Past Year'                  Columns 138-139
+QUANTFO 'Fuel Oil Used Past Year'                           Columns 141
+FODEL 'Fuel Oil Delivered'                                  Columns 143
+NDIFFOCO 'Number Of Different Fuel Oil Companies'           Columns 145
+NFODELNC 'Number Fuel Oil Deliveries Past Year'             Columns 147-148
+KERODEL 'Kerosene Delivered To Home'                        Columns 150
+KEROCASH 'Cash And Carry Kerosene'                          Columns 152
+NOKRCASH 'Number Times Cash/Carry Kerosene'                 Columns 154-155
+NKRGALNC 'Quantity Bought Each Time'                        Columns 157-158
+PRICEKER 'Cash/Carry Kerosene Price/Gallon'                 Columns 160-162
+TOTPAYKR 'Total Cash And Carry Price'                       Columns 164-167
+NDIFKRCO 'Number Kerosene Companies Deliver'                Columns 169
+NOKRDEL 'Times Kerosene Delivered Past Year'                Columns 171-172
+WOODLOGS 'Wood Logs Burned'                                 Columns 174
+WDSCRAP 'Wood Scraps Burned'                                Columns 176
+WDPELLET 'Wood Pellets Burned'                              Columns 178
+WOODAMT 'Amount Of Wood Burned Past Year'                   Columns 180
+ZWOODAMT 'Imputation Flag for WOODAMT'                      Columns 182
+CORDPLU1 'Number Cords Burned Past Year'                    Columns 184
+ZCORDPL1 'Imputation Flag for CORDPLU1'                     Columns 186
+CORDPLU2 'Number Cords Over 2 « Burned'                     Columns 188-189
+ZCORDPL2 'Imputation Flag for CORDPLU2'                     Columns 191
+CORDS 'Number Cords Burned'                                 Columns 193-196
+KNWLDGE 'Certainty Of Energy Answers'                       Columns 198
+HOWPAID 'How Utilities Are Paid'                            Columns 200
+HOWPAYEL 'How Electricity Is Paid'                          Columns 202
+HOWPAYNG 'How Natural Gas Is Paid'                          Columns 204
+HOWPAYLP 'How LPG IS Paid'                                  Columns 206
+HOWPAYFO 'How Fuel Oil Is Paid'                             Columns 208
+HOWPAYKR 'How Kerosene Is Paid'                             Columns 210
+Codebook for File 6
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65, HDD65,
+and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned an
+     unique value of DOEID.  It can be used to merge data from one file with
+     data from another file.
+
+     Minimum Value: 1,001
+     Maximum Value: 6,903
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:  3,841
+     Maximum Value: 79,878
+
+          The sample design for RECS is not a simple random sample. Consequently,
+     to estimate the number or percent of households/housing units with a
+     certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives the
+     number of households that the response represents in the sample.  For
+     most categorical variables, the codebooks contain both the unweighted
+     frequency and the weighted frequency.  The unweighted frequency gives
+     the number of observations, the weighted frequency gives survey estimate
+     of the number of households/housing units for each possible value of the
+     variable.  The weighted frequencies are rounded to the nearest 100,000
+     households.  This is the limit of the accuracy for RECS.  When the
+     unweighted frequency is less than 10 or the weighted frequency is less
+     than 150,000; then weighted frequency is suppressed.  A 'Q' is placed in
+     the frequency to denote that the number is suppressed.  This indicates
+     that there are too few observation upon which to determine an accurate
+     estimate.
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           173             3,400,000
+     2             8                     Q
+     7             1                     Q
+     8            12               200,000
+     9         5,706            97,600,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 or 2, the household and housing unit data was not
+     obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate the
+     presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR was
+     not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The States
+are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         1,332               19,700,000
+     2         1,234               24,100,000
+     3         1,979               35,900,000
+     4         1,355               21,800,000
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         490             5,300,000
+     2         842            14,400,000
+     3         783            16,900,000
+     4         451             7,200,000
+     5         871            18,700,000
+     6         527             6,300,000
+     7         581            10,800,000
+     8         466             6,200,000
+     9         889            15,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         4,258          70,300,000
+     1           399           6,800,000
+     2           609          11,500,000 
+     3           369           7,000,000
+     4           265           5,900,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65 and
+CDD65 to mask the location of the weather station from which the data was
+obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-97 TO 12-97'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,954
+
+HDD65 'Heating Degree-Days to base 65, 1-97 TO 12-97'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 11,672
+
+          Cooling degree days are the number of degrees the average daily
+     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+          ADT = (daily high + daily low)/2
+
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-2B) 
+          different than RECS93
+     Variable was constructed form responses to questions
+          A-2A, A-2B, A-5, and A-9
+     Imputed for Nonresponse
+
+          There is a fine line between the definitions of various types of housing
+     units. The distinction between a single-family attached unit and a unit
+     in an apartment building is particularly complex. The collection and
+     editing of the data on housing type changed from the paper-and-pencil
+     questionnaire for the 1993 RECS to the CAPI questionnaire for the 1997
+     RECS. The change in the data collection and editing procedures may have
+     contributed to changes in the survey results. For example, the estimated
+     number of occupied single-family attached units increased from 7.3
+     million for the 1993 RECS to 10.0 million for the 1997 RECS. Conversely,
+     the number of occupied housing units in buildings with two to four units
+     decreased from 8.0 million for the 1993 RECS to 5.6 million for the 1997
+     RECS.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           402           6,300,000
+     2         3,661          63,800,000
+     3           552           9,900,000 
+     4           351           5,600,000
+     5           934          15,800,000
+
+The remaining variables a present only in File 6.
+
+ELFOOD 'Uses Electric For Cooking'                          Columns 34
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           571           9,000,000
+     1         5,329          92,500,000
+
+ELOTHER 'Uses Electric For Other'                           Columns 36
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0             2                    Q
+     1         5,898          101,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+ELWARM 'Uses Electric For Heating Home'                     Columns 38
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,506           59,500,000
+     1         2,394           42,000,000
+
+ELWATER 'Uses Electric For HOT Water'                       Columns 40
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,511           61,300,000
+     1         2,389           40,200,000
+
+ELCOOL 'Uses Electric For A/C'                              Columns 42
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         1,838           28,100,000
+     1         4,062           73,400,000
+
+FOWARM 'Uses Fuel Oil To Heat Home'                         Columns 44
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,199           91,700,000
+     1           701            9,800,000
+
+FOWATER 'Uses Fuel Oil TO Heat Water'                       Columns 46
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,516           96,300,000
+     1           384            5,200,000
+
+KROTHER 'Uses Kerosene For Other PURPOSE'                   Columns 48
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,900          101,500,000
+
+KRWARM 'Uses Kerosene TO Heat Home'                         Columns 50
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,672           98,000,000
+     1           228            3,500,000
+
+KRWATER 'Uses Kerosene TO Heat Water'                       Columns 52
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,898          101,500,000
+     1             2                    Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+LPCOOK 'Uses LPG To Cook Inside'                            Columns 54
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,605           97,100,000
+     1           295            4,400,000
+
+LPOTHER 'Uses LPG For Other Purpose'                        Columns 56
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,828          100,400,000
+     1            72            1,000,000
+
+LPWARM 'Uses LPG TO Heat Home'                              Columns 58
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,531           95,900,000
+     1           369            5,600,000
+
+LPWATER 'Uses LPG TO Heat Water'                            Columns 60
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,687           98,200,000
+     1           213            3,300,000
+
+OTHCOOK 'Other Fuel Used To Cook'                           Columns 62
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,897          101,400,000
+     1             3                    Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+SOLOTHER 'Uses Solar For Other Purpose'                     Columns 64
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,900          101,500,000
+
+SOLPOOL 'Uses Solar To Heat Pool Heater'                    Columns 66
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,894          101,300,000
+     1             6                    Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+SOLWARM 'Uses Solar To Heat Home'                           Columns 68
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,895          101,400,000
+     1             5                    Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+SOLWATER 'Uses Solar TO Heat Water'                         Columns 70
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,874          101,000,000
+     1            26              500,000
+
+UGCOOK 'Uses Natural Gas For Cooking'                       Columns 72
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,882           66,300,000
+     1         2,018           35,200,000
+
+UGOTH 'Uses Natural Gas For Other Appliances'               Columns 74
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,052           84,500,000
+     1           848           17,000,000
+
+UGWARM 'Uses Natural Gas For Heating Home'                  Columns 76
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         2,891           47,000,000
+     1         3,009           54,500,000
+
+UGWATER 'Uses Natural Gas For Hot Water'                    Columns 78
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         2,988           48,700,000
+     1         2,912           52,800,000
+
+USEEL 'HOUSEHOLD Uses Electricity'                          Columns 80
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0             2                    Q
+     1         5,898          101,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+USEFO 'Household Uses Fuel Oil'                             Columns 82
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,190           91,500,000
+     1           710           10,000,000
+
+USEKERO 'Household Uses Kerosene'                           Columns 84
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,671           98,000,000
+     1           229            3,500,000
+
+USELP 'Household Uses LPG'                                  Columns 86
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,361           93,400,000
+     1           539            8,100,000
+
+USENG 'Household Uses Utility gas'                          Columns 88
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         2,429           39,600,000
+     1         3,471           61,900,000
+
+USEOTH 'Other Fuel Used By Household'                       Columns 90
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,841          100,600,000
+     1            59              900,000
+
+USESOLAR 'Household Uses Solar'                             Columns 92
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,864          100,800,000
+     1            36              700,000
+
+USEWOOD 'Household Uses Wood'                               Columns 94
+     Categorical Variable 
+     Variable Length 1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,028           86,400,000
+     1           872           15,000,000
+
+WDOTHER 'Uses Wood For Other Purpose'                       Columns 96
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,900          101,500,000
+
+WDWARM 'Uses Wood TO Heat Home'                             Columns 98
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,029           86,500,000
+     1           871           15,000,000
+
+WDWATER 'Uses Wood TO Heat Water'                           Columns 100
+     Categorical Variable 
+     Variable Length 1
+     Question first Used in 1997 RECS
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,886          101,300,000
+     1            14              200,000
+
+PELHEAT 'Who Pays Electric For Home Heat'                   Columns 102
+     Categorical Variable 
+     Variable Length 1
+     Question H-2A
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billing
+     4 = Household in Billing pool
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         2,258           39,800,000
+     2           125            2,000,000
+     3             8                    Q
+     4             3                    Q
+     9         3,506           59,500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PELAC 'Who Pays Electric For A/C'                           Columns 104
+     Categorical Variable 
+     Variable Length 1
+     Question H-2B
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billing
+     4 = Household in Billing pool
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         3,896           70,600,000
+     2           153            2,600,000
+     3            10              200,000
+     4             4                    Q
+     9         1,837           28,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PELHOTWA 'Who Pays Electric For Hot Water'                  Columns 106
+     Categorical Variable 
+     Variable Length 1
+     Question H-2C
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billing
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         2,288           38,700,000
+     2            96            1,400,000
+     3             5                    Q
+     9         3,511           61,300,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PELCOOK 'Who Pays Electric For Cooking'                     Columns 108
+     Categorical Variable 
+     Variable Length 1
+     Question H-2D
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billing
+     4 = Household in Billing pool
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         5,057           88,300,000
+     2           248            3,900,000
+     3            18              200,000
+     4             6                    Q
+     9           571            9,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PELLIGHT 'Who Pays Electric For Lights/Appliances'          Columns 110
+     Categorical Variable 
+     Variable Length 1
+     Question H-2E
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billed
+     4 = Household in Billing pool
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         5,564           96,300,000
+     2           307            4,700,000
+     3            21              300,000
+     4             6                    Q
+     9             2                    Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PGASHEAT 'Who Pays Natural Gas For Home Heat'               Columns 112
+     Categorical Variable 
+     Variable Length 1
+     Question H-2F
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billed
+     4 = Household in Billing pool
+     7 = Free Gas Well
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         2,667           48,700,000
+     2           329            5,600,000
+     3             5                    Q
+     4             5                    Q
+     7             3                    Q
+     9         2,891           47,000,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PGASHTWA 'Who Pays Natural Gas For Hot Water'               Columns 114
+     Categorical Variable 
+     Variable Length 1
+     Question H-2G
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billed
+     4 = Household in Billing pool
+     7 = Free Gas Well
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         2,505           45,800,000
+     2           396            6,800,000
+     3             5                    Q
+     4             5                    Q
+     7             1                    Q
+     9         2,988           48,700,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PUGCOOK 'Who Pays Natural Gas To Cook'                      Columns 116
+     Categorical Variable 
+     Variable Length 1
+     Question H-2H
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billed
+     7 = Free Gas Well
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         1,728           30,400,000
+     2           258            4,300,000
+     3            31              600,000
+     7             1                    Q
+     9         3,882           66,300,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PUGOTH 'Who Pays Natural Gas For Appliances'                Columns 118
+     Categorical Variable 
+     Variable Length 1
+     Question H-2I
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     3 = Third Party Billed
+     7 = Free Gas Well
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           813           16,300,000
+     2            24              500,000
+     3            10              200,000
+     7             1                    Q
+     9         5,052           84,500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+PAYFO 'Who Pays For Fuel Oil'                               Columns 120
+     Categorical Variable 
+     Variable Length 1
+     Question H-2J
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           547            7,600,000
+     2           163            2,300,000
+     9         5,190           91,500,000
+
+PAYLPG 'Who Pays For Bottled Gas'                           Columns 122
+     Categorical Variable 
+     Variable Length 1
+     Question H-2K
+     Question same as RECS93
+
+     1 = Household pays
+     2 = Rent or condo Fee
+     7 = Free Gas
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           524            7,900,000
+     2            14              200,000
+     7             1                    Q
+     9         5,361           93,400,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+DEREG 'Able To Select Fuel Supplier'                        Columns 124
+     Categorical Variable 
+     Variable Length 1
+     Question H-3A
+     Question first Used in 1997 RECS
+     Imputed For Nonresponse
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,751           66,100,000
+     1           129            2,400,000
+     9         2,020           33,000,000
+
+ZDEREG 'Imputation Flag for DEREG'                          Columns 126
+     Categorical Variable 
+     Variable length 1
+
+     0 = DEREG not imputed
+     1 = DEREG imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,877          101,100,000
+     1            23              400,000
+
+WCHFUEL 'Fuel Household Can Shop For'                       Columns 128-129
+     Categorical Variable 
+     Variable Length 2
+     Question H-3B
+     Question first Used in 1997 RECS
+     Imputed For Nonresponse
+
+     1 = Natural Gas
+     3 = Both
+     5 = Electricity
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            23              500,000
+     3            34              600,000
+     5            72            1,300,000
+     9         5,771           99,100,000
+
+ZWCHFUEL 'Imputation Flag for WCHFUEL'                      Columns 131
+     Categorical Variable 
+     Variable length 1
+
+     0 = WCHFUEL not imputed
+     1 = WCHFUEL imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,896          101,400,000
+     1             4                    Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+LPGDELV 'LPG Delivered To Your Home'                        Columns 133
+     Categorical Variable 
+     Variable Length 1
+     Question H-4A
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+     8 = No Answer
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            62            1,100,000
+     1           431            6,500,000
+     8             6                    Q
+     9         5,401           93,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+NDIFLPCO 'Number Companies Deliver LPG'                     Columns 135-136
+     Categorical Variable 
+     Variable Length 2
+     Question H-4B
+     Question different than RECS97
+
+     0 = None
+     1 = One
+     2 = Two
+     3 = Three
+     7 = Refused
+     8 = No Answer
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            33              500,000
+     1           417            6,300,000
+     2             8                    Q
+     3             1                    Q
+     7             1                    Q
+     8             3                    Q
+     9         5,437           94,500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+NLPDELNC 'Number LPG Deliveries Past Year'                  Columns 138-139
+     Numerical Variable 
+     Variable Length 2
+     Question H-4C
+     Question same as RECS93
+
+     96 = Don't Know
+     97 = Refused
+     98 = No Answer
+     99 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            33              500,000
+     1            55              800,000
+     2            87            1,300,000
+     3            80            1,200,000
+     4            63            1,000,000
+     5            33              500,000
+     6            41              600,000
+     7            13              200,000
+     8            17              300,000
+     9 to 18      25              300,000
+     96            3                    Q
+     98           13              200,000
+     99        5,437           94,500,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+QUANTFO 'Fuel Oil Used Past Year'                           Columns 141
+     Categorical Variable 
+     Variable Length 1
+     Question H-5
+     Question different than RECS97
+
+     1 = Less Than 100 Gallons
+     2 = 100 TO 499 Gallons
+     3 = 500 TO 1,000 Gallons
+     4 = More Than 1,000 Gallons
+     6 = Don't Know
+     7 = Refused
+     8 = No Answer
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            14              200,000
+     2           119            1,800,000
+     3           223            3,000,000
+     4            72            1,000,000
+     6            46              600,000
+     7             1                    Q
+     8            71              900,000
+     9         5,354           93,900,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+FODEL 'Fuel Oil Delivered'                                  Columns 143
+     Categorical Variable 
+     Variable Length 1
+     Question H-5A1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+     8 = No Answer
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0             2                    Q
+     1           476            6,800,000
+     8            70              900,000
+     9         5,352           93,800,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+NDIFFOCO 'Number Of Different Fuel Oil Companies'           Columns 145
+     Categorical Variable 
+     Variable Length 1
+     Question H-5A2
+     Question different than RECS93
+
+     1 = One
+     2 = Two
+     3 = Three
+     4 = Four
+     8 = No Answer
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           454            6,500,000
+     2            18              200,000
+     3             1                    Q
+     4             2                    Q
+     8             1                    Q
+     9         5,424           94,700,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+NFODELNC 'Number Fuel Oil Deliveries Past Year'             Columns 147-148
+     Numerical Variable 
+     Variable Length 2
+     Question H-5A3
+     Question different than RECS97
+
+     98 = No Answer
+     99 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            41              700,000
+     2            41              600,000
+     3            72            1,100,000
+     4            72            1,000,000
+     5            62              900,000
+     6            68              900,000
+     7            24              300,000
+     8            31              400,000
+     9 to 25      62              800,000
+     98            3                    Q
+     99        5,424           94,700,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+KERODEL 'Kerosene Delivered To Home'                        Columns 150
+     Categorical Variable 
+     Variable Length 1
+     Question H-6A
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+     8 = No Answer
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           164            2,500,000
+     1            38              500,000
+     8            31              500,000
+     9         5,667           98,000,000
+
+KEROCASH 'Cash And Carry Kerosene'                          Columns 152
+     Categorical Variable 
+     Variable Length 1
+     Question H-6A1
+     Question same as RECS93
+
+     0 = No
+     1 = Yes
+     6 = Don't Know
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0            43              600,000
+     1           153            2,300,000
+     6             1                    Q
+     9         5,703           98,500,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+NOKRCASH 'Number Times Cash/Carry Kerosene'                 Columns 154-155
+     Numerical Variable 
+     Variable Length 2
+     Question H-6A2
+     Question same as RECS93
+
+     96 = Don't Know
+     99 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            25              300,000
+     2            15              200,000
+     3            21              400,000
+     4            12              200,000
+     5            12              200,000
+     6 to 10      24              400,000
+     11 to 85     43              600,000
+     96            1                    Q
+     99        5,747           99,200,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+NKRGALNC 'Quantity Bought Each Time'                        Columns 157-158
+     Categorical Variable 
+     Variable Length 2
+     Question H-6A3
+     Question different than RECS93
+
+     1 = 1 Gallon
+     2 = 3 Gallons
+     3 = 5 Gallons
+     4 = 10 Gallons
+     5 = 55 Gallons
+     98 = No Answer
+     99 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            12              200,000
+     2            19              300,000
+     3            96            1,400,000
+     4            22              300,000
+     5             3                    Q
+     98            3                    Q
+     99        5,745           99,100,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+PRICEKER 'Cash/Carry Kerosene Price/Gallon'                 Columns 160-162
+     Numerical Variable 
+     Variable Length 3
+     Question H-6A4
+     Question same as RECS93
+     Two Implied Decimal Places
+
+     996 = Don't Know
+     999 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     50 to 100    15              300,000
+     101 to 120   56              700,000
+     121 to 130   24              400,000
+     131 to 280   40              600,000
+     996          17              300,000
+     999       5,748           99,200,000
+
+TOTPAYKR 'Total Cash And Carry Price'                       Columns 164-167
+     Numerical Variable 
+     Variable Length 4               
+
+     Question H-6A5
+     Question same as RECS93
+     Two Implied Decimal Places
+
+     9996 = Don't Know
+     9998 = No Answer
+     9999 = Not Applicable
+
+                    Number         Weighted
+                    Of             Number of
+     Value          Observations   Households
+     119 to 400        19              300,000
+     401 to 500        20              300,000
+     501 to 600        24              300,000
+     601 to 1000       30              500,000
+     1001 to 5900      23              300,000
+     9996              10              200,000
+     9998              26              400,000
+     9999           5,748           99,200,000
+
+NDIFKRCO 'Number Kerosene Companies Deliver'                Columns 169
+     Categorical Variable 
+     Variable Length 1
+     Question H-6B
+     Question same as RECS93
+
+     1 = One
+     2 = Two
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            34              500,000
+     2             4                    Q
+     9         5,862          101,000,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+NOKRDEL 'Times Kerosene Delivered Past Year'                Columns 171-172
+     Numerical Variable 
+     Variable Length 2
+     Question H-6C
+     Question same as RECS93
+
+     97 = Refused
+     99 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1             4                    Q
+     2            10              100,000
+     3             7                    Q
+     4             7                    Q
+     5             3                    Q
+     6             2                    Q
+     97            1                    Q
+     99        5,866          101,000,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+WOODLOGS 'Wood Logs Burned'                                 Columns 174
+     Categorical Variable 
+     Variable Length 1
+     Question H-7A
+     Question same as RECS93
+     RECS 93 Asked About Activity In Past 12 Months
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           147            2,500,000
+     1           778           13,500,000
+     9         4,975           85,500,000
+
+WDSCRAP 'Wood Scraps Burned'                                Columns 176
+     Categorical Variable 
+     Variable Length 1
+     Question H-7B
+     Question same as RECS93
+     RECS 93 Asked About Activity In Past 12 Months
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           809           14,100,000
+     1           116            1,900,000
+     9         4,975           85,500,000
+
+WDPELLET 'Wood Pellets Burned'                              Columns 178
+     Categorical Variable 
+     Variable Length 1
+     Question H-7C
+     Question same as RECS93
+     RECS 93 Asked About Activity In Past 12 Months
+
+     0 = No
+     1 = Yes
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0           925           16,000,000
+     9         4,975           85,500,000
+
+WOODAMT 'Amount Of Wood Burned Past Year'                   Columns 180
+     Categorical Variable 
+     Variable Length 1
+     Question H-7D
+     Question Different Than RECS93
+     Imputed For Nonresponse
+
+     1 = Less Than Half A Cord
+     2 = More Than Half But Less Than A Whole Cord
+     3 = At Least One Full Cord
+     4 = More Than One Full Cord
+     9 = Not Applicable
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           413            7,700,000
+     2           132            2,400,000
+     3           114            1,700,000
+     4           253            3,900,000
+     9         4,988           85,700,000
+
+ZWOODAMT 'Imputation Flag for WOODAMT'                      Columns 182
+     Categorical Variable 
+     Variable length 1
+
+     0 = WOODAMT not imputed
+     1 = WOODAMT imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,802           99,800,000
+     1            98            1,600,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+CORDPLU1 'Number Cords Burned Past Year'                    Columns 184
+     Categorical Variable 
+     Variable Length 1
+     Question H-7E
+     Question same as RECS93
+     Imputed For Nonresponse
+
+     1 = 1
+     2 = 1 And One-Half
+     3 = 2
+     4 = 2 And One-Half
+     5 = 3 Or More
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            10              200,000
+     2            42              700,000
+     3            45              700,000
+     4            18              300,000
+     5           138            2,100,000
+     9         5,647           97,600,000
+
+ZCORDPL1 'Imputation Flag for CORDPLU1'                     Columns 186
+     Categorical Variable 
+     Variable length 1
+
+     0 = CORDPLU1 not imputed
+     1 = CORDPLU1 imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,877          101,200,000
+     1            23              300,000
+
+CORDPLU2 'Number Cords Over 2 « Burned'                     Columns 188-189
+     Numerical Variable 
+     Variable Length 2
+     Question H-7F
+     Question first Used in 1997 RECS
+     Imputed For Nonresponse
+
+     99 = Not Applicable
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     4            61              900,000
+     5            30              400,000
+     6            15              200,000
+     7 to 30      32              500,000
+     99        5,762           99,400,000
+
+ZCORDPL2 'Imputation Flag for CORDPLU2'                     Columns 191
+     Categorical Variable 
+     Variable length 1
+
+     0 = CORDPLU2 not imputed
+     1 = CORDPLU2 imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         5,889          101,300,000
+     1            11              200,000
+
+CORDS 'Number Cords Burned'                                 Columns 193-196
+     Numerical Variable 
+     Variable Length 4
+     Two Implied Decimal Places
+     Calculated from WOODAMT, CORDPLU1, CORDPLU2
+
+                    Number         Weighted
+                    Of             Number of
+     Value          Observations   Households
+     0              4,988           85,700,000
+     25               413            7,700,000
+     75               132            2,400,000
+     100              124            1,900,000
+     150               42              700,000
+     200               45              700,000
+     250               18              300,000
+     400               61              900,000
+     500               30              400,000
+     600               15              200,000
+     700 TO 3000       32              500,000
+
+KNWLDGE 'Certainty Of Energy Answers'                       Columns 198
+     Categorical Variable 
+     Variable Length 1
+     Question H-8
+     Question same as RECS93
+
+     1 = Very Sure
+     2 = Somewhat Sure
+     3 = Not Too Sure
+     6 = Don't Know
+     7 = Refused
+     8 = No Answer
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         4,409           77,500,000
+     2         1,409           22,700,000
+     3            76            1,100,000
+     6             2                    Q
+     7             1                    Q
+     8             3                    Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+HOWPAID 'How Utilities Are Paid'                            Columns 200
+     Categorical Variable 
+     Variable Length 1
+          Utilities Include Electricity, Utility gas, Fuel Oil, Kerosene, And LPG. 
+     Wood Is Excluded.
+
+     All - All Uses Of Each Fuel Paid AS Indicated
+     Some- At Least One Use Of One Fuel Paid
+     Other - One Or More Payments By Third Party Or Group Billing
+
+     1 = All Paid By Household
+     2 = All Included In Rent
+     3 = Some Paid, Some Rent
+     4 = Other
+     9 = No Utilities Fuel Used
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         5,163           89,700,000
+     2           287            4,400,000
+     3           389            6,400,000
+     4            60              900,000
+     9             1                    Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+HOWPAYEL 'How Electricity Is Paid'                          Columns 202
+     Categorical Variable 
+     Variable Length 1
+
+     All - All Uses Of Each Fuel Paid AS Indicated
+     Some- At Least One Use Of One Fuel Paid
+     Other - One Or More Payments By Third Party Or Group Billing
+
+     1 = All Paid By Household
+     2 = All Included In Rent
+     3 = Some Paid, Some Rent
+     4 = Other
+     9 = No Electricity Used
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         5,556           96,200,000
+     2           307            4,700,000
+     3             8                    Q
+     4            27              400,000
+     9             2                    Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+HOWPAYNG 'How Natural Gas Is Paid'                          Columns 204
+     Categorical Variable 
+     Variable Length 1
+
+     All - All Uses Of Each Fuel Paid AS Indicated
+     Some- At Least One Use Of One Fuel Paid
+     Other - One Or More Payments By Third Party Or Group Billing
+     Natural Gas Wells Are Considered Paid By Household
+
+     1 = All Paid By Household
+     2 = All Included In Rent
+     3 = Some Paid, Some Rent
+     4 = Other
+     9 = No Natural Gas Used
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         2,962           53,300,000
+     2           399            6,600,000
+     3            67            1,200,000
+     4            43              800,000
+     9         2,429           39,600,000
+
+HOWPAYLP 'How LPG IS Paid'                                  Columns 206
+     Categorical Variable 
+     Variable Length 1
+
+     All - All Uses Of Each Fuel Paid AS Indicated
+     Some- At Least One Use Of One Fuel Paid
+     Other - One Or More Payments By Third Party Or Group Billing
+     LPG Gas Wells Are Considered AS Other
+
+     1 = All Paid By Household
+     2 = All Included In Rent
+     4 = Other
+     9 = No LPG Used
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           524            7,900,000
+     2            14              200,000
+     4             1                    Q
+     9         5,361           93,400,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+HOWPAYFO 'How Fuel Oil Is Paid'                             Columns 208
+     Categorical Variable 
+     Variable Length 1
+
+     All - All Uses Of Each Fuel Paid AS Indicated
+     Some- At Least One Use Of One Fuel Paid
+          Other - One Or More Payments By Third Party Or Group Billing
+
+     1 = All Paid By Household
+     2 = All Included In Rent
+     9 = No Fuel Oil Used
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           547            7,600,000
+     2           163            2,300,000
+     9         5,190           91,500,000
+
+HOWPAYKR 'How Kerosene Is Paid'                             Columns 210
+     Categorical Variable 
+     Variable Length 1
+
+     1 = All Paid By Household
+     9 = No Kerosene Used
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           229            3,500,000
+     9         5,671           98,000,000

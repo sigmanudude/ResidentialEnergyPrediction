@@ -1,0 +1,1785 @@
+File layout for File Section 3 (Records are comma-delimited.  First line contains a list of variables on the file.  The remaining lines contain the values of the variables with fixed column positions.)
+
+Variables on all files
+
+DOEID    '4-digit identification number'                    Columns 1-4
+NWEIGHT  'The Final Weight'                                 Columns 6-11
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+REGIONC  'Census Region'                                    Columns 15
+DIVISION 'Census Division'                                  Columns 17
+LRGSTATE 'Four Largest States'                              Columns 19
+CDD65    'Cooling Degree-Days to base 65, 1-04 TO 12-04'    Columns 21-24
+HDD65    'Heating Degree-Days to base 65, 1-04 TO 12-04'    Columns 26-30
+TYPEHUQ  'Type of Home: as report by Respondent'            Columns 32
+
+Variables in File Section 3 only.
+
+
+CWASHER  'Use a clothes washer in home'                      Columns 34
+ZCWASHER 'Imputation Flag for CWASHER'                       Columns 36
+TOPFRONT 'Washing machine load from the top or from front'   Columns 38
+ZTOPFRON 'Imputation Flag for TOPFRONT'                      Columns 40
+WASHLOAD 'How many loads of laundry are washed in a week'    Columns 42 
+ZWASHLOA 'Imputation Flag for WASHLOAD'                      Columns 44
+WASHTEMP 'Temperature setting for wash cycle of the washer'  Columns 46
+ZWASHTEM 'Imputation Flag for WASHTEMP'                      Columns 48
+RNSETEMP 'Water temperature setting for rinse cycle'         Columns 50
+ZRNSETEM 'Imputation Flag for RNSETEMP'                      Columns 52
+DRYER    'Do you use a clothes dryer in home'                Columns 54
+DRYRFUEL 'What fuel does clothes dryer use'                  Columns 56-57
+ZDRYRFUE 'Imputation Flag for DRYRFUEL'                      Columns 59
+DRYRUSE  'How often use your clothes dryer'		       Columns 61
+ZDRYRUSE 'Imputation Flag for DRYRUSE'                       Columns 63
+WATERBED 'Does your household use any waterbed heaters'      Columns 65
+ZWATERBE 'Imputation Flag for WATERBED'                      Columns 67
+NOWTBDHT 'How many waterbed heaters do you use'              Columns 69
+ZNOWTBDH 'Imputation Flag for NOWTBDHT'			       Columns 71
+WTBEDUSE 'How many heaters are used all year round'          Columns 73
+ZWTBEDUS 'Imputation Flag for WTBEDUSE'			       Columns 75
+CFAN     'Does your household use any ceiling fans'          Columns 77
+NUMCFAN  'How many ceiling fans does your household use'     Columns 79-80
+SWIMPOOL 'Does your own swimming pool with filtering system' Columns 82
+ZSWIMPOO 'Imputation Flag for SWIMPOOL'			       Columns 84
+POOL     'Is it a heated pool'                               Columns 86
+FUELPOOL 'What fuel is used most often to heat pool water'   Columns 88-89
+ZFUELPOO 'Imputation Flag for FUELPOOL'			       Columns 91
+RECBATH  'Does your home have a heated hot tub, spa'         Columns 93
+ZRECBATH 'Imputation Flag for RECBATH'                       Columns 95
+FUELTUB  'What fuel is used to the water in hot tub, spa'    Columns 97-98
+ZFUELTUB 'Imputation Flag for FUELTUB'                       Columns 100
+TVCOLOR  'How many TV sets do you use in your home'          Columns 102-103
+BIGTV    'How many are large screen TV sets'                 Columns 105
+ZBIGTV   'Imputation Flag for BIGTV'                         Columns 107
+TVRECEP  'TV connected into cable network or satellite dish' Columns 109
+TYPRECEP 'Which are connected to, cable or satellite dish'   Columns 111
+CBLCON    'How the cable connected the TV'                   Columns 113
+ZCBLCON   'Imputation Flag for CBLCON'                       Columns 115
+VCR       'How many VCRs and DVD players in your home'       Columns 117-118
+ZVCR      'Imputation Flag for VCR'                          Columns 120
+WELLPUMP  'Electric pump for well water'                     Columns 122 
+ZWELLPUM  'Imputation Flag for WELLPUMP'                     Columns 124
+SWAMPCOL  'Evaporative or swamp cooler'                      Columns 126
+ZSWAMPCO  'Imputation Flag for SWAMPCOL'                     Columns 128
+NOTMOIST  'Electric dehumidifier removes moisture in summer' Columns 130
+ZNOTMOIS  'Imputation Flag for NOTMOIST'                     Columns 132
+MOISTURE  'Electric humidifier adds moisture in winter'      Columns 134
+ZMOISTUR  'Imputation Flag for MOISTURE'                     Columns 136
+AQUARIUM  'Large heated aquariums of 20 gallons or more'     Columns 138
+ZAQUARIU  'Imputation Flag for AQUARIUM'                     Columns 140
+DIPSTICK  'Automobile blocker heaters, dip-stick engine'     Columns 142
+ZDIPSTIC  'Imputation Flag for DIPSTICK'                     Columns 144
+NOCORD    'A portable cordless telephone'                    Columns 146
+ZNOCORD   'Imputation Flag for ZNOCORD'                      Columns 148
+CELLPHON  'A cell or mobile phone'                           Columns 150
+ZCELLPHO  'Imputation Flag for CELLPHON'                     Columns 152
+ANSMACH   'A telephone answering machine'                    Columns 154
+ZANSMACH  'Imputation Flag for ANSMACH'                      Columns 156
+STEREO    'Stereo equipment'                                 Columns 158
+ZSTEREO   'Imputation Flag for STEREO'                       Columns 160
+BOOMBOX   'Portable stereo/Boom box'                         Columns 162
+COMPCTST  'Compact stereo system'                            Columns 164
+COMPNTST  'Component stereo system'                          Columns 166
+OTHSTER   'Some other type of system'                        Columns 168
+BATTOOLS  'Portable appliances, powered by recharg. battery' Columns 170
+ZBATTOOL  'Imputation Flag for BATTOOLS'                     Columns 172
+BATCHRG   'These portable appliances plugged in all time'    Columns 174
+ZBATCHRG  'Imputation Flag for BATCHRG'                      Columns 176
+COMPUTER  'A personal computer'                              Columns 178
+ZCOMPUTE  'Imputation Flag for COMPUTER'                     Columns 180
+MULTPC    'Do you use more than one computer in your home'   Columns 182
+NUMPC     'How many PCs do you use'                          Columns 184
+ZNUMPC    'Imputation Flag for NUMPC'                        Columns 186
+LAPTOPPC  'How many of the PCs used are laptops'             Columns 188-189
+ZLAPTOPP  'Imputation Flag for LAPTOPPC'                     Columns 191
+INTERNET  'Do you have access to the internet'               Columns 193
+ZINTERNE  'Imputation Flag for INTERNET'                     Columns 195
+PCPRINT   'Do you have any type of printer'                  Columns 197
+ZPCPRINT  'Imputation Flag for PCPRINT'                      Columns 199
+FXCOPIER  'Some printers have built-in fax and copier'       Columns 201 
+ZFXCOPIE  'Imputation Flag for FXCOPIER'                     Columns 203
+FAX       'Do you have a separate fax machine'               Columns 205 
+ZFAX      'Imputation Flag for FAX'                          Columns 207
+COPIER    'A separate photocopier'                           Columns 209 
+ZCOPIER   'Imputation Flag for COPIER'                       Columns 211
+PCUSE     'How many hours each week is your PC turned on'    Columns 213-214 
+ZPCUSE    'Imputation Flag for PCUSE'                        Columns 216
+PCTASK    'Do you use your PC mainly for personal use'       Columns 218 
+ZPCTASK   'Imputation Flag for PCTASK'                       Columns 220
+TELECOM   'Do you telecommute'                               Columns 222 
+TELLDAYS  'How many days each week, is PC used for telecom.' Columns 224
+ 
+
+
+Codebook for File section 3
+
+Variables DOEID, NWEIGHT, MQRESULT, REGIONC, DIVISION, LRGSTATE CDD65,
+HDD65, and TYPEHUQ are on all files.
+
+DOEID '4-digit identification number'                       Columns 1-4
+     Included in all files
+     Numerical Variable
+     Variable length: 4
+
+          The variable DOEID will be on all files.  Each respondent is assigned
+     an unique value of DOEID.  It can be used to merge data from one file
+     with data from another file.
+
+     Minimum Value: 1,001
+
+     Maximum Value: 5,852
+
+NWEIGHT 'The Final Weight'                                  Columns 6-11
+     Included in all files
+     Numerical Variable
+     Variable length: 6
+
+     Minimum Value:   5,594
+     Maximum Value: 105,485
+
+          The sample design for RECS is not a simple random sample.
+     Consequently, to estimate the number or percent of households/housing units
+     with a certain characteristic, the sampling weight should be used.  The
+     variable NWEIGHT is the sampling weight for the observation.  It is
+     approximately the inverse of the probability of selection.  It gives
+     the number of households that the response represents in the sample. 
+     For most categorical variables, the codebooks contain both the
+     unweighted frequency and the weighted frequency.  The unweighted
+     frequency gives the number of observations, the weighted frequency
+     gives survey estimate of the number of households/housing units for
+     each possible value of the variable.  The weighted frequencies are
+     rounded to the nearest 100,000 households.  This is the limit of the
+     accuracy for RECS.  When the unweighted frequency is less than 10 or
+     the weighted frequency is less than 150,000; then weighted frequency is
+     suppressed.  A 'Q' is placed in the frequency to denote that the number
+     is suppressed.  This indicates that there are too few observation upon
+     which to determine an accurate estimate.
+
+
+MQRESULT 'Mail Questionnaire Codes'                         Columns 13
+     Included in all files
+
+     Categorical Variable 
+     Variable length 1
+
+     Mail Questionnaire (MQ)
+     Authorization Form (AF)
+     Personal Interview (PI)
+
+     1 = MQ Completed, AF Signed
+     2 = MQ Completed, AF not required
+     3 = MQ Completed, AF Not Signed
+     7 = MQ returned after a PI was completed
+     8 = PI was completed after MQ was returned
+     9 = Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1            166          3,900,000
+     2              1                  Q
+     3             76          1,700,000
+     7             42          1,000,000
+     8             24            600,000
+     9          4,513         99,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+          When MQRESULT equals 1 2, or 3, the household and housing unit data
+     was not obtained via a personal interview.  The data were obtained using a
+     shortened mail questionnaire.  A hot-deck imputation procedure was used
+     to match each mail respondent to a personal interview respondent.  The
+     critical matching variables were FUELHEAT, FUELH2O, TYPECOOL, TYPEHUQ,
+     and REGIONC.  Additional  variables used in a scoring function to
+
+
+     determine the best match were MONEYPY, NHSLDMEM, VEHICLES, HHAGE, and
+
+     TOTROOMS.  The remaining household/housing unit characteristics for the
+     mail respondents were determined by the values of the matched personal
+     interview respondent.  The energy consumption and expenditures data for
+
+     the mail respondents was based upon data obtained from their energy
+     suppliers.  It was not imputed using a hot deck procedure.
+
+          Questionnaire data from personal interview respondents sometime is
+     missing and needs to be imputed.  'Z' variables are used to indicate
+     the presence of imputed data.  For example, if ZURBRUR = 0 then URBRUR
+     was not imputed.  If ZURBRUR = 1 then URBRUR was imputed.
+
+
+Census Division/Region:   A geographic area consisting of several States
+defined by the U.S. Department of Commerce, Bureau of the Census.  The
+States are grouped into nine divisions and four regions.
+
+Region    Division            States 
+
+
+Northeast New England         Connecticut, Maine, Massachusetts, 
+                              New Hampshire, Vermont, and Rhode Island
+
+          Middle Atlantic     New Jersey, New York, and Pennsylvania
+
+Midwest   East North Central  Illinois, Indiana, Michigan, 
+                              Ohio, and Wisconsin
+
+          West North Central  Iowa, Kansas, Minnesota, Missouri,
+                              Nebraska, North Dakota, and South Dakota
+
+South     South Atlantic      Delaware, the District of Columbia,
+                              Florida, Georgia, Maryland, North 
+                              Carolina, South Carolina, Virginia,
+                              and West Virginia 
+
+          East South Central  Alabama, Kentucky, Mississippi, 
+                              and Tennessee
+
+          West South Central  Arkansas, Louisiana, Oklahoma, 
+                              and Texas
+
+
+West      Mountain            Arizona, Colorado, Idaho, Montana,
+
+                              Nevada, New Mexico, Utah, and Wyoming
+
+          Pacific             Alaska, California, Hawaii, Oregon, 
+                              and Washington
+
+REGIONC 'Census Region'                                     Columns 15
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+     1 = Northeast Census Region
+     2 = Midwest Census Region
+     3 = South Census Region
+     4 = West Census Region
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1          1,087         20,300,000
+     2          1,047         24,500,000
+     3          1,489         38,900,000
+     4          1,199         23,300,000
+
+
+DIVISION 'Census Division'                                  Columns 17
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+ 
+     1 = New England Census Division
+     2 = Middle Atlantic Census Division
+     3 = East North Central Census Division
+     4 = West North Central Census Division
+     5 = South Atlantic Census Division
+     6 = East South Central Census Division
+     7 = West South Central Census Division
+     8 = Mountain Census Division
+     9 = Pacific Census Division
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1         396             5,400,000
+     2         691            14,800,000
+     3         681            17,100,000
+     4         366             7,400,000
+     5         626            20,300,000
+     6         409             6,800,000
+     7         454            11,800,000
+     8         407             6,700,000
+     9         792            16,600,000
+
+LRGSTATE 'Four Largest States'                              Columns 19
+     Included in all files
+     Categorical Variable 
+     Variable length 1
+
+     0 = Other
+     1 = New York State
+     2 = California
+     3 = Texas
+     4 = Florida
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     0         3,484          73,600,000
+     1           328           7,100,000
+     2           541          12,300,000 
+     3           289           7,700,000
+     4           180           6,300,000
+
+CDD65 and HDD65 are weather data.  The values of CDD65 and HDD65 were based
+upon data obtained from the NOAA.  A random error was added to both HDD65
+and CDD65 to mask the location of the weather station from which the data
+was obtained.
+
+CDD65 'Cooling Degree-Days to base 65, 1-04 TO 12-04'       Columns 21-24
+     Included in all files
+     Numerical Variable 
+     Variable length 4
+
+     Minimum Value:     0
+     Maximum Value: 5,161
+
+HDD65 'Heating Degree-Days to base 65, 1-04 TO 12-04'       Columns 26-30
+     Included in all files
+     Numerical Variable 
+     Variable length 5
+
+     Minimum Value:      0
+     Maximum Value: 10,045
+
+          Cooling degree days are the number of degrees the average daily     temperature (ADT) is above the base temperature.  Heating degree days
+     are the number of degrees the ADT is below the base temperature.  To
+     calculate daily degree days (base 65 degrees):
+
+
+
+          ADT = (daily high + daily low)/2
+          CDD(daily)     = 0            if ADT <= 65
+                         = ADT - 65     if ADT > 65
+
+          HDD(daily)     = 0            if ADT >= 65
+                         = 65 - ADT     if ADT < 65.
+
+          Annual degrees days are calculated by summing the daily degree days. 
+     The .5 is carried over in the summation.  The total is rounded up after
+     the summation.
+
+TYPEHUQ 'Type of Home: as report by Respondent'             Columns 32
+     Included in all files
+     Categorical Variable
+     Variable length: 1
+     Question (A-1) 
+          different than RECS97
+     Variable was constructed form responses to questions
+          A-1, A-3, A-3a, and A-3a1
+     
+          There is a fine line between the definitions of various types of
+     housing units. The distinction between a single-family attached unit
+     and a unit in an apartment building is particularly complex. The 1997
+     RECS relied more heavily of the respondent's perception of the housing
+     type.  The 2001 RECS placed more emphasis on the interviewer's perception.
+
+
+     1 = Mobile Home
+     2 = Single-Family detached
+     3 = Single-Family Attached
+     4 = Apartment in Building containing 2-4 units
+     5 = Apartment in Building Containing 5 or more units
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+     1           325           6,800,000
+     2         2,935          63,100,000
+     3           426          10,600,000 
+     4           444           9,500,000
+     5           692          17,000,000
+
+
+
+The remaining variables are on File Section 3 only.
+
+CWASHER  'Use a clothes washer in home'                      Columns 34
+     Question C-1
+     
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          995         22,900,000
+       1        3,827         84,100,000
+
+ZCWASHER 'Imputation Flag for CWASHER'                       Columns 36
+
+     0 = Not Imputed
+     2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+TOPFRONT 'Washing machine load from the top or from front'   Columns 38
+     Question C-1a
+     
+     1 = Top loading
+     2 = Front loading
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        3,715         81,600,000
+       2          112          2,500,000
+       9          995         22,900,000
+
+
+ZTOPFRON 'Imputation Flag for TOPFRONT'                      Columns 40
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+WASHLOAD 'How many loads of laundry are washed in a week'    Columns 42 
+     Question C-1b
+
+     1 = 1 Load or less each week
+     2 = 2 to 4 Loads
+     3 = 5 to 9 Loads
+     4 = 10 to 15 Loads
+     5 = More than 15 Loads
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of     Value     Observations   Households
+       1          291          6,800,000
+       2        1,513         34,100,000
+       3        1,443         31,000,000
+       4          448          9,600,000
+       5          132          2,700,000
+       9          995         22,900,000
+
+
+ZWASHLOA 'Imputation Flag for WASHLOAD'                      Columns 44
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,814        106,800,000
+       2            8                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+ 
+WASHTEMP 'Temperature setting for wash cycle of the washer'  Columns 46
+
+     Question C-1c
+
+     1 = Hot
+     2 = Warm
+     3 = Cold
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          286          6,200,000
+       2        2,271         49,700,000
+       3        1,270         28,200,000
+       9          995         22,900,000
+
+
+ZWASHTEM 'Imputation Flag for WASHTEMP'                      Columns 48
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,795        106,500,000
+       2           27            500,000
+
+
+RNSETEMP 'Water temperature setting for rinse cycle'         Columns 50
+
+     Question C-1d
+
+     1 = Hot
+     2 = Warm
+     3 = Cold
+     9 = No Answer/Not Applicable    
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           63          1,400,000
+       2          753         16,600,000
+       3        3,011         66,100,000
+       9          995         22,900,000
+
+
+ZRNSETEM 'Imputation Flag for RNSETEMP'                      Columns 52
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,794        106,400,000
+       2           28            600,000
+
+
+DRYER    'Do you use a clothes dryer in home'                Columns 54
+
+     Question C-2
+
+     0 = No
+     1 = Yes
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0       1,245          28,200,000
+       1       3,577          78,800,000
+     
+
+DRYRFUEL 'What fuel does clothes dryer use'                  Columns 56-57
+
+     Question C-2a
+
+     1 = Natural gas from underground pipes
+     2 = Bottled Gas (LPG or Propane)
+     5 = Electricity
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          715     16,900,000
+       2           47        800,000
+       5        2,815     61,100,000
+      99        1,245     28,200,000
+
+
+ZDRYRFUE 'Imputation Flag for DRYRFUEL'                      Columns 59
+  
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,816        106,800,000
+       1            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+DRYRUSE  'How often use your clothes dryer'		       Columns 61
+
+     Question C-2b
+
+     1 = Use it every time wash clothes
+     2 = Use it for some, but not all, load of wash
+     3 = Use it infrequently
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        2,830         63,500,000
+       2          607         12,700,000
+       3          140          2,700,000
+       9        1,245         28,200,000
+
+                  
+ZDRYRUSE 'Imputation Flag for DRYRUSE'                       Columns 63
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+WATERBED 'Does your household use any waterbed heaters'      Columns 65
+
+     Question C-3
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,565        101,400,000
+       1          257          5,500,000
+
+
+ZWATERBE 'Imputation Flag for WATERBED'                      Columns 67
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+NOWTBDHT 'How many waterbed heaters do you use'              Columns 69
+
+     Question C-3a
+
+     0-9 = Number of waterbed heaters
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,565        101,400,000
+       1          223          4,800,000
+       2           31            700,000
+       3            2                  Q
+       4            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZNOWTBDH 'Imputation Flag for NOWTBDHT'			       Columns 71
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+WTBEDUSE 'How many heaters are used all year round'          Columns 73
+
+     Question C-3a1
+
+      0-9 = Number of waterbed heaters used all year
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,595        102,000,000
+       1          198          4,300,000
+       2           26            600,000
+       3            2                  Q
+       4            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+ZWTBEDUS 'Imputation Flag for WTBEDUSE'			       Columns 75
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+CFAN     'Does your household use any ceiling fans'          Columns 77
+
+     Question C-4
+
+     0 = NO
+     1 = Yes
+       
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,742         37,400,000
+       1        3,080         69,600,000
+
+
+NUMCFAN  'How many ceiling fans does your household use'     Columns 79-80
+
+   Question C-4a
+   
+    0-9 = Number of ceiling fans
+
+               Number         Weighted               Of             Number of
+    Value     Observations   Households
+      0         1,742        37,400,000
+      1         1,013        22,000,000
+      2           677        15,100,000
+      3           484        10,900,000
+      4           403         9,300,000
+      5           268         6,500,000
+      6           152         3,800,000
+      7            48         1,200,000
+      8            23           500,000
+      9             8                 Q
+     10             4                 Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+SWIMPOOL 'Does your own swimming pool with filtering system' Columns 82
+
+     Question C-5
+
+     0 = NO
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,075         67,100,000
+       1          286          6,500,000
+       9        1,461         33,300,000
+
+
+ZSWIMPOO 'Imputation Flag for SWIMPOOL'			       Columns 84
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted               Of             Number of
+     Value     Observations   Households
+       0        4,822        107,000,000
+
+
+POOL     'Is it a heated pool'                               Columns 86
+
+     Question C-5a
+
+     0 = NO
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          237          5,300,000
+       1           49          1,200,000
+       9        4,536        100,400,000
+
+
+FUELPOOL 'What fuel is used most often to heat pool water'   Columns 88-89
+
+     Question C-5a1
+
+     1 = Natural gas from underground pipes
+     2 = Bottled Gas (LPG or Propane)
+     5 = Electricity
+     8 = Solar
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1           30            800,000
+       2           11            200,000
+       5            2                  Q
+       8            6                  Q
+      99        4,773        105,800,000
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZFUELPOO 'Imputation Flag for FUELPOOL'			       Columns 91
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       1            1                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+RECBATH  'Does your home have a heated hot tub, spa'         Columns 93
+
+     Question C-6
+
+     0 = No     1 = Yes
+    
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,631        102,600,000
+       1          191          4,400,000
+
+
+ZRECBATH 'Imputation Flag for RECBATH'                       Columns 95
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+              		 Number         Weighted
+   			       Of             Number of
+               Value     Observations   Households
+                 0        4,818        106,900,000
+                 2            4                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+FUELTUB  'What fuel is used to the water in hot tub, spa'    Columns 97-98
+
+     Question C-6a
+
+     1 = Natural gas from underground pipes
+     2 = Bottled Gas (LPG or Propane)
+     3 = Fuel oil
+     5 = Electricity
+     8 = Solar
+    99 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            36           900,000
+       2             5                 Q
+       3             1                 Q
+       5           146         3,300,000
+       8             3                 Q
+      99         4,631       102,600,000
+    
+
+ZFUELTUB 'Imputation Flag for FUELTUB'                       Columns 100
+
+   0 = Not Imputed
+   1 = Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       1            1                  Q
+                     
+     Q = Data withheld because fewer than 10 observation in the category.
+
+ 
+TVCOLOR  'How many TV sets do you use in your home'          Columns 102-103
+
+     Question C-7
+
+     0-15 = Number of color TV sets
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0           51          1,200,000
+       1        1,321         29,300,000
+       2        1,757         38,400,000
+       3        1,042         23,300,000
+       4          448         10,200,000
+       5          134          2,900,000
+       6           45          1,000,000
+       7           16            400,000
+       8            4                  Q
+      10            1                  Q
+      11            2                  Q
+      13            1                  Q
+    
+     Q = Data withheld because fewer than 10 observation in the category.
+
+ 
+BIGTV    'How many are large screen TV sets'                 Columns 105
+
+     Question C-7a
+
+     0-15 = Number of large screen color TV sets
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,167         70,400,000
+       1        1,242         27,300,000
+       2          348          7,900,000
+       3           48          1,100,000
+       4           11            200,000
+       5            6                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZBIGTV   'Imputation Flag for BIGTV'                         Columns 107
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+                     
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+TVRECEP  'TV connected into cable network or satellite dish' Columns 109
+
+     Question C-7b
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,081         23,600,000
+       1        3,690         82,200,000
+       9           51          1,200,000
+
+
+TYPRECEP 'Which are connected to, cable or satellite dish'   Columns 111
+
+     Question C-7b1
+
+     1 = Cable network
+     2 = Satelite dish antenna
+     3 = Both
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        3,039         68,300,000
+       2          566         12,000,000
+       3           85          1,900,000
+       9        1,132         24,800,000
+
+
+CBLCON    'How the cable connected the TV'                   Columns 113
+
+          Question C-7b1a
+
+     1 = Connected directly to the TV
+     2 = Connected to the TV through a box
+     3 = Varies with the TV
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1        2,029         45,700,000
+       2          883         19,300,000
+       3          212          5,100,000
+       9        1,698         36,800,000
+
+ZCBLCON   'Imputation Flag for CBLCON'                       Columns 115
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,812        106,800,000
+       2           10            200,000
+
+
+VCR       'How many VCRs and DVD players in your home'       Columns 117-118
+
+     Question C-7c
+
+     0-15 = Number of VCRs and DVD players 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          480         10,900,000
+       1        2,355         52,300,000
+       2        1,332         29,000,000
+       3          443         10,100,000
+       4          140          2,900,000
+       5           50          1,200,000
+       6           10            200,000
+       7            9                  Q
+       11           3                  Q
+
+     Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZVCR      'Imputation Flag for VCR'                          Columns 120
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,819        106,900,000
+       2            3                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+WELLPUMP  'Electric pump for well water'                     Columns 122 
+
+     Question C-8a
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,140         93,200,000
+       1          682         13,800,000
+ 
+
+ZWELLPUM  'Imputation Flag for WELLPUMP'                     Columns 124
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households 
+       0        4,811        106,800,000
+       2           11            200,000
+
+
+SWAMPCOL  'Evaporative or swamp cooler'                      Columns 126
+
+     Question C-8b
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,667        104,300,000
+       1          155          2,700,000
+
+
+ZSWAMPCO  'Imputation Flag for SWAMPCOL'                     Columns 128
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,819        106,900,000
+       2            3                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+NOTMOIST  'Electric dehumidifier removes moisture in summer' Columns 130
+
+     Question C-8c
+
+     0 = No
+     1 = Yes
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,244         94,900,000
+       1          578         12,100,000
+
+
+ZNOTMOIS  'Imputation Flag for NOTMOIST'                     Columns 132
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+                     
+
+MOISTURE  'Electric humidifier adds moisture in winter'      Columns 134
+
+     Question C-8d
+
+     0 = No
+     1 = Yes 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,084         91,400,000
+       1          738         15,600,000
+
+
+ZMOISTUR  'Imputation Flag for MOISTURE'                     Columns 136
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+AQUARIUM  'Large heated aquariums of 20 gallons or more'     Columns 138
+
+     Question C-8e
+
+     0 = No
+     1 = Yes 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,619        102,500,000
+       1          203          4,500,000
+
+
+ZAQUARIU  'Imputation Flag for AQUARIUM'                     Columns 140
+
+   0 = Not Imputed
+   1 = Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+DIPSTICK  'Automobile blocker heaters, dip-stick engine'     Columns 142
+
+     Question C-8f
+     
+     0 = No
+     1 = Yes 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,671        104,700,000
+       1          151          2,300,000
+
+
+ZDIPSTIC  'Imputation Flag for DIPSTICK'                     Columns 144
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+NOCORD    'A portable cordless telephone'                    Columns 146
+  
+     Question C-8g
+
+     0 = No
+     1 = Yes 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,143         25,500,000
+       1        3,679         81,500,000
+
+ZNOCORD   'Imputation Flag for ZNOCORD'                      Columns 148
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,800,000
+       2            5                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+CELLPHON  'A cell or mobile phone'                           Columns 150
+
+     Question C-8h
+
+     0 = No
+     1 = Yes 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,294         50,200,000
+       1        2,528         56,800,000
+
+ZCELLPHO  'Imputation Flag for CELLPHON'                     Columns 152
+   0 = Not Imputed
+   2 = EIA Imputed
+
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,815        106,800,000
+       2            7                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+ANSMACH   'A telephone answering machine'                    Columns 154
+
+     Question C-8i
+
+     0 = No
+     1 = Yes 
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,842         41,300,000
+       1        2,980         65,700,000
+
+
+ZANSMACH  'Imputation Flag for ANSMACH'                      Columns 156
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,818        106,900,000
+       2            4                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+STEREO    'Stereo equipment'                                 Columns 158
+
+     Question C-8j
+
+     0 = No
+     1 = Yes  
+   
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,173         26,700,000
+       1        3,649         80,300,000
+
+
+
+ZSTEREO   'Imputation Flag for STEREO'                       Columns 160
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,818        106,900,000
+       2            4                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+BOOMBOX   'Portable stereo/Boom box'                         Columns 162
+
+     Question C-8j1
+
+     0 = No
+     1 = Yes  
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,590         80,800,000
+       1        1,232         26,100,000
+
+
+COMPCTST  'Compact stereo system'                            Columns 164
+
+     Question C-8j1
+
+     0 = No
+     1 = Yes  
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,153         70,400,000
+       1        1,669         36,500,000
+
+
+COMPNTST  'Component stereo system'                          Columns 166
+
+     Question C-8j1
+
+     0 = No
+     1 = Yes  
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        3,202         70,700,000
+       1        1,620         36,300,000
+
+
+OTHSTER   'Some other type of system'                        Columns 168
+
+     Question C-8j1
+
+     0 = No
+     1 = Yes  
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,670        103,900,000
+       1          152          3,100,000
+
+
+BATTOOLS  'Portable appliances, powered by recharg. battery' Columns 170
+
+     Question C-8k
+
+     0 = No
+     1 = Yes  
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,629         59,300,000
+       1        2,193         47,700,000
+  
+
+ZBATTOOL  'Imputation Flag for BATTOOLS'                     Columns 172
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,815        106,800,000
+       2            7                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+BATCHRG   'These portable appliances plugged in all time'    Columns 174
+
+     Question C-8k1
+     
+     1 = Keep them plugged in all the time
+     2 = Recharge them as needed
+     3 = Both ways are used
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          473         10,800,000
+       2        1,582         33,800,000
+       3          138          3,100,000
+       9        2,629         59,300,000
+
+ZBATCHRG  'Imputation Flag for BATCHRG'                      Columns 176
+   
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,900,000
+       2            5                  Q
+
+  Q = Data withheld because fewer than 10 observation in the category.
+
+                    
+COMPUTER  'A personal computer'                              Columns 178
+
+     Question C-9
+
+     0 = No
+     1 = Yes  
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,105         47,000,000
+       1        2,717         60,000,000
+
+  
+ZCOMPUTE  'Imputation Flag for COMPUTER'                     Columns 180
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,818        106,900,000
+       2            4                  Q
+         
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+MULTPC    'Do you use more than one computer in your home'   Columns 182
+
+     Question C-9a
+
+     0 = No
+     1 = Yes  
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,036         44,500,000
+       1          681         15,500,000
+       9        2,105         47,000,000
+
+
+NUMPC     'How many PCs do you use'                          Columns 184
+
+     Question C-9a1
+     0-9 = Number of Personal computers
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,105         47,000,000
+       1        2,036         44,500,000
+       2          481         10,800,000
+       3          149          3,500,000
+       4           35            900,000
+       5            9                  Q
+       6            2                  Q
+       7            3                  Q
+       8            1                  Q
+       9            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZNUMPC    'Imputation Flag for NUMPC'                        Columns 186
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,818        106,900,000
+       2            4                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+LAPTOPPC  'How many of the PCs used are laptops'             Columns 188-189
+
+     Question C-9b
+
+     0-9 = Number of PCs used as laptops
+     99  = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        2,116         45,900,000
+       1          508         12,000,000
+       2           85          2,000,000
+       3            6                  Q
+       4            2                  Q
+      99        2,105         47,000,000
+       
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+ZLAPTOPP  'Imputation Flag for LAPTOPPC'                     Columns 191
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+INTERNET  'Do you have access to the internet'               Columns 193
+
+     Question C-9c 
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          428          9,400,000
+       1        2,289         50,700,000
+       9        2,105         47,000,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+ZINTERNE  'Imputation Flag for INTERNET'                     Columns 195
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,820        106,900,000
+       2            2                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+PCPRINT   'Do you have any type of printer'                  Columns 197
+
+      Question C-9d
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          318          7,200,000
+       1        2,399         52,800,000
+       9        2,105         47,000,000
+
+
+ZPCPRINT  'Imputation Flag for PCPRINT'                      Columns 199
+   0 = Not Imputed
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,822        107,000,000
+
+
+FXCOPIER  'Some printers have built-in fax and copier'       Columns 201 
+
+     Question C-9d1
+   
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+     
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        1,827         40,200,000
+       1          572         12,600,000
+       9        2,423         54,200,000
+
+
+ZFXCOPIE  'Imputation Flag for FXCOPIER'                     Columns 203
+  
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,810        106,700,000
+       2           12            300,000
+           
+
+FAX       'Do you have a separate fax machine'               Columns 205 
+
+     Question C-10
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,337         96,000,000
+       1          485         11,000,000
+
+
+
+ZFAX      'Imputation Flag for FAX'                          Columns 207
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,819        106,900,000
+       2            3                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+COPIER    'A separate photocopier'                           Columns 209 
+
+     Question C-11
+
+     0 = No
+     1 = Yes
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,475         99,600,000
+       1          347          7,400,000
+
+
+ZCOPIER   'Imputation Flag for COPIER'                       Columns 211
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,817        106,900,000
+       2            5                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+PCUSE     'How many hours each week is your PC turned on'    Columns 213-214 
+
+     Question C-12
+
+     10 = Less than 2 hours
+     20 = 2 to 15 hours per week
+     31 = 16 to 40 hours per week
+     32 = More than 40 hours, bit not on all the time
+     40 = Turned on all the time
+     99 = No Answer/Not Applicable
+     
+               Number         Weighted
+               Of             Number of
+     Value     Observations   households
+       10        449          10,300,000
+       20      1,208          26,300,000
+       31        562          12,200,000
+       32        254           5,700,000
+       40        244           5,600,000
+       99      2,105          47,000,000
+
+
+ZPCUSE    'Imputation Flag for PCUSE'                        Columns 216
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,819        106,900,000       2            3                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+PCTASK    'Do you use your PC mainly for personal use'       Columns 218 
+
+     Question C-12a
+
+     1 = Personal use
+     2 = Business use
+     3 = Both or about equally
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1          649         14,000,000
+       2          101          2,100,000
+       3          310          7,300,000
+       9        3,762         83,600,000
+
+
+ZPCTASK   'Imputation Flag for PCTASK'                       Columns 220
+
+   0 = Not Imputed
+   2 = EIA Imputed
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0        4,821        107,000,000
+       2            1                  Q
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+TELECOM   'Do you telecommute'                               Columns 222 
+
+     Question C-12a1
+
+     0 = No
+     1 = Yes
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       0          263          5,800,000
+       1          148          3,600,000
+       9        4,411         97,500,000
+
+TELLDAYS  'How many days each week, is PC used for telecom.' Columns 224
+
+     Question C-12a1a
+
+     0-7 = Number of days telecommuting
+     9 = No Answer/Not Applicable
+
+               Number         Weighted
+               Of             Number of
+     Value     Observations   Households
+       1            27           800,000
+       2            19           500,000
+       3            15           300,000
+       4            17           400,000
+       5            39           900,000
+       6             9                 Q
+       7            22           500,000
+       9         4,674       103,400,000
+
+Q = Data withheld because fewer than 10 observation in the category.
+
+
+
