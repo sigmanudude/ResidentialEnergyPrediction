@@ -1,0 +1,298 @@
+Cols,Type,Descr
+DOEID,Character,Unique identifier for each respondent
+REGIONC,Numeric,Census Region
+DIVISION,Numeric,Census Division
+TYPEHUQ,Numeric,Type of housing unit
+CELLAR,Numeric,Housing unit over a basement
+ZCELLAR,Numeric,Imputation flag for CELLAR
+BASEFIN,Numeric,Finished basement
+ZBASEFIN,Numeric,Imputation flag for BASEFIN
+ATTIC,Numeric,Attic above the housing unit
+ZATTIC,Numeric,Imputation flag for ATTIC
+ATTICFIN,Numeric,Finished attic
+ZATTICFIN,Numeric,Imputation flag for ATTICFIN
+STORIES,Numeric,Number of stories in a single-family home
+ZSTORIES,Numeric,Imputation flag for STORIES
+PRKGPLC1,Numeric,Attached garage
+ZPRKGPLC1,Numeric,Imputation flag for PRKGPLC1
+KOWNRENT,Numeric,Own or rent
+ZKOWNRENT,Numeric,Imputation flag for KOWNRENT
+STUDIO,Numeric,Studio apartment
+ZSTUDIO,Numeric,Imputation flag for STUDIO
+BEDROOMS,Numeric,Number of bedrooms
+ZBEDROOMS,Numeric,Imputation flag for BEDROOMS
+NCOMBATH,Numeric,Number of full bathrooms
+ZNCOMBATH,Numeric,Imputation flag for NCOMBATH
+NHAFBATH,Numeric,Number of half bathrooms
+ZNHAFBATH,Numeric,Imputation flag for NHAFBATH
+OTHROOMS,Numeric,Number of other rooms
+ZOTHROOMS,Numeric,Imputation flag for OTHROOMS
+TOTROOMS,Numeric,"Total number of rooms in the housing unit, excluding bathrooms"
+WALLTYPE,Numeric,Major outside wall material
+ZWALLTYPE,Numeric,Imputation flag for WALLTYPE
+HIGHCEIL,Numeric,High ceilings
+ZHIGHCEIL,Numeric,Imputation flag for HIGHCEIL
+DOOR1SUM,Numeric,Number of sliding glass doors
+ZDOOR1SUM,Numeric,Imputation flag for DOOR1SUM
+WINDOWS,Numeric,Number of windows
+ZWINDOWS,Numeric,Imputation flag for WINDOWS
+TYPEGLASS,Numeric,Type of glass in most windows
+ZTYPEGLASS,Numeric,Imputation flag for TYPEGLASS
+ADQINSUL,Numeric,Level of insulation
+ZADQINSUL,Numeric,Imputation flag for ADQINSUL
+DRAFTY,Numeric,Frequency of draft
+ZDRAFTY,Numeric,Imputation flag for DRAFTY
+SWIMPOOL,Numeric,Swimming pool
+ZSWIMPOOL,Numeric,Imputation flag for SWIMPOOL
+POOL,Numeric,Heated swimming pool
+ZPOOL,Numeric,Imputation flag for POOL
+FUELPOOL,Numeric,Fuel used for heating swimming pool
+ZFUELPOOL,Numeric,Imputation flag for FUELPOOL
+RECBATH,Numeric,Hot tub
+ZRECBATH,Numeric,Imputation flag for RECBATH
+FUELTUB,Numeric,Fuel used for heating hot tub
+ZFUELTUB,Numeric,Imputation flag for FUELTUB
+NUMFRIG,Numeric,Number of refrigerators used
+ZNUMFRIG,Numeric,Imputation flag for NUMFRIG
+SIZRFRI1,Numeric,Size of most-used refrigerator
+ZSIZRFRI1,Numeric,Imputation flag for SIZRFRI1
+TYPERFR1,Numeric,Door arrangement of most-used refrigerator
+ZTYPERFR1,Numeric,Imputation flag for TYPERFR1
+AGERFRI1,Numeric,Age of most-used refrigerator
+ZAGERFRI1,Numeric,Imputation flag for AGERFRI1
+ICE,Numeric,Through-the-door ice on most-used refrigerator
+ZICE,Numeric,Imputation flag for ICE
+SIZRFRI2,Numeric,Size of second most-used refrigerator
+ZSIZRFRI2,Numeric,Imputation flag for SIZRFRI2
+TYPERFR2,Numeric,Door arrangement of second most-used refrigerator
+ZTYPERFR2,Numeric,Imputation flag for TYPERFR2
+AGERFRI2,Numeric,Age of second most-used refrigerator
+ZAGERFRI2,Numeric,Imputation flag for AGERFRI2
+NUMFREEZ,Numeric,Number of separate freezers used
+ZNUMFREEZ,Numeric,Imputation flag for NUMFREEZ
+UPRTFRZR,Numeric,Door arrangement of most-used freezer
+ZUPRTFRZR,Numeric,Imputation flag for UPRTFRZR
+SIZFREEZ,Numeric,Size of most-used freezer
+ZSIZFREEZ,Numeric,Imputation flag for SIZFREEZ
+AGEFRZR,Numeric,Age of most-used freezer
+ZAGEFRZR,Numeric,Imputation flag for AGEFRZR
+STOVEN,Numeric,Number of stoves
+ZSTOVEN,Numeric,Imputation flag for STOVEN
+OVENUSE,Numeric,Frequency of use of oven part of stove
+ZOVENUSE,Numeric,Imputation flag for OVENUSE
+STOVE,Numeric,Number of separate cooktops
+ZSTOVE,Numeric,Imputation flag for STOVE
+OVEN,Numeric,Number of separate ovens
+ZOVEN,Numeric,Imputation flag for OVEN
+MICRO,Numeric,Microwave oven used
+ZMICRO,Numeric,Imputation flag for MICRO
+AMTMICRO,Numeric,Frequency of microwave use
+ZAMTMICRO,Numeric,Imputation flag for AMTMICRO
+NUMMEAL,Numeric,Frequency hot meals are cooked
+ZNUMMEAL,Numeric,Imputation flag for NUMMEAL
+COFFEE,Numeric,Coffee maker used
+ZCOFFEE,Numeric,Imputation flag for COFFEE
+DISHWASH,Numeric,Have dishwasher
+ZDISHWASH,Numeric,Imputation flag for DISHWASH
+DWASHUSE,Numeric,Frequency of dishwasher use
+ZDWASHUSE,Numeric,Imputation flag for DWASHUSE
+AGEDW,Numeric,Age of dishwasher
+ZAGEDW,Numeric,Imputation flag for AGEDW
+CWASHER,Numeric,Have clothes washer in home
+ZCWASHER,Numeric,Imputation flag for CWASHER
+TOPFRONT,Numeric,Top or front loading clothes washer
+ZTOPFRONT,Numeric,Imputation flag for TOPFRONT
+WASHLOAD,Numeric,Frequency of clothes washer use
+ZWASHLOAD,Numeric,Imputation flag for WASHLOAD
+WASHTEMP,Numeric,Water temperature used for wash cycle
+ZWASHTEMP,Numeric,Imputation flag for WASHTEMP
+RNSETEMP,Numeric,Water temperature used for rinse cycle
+ZRNSETEMP,Numeric,Imputation flag for RNSETEMP
+AGECWASH,Numeric,Age of clothes washer
+ZAGECWASH,Numeric,Imputation flag for AGECWASH
+DRYER,Numeric,Have clothes dryer in home
+ZDRYER,Numeric,Imputation flag for DRYER
+DRYRFUEL,Numeric,Fuel used by clothes dryer
+ZDRYRFUEL,Numeric,Imputation flag for DRYRFUEL
+DRYRUSE,Numeric,Frequency of clothes dryer use
+ZDRYRUSE,Numeric,Imputation flag for DRYRUSE
+AGECDRYER,Numeric,Age of clothes dryer
+ZAGECDRYER,Numeric,Imputation flag for AGECDRYER
+TVCOLOR,Numeric,Number of televisions used
+ZTVCOLOR,Numeric,Imputation flag for TVCOLOR
+INTERNET,Numeric,Internet access at home
+ZINTERNET,Numeric,Imputation flag for INTERNET
+INWIRELESS,Numeric,Wireless internet access
+ZINWIRELESS,Numeric,Imputation flag for INWIRELESS
+DNTHEAT,Numeric,"No space heating equipment, or unused space heating equipment"
+ZDNTHEAT,Numeric,Imputation flag for DNTHEAT
+EQUIPM,Numeric,Main space heating equipment type
+ZEQUIPM,Numeric,Imputation flag for EQUIPM
+FUELHEAT,Numeric,Main space heating fuel
+ZFUELHEAT,Numeric,Imputation flag for FUELHEAT
+EQUIPAGE,Numeric,Age of main space heating equipment
+ZEQUIPAGE,Numeric,Imputation flag for EQUIPAGE
+THERMAIN,Numeric,Any thermostats
+ZTHERMAIN,Numeric,Imputation flag for THERMAIN
+PROTHERM,Numeric,Programmable main thermostat
+ZPROTHERM,Numeric,Imputation flag for PROTHERM
+TEMPHOME,Numeric,Winter temperature when someone is home during the day
+ZTEMPHOME,Numeric,Imputation flag for TEMPHOME
+TEMPGONE,Numeric,Winter temperature when no one is home during the day
+ZTEMPGONE,Numeric,Imputation flag for TEMPGONE
+TEMPNITE,Numeric,Winter temperature at night
+ZTEMPNITE,Numeric,Imputation flag for TEMPNITE
+EQUIPAUX,Numeric,Secondary space heating equipment used
+BASEHEAT,Numeric,Heating used in basement
+ZBASEHEAT,Numeric,Imputation flag for BASEHEAT
+ATTCHEAT,Numeric,Heating used in attic
+ZATTCHEAT,Numeric,Imputation flag for ATTCHEAT
+GARGHEAT,Numeric,Heating used in attached garage
+ZGARGHEAT,Numeric,Imputation flag for GARGHEAT
+MOISTURE,Numeric,Humidifier used
+ZMOISTURE,Numeric,Imputation flag for MOISTURE
+USEMOISTURE,Numeric,Number of months humidifier used in last year
+ZUSEMOISTURE,Numeric,Imputation flag for USEMOISTURE
+AIRCOND,Numeric,Air conditioning equipment used
+ZAIRCOND,Numeric,Imputation flag for AIRCOND
+COOLTYPE,Numeric,Type of air conditioning equipment used
+ZCOOLTYPE,Numeric,Imputation flag for COOLTYPE
+CENACHP,Numeric,Central air conditioner is a heat pump
+ZCENACHP,Numeric,Imputation flag for CENACHP
+AGECENAC,Numeric,Age of central air conditioner
+ZAGECENAC,Numeric,Imputation flag for AGECENAC
+THERMAINAC,Numeric,Thermostat for central air conditioner
+ZTHERMAINAC,Numeric,Imputation flag for THERMAINAC
+PROTHERMAC,Numeric,Programmable thermostat for central air conditioner
+ZPROTHERMAC,Numeric,Imputation flag for PROTHERMAC
+USECENAC,Numeric,Central air conditioner household behavior
+ZUSECENAC,Numeric,Imputation flag for USECENAC
+NUMBERAC,Numeric,Number of individual air conditioning units used
+ZNUMBERAC,Numeric,Imputation flag for NUMBERAC
+WWACAGE,Numeric,Age of most-used individual air conditioning unit
+ZWWACAGE,Numeric,Imputation flag for WWACAGE
+USEWWAC,Numeric,Most-used individual air conditioning unit household behavior
+ZUSEWWAC,Numeric,Imputation flag for USEWWAC
+TEMPHOMEAC,Numeric,Summer temperature when someone is home during the day
+ZTEMPHOMEAC,Numeric,Imputation flag for TEMPHOMEAC
+TEMPGONEAC,Numeric,Summer temperature when no one is home during the day
+ZTEMPGONEAC,Numeric,Imputation flag for TEMPGONEAC
+TEMPNITEAC,Numeric,Summer temperature at night
+ZTEMPNITEAC,Numeric,Imputation flag for TEMPNITEAC
+BASECOOL,Numeric,Cooling used in basement
+ZBASECOOL,Numeric,Imputation flag for BASECOOL
+ATTCCOOL,Numeric,Cooling used in attic
+ZATTCCOOL,Numeric,Imputation flag for ATTCCOOL
+GARGCOOL,Numeric,Cooling used in attached garage
+ZGARGCOOL,Numeric,Imputation flag for GARGCOOL
+SWAMPCOL,Numeric,Swamp cooler used
+ZSWAMPCOL,Numeric,Imputation flag for SWAMPCOL
+NUMCFAN,Numeric,Number of ceiling fans used
+ZNUMCFAN,Numeric,Imputation flag for NUMCFAN
+NOTMOIST,Numeric,Dehumidifier used
+ZNOTMOIST,Numeric,Imputation flag for NOTMOIST
+USENOTMOIST,Numeric,Number of months dehumidifier used in last year
+ZUSENOTMOIST,Numeric,Imputation flag for USENOTMOIST
+FUELH2O,Numeric,Fuel used by main water heater
+ZFUELH2O,Numeric,Imputation flag for FUELH2O
+WHEATAGE,Numeric,Main water heater age
+ZWHEATAGE,Numeric,Imputation flag for WHEATAGE
+WHEATSIZ,Numeric,Main water heater size
+ZWHEATSIZ,Numeric,Imputation flag for WHEATSIZ
+FUELH2O2,Numeric,Fuel used by secondary water heater
+ZFUELH2O2,Numeric,Imputation flag for FUELH2O2
+ESCWASH,Numeric,Energy Star qualified clothes washer
+ESDISHW,Numeric,Energy Star qualified dishwasher
+ESFRIG,Numeric,Energy Star qualified refrigerator
+LPGPAY,Numeric,Who pays for propane
+ZLPGPAY,Numeric,Imputation flag for LPGPAY
+FOPAY,Numeric,Who pays for fuel oil
+ZFOPAY,Numeric,Imputation flag for FOPAY
+HHSEX,Numeric,Respondent sex
+ZHHSEX,Numeric,Imputation flag for HHSEX
+HHAGE,Numeric,Respondent age
+ZHHAGE,Numeric,Imputation flag for HHAGE
+EMPLOYHH,Numeric,Respondent employment status
+ZEMPLOYHH,Numeric,Imputation flag for EMPLOYHH
+SDESCENT,Numeric,Respondent is Hispanic or Latino
+ZSDESCENT,Numeric,Imputation flag for SDESCENT
+NHSLDMEM,Numeric,Number of household members
+ZNHSLDMEM,Numeric,Imputation flag for NHSLDMEM
+ATHOME,Numeric,Number of weekdays someone is at home
+ZATHOME,Numeric,Imputation flag for ATHOME
+MONEYPY,Numeric,Annual gross household income for the last year
+ZMONEYPY,Numeric,Imputation flag for MONEYPY
+USEEL,Numeric,Electricity used
+ELWARM,Numeric,Electricity used for space heating
+ELCOOL,Numeric,Electricity used for air conditioning
+ELWATER,Numeric,Electricity used for water heating
+ELFOOD,Numeric,Electricity used for cooking
+ELOTHER,Numeric,"Electricity used, other than for space heating, water heating, air conditioning, or cooking"
+USENG,Numeric,Natural gas used
+UGWARM,Numeric,Natural gas used for space heating
+UGWATER,Numeric,Natural gas used for water heating
+UGCOOK,Numeric,Natural gas used for cooking
+UGOTH,Numeric,"Natural gas used, other than for space heating, water heating, or cooking"
+USELP,Numeric,Propane used
+LPWARM,Numeric,Propane used for space heating
+LPWATER,Numeric,Propane used for water heating
+LPCOOK,Numeric,Propane used for cooking
+LPOTHER,Numeric,"Propane used, other than for space heating, water heating, or cooking"
+USEFO,Numeric,Fuel oil used
+FOWARM,Numeric,Fuel oil used for space heating
+FOWATER,Numeric,Fuel oil used for water heating
+FOOTHER,Numeric,"Fuel oil used, other than for space heating or water heating"
+USEWOOD,Numeric,Wood used (cordwood or pellets)
+WOODLOGS,Numeric,Wood logs (cordwood) used
+ZWOODLOGS,Numeric,Imputation flag for WOODLOGS
+WDPELLET,Numeric,Wood pellets used
+ZWDPELLET,Numeric,Imputation flag for WDPELLET
+WDOTHER,Numeric,"Type of wood used other than logs, pellets, or scraps"
+WDWARM,Numeric,Wood (cordwood or pellets) used for space heating
+WDWATER,Numeric,Wood (cordwood or pellets) used for water heating
+USESOLAR,Numeric,Solar used
+SOLWATER,Numeric,Solar used for water heating
+SOLOTHER,Numeric,"Solar used, other than for water heating"
+TOTCSQFT,Numeric,Total cooled square footage
+TOTHSQFT,Numeric,Total heated square footage
+TOTUCSQFT,Numeric,Total uncooled square footage
+TOTUSQFT,Numeric,Total unheated square footage
+NWEIGHT,Numeric,Final sample weight
+KWH,Numeric,"Total site electricity usage, in kilowatthours, 2015"
+BTUEL,Numeric,"Total site electricity usage, in thousand Btu, 2015"
+BTUELSPH,Numeric,"Electricity usage for space heating, main and secondary, in thousand Btu, 2015"
+BTUELCOL,Numeric,"Electricity usage for air conditioning (central systems and individual units), in thousand Btu, 2015"
+BTUELWTH,Numeric,"Electricity usage for water heating, main and secondary, in thousand Btu, 2015"
+BTUELRFG,Numeric,"Electricity usage for all refrigerators, in thousand Btu, 2015"
+DOLLAREL,Numeric,"Total electricity cost, in dollars, 2015"
+DOLELSPH,Numeric,"Electricity cost for space heating, main and secondary, in dollars, 2015"
+DOLELCOL,Numeric,"Electricity cost for air conditioning (central systems and individual units), in dollars, 2015"
+DOLELWTH,Numeric,"Electricity cost for water heating, main and secondary, in dollars, 2015"
+DOLELRFG,Numeric,"Electricity cost for all refrigerators, in dollars, 2015"
+CUFEETNG,Numeric,"Total natural gas usage, in hundred cubic feet, 2015"
+BTUNG,Numeric,"Total natural gas usage, in thousand Btu, 2015"
+BTUNGSPH,Numeric,"Natural gas usage for space heating, main and secondary, in thousand Btu, 2015"
+BTUNGWTH,Numeric,"Natural gas usage for water heating, main and secondary, in thousand Btu, 2015"
+DOLLARNG,Numeric,"Total natural gas cost, in dollars, 2015"
+DOLNGSPH,Numeric,"Natural Gas cost for space heating, main and secondary, in dollars, 2015"
+DOLNGWTH,Numeric,"Natural gas cost for water heating, main and secondary, in dollars, 2015"
+GALLONLP,Numeric,"Total propane usage, in gallons, 2015"
+BTULP,Numeric,"Total propane usage, in thousand Btu, 2015"
+BTULPSPH,Numeric,"Propane usage for space heating, main and secondary, in thousand Btu, 2015"
+BTULPWTH,Numeric,"Propane usage for water heating, main and secondary, in thousand Btu, 2015"
+DOLLARLP,Numeric,"Total cost of propane, in dollars, 2015"
+DOLLPSPH,Numeric,"Propane cost for space heating, main and secondary, in dollars, 2015"
+DOLLPWTH,Numeric,"Propane cost for water heating, main and secondary, in dollars, 2015"
+GALLONFO,Numeric,"Total fuel oil/kerosene usage, in gallons, 2015"
+BTUFO,Numeric,"Total fuel oil/kerosene usage, in thousand Btu, 2015"
+BTUFOSPH,Numeric,"Fuel oil/kerosene usage for space heating, main and secondary, in thousand Btu, 2015"
+BTUFOWTH,Numeric,"Fuel oil/kerosene usage for water heating, main and secondary, in thousand Btu, 2015"
+DOLLARFO,Numeric,"Total cost of fuel oil/kerosene, in dollars, 2015"
+DOLFOSPH,Numeric,"Fuel oil/kerosene cost for space heating, main and secondary, in dollars, 2015"
+DOLFOWTH,Numeric,"Fuel oil/kerosene cost for water heating, main and secondary, in dollars, 2015"
+WOODAMT,Numeric,Cords of wood used in the last year
+ZWOODAMT,Numeric,Imputation flag for WOODAMT
+PERIODEL,Numeric,Number of days covered by Energy Supplier Survey electricity billing data and used to calculate annual consumption and expenditures
+PERIODNG,Numeric,Number of days covered by Energy Supplier Survey natural gas billing data and used to calculate annual consumption and expenditures
+PERIODFO,Numeric,Number of days covered by Energy Supplier Survey fuel oil/kerosene billing data and used to calculate annual consumption and expenditures
+PERIODLP,Numeric,Number of days covered by Energy Supplier Survey propane billing data and used to calculate annual consumption and expenditures
