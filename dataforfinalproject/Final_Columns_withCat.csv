@@ -1,0 +1,200 @@
+COLUMN_NAME,COLUMN_CAT_ABBR,COLUMN_CATEGORY,COLUMN_DESCRIPTION
+RECSYEAR,COMMON,CommonVariables,Survey Conducted Year
+DOEID,COMMON,CommonVariables,4-digit identification number
+REGIONC,COMMON,CommonVariables,Census Region
+DIVISION,COMMON,CommonVariables,Census Division
+TYPEHUQ,COMMON,CommonVariables,Type of Home: as report by Respondent
+CELLAR,HUC,Housing Unit Characteristics,Home Has Basement
+STORIES,HUC,Housing Unit Characteristics,Reported Stories in Housing Unit
+PRKGPLC1,HUC,Housing Unit Characteristics,Home has Garage or Carport
+YEARMADE,HUC,Housing Unit Characteristics,Year Home Built
+OCCUPYY,HUC,Housing Unit Characteristics,Year Moved into Home
+BEDROOMS,HUC,Housing Unit Characteristics,Number of bedrooms
+NCOMBATH,HUC,Housing Unit Characteristics,Number of Complete Baths
+NHAFBATH,HUC,Housing Unit Characteristics,Number of Half Baths
+OTHROOMS,HUC,Housing Unit Characteristics,Number of Other Rooms
+TOTROOMS,HUC,Housing Unit Characteristics,Total Number of Rooms
+DOOR1SUM,WTH,"Water heating, Cooling and Miscell",Number of sliding glass doors
+WINDOWS,WTH,"Water heating, Cooling and Miscell",Number of windows
+ADQINSUL,WTH,"Water heating, Cooling and Miscell",Respondent perception of home insulation
+DRAFTY,WTH,"Water heating, Cooling and Miscell",How often find your home too drafty during winter
+UGASHERE,HUC,Housing Unit Characteristics,Natural gas from underground pipe available
+FUELPOOL,APL_OTH,Other Appliances,What fuel is used most often to heat pool water
+SIZRFRI1,APL_KIT,Kitchen Appliances,Size of first refrigerator
+TYPERFR1,APL_KIT,Kitchen Appliances,Type of first refrigerators
+AGERFRI1,APL_KIT,Kitchen Appliances,How old is first refrigerator
+ICE,APL_KIT,Kitchen Appliances,Does refrigerator have through-the-door ice
+SIZRFRI2,APL_KIT,Kitchen Appliances,Size of second refrigerator
+TYPERFR2,APL_KIT,Kitchen Appliances,Type of second refrigerator
+AGERFRI2,APL_KIT,Kitchen Appliances,How old is second refrigerator
+NUMFREEZ,APL_KIT,Kitchen Appliances,How many separate freezers are used in your home
+SIZFREEZ,APL_KIT,Kitchen Appliances,Size of this freezer
+AGEFRZR,APL_KIT,Kitchen Appliances,How old is this freezer
+STOVENFUEL,APL_KIT,Kitchen Appliances,Stove use the same fuel for both burners and oven
+OVENUSE,APL_KIT,Kitchen Appliances,How often you use your oven
+AMTMICRO,APL_KIT,Kitchen Appliances,How often is microwave used
+NUMMEAL,APL_KIT,Kitchen Appliances,How often hot meals are usually cooked
+TOASTER,APL_KIT,Kitchen Appliances,Do use any electric toaster ovens
+COFFEE,APL_KIT,Kitchen Appliances,Do you use any electric coffee makers
+DWASHUSE,APL_KIT,Kitchen Appliances,How often automatic dishwasher used
+WASHLOAD,APL_OTH,Other Appliances,How many loads of laundry are washed in a week
+WASHTEMP,APL_OTH,Other Appliances,Temperature setting for wash cycle of the washer
+RNSETEMP,APL_OTH,Other Appliances,Water temperature setting for rinse cycle
+DRYRUSE,APL_OTH,Other Appliances,How often use your clothes dryer
+EQUIPM,SPH,Space Heating,Type of heating equipment provides the heat
+FUELHEAT,SPH,Space Heating,Main fuel used for heating home
+EQUIPAGE,SPH,Space Heating,How old is equipment identified in D-2 heat system
+PROTHERM,SPH,Space Heating,Is that thermostat programmable
+TEMPHOME,SPH,Space Heating,Setting During the day when someone is home
+TEMPGONE,SPH,Space Heating,Setting During the day when no one is home
+TEMPNITE,SPH,Space Heating,Setting During sleeping hours
+EQUIPAUX,SPH,Space Heating,Use any other types of equipment to heat home
+REVERSE,SPH,Space Heating,Sec Ht Eqp Heat pump
+WARMAIR,SPH,Space Heating,Sec Ht Eqp Central warm-air furnace with ducts
+STEAMR,SPH,Space Heating,Sec Ht Eqp Steam system with radiators/convectors
+PERMELEC,SPH,Space Heating,Sec Ht Eqp Built-in electric units in each room
+PIPELESS,SPH,Space Heating,Sec Ht Eqp Built-in floor/wall pipeless furnace
+ROOMHEAT,SPH,Space Heating,Sec Ht Eqp Built-in room heater burning
+WOODKILN,SPH,Space Heating,"Sec Ht Eqp Heating stove burning wood, coal, coke"
+CARRYEL,SPH,Space Heating,Sec Ht Eqp Portable electric heaters
+CARRYKER,SPH,Space Heating,Sec Ht Eqp Portable kerosene heaters
+CHIMNEY,SPH,Space Heating,Sec Ht Eqp Fireplace
+RANGE,SPH,Space Heating,Sec Ht Eqp Cooking stove
+DIFEQUIP,SPH,Space Heating,Sec Ht Eqp Some other equipment
+ELECAUX,SPH,Space Heating,Secondary heating fuel - Electricity
+UGASAUX,SPH,Space Heating,Secondary heating fuel - Natural Gas
+LPGAUX,SPH,Space Heating,Secondary heating fuel - LPG
+FOKRAUX,SPH,Space Heating,Secondary heating fuel - Fuel Oil
+WOODAUX,SPH,Space Heating,Secondary heating fuel - Wood
+OTHERAUX,SPH,Space Heating,Secondary heating fuel - Other
+ATTCHEAT,HUC,Housing Unit Characteristics,How much of the attic is warm
+GARGHEAT,HUC,Housing Unit Characteristics,The garage is warm enough to work
+COOLTYPE,WTH,"Water heating, Cooling and Miscell",What kind of air-conditioning equipment you have
+AGECENAC,WTH,"Water heating, Cooling and Miscell",How old is your household
+USECENAC,WTH,"Water heating, Cooling and Miscell",How household uses central AC during the summer
+NUMBERAC,WTH,"Water heating, Cooling and Miscell",Number of window or wall AC units in your home
+WWACAGE,WTH,"Water heating, Cooling and Miscell",How old is household
+USEWWAC,WTH,"Water heating, Cooling and Miscell",How household uses window AC during the summer
+NUMCFAN,APL_OTH,Other Appliances,How many ceiling fans does your household use
+FUELH2O,WTH,"Water heating, Cooling and Miscell","Fuel used for heating water, washing or bathing"
+WHEATAGE,WTH,"Water heating, Cooling and Miscell",How old is your household
+WHEATSIZ,WTH,"Water heating, Cooling and Miscell",Size of household
+LGTOUTNUM,WTH,"Water heating, Cooling and Miscell",Are any outdoor lights left on all night
+ESDISHW,APL_OTH,Other Appliances,Enaergy Star for Dishwasher
+PGASHEAT,FUP,Fuels Used and Fuel Payment,Who pays natural gas for heat
+LPGPAY,FUP,Fuels Used and Fuel Payment,Who pays for bottled gas
+FOPAY,FUP,Fuels Used and Fuel Payment,Who pays for fuel oil
+HHSEX,HMC,Household Characteristics,Are you/is the householder a male or a female
+HHAGE,HMC,Household Characteristics,How old are you/is the householder
+EMPLOYHH,HMC,Household Characteristics,How would you describe employment status
+HOUSEHOLDER_RACE,HMC,Household Characteristics,Race of Householder
+NHSLDMEM,HMC,Household Characteristics,How many people normally live in this household
+ATHOME,HMC,Household Characteristics,Is someone at home all day on a typical weekday
+MONEYPY,HMC,Household Characteristics,Total combined income in the past 12 months
+ELWATER,FUP,Fuels Used and Fuel Payment,Electricity used for H2O
+LPOTHER,FUP,Fuels Used and Fuel Payment,Bottled gas used for other
+TOTCSQFT,HUC,Housing Unit Characteristics,Estimated air-conditional square footage
+TOTHSQFT,HUC,Housing Unit Characteristics,Total heated square footage
+TOTUSQFT,HUC,Housing Unit Characteristics,Total unheated square footage
+NWEIGHT,COMMON,CommonVariables,The Final Weight
+CDD65,COMMON,CommonVariables,"Cooling Degree-Days to base 65, 1-04 TO 12-04"
+HDD65,COMMON,CommonVariables,"Heating Degree-Days to base 65, 1-04 TO 12-04"
+GALLONLP,E_CONS,Energy Consumption,Gallons Of LPG Bought
+CUFEETNG,E_CONS,Energy Consumption,CCFS (Hundred Cubic Feet) Of Natural Gas
+BTUEL,E_CONS,Energy Consumption,Electric Annual Use In Thousands Of BTU
+BTUELSPH,E_CONS,Energy Consumption,Electric Space Heat Use (Estimated)               Columns 94-99
+BTUELCOL,E_CONS,Energy Consumption,Electric AC Use (Estimated)                       Columns 193-197
+BTUELWTH,E_CONS,Energy Consumption,Electric Water Heat Use (Estimated)               Columns 129-133
+BTUELRFG,E_CONS,Energy Consumption,Electric Refrigerator Use (Estimated)             Columns 199-203
+BTUELOTH,E_CONS,Energy Consumption,"Total Electric BTU usage other than space, water, cooling"
+BTULP,E_CONS,Energy Consumption,LPG Annual Use In Thousands Of BTU
+BTULPSPH,E_CONS,Energy Consumption,LPG Space Heat Use (Estimated)                    Columns 115-120
+BTULPWTH,E_CONS,Energy Consumption,LPG Water Heat Use (Estimated)                    Columns 149-153
+BTULPOTH,E_CONS,Energy Consumption,"Total Propane BTU usage other than space, water, cooling"
+BTUNG,E_CONS,Energy Consumption,Natural Gas Annual Use In Thousands Of BTU
+BTUNGSPH,E_CONS,Energy Consumption,Natural Gas Space Heat Use (Estimated)            Columns 101-106
+BTUNGWTH,E_CONS,Energy Consumption,Natural Gas Water Heat Use (Estimated)            Columns 135-140
+BTUNGOTH,E_CONS,Energy Consumption,"Total natural gas BTU usage other than space, water, cooling"
+BTUFO,E_CONS,Energy Consumption,Fuel Oil Annual Use In Thousands Of BTU
+BTUFOSPH,E_CONS,Energy Consumption,Fuel Oil Space Heat Use (Estimated)               Columns 108-113
+BTUFOWTH,E_CONS,Energy Consumption,Fuel Oil Water Heat Use (Estimated)               Columns 142-147
+BTUFOOTH,E_CONS,Energy Consumption,"Total Fuel Oil/Kerosene BTU usage other than space, water, cooling"
+DOLLARNG,E_EXP,Energy Expenditures,Estimated Cost Of Natural Gas In Dollars
+DOLNGSPH,E_EXP,Energy Expenditures,Natural Gas Space Heat Use (Estimated) In Dollars
+DOLNGWTH,E_EXP,Energy Expenditures,Natural Gas Water Heat Use (Estimated) In Dollars
+DOLNGOTH,E_EXP,Energy Expenditures,Cost of Natural Gas usage for other purposes
+DOLLAREL,E_EXP,Energy Expenditures,Estimated Cost Of Electricity In Dollars
+DOLELSPH,E_EXP,Energy Expenditures,Electric Space Heat Use (Estimated) In Dollars
+DOLELCOL,E_EXP,Energy Expenditures,Electric AC Use (Estimated) In Dollars
+DOLELWTH,E_EXP,Energy Expenditures,Electric Water Heating Use (Estimated) In Dollars
+DOLELRFG,E_EXP,Energy Expenditures,Electric Refrigerator Use (Estimated) In Dollars
+DOLELOTH,E_EXP,Energy Expenditures,Cost of Electric usage for other purposes
+DOLLARLP,E_EXP,Energy Expenditures,Estimated Cost Of LPG In Dollars
+DOLLPSPH,E_EXP,Energy Expenditures,LPG Space Heat Use (Estimated) In Dollars
+DOLLPWTH,E_EXP,Energy Expenditures,LPG Water Heat Use (Estimated) In Dollars
+DOLLPOTH,E_EXP,Energy Expenditures,Cost of Propane usage for other purposes
+DOLLARFO,E_EXP,Energy Expenditures,Estimated Cost Of Fuel Oil In Dollars
+DOLFOSPH,E_EXP,Energy Expenditures,Fuel Oil Space Heat Use (Estimated) In Dollars
+DOLFOWTH,E_EXP,Energy Expenditures,Fuel Oil Water Heat Use (Estimated) In Dollars
+DOLFOOTH,E_EXP,Energy Expenditures,Cost of Fuel Oil/ Kerosene usage for other purposes
+GALLONFO,E_CONS,Energy Consumption,Gallons Of Fuel Oil Bought
+TOTALBTU,E_CONS,Energy Consumption,Total Annual BTU Consumtion
+TOTALBTUSPH,E_CONS,Energy Consumption,Total Annual BTU usage for Space Heating only
+TOTALBTUWTH,E_CONS,Energy Consumption,Total Annual BTU usage for Water Heating. AC only
+TOTALBTUOTH,E_CONS,Energy Consumption,Total Annual BTU usage for other purposes
+TOTALDOLLAR,E_EXP,Energy Expenditures,Total Annual BTU Consumtion cost
+TOTALDOLSPH,E_EXP,Energy Expenditures,Total Annual Cost BTU usage for Space Heating only
+TOTALDOLWTH,E_EXP,Energy Expenditures,Total Cost Annual BTU usage for Water Heating. AC only
+TOTALDOLOTH,E_EXP,Energy Expenditures,Total CostAnnual BTU usage for other purposes
+WOODAMT,WTH,"Water heating, Cooling and Miscell",Amount of Cords of Wood consumed
+PERIODFO,E_SUP,Characteristics of Energy Suppl,Period Of Time Fuel Oil Data Available
+PERIODLP,E_SUP,Characteristics of Energy Suppl,Period Of Time LPG Data Available
+PERIODEL,E_SUP,Characteristics of Energy Suppl,Period of Time Electric Data Available
+PERIODNG,E_SUP,Characteristics of Energy Suppl,Period Of Time Natural Gas Data Available
+KOWNRENT,HUC,Housing Unit Characteristics,Dwelling owned or rented
+SWIMPOOL,APL_OTH,Other Appliances,Does your own swimming pool with filtering system
+POOL,APL_OTH,Other Appliances,Is it a heated pool
+RECBATH,APL_OTH,Other Appliances,"Does your home have a heated hot tub, spa"
+FUELTUB,APL_OTH,Other Appliances,"What fuel is used to the water in hot tub, spa"
+NUMFRIG,APL_KIT,Kitchen Appliances,How many refrigerators do you use in your home
+UPRTFRZR,APL_KIT,Kitchen Appliances,What model freezer is this
+STOVEN,APL_KIT,Kitchen Appliances,Stove that has both burners and one or two ovens
+STOVE,APL_KIT,Kitchen Appliances,Separate build-in range top or burners
+OVEN,APL_KIT,Kitchen Appliances,Separate built-in oven
+MICRO,APL_KIT,Kitchen Appliances,Use a microwave Oven to do any cooking
+DISHWASH,APL_KIT,Kitchen Appliances,Does your household use an automatic dishwasher
+CWASHER,APL_OTH,Other Appliances,Use a clothes washer in home
+DRYER,APL_OTH,Other Appliances,Do you use a clothes dryer in home
+DRYRFUEL,APL_OTH,Other Appliances,What fuel does clothes dryer use
+DNTHEAT,SPH,Space Heating,"Have any heating equipment, Use it or not"
+THERMAIN,SPH,Space Heating,Have a thermostat controls main heating equipment
+AIRCOND,WTH,"Water heating, Cooling and Miscell",Do you have air conditioning equipment at home
+CENACHP,WTH,"Water heating, Cooling and Miscell",Is your central AC system a heat pump
+USEEL,FUP,Fuels Used and Fuel Payment,HH uses electricity
+ELWARM,FUP,Fuels Used and Fuel Payment,Electricity used for heat
+ELCOOL,FUP,Fuels Used and Fuel Payment,Electricity used to cool
+ELFOOD,FUP,Fuels Used and Fuel Payment,Electricity used to cook
+ELOTHER,FUP,Fuels Used and Fuel Payment,Electricity used for other
+UGWARM,FUP,Fuels Used and Fuel Payment,Natural gas used for heat
+UGWATER,FUP,Fuels Used and Fuel Payment,Natural gas used for H2O
+UGCOOK,FUP,Fuels Used and Fuel Payment,Natural gas used to cook
+UGOTH,FUP,Fuels Used and Fuel Payment,Natural gas used for other
+USELP,FUP,Fuels Used and Fuel Payment,HH uses LPG
+LPWARM,FUP,Fuels Used and Fuel Payment,Bottled gas used for heat
+LPWATER,FUP,Fuels Used and Fuel Payment,Bottled gas used for H2O
+LPCOOK,FUP,Fuels Used and Fuel Payment,Bottled gas used to cook
+USEFO,FUP,Fuels Used and Fuel Payment,HH uses Fuel oil
+FOWARM,FUP,Fuels Used and Fuel Payment,Fuel oil used for heat
+FOWATER,FUP,Fuels Used and Fuel Payment,Fuel oil used for H2O
+USEWOOD,FUP,Fuels Used and Fuel Payment,HH uses Wood
+WOODLOGS,FUP,Fuels Used and Fuel Payment,Use Wood logs or split wood as a fuel in house
+WDPELLET,FUP,Fuels Used and Fuel Payment,Use Wood pellets as a fuel in house
+WDOTHER,FUP,Fuels Used and Fuel Payment,Wood used for other
+WDWARM,FUP,Fuels Used and Fuel Payment,Wood used for heat
+WDWATER,FUP,Fuels Used and Fuel Payment,Wood used for H2O
+USESOLAR,FUP,Fuels Used and Fuel Payment,HH uses solar
+SOLWATER,FUP,Fuels Used and Fuel Payment,Solar used for H2O
+SOLOTHER,FUP,Fuels Used and Fuel Payment,Solar used for other
+TVAUDIOEQUIP,APL_OTH,Other Appliances,"Total of All TV, Audio, Stereo, VCR, DVD etc.,"
+PCOFFEQUIP,APL_OTH,Other Appliances,"Total of Desktop, laptop, printer, fax, copier etc."
+PHONE,APL_OTH,Other Appliances,Total of all phones including smartphone and related accessories
