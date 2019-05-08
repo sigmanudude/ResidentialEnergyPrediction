@@ -27,7 +27,14 @@ from sklearn import preprocessing
 from sklearn.feature_extraction import DictVectorizer
 
 
-def generateX():    
+#############################################################################################################
+# Fuction to generate X predictor array or dataframe from raw data and key features columns required
+# Accepts Two parameters
+# ohe : One Hot Encoding required
+# target : BTU or DOLLAR. Based on the target being predicted the target columns will  be dropped / retained
+#############################################################################################################
+
+def generateX(ohe = True, target = "BTU"):    
 
     dataFilePath = "dataforfinalproject"
     filename = "RECS_COMBINED_DATA.csv"
@@ -55,17 +62,12 @@ def generateX():
     
     # transpose to make it easier to obtain columns with values of 99 and <0
     descrDF = descrDF.transpose().reset_index()
-#     descrDF
+
     # obtain column names with values 99. 99 indicates missing or unavailable info. this needs to be replaced with MOde
     cols99_2 = descrDF[(descrDF['max'] == 99.0) | (descrDF['min'] < 0) ]['index'].tolist()
-    
-
-
     print(f"cols with values as 99 and -2: {cols99_2} \n")
 
-    # print(f"cols with values as -2 : {cols_2} ")
-
-
+   
     # For all categorical columns, that have 99 and -2 , replace with Columns Mode value#
     # step 1 - Fill na for thse values of 99 and -2
     # Step 2: Fillna with mode
@@ -76,7 +78,6 @@ def generateX():
 
 
     #step2 :
-    # modelDF[cols99_2].apply(lambda r : modes[r.name])
     modelDF[cols99_2] = modelDF[cols99_2].fillna(modelDF.mode().iloc[0])
 
     # just for Col EDishw, the values are in -ve  (-9, -8 )so replace it in a separate line
@@ -88,45 +89,36 @@ def generateX():
 
     modelDF[df_cols[(df_cols.FEATURES_MODEL == "Y") & (df_cols.COLUMN_TYPE == "Categorical")].COLUMN_NAME].describe()
 
-#     descrDF1 = modelDF[df_cols[(df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME].describe()
-#     # transpose to make it easier to obtain columns with values of 99 and -2
-#     descrDF1 = descrDF1.transpose().reset_index()
-# #     descrDF1[descrDF1['min'] < 0] 
-
-    # XGBOOST - Predicting Total Consumption in BTU
-
-    # Drop Price / Cost related Columns as it is only Consumption we are interested in 
-    cost_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("DOL") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
-    cost_cols
-
-    modelDF[cost_cols].head()
-
-    modelDF_BTU = modelDF.copy()
-    modelDF_BTU.drop(cost_cols, axis = 1, inplace = True)
-    print(modelDF_BTU.shape)
-    modelDF_BTU.columns
-
+    if(target == "BTU"):
+        # Drop Price / Cost related Columns as it is only Consumption we are interested in 
+        cost_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("DOL") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
+        modelDF.drop(cost_cols, axis = 1, inplace = True)
+        print(modelDF.shape)
+    
 #     # assign target or output to y
 #     y = modelDF_BTU['TOTALBTU']
 #     print(f"shape of y is {y.shape}")
 
     # and drop TOTAL BTU from X set
-    X = modelDF_BTU.drop(['TOTALBTU'], axis = 1)
+    X = modelDF.drop(['TOTALBTU'], axis = 1)
     print(f"shape of X is {X.shape}")
 
-    ### Apply dict vectorizer 
+    if(ohe):
+        ### Apply dict vectorizer 
+        # convert the X array into a dict
+        X_dict = X.to_dict(orient = "records")
+       
 
-    X_dict = X.to_dict(orient = "records")
-    X_dict
+        # instantiate a Dictvectorizer object for X
+        dv_X = DictVectorizer(sparse=False)   # sparse = False makes the output is not a sparse matrix
 
-    # instantiate a Dictvectorizer object for X
-    dv_X = DictVectorizer(sparse=False) 
-    # sparse = False makes the output is not a sparse matrix
-
-    # apply dv_X on X_dict
-    X_encoded = dv_X.fit_transform(X_dict)
-    # show X_encoded
-    return X_encoded
+        # apply dv_X on X_dict
+        X_encoded = dv_X.fit_transform(X_dict)
+        
+        # return X_encoded
+        return X_encoded
+    else:
+        return X
 
 
 # In[4]:
