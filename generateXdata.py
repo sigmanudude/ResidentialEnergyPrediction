@@ -17,9 +17,6 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings("ignore")
 
-# import required libraries related to xgBoost and sci-kit learn
-import xgboost as xgb
-from sklearn.metrics import mean_squared_error
 
 # from keras.utils import to_categorical
 
@@ -135,7 +132,7 @@ def generateX():
 # In[4]:
 
 
-generateX()
+# generateX()
 
 
 # In[ ]:
