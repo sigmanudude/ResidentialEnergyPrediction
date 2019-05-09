@@ -47,10 +47,8 @@ def generateX(ohe = True, target = "BTU"):
     modelDF = df_recs[df_cols[df_cols.FEATURES_MODEL == "Y"].COLUMN_NAME]
     print(f" X Features shape : {modelDF.shape}")
 
-    y_label = df_recs['TOTALBTU']
-    print(f"y label shape : {y_label.shape}")
-
-    ### Prepare Data
+    
+    ### Prepare X Data
 
     # describe the dataframe that will be used for model
     descrDF = modelDF[df_cols[(df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME].describe()
@@ -92,7 +90,7 @@ def generateX(ohe = True, target = "BTU"):
         # and drop TOTAL BTU from X set
         X = modelDF.drop(['TOTALBTU'], axis = 1)
     else:
-            # and drop TOTAL BTU from X set
+            # and drop TOTAL DOLLAR from X set
         X = modelDF.drop(['TOTALDOLLAR'], axis = 1)
         
     print(f"shape of X is {X.shape}")
@@ -111,9 +109,10 @@ def generateX(ohe = True, target = "BTU"):
         
         vocab = dv_X.get_feature_names()
         # return X_encoded and its vocab
-        return X_encoded
+        return (X_encoded, vocab)
     else:
-        return X
+        return (X, X.columns)
+
 
 
 # In[4]:
