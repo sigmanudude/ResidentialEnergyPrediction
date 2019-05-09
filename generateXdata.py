@@ -1,13 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
 
 # IMport dependencies
 import pandas as pd
 from pandas import set_option
-import numpy
+import numpy as np
 import os
 import csv
 
@@ -93,14 +88,13 @@ def generateX(ohe = True, target = "BTU"):
         # Drop Price / Cost related Columns as it is only Consumption we are interested in 
         cost_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("DOL") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
         modelDF.drop(cost_cols, axis = 1, inplace = True)
-        print(modelDF.shape)
-    
-#     # assign target or output to y
-#     y = modelDF_BTU['TOTALBTU']
-#     print(f"shape of y is {y.shape}")
-
-    # and drop TOTAL BTU from X set
-    X = modelDF.drop(['TOTALBTU'], axis = 1)
+        
+        # and drop TOTAL BTU from X set
+        X = modelDF.drop(['TOTALBTU'], axis = 1)
+    else:
+            # and drop TOTAL BTU from X set
+        X = modelDF.drop(['TOTALDOLLAR'], axis = 1)
+        
     print(f"shape of X is {X.shape}")
 
     if(ohe):
@@ -115,7 +109,8 @@ def generateX(ohe = True, target = "BTU"):
         # apply dv_X on X_dict
         X_encoded = dv_X.fit_transform(X_dict)
         
-        # return X_encoded
+        vocab = dv_X.get_feature_names()
+        # return X_encoded and its vocab
         return X_encoded
     else:
         return X
