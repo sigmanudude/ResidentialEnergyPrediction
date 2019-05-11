@@ -1,5 +1,6 @@
 COLUMN_NAME,COLUMN_CAT_ABBR,COLUMN_CATEGORY,COLUMN_DESCRIPTION,FEATURES_MODEL,COLUMN_TYPE,REQ_ONEHOTENC
 RECSYEAR,COMMON,CommonVariables,Survey Conducted Year,N,Numerical,FALSE
+COUNTRY,COMMON,CommonVariables,String,N,String,FALSE
 DOEID,COMMON,CommonVariables,4-digit identification number,N,Numerical,FALSE
 REGIONC,COMMON,CommonVariables,Census Region,Y,Categorical,TRUE
 DIVISION,COMMON,CommonVariables,Census Division,Y,Categorical,TRUE
