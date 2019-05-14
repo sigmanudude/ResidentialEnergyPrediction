@@ -3,7 +3,9 @@ RECSYEAR,COMMON,CommonVariables,Survey Conducted Year,N,Numerical,FALSE
 COUNTRY,COMMON,CommonVariables,String,N,String,FALSE
 DOEID,COMMON,CommonVariables,4-digit identification number,N,Numerical,FALSE
 REGIONC,COMMON,CommonVariables,Census Region,Y,Categorical,TRUE
+REGIONNAME,COMMON,CommonVariables,Region Name,N,Categorical,TRUE
 DIVISION,COMMON,CommonVariables,Census Division,Y,Categorical,TRUE
+DIVISIONNAME,COMMON,CommonVariables,Division names,N,Categorical,TRUE
 TYPEHUQ,COMMON,CommonVariables,Type of Home: as report by Respondent,N,Categorical,TRUE
 CELLAR,HUC,Housing Unit Characteristics,Home Has Basement,Y,Categorical,TRUE
 STORIES,HUC,Housing Unit Characteristics,Reported Stories in Housing Unit,Y,Numerical,FALSE
