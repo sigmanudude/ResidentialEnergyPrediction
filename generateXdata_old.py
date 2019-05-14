@@ -47,10 +47,8 @@ def generateX(ohe = True, target = "BTU"):
     modelDF = df_recs[df_cols[df_cols.FEATURES_MODEL == "Y"].COLUMN_NAME]
     print(f" X Features shape : {modelDF.shape}")
 
-    y_label = df_recs['TOTALBTU']
-    print(f"y label shape : {y_label.shape}")
-
-    ### Prepare Data
+    
+    ### Prepare X Data
 
     # describe the dataframe that will be used for model
     descrDF = modelDF[df_cols[(df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME].describe()
@@ -88,26 +86,13 @@ def generateX(ohe = True, target = "BTU"):
         # Drop Price / Cost related Columns as it is only Consumption we are interested in 
         cost_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("DOL") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
         modelDF.drop(cost_cols, axis = 1, inplace = True)
-        # Drop All BTU related cols too
-        btu_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("BTU") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
-        modelDF.drop(btu_cols, axis = 1, inplace = True)
         
         # and drop TOTAL BTU from X set
-#         X = modelDF.drop(['TOTALBTU'], axis = 1)
+        X = modelDF.drop(['TOTALBTU'], axis = 1)
     else:
-        # Drop Price / Cost related Columns as it is only Consumption we are interested in 
-        cost_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("DOL") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
-        modelDF.drop(cost_cols, axis = 1, inplace = True)
+            # and drop TOTAL DOLLAR from X set
+        X = modelDF.drop(['TOTALDOLLAR'], axis = 1)
         
-        # Also drop the Total BTU cols 
-        btu_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("TOTALBTU") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
-        modelDF.drop(btu_cols, axis = 1, inplace = True)
-
-
-            # and drop TOTAL BTU from X set
-#         X = modelDF.drop(['TOTALDOLLAR'], axis = 1)
-        
-    X = modelDF
     print(f"shape of X is {X.shape}")
 
     if(ohe):
@@ -127,6 +112,7 @@ def generateX(ohe = True, target = "BTU"):
         return (X_encoded, vocab)
     else:
         return (X, X.columns)
+
 
 
 # In[4]:
