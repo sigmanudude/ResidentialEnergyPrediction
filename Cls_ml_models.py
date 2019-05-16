@@ -15,7 +15,8 @@ from sklearn.metrics import mean_squared_error
 
 
 # SKLearn - Linear Model libraries
-from sklearn.linear_model import LinearRegression, ElasticNet, Lasso, LassoCV
+from sklearn.linear_model import LinearRegression, ElasticNet, Lasso, LassoCV, Ridge,RidgeCV
+
 
 # SKLearn - Tree Boosting libraries
 from sklearn.ensemble import RandomForestRegressor
@@ -63,6 +64,16 @@ class ml_models_tuned(object):
         
         model = lassocv
         print(f"Best LassoCV model with alpha {lassocv.alpha_} is {model}")
+        return model
+    
+    def ret_RidgeCV_tunedModel(self):
+        
+        alpha=np.arange(0.0,0.05,.003)
+        model = RidgeCV(alphas=alpha, cv=self.seed, normalize=True)
+        model.fit(self.X_train, self.y_train)       
+        
+        print(f"Best LassoCV model with alpha {model.alpha_} is {model}")
+        
         return model
     
     def ret_RF_tunedModel(self):
@@ -192,6 +203,30 @@ class ml_models_tuned(object):
         df_modelresults=pd.DataFrame(predictions,columns=['Lasso_CV_predicted'])
         
         return(df_modelresults,RMSE_test,r2)
+    
+    def ridge_CV(self, model):
+        print("\nBegining to run Ridge CV regression Model (alpha = determined by K-Folds).................................\n")                
+        print(f"Model used for Fitting and Predicting is {model}.....................\n")
+        
+        print("Fit the best model from k-folds to training data................")
+        model.fit(self.X_train, self.y_train)
+        print("best model coefficients:")
+        print(pd.Series(model.coef_).tolist())
+        
+        print("\nPredict data using testing data................")
+        predictions = model.predict(self.X_test)
+        RMSE_test = np.sqrt(mean_squared_error(self.y_test, predictions))
+        r2 = model.score(self.X_test, self.y_test)
+        
+        print("Ridge CV Regresion Model report")
+        print("----------------------------------------------------------------\n")
+        
+        print("Test RMSE: %f" % (RMSE_test))
+        print('The accuracy of the LassoCV regressor is {:.2f} out of 1 on the test data'.format(r2))
+        
+        df_modelresults=pd.DataFrame(predictions,columns=['Ridge_CV_predicted'])
+        
+        return(df_modelresults,RMSE_test,r2)
 
     def RF_model(self, model):
         print("\nBegining to run RandomForest regression Model.................................\n")                
@@ -298,6 +333,8 @@ class ml_models_tuned(object):
             return self.classic_lasso_model(model_)
         elif(whichModel == "LassoCV"):
             return self.lasso_CV(model_)
+        elif(whichModel == "RidgeCV"):
+            return self.ridge_CV(model_)
         elif(whichModel == "eNet"):
             return self.eNet_model(model_)
         elif(whichModel == "RF"):
