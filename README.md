@@ -10,6 +10,8 @@ Contents:
 - [XGBoost Regressor](#XGBoost-Regressor)
 - [Model Comparison](#Model-Comparison)
 - [How to Run](#How-to-Run)
+
+
 ## Overview
 We are visualizing and predicting the usage of energy across the US. Our resource used was from the Residential Energy Consumption Survey(RECS).
  
@@ -75,6 +77,7 @@ Feature Selector used five methods used to identify features to remove:
 - Low Importance Features-Identify features with Low importance (i.e. where cumulative importance is below the threshold of 95 %) 
 
 ![Feature Importance](Pictures/featureSelector_top20.png)
+![Feature Selector cummulative gain](Pictures/featureSelector_elbowcurve.png)
 
 ## Linear Models
 All or Most supervised learning starts with Linear Models. Linear Models provide a varied set of modeling techniques like Ridge, Lasso etc.,
@@ -82,10 +85,10 @@ All or Most supervised learning starts with Linear Models. Linear Models provide
 To predict RECS price or consumption, we utilize these linear models along with GridSearchCV to fine tune each of the models
 
 Process we followed, 
-![Linear Modeling Process](Pictures/lr_pic.png)
+![Linear Modeling Process](Pictures/lr_pic.PNG)
 
 Linear model results,
-![Accuracy and Error results](Pictures/LR_models_results.png)
+![Accuracy and Error results](Pictures/LR_models_results.PNG)
 
 Linear model residual plot,
 ![Accuracy and Error results](Pictures/linearModels_residualPlot.png)
@@ -94,10 +97,10 @@ Linear model residual plot,
 Random Forest method is used to classify the data into classes and predict the mean (regression) of the forest trees to predict Total Dollar 
 
 Process we followed, 
-![RF Modeling Process](Pictures/rf_process_pic.png)
+![RF Modeling Process](Pictures/rf_process_pic.PNG)
 
 RandomForest model results,
-![Accuracy and Error results](Pictures/RF_resuls.png)
+![Accuracy and Error results](Pictures/RF_resuls.PNG)
 
 RandomForest model residual plot,
 ![Accuracy and Error results](Pictures/RandomForestResidual.png)
@@ -106,10 +109,10 @@ RandomForest model residual plot,
 ....XGBoost (“Extreme Gradient Boosting”) is one of the Ensemble Algorithms used as regressor  or classifier. With all the previous models yielding results of around 81% r2 value, thus clearly indicating presence of weak predictors. As XGBoost is known for its ability to create a strong model with weak predictors, we decided to use this for predicting total dollar and consumption.  
 
 Process we followed, 
-![XGB Modeling Process](Pictures/xgb_process.png)
+![XGB Modeling Process](Pictures/xgb_process.PNG)
 
 XGBoost model results,
-![Accuracy and Error results](Pictures/xgb_results.png)
+![Accuracy and Error results](Pictures/xgb_results.PNG)
 
 XGBoost model regression error plot,
 ![Accuracy and Error results](Pictures/xgBoost_regError.png)
@@ -122,10 +125,10 @@ XGBoost model regression error plot,
 - The results show that all Linear models (post tuning) have the same accuracy. However tree based models (RF and XGBoost) have better accuracy.
 
 Model Performances are depicted below,
-![Model Performances](Pictures/model_compare.png)
+![Model Performances](Pictures/model_compare.PNG)
 
 Results of RMSE and r2,
-![Models results](Pictures/model_comparison_results.png)
+![Models results](Pictures/model_comparison_results.PNG)
 
 ## How to Run
 
