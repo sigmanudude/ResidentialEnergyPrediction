@@ -5,11 +5,11 @@ Contents:
 - [Data Transformatio and Merging](#Data-Transformation-and-Merging)
 - [PCA and KMeans clustering](#PCA-and-KMeans-clustering)
 - [Feature Selector](#Feature-Selector)
-- [Linear Models](*Linear-Models)
-- [RandomForest Regressor](*RandomForest-Regressor)
-- [XGBoost Regressor](*XGBoost-Regressor)
-- [Model Comparison](*Model-Comparison)
-
+- [Linear Models](#Linear-Models)
+- [RandomForest Regressor](#RandomForest-Regressor)
+- [XGBoost Regressor](#XGBoost-Regressor)
+- [Model Comparison](#Model-Comparison)
+- [How to Run](#How-to-Run)
 ## Overview
 We are visualizing and predicting the usage of energy across the US. Our resource used was from the Residential Energy Consumption Survey(RECS).
  
@@ -126,3 +126,9 @@ Model Performances are depicted below,
 
 Results of RMSE and r2,
 ![Models results](Pictures/model_comparison_results.png)
+
+## How to Run
+
+- Clone or download github files into a local directory.
+- Open Jupyter notebook and open ml_models.ipynb
+- run notebook and observe results
