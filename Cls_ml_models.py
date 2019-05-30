@@ -4,8 +4,9 @@ import numpy as np
 from numpy import arange
 import pandas as pd
 from pandas import set_option
-from pandas.tools.plotting import scatter_matrix
+# from pandas.tools.plotting import scatter_matrix
 import os
+from sklearn.externals import joblib
 
 
 # SKLearn - helper libraries
@@ -119,6 +120,9 @@ class ml_models_tuned(object):
         
         print("Fit train data to the model.....................\n")
         model.fit(self.X_train, self.y_train)
+              
+        print("Save the model to local disk ................................\n")
+        joblib.dump(model, 'final_models/LR_finalized_model.sav')
         
         print("Predict Y values for test data.....................\n")
         predictions_train = model.predict(self.X_train)
@@ -155,6 +159,10 @@ class ml_models_tuned(object):
         
         print(f"Model used for Fitting and Predicting is {model}.....................\n")
         lasso = model.fit(self.X_train, self.y_train)
+              
+        print("Save the model to local disk ................................\n")
+        joblib.dump(model, 'final_models/Classo_finalized_model.sav')
+        
         
         print("Predict y values for train and test data.....................\n")
         predictions_train = lasso.predict(self.X_train)
@@ -186,6 +194,10 @@ class ml_models_tuned(object):
         
         print("Fit the best model from k-folds to training data................")
         lasso.fit(self.X_train, self.y_train)
+              
+        print("Save the model to local disk ................................\n")
+        joblib.dump(model, 'final_models/LassoCV_finalized_model.sav')
+        
         print("best model coefficients:")
         print(pd.Series(lasso.coef_).tolist())
         
@@ -210,6 +222,10 @@ class ml_models_tuned(object):
         
         print("Fit the best model from k-folds to training data................")
         model.fit(self.X_train, self.y_train)
+              
+        print("Save the model to local disk ................................\n")
+        joblib.dump(model, 'final_models/RidgeCV_finalized_model.sav')
+        
         print("best model coefficients:")
         print(pd.Series(model.coef_).tolist())
         
@@ -236,6 +252,10 @@ class ml_models_tuned(object):
 
         # Train the model on training data
         rf.fit(self.X_train, self.y_train)
+              
+        print("Save the model to local disk ................................\n")
+        joblib.dump(model, 'final_models/RF_finalized_model.sav')
+        
 
         print("Predict y values for train and test data.....................\n")
         predictions = rf.predict(self.X_test)
@@ -267,6 +287,10 @@ class ml_models_tuned(object):
         print("----------------------------------------------------------------\n")
         eval_set = [(self.X_train, self.y_train), (self.X_test, self.y_test)]
         model.fit(self.X_train, self.y_train,eval_metric=["rmse"], eval_set=eval_set, verbose=False)
+              
+        print("Save the model to local disk ................................\n")
+        joblib.dump(model, 'final_models/xgb_finalized_model.sav')
+        
         
         print("Predicting Y with test data")
         print("----------------------------------------------------------------\n")
@@ -310,6 +334,9 @@ class ml_models_tuned(object):
         
         print("Fit train data to the best model.....................\n") 
         enet_grid.fit(self.X_train, self.y_train)
+        
+        print("Save the model to local disk ................................\n")
+        joblib.dump(model, 'final_models/eNet_finalized_model.sav')
         
         print("Predict Y for test data.....................\n") 
         predictions = enet_grid.predict(self.X_test)
