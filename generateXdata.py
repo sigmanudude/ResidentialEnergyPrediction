@@ -50,40 +50,7 @@ def generateX(ohe = True, target = "BTU"):
     y_label = df_recs['TOTALBTU']
     print(f"y label shape : {y_label.shape}")
 
-    ### Prepare Data
-
-    # describe the dataframe that will be used for model
-    descrDF = modelDF[df_cols[(df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME].describe()
     
-    # transpose to make it easier to obtain columns with values of 99 and <0
-    descrDF = descrDF.transpose().reset_index()
-
-    # obtain column names with values 99. 99 indicates missing or unavailable info. this needs to be replaced with MOde
-    cols99_2 = descrDF[(descrDF['max'] == 99.0) | (descrDF['min'] < 0) ]['index'].tolist()
-    print(f"cols with values as 99 and -2: {cols99_2} \n")
-
-   
-    # For all categorical columns, that have 99 and -2 , replace with Columns Mode value#
-    # step 1 - Fill na for thse values of 99 and -2
-    # Step 2: Fillna with mode
-
-    # step1 
-    modelCopy = modelDF.copy()
-    modelDF[cols99_2] = modelDF[cols99_2].applymap(lambda r : None if r in [99,-2] else r)
-
-
-    #step2 :
-    modelDF[cols99_2] = modelDF[cols99_2].fillna(modelDF.mode().iloc[0])
-
-    # just for Col EDishw, the values are in -ve  (-9, -8 )so replace it in a separate line
-    modelDF['ESDISHW'] = modelDF['ESDISHW'].apply(lambda r : 0 if (r < 0) else r)
-
-    # check if NAN exists
-    print(f"Duplicate Count : {modelDF.isnull().values.sum()}")
-
-
-    modelDF[df_cols[(df_cols.FEATURES_MODEL == "Y") & (df_cols.COLUMN_TYPE == "Categorical")].COLUMN_NAME].describe()
-
     if(target == "BTU"):
         # Drop Price / Cost related Columns as it is only Consumption we are interested in 
         cost_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("DOL") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
