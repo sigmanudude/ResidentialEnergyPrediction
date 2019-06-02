@@ -176,29 +176,23 @@
                                   <form>  
                                       <ul class="list-inline" id="filters">
                                       <li class="list-inline-item">
-                                      <label for="year">Select Sample</label>
+                                      <label for="year">Filter By</label>
                                       </li>
                                       <li class="list-inline-item"></li>
-                                      <select type="select" id="sample" name="sample">
-                                        <!-- <option value = "0" >All years</option> -->
+                                      <select type="select" id="years" name="years">
+                                        <option value = "0" >All years</option>
                                       </select>
                                       </li>
-                                      <!-- <li class="list-inline-item"> -->
+                                      <li class="list-inline-item">
                                       <!-- <label for="policedist">Select a Police District</label> -->
-                                      <!-- <select type="select" id="district" name="district">
+                                      <select type="select" id="district" name="district">
                                           <option value = "0">All Districts</option>
                                       </select>
-                                    </li> -->
-                                    <li class="list-inline-item">
-                                      <label for="year">Select Model</label>
-                                      </li>
+                                    </li>
                                     <li class="list-inline-item">
                                       <!-- <label for="violCat">Select a Violation Category</label> -->
-                                      <select type="select" id="model" name="model">
-                                          <option value = "all">All Models</option>
-                                          <option value = "LR">Linear Models</option>
-                                          <option value = "RF">Random Forest</option>
-                                          <option value = "XGB">XGBoost</option>
+                                      <select type="select" id="category" name="category">
+                                          <option value = "all">All Categories</option>
                                       </select>
                                     </li>
                                     <li class="list-inline-item">
@@ -219,12 +213,12 @@
                           <div class="row">
                                   <div class="w-75 col-xs-12 col-sm-12 col-md-6">
                                     <div class="card" style = "border:none;margin:1rem 0 0 0;" >
-                                      <h5><strong>Seleted House Properties</strong></h5>
+                                      <h5><strong>Violations by District</strong></h5>
                                       <!-- bar chart displaying violation by district-->
-                                      
+                                      <div id="distSpread"></div>
                                       <!-- <img class="card-img-top" src="../static/imgs/plot3.PNG" alt="Card image cap"> -->
                                       <div class="card-body">
-                                        <div id="houseprop"></div>   
+                                            
                                       </div>
                                   </div>
                                   </div>

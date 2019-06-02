@@ -1,12 +1,14 @@
 // Main javascript file that will invoke all the function to populate the dashboard
 
 // ########### Declare global variables
+var predictPriceURL = "/predict/"
+
 var submitBtn = d3.select("#filter-btn"); 
 var clearBtn = d3.select("#clear-filter-btn"); 
 // Grab a reference to the dropdown select element
-var yrSel = d3.select("#years");
-var distSel = d3.select("#district");
-var catSel = d3.select("#category");
+var sampSel = d3.select("#sample");
+// var distSel = d3.select("#district");
+var modelSel = d3.select("#model");
 
 // grab instance of div to display data
 var tblDiv = d3.select("#dataTbl");
@@ -39,25 +41,25 @@ function init(){
     // associate event to the buttons
     submitBtn.on("click", function(){filterData();});
     clearBtn.on("click", function(){resetFilters();});
-    dataBtn.on("click", function(){displayData(_yr,_cat,_dist,tblDiv, currpg);});
-    prev.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,currpg-1);});
-    next.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,currpg+1);});
-    first.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,startpg);});
-    last.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,totalpg);});
+    // dataBtn.on("click", function(){displayData(_yr,_cat,_dist,tblDiv, currpg);});
+    // prev.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,currpg-1);});
+    // next.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,currpg+1);});
+    // first.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,startpg);});
+    // last.on("click", function(){displayData(_yr,_cat,_dist,tblDiv,totalpg);});
 
     //display leaflet map
-    createMap(_yr,_cat,_dist);
+    // createMap(_yr,_cat,_dist);
 
     // Build all static plots
-    YoY(); //YOY plot
-    boxPlot_byYr();   //box plot    
-    buildCharts();// contribution of district vs YOY change
+    // YoY(); //YOY plot
+    // boxPlot_byYr();   //box plot    
+    // buildCharts();// contribution of district vs YOY change
 
     // Dashboard plots and data
     // Create bar plot of the violation by district and further dynamically filtered by year, district and category
     
-    dynBarPlots(_yr,_cat,_dist,'violationByDist', "distSpread","Districts");
-    dynBarPlots(_yr,_cat,_dist,'violationByCat', "violationCat","Categories");
+    // dynBarPlots(_yr,_cat,_dist,'violationByDist', "distSpread","Districts");
+    // dynBarPlots(_yr,_cat,_dist,'violationByCat', "violationCat","Categories");
    
 }
 
@@ -108,59 +110,55 @@ function boxPlot_byYr(){
 function populateFilters() {    
     // Use the list of sample names to populate the select options
     d3.json("/filterData").then((filtData) => {
-        // console.log(filtData['Category']);
-        filtData['Category'].forEach((item) => {
-        catSel
+        console.log(filtData['Sample']);
+        filtData['Sample'].forEach((item) => {
+        sampSel
           .append("option")
-          .text(`${item['ViolationCategory']}`)
-          .property("value", item['ViolationCategory']);
-      });
-      filtData['District'].forEach((item) => {
-        distSel
-          .append("option")
-          .text(`${item['SubAgency']}`)
-          .property("value", item['PoliceDistrictID']);
-      });
-      filtData['Year'].forEach((item) => {
-        yrSel
-          .append("option")
-          .text(`${item['Year']}`)
-          .property("value", item['Year']);
+          .text(`${item}`)
+          .property("value", item.split(" ")[1]);
+        console.log(item);
       });      
-      
     });
   };
 
+  
+
 function filterData(){
     d3.event.preventDefault();
-    var yr = yrSel.property("value");
-    var cat = catSel.property("value");
-    var dist = distSel.property("value");
+    var sampleNum = sampSel.property("value");
+    var whichModel = modelSel.property("value");
     
-    console.log(`${yr}, ${cat},${dist}`);
+    
+    console.log(`${sampleNum}, ${whichModel}`);
 
-    
-    // # call display map using filtered data
-    addEdit_MapLayers(yr,cat,dist, "update");
-    //redo the plot
-    dynBarPlots(yr,cat,dist, 'violationByDist', "distSpread", "Districts");
-    dynBarPlots(yr,cat,dist,'violationByCat', "violationCat", "Categories");
-    // dynBarPlots(yr,cat,dist,'violationByType', "violationType");
+     d3.json(`/${predictPriceURL}/${sampleNum}/${whichModel}`).then(function(data){
+    //     // remove already displayed
+    console.log(data)
+        
+    //    print the table sent by Flask
+         d3.select("#houseprop").html(data); // Print the sample number selected
+    //     Object.entries(data).forEach(([key, value]) => {
+    //       if(key !== "sample" && key !== "WFREQ")
+    //         metadata_panel.append("span")
+    //                     .attr("style","font-size: 11px;")
+    //                     .text(`${key} : ${value} | `);
+    //         });
+    });    
 };
 
 function resetFilters(){
     d3.event.preventDefault();
-    yrSel.selectAll("option").property("selected",function(d){ return d === 0; })
-    catSel.selectAll("option").property("selected",function(d){ return d === "all"; })
-    distSel.selectAll("option").property("selected",function(d){ return d === 0; })
+    sampSel.selectAll("option").property("selected",function(d){ return d === 0; })
+    modelSel.selectAll("option").property("selected",function(d){ return d === "all"; })
+    // distSel.selectAll("option").property("selected",function(d){ return d === 0; })
     
-    // redraw map features layer All data
-    addEdit_MapLayers(_yr,_cat,_dist, "update");
+    // // redraw map features layer All data
+    // addEdit_MapLayers(_yr,_cat,_dist, "update");
 
-    // reset all barplots
-    dynBarPlots(_yr,_cat,_dist, 'violationByDist', "distSpread", "Districts");
-    dynBarPlots(_yr,_cat,_dist,'violationByCat', "violationCat","Categories");
-    // dynBarPlots(_yr,_cat,_dist,'violationByType', "violationType");
+    // // reset all barplots
+    // dynBarPlots(_yr,_cat,_dist, 'violationByDist', "distSpread", "Districts");
+    // dynBarPlots(_yr,_cat,_dist,'violationByCat', "violationCat","Categories");
+    // // dynBarPlots(_yr,_cat,_dist,'violationByType', "violationType");
 };
 
 function createMap(y,c,d){

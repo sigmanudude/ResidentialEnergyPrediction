@@ -29,20 +29,32 @@ from sklearn.feature_extraction import DictVectorizer
 # target : BTU or DOLLAR. Based on the target being predicted the target columns will  be dropped / retained
 #############################################################################################################
 
-def generateX_samp(ohe = True, target = "BTU", numSamples = 0):    
+def generateX_samp(ohe = True, target = "BTU", numSamples = 20, region = 0, totsqft_cd = 0):    
 
     dataFilePath = "dataforfinalproject"
     filename = "RECS_COMBINED_DATA.csv"
     cols_file = "Final_Columns_withCat.csv"
+    
+    totsqt = {0 : "(df_recs.TOTHSQFT != -1)",
+             1 : "(df_recs.TOTHSQFT < 900)",
+             2 : "((df_recs.TOTHSQFT >= 900) & (df_recs.TOTHSQFT < 1500))",
+             3 : "((df_recs.TOTHSQFT >= 1500) & (df_recs.TOTHSQFT < 2500))",
+             4 : "((df_recs.TOTHSQFT >= 2500) & (df_recs.TOTHSQFT < 3500))",
+             5 : "(df_recs.TOTHSQFT >= 3500)"}
+        
 
     # read dataset wih all years combined data
     df_recs = pd.read_csv(os.path.join(dataFilePath, filename), low_memory= False)
 
     if(numSamples != 0 and numSamples != df_recs.shape[0]):
-        sample_df = df_recs.sample( n = numSamples)
+        if(region != 0):            
+            sample_df = df_recs[(df_recs.REGIONC == region) & (eval(totsqt[totsqft_cd]))].sample( n = numSamples)
+        else:
+            sample_df = df_recs[(eval(totsqt[totsqft_cd]))].sample( n = numSamples)
         print(sample_df)
     else:
         sample_df = df_recs
+    
     
     # read the columns from Columns csv
     df_cols = pd.read_csv(os.path.join(dataFilePath, cols_file))
@@ -50,6 +62,7 @@ def generateX_samp(ohe = True, target = "BTU", numSamples = 0):
 
     # Whittle down the dataset to contain only Features required for modeling - X 
     modelDF = sample_df[df_cols[df_cols.FEATURES_MODEL == "Y"].COLUMN_NAME]
+    modelDF.to_csv(os.path.join("dataforfinalproject/InputSamples.csv"), index = True)
     print(f" X Features shape : {modelDF.shape}")
 
     
