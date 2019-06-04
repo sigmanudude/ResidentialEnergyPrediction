@@ -125,6 +125,7 @@ function populateFilters() {
 
 function filterData(){
     d3.event.preventDefault();
+    
     var regionVal = regSel.property("value");
     var sqftVal = sqftSel.property("value");
     
