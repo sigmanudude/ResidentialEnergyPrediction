@@ -5,6 +5,7 @@ import numpy as np
 
 from flask import Flask, jsonify, render_template, request
 
+from predictPrice import predictPrice
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ app = Flask(__name__)
 # Global Variables
 #################################################
 filter_by = {"yr" : 0, "cat" : all, "dist" :0}
-samplefile = "sampletest.csv"
+samplefile = "InputSamples.csv"
 datafilepath = "dataforfinalproject"
 
 # read sample csv
@@ -52,21 +53,19 @@ def filterData():
     # convert number of rows into dict with each sample number
     filt_dict['Sample'] = [f"Sample {i+1}" for i in range(sampdf.shape[0])]
 
+    
     return jsonify(filt_dict)
 
 # Filter routes
-@app.route("/predict/<samplenum>/<modelname>")
-def predictPrice(samplenum, modelname):
+@app.route("/predict/<regVal>/<sqftVal>")
+def predPrice(regVal, sqftVal):
     """Return a json that provides details of the metadata chosen and predicted price."""
-    sel_sampdf = sampdf.iloc[int(samplenum)-1, :]
-    print(sel_sampdf)
-
     
+    resultsJSON = {}
+    resultsJSON['metadata'] = sampdf.to_html(table_id = "sampMetaData", classes = "table table-striped")
+    resultsJSON['PredictResults'] = predictPrice(int(regVal),int(sqftVal))
 
-    md = {}
-    md['metadata'] = pd.DataFrame(sel_sampdf).to_html(table_id = "sampMetaData", classes = "table table-striped")
-
-    return jsonify(md)
+    return jsonify(resultsJSON)
 
 if __name__ == "__main__":
     app.run()

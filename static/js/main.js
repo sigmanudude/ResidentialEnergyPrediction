@@ -6,9 +6,9 @@ var predictPriceURL = "/predict/"
 var submitBtn = d3.select("#filter-btn"); 
 var clearBtn = d3.select("#clear-filter-btn"); 
 // Grab a reference to the dropdown select element
-var sampSel = d3.select("#sample");
+var regSel = d3.select("#region");
 // var distSel = d3.select("#district");
-var modelSel = d3.select("#model");
+var sqftSel = d3.select("#sqft");
 
 // grab instance of div to display data
 var tblDiv = d3.select("#dataTbl");
@@ -35,7 +35,7 @@ var map, mapTile, mapFeatures, legend;
 // function that initiliazes the page
 function init(){
     // populate the dropdown filters
-    populateFilters();
+    // populateFilters();
     
     //attach event to submit buttons
     // associate event to the buttons
@@ -125,18 +125,18 @@ function populateFilters() {
 
 function filterData(){
     d3.event.preventDefault();
-    var sampleNum = sampSel.property("value");
-    var whichModel = modelSel.property("value");
+    var regionVal = regSel.property("value");
+    var sqftVal = sqftSel.property("value");
     
     
-    console.log(`${sampleNum}, ${whichModel}`);
+    console.log(`${regionVal}, ${sqftVal}`);
 
-     d3.json(`/${predictPriceURL}/${sampleNum}/${whichModel}`).then(function(data){
+     d3.json(`${predictPriceURL}${regionVal}/${sqftVal}`).then(function(data){
     //     // remove already displayed
-    console.log(data)
+    console.log(data['PredictResults'])
         
     //    print the table sent by Flask
-         d3.select("#houseprop").html(data); // Print the sample number selected
+         d3.select("#resPredict").html(data['PredictResults']); // Print the sample number selected
     //     Object.entries(data).forEach(([key, value]) => {
     //       if(key !== "sample" && key !== "WFREQ")
     //         metadata_panel.append("span")

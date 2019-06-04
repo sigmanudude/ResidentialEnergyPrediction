@@ -179,12 +179,8 @@
                                       <label for="year">Select Region</label>
                                       </li>
                                       <li class="list-inline-item"></li>
-                                      <select type="select" id="region" name="region">
-                                        <option value = "0" >All regions</option>
-                                        <option value = "1" >Northeast</option>
-                                        <option value = "2" >MidWest</option>
-                                        <option value = "3" >South</option>
-                                        <option value = "4" >West</option>
+                                      <select type="select" id="sample" name="sample">
+                                        <!-- <option value = "0" >All years</option> -->
                                       </select>
                                       </li>
                                       <!-- <li class="list-inline-item"> -->
@@ -194,22 +190,20 @@
                                       </select>
                                     </li> -->
                                     <li class="list-inline-item">
-                                      <label for="year">Select Sq.Footage</label>
+                                      <label for="year">Select Model</label>
                                       </li>
                                     <li class="list-inline-item">
                                       <!-- <label for="violCat">Select a Violation Category</label> -->
-                                      <select type="select" id="sqft" name="sqft">
-                                          <option value = "0">Any sq. footage</option>
-                                          <option value = "1">Less than 900 sq.ft</option>
-                                          <option value = "2">Between 900 and 1500 sq.ft.</option>
-                                          <option value = "3">Between 1500 and 2500 sq.ft.</option>
-                                          <option value = "4">Between 2500 and 3500 sq.ft.</option>
-                                          <option value = "5">Greater than 3500 sq.ft.</option>
+                                      <select type="select" id="model" name="model">
+                                          <option value = "all">All Models</option>
+                                          <option value = "LR">Linear Models</option>
+                                          <option value = "RF">Random Forest</option>
+                                          <option value = "XGB">XGBoost</option>
                                       </select>
                                     </li>
                                     <li class="list-inline-item">
                                       <button id="filter-btn" type="submit" class="btn btn-sm" 
-                          style="font-size:10px; background-color: steelblue;color:white;">Predict</button>
+                          style="font-size:10px; background-color: steelblue;color:white;">Filter</button>
                           
                           <button id="clear-filter-btn" type="submit" class="btn btn-sm" 
                           style="font-size:10px; background-color: steelblue; color:white">Reset</button>
@@ -225,12 +219,12 @@
                           <div class="row">
                                   <div class="w-75 col-xs-12 col-sm-12 col-md-6">
                                     <div class="card" style = "border:none;margin:1rem 0 0 0;" >
-                                      <h5><strong>Prediction Results</strong></h5>
+                                      <h5><strong>Seleted House Properties</strong></h5>
                                       <!-- bar chart displaying violation by district-->
                                       
                                       <!-- <img class="card-img-top" src="../static/imgs/plot3.PNG" alt="Card image cap"> -->
                                       <div class="card-body">
-                                        <div id="resPredict"></div>   
+                                        <div id="houseprop"></div>   
                                       </div>
                                   </div>
                                   </div>
