@@ -22,9 +22,10 @@ body {
   height:1000px;
   background-color:#ffffff;
   background-repeat:repeat-x;
-  background-image:url("https://insideflyer.com/wp-content/uploads/2018/02/Traffic-765x420.jpg");
+  /* background-image:url("https://images.techhive.com/images/article/2015/03/energy-usage-100574097-primary.idge.jpg"); */
+  /* background-image:url("../imgs/backgnd_img.jpg"); */
   /* background-image: url("../imgs/bckgnd.jpg"); */
-  animation: movement 10s linear infinite; 
+  /* animation: movement 10s linear infinite;  */
 }
 
 /* Media query for body */
@@ -107,7 +108,7 @@ nav > div a.nav-item.nav-link:focus
   /* Typography */
   font-size: 28px;
   font-weight: bold;
-  color: white;
+  color: black;
   /* background-color: #000; */
   
 }
@@ -130,13 +131,16 @@ nav > div a.nav-item.nav-link:focus
 .description-content-alt {
   /* Box-model */
   padding: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+
+  color:black;
 
   /* Positioning */
   /* margin-top: 2px; */
 
   /* Visual */
-  background-color: rgba(7, 0, 0, 0.4);
+  /* background-color: rgba(7, 0, 0, 0.4); */
+  background-image:url("../imgs/backgnd_img.jpg");
 }
 
 .description-content > p {
@@ -201,7 +205,8 @@ nav > div a.nav-item.nav-link:focus
   /* Typography */
   font-size: 25px;
   font-weight: bold;
-  color: slategray;
+  /* color: slategray; */
+  color: orange;
   /* color: #1d0741; */
 }
 

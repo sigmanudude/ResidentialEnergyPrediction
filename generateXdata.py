@@ -106,35 +106,49 @@ def generateX(ohe = True, target = "BTU"):
 # specificSample : sample num
 #############################################################################################################
 
-def generateX_samp(ohe = True, target = "BTU", numSamples = 0, specificSample = 0):    
+def generateX_samp(ohe = True, target = "BTU", numSamples = 20, region = 0, totsqft_cd = 0):    
 
     dataFilePath = "dataforfinalproject"
     filename = "RECS_COMBINED_DATA.csv"
     cols_file = "Final_Columns_withCat.csv"
-    samplefile = "sampletest.csv"
+    sampleFilename = "InputSamples.csv"
+    
+    totsqt = {0 : "(df_recs.TOTHSQFT != -1)",
+             1 : "(df_recs.TOTHSQFT < 900)",
+             2 : "((df_recs.TOTHSQFT >= 900) & (df_recs.TOTHSQFT < 1500))",
+             3 : "((df_recs.TOTHSQFT >= 1500) & (df_recs.TOTHSQFT < 2500))",
+             4 : "((df_recs.TOTHSQFT >= 2500) & (df_recs.TOTHSQFT < 3500))",
+             5 : "(df_recs.TOTHSQFT >= 3500)"}
+        
 
     # read dataset wih all years combined data
     df_recs = pd.read_csv(os.path.join(dataFilePath, filename), low_memory= False)
-    df_samp = pd.read_csv(os.path.join(dataFilePath, samplefile), low_memory = False)
-
+    # print(region)
+    # print(totsqft_cd)
     if(numSamples != 0 and numSamples != df_recs.shape[0]):
-        sample_df = df_recs.sample( n = numSamples)
-        print(sample_df)
+        if(region != 0):            
+            sample_df = df_recs[(df_recs.REGIONC == region) & (eval(totsqt[totsqft_cd]))].sample( n = numSamples)
+        else:
+            sample_df = df_recs[(eval(totsqt[totsqft_cd]))].sample( n = numSamples)
+        
     else:
         sample_df = df_recs
     
+    # save the samples generated to csv file to populate in the DATA tab
+    sample_df.reset_index().to_csv(os.path.join(dataFilePath,sampleFilename), index = False)
+
     # read the columns from Columns csv
     df_cols = pd.read_csv(os.path.join(dataFilePath, cols_file))
 #     df_cols.columns
 
     # Whittle down the dataset to contain only Features required for modeling - X 
     modelDF = sample_df[df_cols[df_cols.FEATURES_MODEL == "Y"].COLUMN_NAME]
+    
+    
+    # modelDF.to_csv(os.path.join(dataFilePath, sampleFilename), index = True)
+    
     print(f" X Features shape : {modelDF.shape}")
 
-    
-    
-
-    
     if(target == "BTU"):
         # Drop Price / Cost related Columns as it is only Consumption we are interested in 
         cost_cols = df_cols[(df_cols['COLUMN_NAME'].str.find("DOL") != -1) & (df_cols.FEATURES_MODEL == "Y")].COLUMN_NAME.tolist()
@@ -181,4 +195,16 @@ def generateX_samp(ohe = True, target = "BTU", numSamples = 0, specificSample = 
         return (X_encoded, vocab, y_label)
     else:
         return (X, X.columns,y_label)
+
+
+# In[4]:
+
+
+# generateX()
+
+
+# In[ ]:
+
+
+
 
