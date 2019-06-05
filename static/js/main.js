@@ -22,6 +22,8 @@ var distSumElement = d3.select("#distSum");
 
 var startpg = 1, totalpg = 36, currpg = 1;
 
+var spinner_HTM = `<div class="d-flex justify-content-center"><div class="spinner-border" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only">Predicting...</span></div></div>`
+
 
 // function that initiliazes the page
 function init(){
@@ -107,7 +109,7 @@ function filterData(){
     var regionVal = regSel.property("value");
     var sqftVal = sqftSel.property("value");
     
-    
+    d3.select("#resPredict").html(spinner_HTM);
     console.log(`${regionVal}, ${sqftVal}`);
 
      d3.json(`${predictPriceURL}${regionVal}/${sqftVal}`).then(function(data){

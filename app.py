@@ -63,7 +63,7 @@ def predPrice(regVal, sqftVal):
     
     resultsJSON = {}
     sampdf.rename(columns = {"index":"SAMPLE #"}, inplace = True)
-    resultsJSON['metadata'] = sampdf.to_html(table_id = "sampMetaData", classes = "table table-striped table-bordered table-sm")
+    resultsJSON['metadata'] = sampdf.to_html(table_id = "sampMetaData",index_names = False, classes = "table table-striped table-bordered table-sm")
     resultsJSON['PredictResults'] = predictPrice(int(regVal),int(sqftVal))
 
     return jsonify(resultsJSON)
