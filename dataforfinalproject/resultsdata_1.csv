@@ -1,271 +1,1801 @@
 ,SampleNum,Model,Price
-0,0,index,8515.0
-1,0,Actual,2670.0
-2,0,Classic Lasso,2024.09
-3,0,Elasticnet,2023.18
-4,0,LassoCV,2041.75
-5,0,LinearRegression,2024.1
-6,0,RandomForest,2369.29
-7,0,RidgeCV,2024.1
-8,0,XGBoost,2342.52
-9,1,index,5681.0
-10,1,Actual,1370.0
-11,1,Classic Lasso,1371.2
-12,1,Elasticnet,1371.04
-13,1,LassoCV,1373.75
-14,1,LinearRegression,1371.24
-15,1,RandomForest,1460.27
-16,1,RidgeCV,1371.24
-17,1,XGBoost,1311.89
-18,2,index,15992.0
-19,2,Actual,2208.96
-20,2,Classic Lasso,1983.38
-21,2,Elasticnet,1983.6
-22,2,LassoCV,1999.57
-23,2,LinearRegression,1983.43
-24,2,RandomForest,1722.9
-25,2,RidgeCV,1983.43
-26,2,XGBoost,1917.08
-27,3,index,18770.0
-28,3,Actual,1902.61
-29,3,Classic Lasso,2073.31
-30,3,Elasticnet,2070.97
-31,3,LassoCV,2058.56
-32,3,LinearRegression,2073.52
-33,3,RandomForest,2008.51
-34,3,RidgeCV,2073.52
-35,3,XGBoost,1959.32
-36,4,index,18117.0
-37,4,Actual,1151.43
-38,4,Classic Lasso,1281.39
-39,4,Elasticnet,1281.2
-40,4,LassoCV,1290.61
-41,4,LinearRegression,1281.41
-42,4,RandomForest,1299.25
-43,4,RidgeCV,1281.41
-44,4,XGBoost,1119.43
-45,5,index,17254.0
-46,5,Actual,2139.76
-47,5,Classic Lasso,2206.86
-48,5,Elasticnet,2207.73
-49,5,LassoCV,2204.23
-50,5,LinearRegression,2206.97
-51,5,RandomForest,2188.13
-52,5,RidgeCV,2206.97
-53,5,XGBoost,2148.97
-54,6,index,12372.0
-55,6,Actual,2173.0
-56,6,Classic Lasso,2281.03
-57,6,Elasticnet,2282.44
-58,6,LassoCV,2277.39
-59,6,LinearRegression,2280.86
-60,6,RandomForest,2042.12
-61,6,RidgeCV,2280.86
-62,6,XGBoost,2147.36
-63,7,index,14193.0
-64,7,Actual,3218.0
-65,7,Classic Lasso,3297.69
-66,7,Elasticnet,3297.43
-67,7,LassoCV,3289.56
-68,7,LinearRegression,3297.78
-69,7,RandomForest,3084.02
-70,7,RidgeCV,3297.78
-71,7,XGBoost,3255.98
-72,8,index,10770.0
-73,8,Actual,2445.0
-74,8,Classic Lasso,2837.58
-75,8,Elasticnet,2833.38
-76,8,LassoCV,2830.5
-77,8,LinearRegression,2837.87
-78,8,RandomForest,2487.16
-79,8,RidgeCV,2837.87
-80,8,XGBoost,2514.09
-81,9,index,14003.0
-82,9,Actual,3478.0
-83,9,Classic Lasso,2326.41
-84,9,Elasticnet,2327.37
-85,9,LassoCV,2325.04
-86,9,LinearRegression,2326.41
-87,9,RandomForest,2945.69
-88,9,RidgeCV,2326.41
-89,9,XGBoost,3056.38
-90,10,index,14124.0
-91,10,Actual,1551.0
-92,10,Classic Lasso,2701.39
-93,10,Elasticnet,2700.85
-94,10,LassoCV,2682.36
-95,10,LinearRegression,2701.4
-96,10,RandomForest,2572.31
-97,10,RidgeCV,2701.4
-98,10,XGBoost,2174.87
-99,11,index,16915.0
-100,11,Actual,3393.58
-101,11,Classic Lasso,2592.99
-102,11,Elasticnet,2592.92
-103,11,LassoCV,2593.19
-104,11,LinearRegression,2593.04
-105,11,RandomForest,3204.81
-106,11,RidgeCV,2593.04
-107,11,XGBoost,3339.78
-108,12,index,4475.0
-109,12,Actual,1662.0
-110,12,Classic Lasso,1856.66
-111,12,Elasticnet,1854.12
-112,12,LassoCV,1878.95
-113,12,LinearRegression,1856.72
-114,12,RandomForest,1698.66
-115,12,RidgeCV,1856.72
-116,12,XGBoost,1923.23
-117,13,index,17685.0
-118,13,Actual,3698.8
-119,13,Classic Lasso,2841.94
-120,13,Elasticnet,2842.56
-121,13,LassoCV,2841.19
-122,13,LinearRegression,2841.84
-123,13,RandomForest,2810.88
-124,13,RidgeCV,2841.84
-125,13,XGBoost,3581.89
-126,14,index,4011.0
-127,14,Actual,2793.0
-128,14,Classic Lasso,2409.57
-129,14,Elasticnet,2410.13
-130,14,LassoCV,2423.4
-131,14,LinearRegression,2409.44
-132,14,RandomForest,2423.99
-133,14,RidgeCV,2409.44
-134,14,XGBoost,2251.37
-135,15,index,9487.0
-136,15,Actual,1536.0
-137,15,Classic Lasso,1819.91
-138,15,Elasticnet,1822.63
-139,15,LassoCV,1817.31
-140,15,LinearRegression,1819.86
-141,15,RandomForest,1757.71
-142,15,RidgeCV,1819.86
-143,15,XGBoost,1819.94
-144,16,index,20644.0
-145,16,Actual,2155.47
-146,16,Classic Lasso,2182.39
-147,16,Elasticnet,2180.37
-148,16,LassoCV,2184.27
-149,16,LinearRegression,2182.74
-150,16,RandomForest,2126.83
-151,16,RidgeCV,2182.74
-152,16,XGBoost,2251.53
-153,17,index,2149.0
-154,17,Actual,724.0
-155,17,Classic Lasso,1300.19
-156,17,Elasticnet,1300.51
-157,17,LassoCV,1293.9
-158,17,LinearRegression,1300.29
-159,17,RandomForest,1280.83
-160,17,RidgeCV,1300.29
-161,17,XGBoost,1163.34
-162,18,index,1451.0
-163,18,Actual,1820.0
-164,18,Classic Lasso,1698.08
-165,18,Elasticnet,1698.83
-166,18,LassoCV,1693.25
-167,18,LinearRegression,1697.94
-168,18,RandomForest,1802.72
-169,18,RidgeCV,1697.94
-170,18,XGBoost,1832.13
-171,19,index,9128.0
-172,19,Actual,1198.0
-173,19,Classic Lasso,1124.98
-174,19,Elasticnet,1125.17
-175,19,LassoCV,1129.56
-176,19,LinearRegression,1125.03
-177,19,RandomForest,1482.66
-178,19,RidgeCV,1125.03
-179,19,XGBoost,1248.59
-180,20,index,1961.0
-181,20,Actual,859.0
-182,20,Classic Lasso,674.54
-183,20,Elasticnet,674.6
-184,20,LassoCV,680.53
-185,20,LinearRegression,674.57
-186,20,RandomForest,1034.25
-187,20,RidgeCV,674.57
-188,20,XGBoost,879.24
-189,21,index,19770.0
-190,21,Actual,3422.28
-191,21,Classic Lasso,2609.06
-192,21,Elasticnet,2611.84
-193,21,LassoCV,2596.61
-194,21,LinearRegression,2608.98
-195,21,RandomForest,3282.03
-196,21,RidgeCV,2608.98
-197,21,XGBoost,3379.93
-198,22,index,4872.0
-199,22,Actual,3741.0
-200,22,Classic Lasso,3039.47
-201,22,Elasticnet,3038.49
-202,22,LassoCV,3028.3
-203,22,LinearRegression,3039.56
-204,22,RandomForest,3433.33
-205,22,RidgeCV,3039.56
-206,22,XGBoost,3635.56
-207,23,index,20405.0
-208,23,Actual,1383.93
-209,23,Classic Lasso,1502.98
-210,23,Elasticnet,1501.91
-211,23,LassoCV,1505.93
-212,23,LinearRegression,1503.03
-213,23,RandomForest,1513.78
-214,23,RidgeCV,1503.03
-215,23,XGBoost,1357.84
-216,24,index,9790.0
-217,24,Actual,3082.0
-218,24,Classic Lasso,2780.17
-219,24,Elasticnet,2779.43
-220,24,LassoCV,2777.47
-221,24,LinearRegression,2780.07
-222,24,RandomForest,3027.35
-223,24,RidgeCV,2780.07
-224,24,XGBoost,3133.75
-225,25,index,12960.0
-226,25,Actual,2812.0
-227,25,Classic Lasso,3416.8
-228,25,Elasticnet,3416.73
-229,25,LassoCV,3395.87
-230,25,LinearRegression,3417.01
-231,25,RandomForest,2797.8
-232,25,RidgeCV,3417.01
-233,25,XGBoost,2928.14
-234,26,index,13038.0
-235,26,Actual,3723.0
-236,26,Classic Lasso,3629.94
-237,26,Elasticnet,3629.89
-238,26,LassoCV,3616.89
-239,26,LinearRegression,3629.65
-240,26,RandomForest,3498.98
-241,26,RidgeCV,3629.65
-242,26,XGBoost,3600.52
-243,27,index,4545.0
-244,27,Actual,1339.0
-245,27,Classic Lasso,1618.97
-246,27,Elasticnet,1619.81
-247,27,LassoCV,1624.47
-248,27,LinearRegression,1618.97
-249,27,RandomForest,1430.51
-250,27,RidgeCV,1618.97
-251,27,XGBoost,1408.91
-252,28,index,5658.0
-253,28,Actual,2022.0
-254,28,Classic Lasso,2175.74
-255,28,Elasticnet,2175.35
-256,28,LassoCV,2173.65
-257,28,LinearRegression,2175.81
-258,28,RandomForest,2010.86
-259,28,RidgeCV,2175.81
-260,28,XGBoost,2258.35
-261,29,index,17898.0
-262,29,Actual,1909.51
-263,29,Classic Lasso,2049.08
-264,29,Elasticnet,2049.81
-265,29,LassoCV,2053.09
-266,29,LinearRegression,2049.0
-267,29,RandomForest,1867.37
-268,29,RidgeCV,2049.0
-269,29,XGBoost,1906.17
+0,0,index,739.0
+1,0,Actual,648.0
+2,0,Classic Lasso,752.46
+3,0,Elasticnet,752.71
+4,0,LassoCV,737.51
+5,0,LinearRegression,752.54
+6,0,RandomForest,939.6
+7,0,RidgeCV,752.54
+8,0,XGBoost,888.08
+9,1,index,10653.0
+10,1,Actual,1698.0
+11,1,Classic Lasso,2223.61
+12,1,Elasticnet,2222.29
+13,1,LassoCV,2218.41
+14,1,LinearRegression,2223.57
+15,1,RandomForest,1861.82
+16,1,RidgeCV,2223.57
+17,1,XGBoost,1766.75
+18,2,index,14950.0
+19,2,Actual,1374.0
+20,2,Classic Lasso,1310.89
+21,2,Elasticnet,1311.22
+22,2,LassoCV,1317.55
+23,2,LinearRegression,1310.75
+24,2,RandomForest,1263.95
+25,2,RidgeCV,1310.75
+26,2,XGBoost,1432.36
+27,3,index,10428.0
+28,3,Actual,1644.0
+29,3,Classic Lasso,1721.43
+30,3,Elasticnet,1720.37
+31,3,LassoCV,1716.27
+32,3,LinearRegression,1721.42
+33,3,RandomForest,1825.56
+34,3,RidgeCV,1721.42
+35,3,XGBoost,1755.56
+36,4,index,16300.0
+37,4,Actual,618.3
+38,4,Classic Lasso,820.99
+39,4,Elasticnet,821.45
+40,4,LassoCV,822.67
+41,4,LinearRegression,820.93
+42,4,RandomForest,730.62
+43,4,RidgeCV,820.93
+44,4,XGBoost,743.78
+45,5,index,4788.0
+46,5,Actual,1639.0
+47,5,Classic Lasso,1256.22
+48,5,Elasticnet,1256.71
+49,5,LassoCV,1255.88
+50,5,LinearRegression,1256.2
+51,5,RandomForest,1249.1
+52,5,RidgeCV,1256.2
+53,5,XGBoost,1320.29
+54,6,index,2069.0
+55,6,Actual,969.0
+56,6,Classic Lasso,854.02
+57,6,Elasticnet,854.85
+58,6,LassoCV,844.97
+59,6,LinearRegression,854.1
+60,6,RandomForest,1038.83
+61,6,RidgeCV,854.1
+62,6,XGBoost,955.18
+63,7,index,7555.0
+64,7,Actual,1925.0
+65,7,Classic Lasso,1794.15
+66,7,Elasticnet,1794.01
+67,7,LassoCV,1801.72
+68,7,LinearRegression,1794.07
+69,7,RandomForest,1825.05
+70,7,RidgeCV,1794.07
+71,7,XGBoost,1832.91
+72,8,index,4088.0
+73,8,Actual,433.0
+74,8,Classic Lasso,642.81
+75,8,Elasticnet,643.66
+76,8,LassoCV,635.44
+77,8,LinearRegression,642.72
+78,8,RandomForest,391.54
+79,8,RidgeCV,642.72
+80,8,XGBoost,396.44
+81,9,index,7487.0
+82,9,Actual,597.0
+83,9,Classic Lasso,698.44
+84,9,Elasticnet,699.58
+85,9,LassoCV,716.22
+86,9,LinearRegression,698.26
+87,9,RandomForest,635.37
+88,9,RidgeCV,698.26
+89,9,XGBoost,675.73
+90,10,index,10821.0
+91,10,Actual,982.0
+92,10,Classic Lasso,1435.64
+93,10,Elasticnet,1434.64
+94,10,LassoCV,1439.84
+95,10,LinearRegression,1435.67
+96,10,RandomForest,1264.15
+97,10,RidgeCV,1435.67
+98,10,XGBoost,1330.76
+99,11,index,647.0
+100,11,Actual,820.0
+101,11,Classic Lasso,919.17
+102,11,Elasticnet,919.25
+103,11,LassoCV,926.66
+104,11,LinearRegression,919.22
+105,11,RandomForest,958.12
+106,11,RidgeCV,919.22
+107,11,XGBoost,792.64
+108,12,index,13674.0
+109,12,Actual,1086.0
+110,12,Classic Lasso,1124.47
+111,12,Elasticnet,1124.94
+112,12,LassoCV,1106.84
+113,12,LinearRegression,1124.75
+114,12,RandomForest,991.39
+115,12,RidgeCV,1124.75
+116,12,XGBoost,1003.73
+117,13,index,8711.0
+118,13,Actual,639.0
+119,13,Classic Lasso,1002.36
+120,13,Elasticnet,1002.76
+121,13,LassoCV,1004.51
+122,13,LinearRegression,1002.2
+123,13,RandomForest,731.77
+124,13,RidgeCV,1002.2
+125,13,XGBoost,746.37
+126,14,index,9772.0
+127,14,Actual,494.0
+128,14,Classic Lasso,1143.65
+129,14,Elasticnet,1143.77
+130,14,LassoCV,1134.24
+131,14,LinearRegression,1143.66
+132,14,RandomForest,681.86
+133,14,RidgeCV,1143.66
+134,14,XGBoost,616.58
+135,15,index,10549.0
+136,15,Actual,657.0
+137,15,Classic Lasso,850.9
+138,15,Elasticnet,851.66
+139,15,LassoCV,869.99
+140,15,LinearRegression,850.68
+141,15,RandomForest,679.84
+142,15,RidgeCV,850.68
+143,15,XGBoost,625.38
+144,16,index,16289.0
+145,16,Actual,461.65
+146,16,Classic Lasso,751.2
+147,16,Elasticnet,750.63
+148,16,LassoCV,771.29
+149,16,LinearRegression,751.22
+150,16,RandomForest,737.64
+151,16,RidgeCV,751.22
+152,16,XGBoost,566.39
+153,17,index,1576.0
+154,17,Actual,898.0
+155,17,Classic Lasso,713.47
+156,17,Elasticnet,712.8
+157,17,LassoCV,713.56
+158,17,LinearRegression,713.46
+159,17,RandomForest,914.6
+160,17,RidgeCV,713.46
+161,17,XGBoost,899.21
+162,18,index,13058.0
+163,18,Actual,367.0
+164,18,Classic Lasso,537.76
+165,18,Elasticnet,538.19
+166,18,LassoCV,530.7
+167,18,LinearRegression,537.84
+168,18,RandomForest,534.12
+169,18,RidgeCV,537.84
+170,18,XGBoost,420.59
+171,19,index,12479.0
+172,19,Actual,1310.0
+173,19,Classic Lasso,1166.2
+174,19,Elasticnet,1167.64
+175,19,LassoCV,1150.79
+176,19,LinearRegression,1166.45
+177,19,RandomForest,1182.88
+178,19,RidgeCV,1166.45
+179,19,XGBoost,1197.6
+180,20,index,2176.0
+181,20,Actual,3853.0
+182,20,Classic Lasso,3588.14
+183,20,Elasticnet,3590.06
+184,20,LassoCV,3656.95
+185,20,LinearRegression,3587.89
+186,20,RandomForest,2488.15
+187,20,RidgeCV,3587.89
+188,20,XGBoost,2789.86
+189,21,index,867.0
+190,21,Actual,711.0
+191,21,Classic Lasso,668.09
+192,21,Elasticnet,669.1
+193,21,LassoCV,679.32
+194,21,LinearRegression,667.87
+195,21,RandomForest,938.93
+196,21,RidgeCV,667.87
+197,21,XGBoost,725.34
+198,22,index,6165.0
+199,22,Actual,3459.0
+200,22,Classic Lasso,2649.26
+201,22,Elasticnet,2642.06
+202,22,LassoCV,2631.53
+203,22,LinearRegression,2649.65
+204,22,RandomForest,3224.45
+205,22,RidgeCV,2649.65
+206,22,XGBoost,3353.86
+207,23,index,17735.0
+208,23,Actual,3327.34
+209,23,Classic Lasso,2094.15
+210,23,Elasticnet,2092.68
+211,23,LassoCV,2105.81
+212,23,LinearRegression,2094.27
+213,23,RandomForest,2975.13
+214,23,RidgeCV,2094.27
+215,23,XGBoost,3128.32
+216,24,index,10618.0
+217,24,Actual,1244.0
+218,24,Classic Lasso,962.65
+219,24,Elasticnet,963.18
+220,24,LassoCV,941.13
+221,24,LinearRegression,963.01
+222,24,RandomForest,958.58
+223,24,RidgeCV,963.01
+224,24,XGBoost,1023.63
+225,25,index,12941.0
+226,25,Actual,1027.0
+227,25,Classic Lasso,1370.62
+228,25,Elasticnet,1371.12
+229,25,LassoCV,1363.24
+230,25,LinearRegression,1370.75
+231,25,RandomForest,1346.59
+232,25,RidgeCV,1370.75
+233,25,XGBoost,1263.5
+234,26,index,8786.0
+235,26,Actual,370.0
+236,26,Classic Lasso,367.66
+237,26,Elasticnet,367.25
+238,26,LassoCV,361.53
+239,26,LinearRegression,367.66
+240,26,RandomForest,501.05
+241,26,RidgeCV,367.66
+242,26,XGBoost,359.25
+243,27,index,17127.0
+244,27,Actual,679.68
+245,27,Classic Lasso,875.25
+246,27,Elasticnet,875.09
+247,27,LassoCV,868.5
+248,27,LinearRegression,875.32
+249,27,RandomForest,686.99
+250,27,RidgeCV,875.32
+251,27,XGBoost,755.23
+252,28,index,3484.0
+253,28,Actual,2007.0
+254,28,Classic Lasso,1449.14
+255,28,Elasticnet,1448.68
+256,28,LassoCV,1436.25
+257,28,LinearRegression,1449.31
+258,28,RandomForest,1712.29
+259,28,RidgeCV,1449.31
+260,28,XGBoost,1846.27
+261,29,index,6515.0
+262,29,Actual,679.0
+263,29,Classic Lasso,765.58
+264,29,Elasticnet,765.01
+265,29,LassoCV,766.05
+266,29,LinearRegression,765.67
+267,29,RandomForest,931.11
+268,29,RidgeCV,765.67
+269,29,XGBoost,705.62
+270,30,index,11295.0
+271,30,Actual,1048.0
+272,30,Classic Lasso,1231.06
+273,30,Elasticnet,1230.94
+274,30,LassoCV,1241.12
+275,30,LinearRegression,1231.05
+276,30,RandomForest,966.97
+277,30,RidgeCV,1231.05
+278,30,XGBoost,958.03
+279,31,index,7638.0
+280,31,Actual,630.0
+281,31,Classic Lasso,609.42
+282,31,Elasticnet,608.97
+283,31,LassoCV,614.05
+284,31,LinearRegression,609.37
+285,31,RandomForest,711.97
+286,31,RidgeCV,609.37
+287,31,XGBoost,620.22
+288,32,index,1349.0
+289,32,Actual,1307.0
+290,32,Classic Lasso,1554.64
+291,32,Elasticnet,1555.35
+292,32,LassoCV,1549.0
+293,32,LinearRegression,1554.61
+294,32,RandomForest,1419.39
+295,32,RidgeCV,1554.61
+296,32,XGBoost,1366.42
+297,33,index,8747.0
+298,33,Actual,899.0
+299,33,Classic Lasso,1094.83
+300,33,Elasticnet,1094.52
+301,33,LassoCV,1093.64
+302,33,LinearRegression,1094.85
+303,33,RandomForest,942.73
+304,33,RidgeCV,1094.85
+305,33,XGBoost,957.0
+306,34,index,6244.0
+307,34,Actual,886.0
+308,34,Classic Lasso,812.69
+309,34,Elasticnet,813.96
+310,34,LassoCV,812.15
+311,34,LinearRegression,812.62
+312,34,RandomForest,871.84
+313,34,RidgeCV,812.62
+314,34,XGBoost,847.4
+315,35,index,2425.0
+316,35,Actual,1452.0
+317,35,Classic Lasso,1083.94
+318,35,Elasticnet,1076.75
+319,35,LassoCV,1049.61
+320,35,LinearRegression,1084.34
+321,35,RandomForest,1118.8
+322,35,RidgeCV,1084.34
+323,35,XGBoost,1360.34
+324,36,index,2999.0
+325,36,Actual,1275.0
+326,36,Classic Lasso,1300.76
+327,36,Elasticnet,1301.55
+328,36,LassoCV,1282.48
+329,36,LinearRegression,1300.79
+330,36,RandomForest,1249.72
+331,36,RidgeCV,1300.79
+332,36,XGBoost,1231.21
+333,37,index,6269.0
+334,37,Actual,893.0
+335,37,Classic Lasso,979.26
+336,37,Elasticnet,979.76
+337,37,LassoCV,978.16
+338,37,LinearRegression,979.22
+339,37,RandomForest,971.78
+340,37,RidgeCV,979.22
+341,37,XGBoost,932.98
+342,38,index,15580.0
+343,38,Actual,1843.0
+344,38,Classic Lasso,1812.66
+345,38,Elasticnet,1812.83
+346,38,LassoCV,1825.72
+347,38,LinearRegression,1812.57
+348,38,RandomForest,1769.27
+349,38,RidgeCV,1812.57
+350,38,XGBoost,1874.41
+351,39,index,19927.0
+352,39,Actual,543.74
+353,39,Classic Lasso,716.86
+354,39,Elasticnet,716.04
+355,39,LassoCV,720.14
+356,39,LinearRegression,716.94
+357,39,RandomForest,543.7
+358,39,RidgeCV,716.94
+359,39,XGBoost,521.17
+360,40,index,9203.0
+361,40,Actual,1924.0
+362,40,Classic Lasso,1678.06
+363,40,Elasticnet,1683.73
+364,40,LassoCV,1676.19
+365,40,LinearRegression,1677.74
+366,40,RandomForest,2082.4
+367,40,RidgeCV,1677.74
+368,40,XGBoost,1997.2
+369,41,index,586.0
+370,41,Actual,900.0
+371,41,Classic Lasso,907.64
+372,41,Elasticnet,907.61
+373,41,LassoCV,909.0
+374,41,LinearRegression,907.73
+375,41,RandomForest,960.53
+376,41,RidgeCV,907.73
+377,41,XGBoost,941.37
+378,42,index,6610.0
+379,42,Actual,752.0
+380,42,Classic Lasso,686.86
+381,42,Elasticnet,686.19
+382,42,LassoCV,685.47
+383,42,LinearRegression,686.89
+384,42,RandomForest,788.27
+385,42,RidgeCV,686.89
+386,42,XGBoost,698.53
+387,43,index,2810.0
+388,43,Actual,713.0
+389,43,Classic Lasso,636.06
+390,43,Elasticnet,636.75
+391,43,LassoCV,617.17
+392,43,LinearRegression,636.0
+393,43,RandomForest,624.86
+394,43,RidgeCV,636.0
+395,43,XGBoost,621.6
+396,44,index,2535.0
+397,44,Actual,1678.0
+398,44,Classic Lasso,1709.19
+399,44,Elasticnet,1704.08
+400,44,LassoCV,1793.95
+401,44,LinearRegression,1709.23
+402,44,RandomForest,1762.94
+403,44,RidgeCV,1709.23
+404,44,XGBoost,1651.98
+405,45,index,16730.0
+406,45,Actual,1035.53
+407,45,Classic Lasso,1166.01
+408,45,Elasticnet,1167.06
+409,45,LassoCV,1175.53
+410,45,LinearRegression,1166.01
+411,45,RandomForest,985.59
+412,45,RidgeCV,1166.01
+413,45,XGBoost,941.83
+414,46,index,7276.0
+415,46,Actual,1496.0
+416,46,Classic Lasso,1932.82
+417,46,Elasticnet,1933.2
+418,46,LassoCV,1918.03
+419,46,LinearRegression,1933.03
+420,46,RandomForest,1464.97
+421,46,RidgeCV,1933.03
+422,46,XGBoost,1596.94
+423,47,index,12273.0
+424,47,Actual,888.0
+425,47,Classic Lasso,1072.19
+426,47,Elasticnet,1072.24
+427,47,LassoCV,1073.45
+428,47,LinearRegression,1072.12
+429,47,RandomForest,872.45
+430,47,RidgeCV,1072.12
+431,47,XGBoost,838.88
+432,48,index,12318.0
+433,48,Actual,1440.0
+434,48,Classic Lasso,1058.93
+435,48,Elasticnet,1057.81
+436,48,LassoCV,1055.43
+437,48,LinearRegression,1058.99
+438,48,RandomForest,1048.94
+439,48,RidgeCV,1058.99
+440,48,XGBoost,1158.98
+441,49,index,7274.0
+442,49,Actual,488.0
+443,49,Classic Lasso,426.06
+444,49,Elasticnet,418.07
+445,49,LassoCV,427.92
+446,49,LinearRegression,426.48
+447,49,RandomForest,417.01
+448,49,RidgeCV,426.48
+449,49,XGBoost,473.35
+450,50,index,4102.0
+451,50,Actual,1312.0
+452,50,Classic Lasso,1466.87
+453,50,Elasticnet,1467.05
+454,50,LassoCV,1457.68
+455,50,LinearRegression,1466.85
+456,50,RandomForest,1384.67
+457,50,RidgeCV,1466.85
+458,50,XGBoost,1442.42
+459,51,index,4191.0
+460,51,Actual,779.0
+461,51,Classic Lasso,688.71
+462,51,Elasticnet,689.87
+463,51,LassoCV,681.58
+464,51,LinearRegression,688.63
+465,51,RandomForest,962.16
+466,51,RidgeCV,688.63
+467,51,XGBoost,775.77
+468,52,index,9471.0
+469,52,Actual,902.0
+470,52,Classic Lasso,1188.78
+471,52,Elasticnet,1188.54
+472,52,LassoCV,1178.87
+473,52,LinearRegression,1189.07
+474,52,RandomForest,991.49
+475,52,RidgeCV,1189.07
+476,52,XGBoost,997.31
+477,53,index,17738.0
+478,53,Actual,1056.0
+479,53,Classic Lasso,783.21
+480,53,Elasticnet,785.72
+481,53,LassoCV,796.75
+482,53,LinearRegression,783.12
+483,53,RandomForest,1044.14
+484,53,RidgeCV,783.12
+485,53,XGBoost,1023.78
+486,54,index,12972.0
+487,54,Actual,552.0
+488,54,Classic Lasso,601.46
+489,54,Elasticnet,601.91
+490,54,LassoCV,602.34
+491,54,LinearRegression,601.77
+492,54,RandomForest,538.28
+493,54,RidgeCV,601.77
+494,54,XGBoost,662.61
+495,55,index,10123.0
+496,55,Actual,912.0
+497,55,Classic Lasso,1218.69
+498,55,Elasticnet,1218.84
+499,55,LassoCV,1210.81
+500,55,LinearRegression,1218.74
+501,55,RandomForest,1334.13
+502,55,RidgeCV,1218.74
+503,55,XGBoost,1053.91
+504,56,index,15960.0
+505,56,Actual,1023.0
+506,56,Classic Lasso,1188.1
+507,56,Elasticnet,1189.73
+508,56,LassoCV,1187.57
+509,56,LinearRegression,1188.06
+510,56,RandomForest,1236.96
+511,56,RidgeCV,1188.06
+512,56,XGBoost,1070.3
+513,57,index,11148.0
+514,57,Actual,2072.0
+515,57,Classic Lasso,1779.95
+516,57,Elasticnet,1780.85
+517,57,LassoCV,1767.18
+518,57,LinearRegression,1779.95
+519,57,RandomForest,1733.9
+520,57,RidgeCV,1779.95
+521,57,XGBoost,2034.82
+522,58,index,10908.0
+523,58,Actual,857.0
+524,58,Classic Lasso,1001.63
+525,58,Elasticnet,1001.77
+526,58,LassoCV,981.01
+527,58,LinearRegression,1002.03
+528,58,RandomForest,917.19
+529,58,RidgeCV,1002.03
+530,58,XGBoost,957.52
+531,59,index,10773.0
+532,59,Actual,1425.0
+533,59,Classic Lasso,1640.69
+534,59,Elasticnet,1639.17
+535,59,LassoCV,1648.02
+536,59,LinearRegression,1640.68
+537,59,RandomForest,1407.65
+538,59,RidgeCV,1640.68
+539,59,XGBoost,1508.04
+540,60,index,12915.0
+541,60,Actual,2212.0
+542,60,Classic Lasso,1985.28
+543,60,Elasticnet,1985.04
+544,60,LassoCV,1989.01
+545,60,LinearRegression,1985.25
+546,60,RandomForest,2271.96
+547,60,RidgeCV,1985.25
+548,60,XGBoost,2175.97
+549,61,index,8362.0
+550,61,Actual,430.0
+551,61,Classic Lasso,732.74
+552,61,Elasticnet,731.86
+553,61,LassoCV,731.72
+554,61,LinearRegression,732.77
+555,61,RandomForest,611.23
+556,61,RidgeCV,732.77
+557,61,XGBoost,414.87
+558,62,index,14161.0
+559,62,Actual,1110.0
+560,62,Classic Lasso,1194.47
+561,62,Elasticnet,1194.52
+562,62,LassoCV,1195.73
+563,62,LinearRegression,1194.49
+564,62,RandomForest,1191.9
+565,62,RidgeCV,1194.49
+566,62,XGBoost,1064.6
+567,63,index,7057.0
+568,63,Actual,1254.0
+569,63,Classic Lasso,1308.58
+570,63,Elasticnet,1308.94
+571,63,LassoCV,1310.85
+572,63,LinearRegression,1308.53
+573,63,RandomForest,1240.07
+574,63,RidgeCV,1308.53
+575,63,XGBoost,1281.92
+576,64,index,15606.0
+577,64,Actual,1591.0
+578,64,Classic Lasso,1552.8
+579,64,Elasticnet,1552.17
+580,64,LassoCV,1551.15
+581,64,LinearRegression,1552.82
+582,64,RandomForest,1608.44
+583,64,RidgeCV,1552.82
+584,64,XGBoost,1636.81
+585,65,index,9151.0
+586,65,Actual,1537.0
+587,65,Classic Lasso,1490.76
+588,65,Elasticnet,1492.02
+589,65,LassoCV,1479.29
+590,65,LinearRegression,1490.79
+591,65,RandomForest,1667.96
+592,65,RidgeCV,1490.79
+593,65,XGBoost,1559.77
+594,66,index,6796.0
+595,66,Actual,2627.0
+596,66,Classic Lasso,1868.69
+597,66,Elasticnet,1867.27
+598,66,LassoCV,1870.53
+599,66,LinearRegression,1868.76
+600,66,RandomForest,2251.95
+601,66,RidgeCV,1868.76
+602,66,XGBoost,2485.33
+603,67,index,7005.0
+604,67,Actual,1084.0
+605,67,Classic Lasso,1085.1
+606,67,Elasticnet,1085.42
+607,67,LassoCV,1069.59
+608,67,LinearRegression,1085.42
+609,67,RandomForest,1073.88
+610,67,RidgeCV,1085.42
+611,67,XGBoost,1183.62
+612,68,index,14547.0
+613,68,Actual,507.0
+614,68,Classic Lasso,835.94
+615,68,Elasticnet,835.86
+616,68,LassoCV,845.81
+617,68,LinearRegression,835.95
+618,68,RandomForest,403.05
+619,68,RidgeCV,835.95
+620,68,XGBoost,494.61
+621,69,index,4055.0
+622,69,Actual,1008.0
+623,69,Classic Lasso,1455.55
+624,69,Elasticnet,1455.02
+625,69,LassoCV,1436.51
+626,69,LinearRegression,1455.6
+627,69,RandomForest,1164.58
+628,69,RidgeCV,1455.6
+629,69,XGBoost,1061.23
+630,70,index,8171.0
+631,70,Actual,1525.0
+632,70,Classic Lasso,1636.27
+633,70,Elasticnet,1637.5
+634,70,LassoCV,1629.43
+635,70,LinearRegression,1636.32
+636,70,RandomForest,1825.91
+637,70,RidgeCV,1636.32
+638,70,XGBoost,1530.97
+639,71,index,2264.0
+640,71,Actual,871.0
+641,71,Classic Lasso,1246.77
+642,71,Elasticnet,1245.93
+643,71,LassoCV,1220.51
+644,71,LinearRegression,1246.98
+645,71,RandomForest,771.09
+646,71,RidgeCV,1246.98
+647,71,XGBoost,838.5
+648,72,index,13789.0
+649,72,Actual,1912.0
+650,72,Classic Lasso,1787.82
+651,72,Elasticnet,1788.91
+652,72,LassoCV,1778.91
+653,72,LinearRegression,1787.85
+654,72,RandomForest,1418.55
+655,72,RidgeCV,1787.85
+656,72,XGBoost,1797.6
+657,73,index,10920.0
+658,73,Actual,698.0
+659,73,Classic Lasso,1042.11
+660,73,Elasticnet,1042.08
+661,73,LassoCV,1046.37
+662,73,LinearRegression,1042.16
+663,73,RandomForest,666.47
+664,73,RidgeCV,1042.16
+665,73,XGBoost,693.47
+666,74,index,7262.0
+667,74,Actual,1539.0
+668,74,Classic Lasso,1389.17
+669,74,Elasticnet,1389.54
+670,74,LassoCV,1399.54
+671,74,LinearRegression,1388.96
+672,74,RandomForest,1459.61
+673,74,RidgeCV,1388.96
+674,74,XGBoost,1419.46
+675,75,index,5100.0
+676,75,Actual,1239.0
+677,75,Classic Lasso,1416.92
+678,75,Elasticnet,1417.65
+679,75,LassoCV,1437.73
+680,75,LinearRegression,1416.72
+681,75,RandomForest,1441.42
+682,75,RidgeCV,1416.72
+683,75,XGBoost,1318.26
+684,76,index,5887.0
+685,76,Actual,1684.0
+686,76,Classic Lasso,1670.53
+687,76,Elasticnet,1669.85
+688,76,LassoCV,1676.08
+689,76,LinearRegression,1670.53
+690,76,RandomForest,1552.63
+691,76,RidgeCV,1670.53
+692,76,XGBoost,1645.03
+693,77,index,21340.0
+694,77,Actual,1087.13
+695,77,Classic Lasso,1494.42
+696,77,Elasticnet,1496.48
+697,77,LassoCV,1501.26
+698,77,LinearRegression,1494.35
+699,77,RandomForest,1404.08
+700,77,RidgeCV,1494.35
+701,77,XGBoost,1128.85
+702,78,index,15334.0
+703,78,Actual,556.0
+704,78,Classic Lasso,831.55
+705,78,Elasticnet,832.18
+706,78,LassoCV,843.9
+707,78,LinearRegression,831.42
+708,78,RandomForest,736.8
+709,78,RidgeCV,831.42
+710,78,XGBoost,709.53
+711,79,index,5141.0
+712,79,Actual,1710.0
+713,79,Classic Lasso,1647.59
+714,79,Elasticnet,1648.17
+715,79,LassoCV,1658.35
+716,79,LinearRegression,1647.45
+717,79,RandomForest,1728.94
+718,79,RidgeCV,1647.45
+719,79,XGBoost,1705.81
+720,80,index,20829.0
+721,80,Actual,550.55
+722,80,Classic Lasso,752.29
+723,80,Elasticnet,751.44
+724,80,LassoCV,761.78
+725,80,LinearRegression,752.35
+726,80,RandomForest,543.26
+727,80,RidgeCV,752.35
+728,80,XGBoost,533.54
+729,81,index,7991.0
+730,81,Actual,1248.0
+731,81,Classic Lasso,1225.73
+732,81,Elasticnet,1226.86
+733,81,LassoCV,1226.26
+734,81,LinearRegression,1225.66
+735,81,RandomForest,1278.74
+736,81,RidgeCV,1225.66
+737,81,XGBoost,1257.79
+738,82,index,20297.0
+739,82,Actual,1934.98
+740,82,Classic Lasso,1211.27
+741,82,Elasticnet,1211.79
+742,82,LassoCV,1210.65
+743,82,LinearRegression,1211.21
+744,82,RandomForest,1866.18
+745,82,RidgeCV,1211.21
+746,82,XGBoost,1796.16
+747,83,index,11625.0
+748,83,Actual,2010.0
+749,83,Classic Lasso,1694.91
+750,83,Elasticnet,1694.29
+751,83,LassoCV,1693.43
+752,83,LinearRegression,1694.85
+753,83,RandomForest,1893.23
+754,83,RidgeCV,1694.85
+755,83,XGBoost,1989.05
+756,84,index,13808.0
+757,84,Actual,2389.0
+758,84,Classic Lasso,2026.67
+759,84,Elasticnet,2025.38
+760,84,LassoCV,2019.6
+761,84,LinearRegression,2026.78
+762,84,RandomForest,2279.61
+763,84,RidgeCV,2026.78
+764,84,XGBoost,2333.21
+765,85,index,718.0
+766,85,Actual,1207.0
+767,85,Classic Lasso,1190.03
+768,85,Elasticnet,1191.22
+769,85,LassoCV,1181.96
+770,85,LinearRegression,1190.13
+771,85,RandomForest,1164.61
+772,85,RidgeCV,1190.13
+773,85,XGBoost,1249.48
+774,86,index,426.0
+775,86,Actual,1329.0
+776,86,Classic Lasso,1469.19
+777,86,Elasticnet,1467.83
+778,86,LassoCV,1469.12
+779,86,LinearRegression,1469.36
+780,86,RandomForest,1356.09
+781,86,RidgeCV,1469.36
+782,86,XGBoost,1347.23
+783,87,index,8121.0
+784,87,Actual,1372.0
+785,87,Classic Lasso,1339.38
+786,87,Elasticnet,1339.61
+787,87,LassoCV,1324.63
+788,87,LinearRegression,1339.65
+789,87,RandomForest,1318.93
+790,87,RidgeCV,1339.65
+791,87,XGBoost,1406.43
+792,88,index,13381.0
+793,88,Actual,263.0
+794,88,Classic Lasso,636.05
+795,88,Elasticnet,637.11
+796,88,LassoCV,650.94
+797,88,LinearRegression,635.89
+798,88,RandomForest,328.95
+799,88,RidgeCV,635.89
+800,88,XGBoost,283.85
+801,89,index,7217.0
+802,89,Actual,1550.0
+803,89,Classic Lasso,1115.48
+804,89,Elasticnet,1115.68
+805,89,LassoCV,1106.08
+806,89,LinearRegression,1115.46
+807,89,RandomForest,1346.26
+808,89,RidgeCV,1115.46
+809,89,XGBoost,1374.3
+810,90,index,3133.0
+811,90,Actual,601.0
+812,90,Classic Lasso,486.61
+813,90,Elasticnet,487.96
+814,90,LassoCV,481.32
+815,90,LinearRegression,486.68
+816,90,RandomForest,794.72
+817,90,RidgeCV,486.68
+818,90,XGBoost,636.33
+819,91,index,2297.0
+820,91,Actual,1356.0
+821,91,Classic Lasso,1108.8
+822,91,Elasticnet,1107.56
+823,91,LassoCV,1119.51
+824,91,LinearRegression,1108.78
+825,91,RandomForest,1140.4
+826,91,RidgeCV,1108.78
+827,91,XGBoost,1161.0
+828,92,index,10441.0
+829,92,Actual,459.0
+830,92,Classic Lasso,656.74
+831,92,Elasticnet,658.19
+832,92,LassoCV,676.89
+833,92,LinearRegression,656.58
+834,92,RandomForest,717.3
+835,92,RidgeCV,656.58
+836,92,XGBoost,474.92
+837,93,index,7768.0
+838,93,Actual,2814.0
+839,93,Classic Lasso,2615.4
+840,93,Elasticnet,2616.07
+841,93,LassoCV,2599.29
+842,93,LinearRegression,2615.35
+843,93,RandomForest,2676.16
+844,93,RidgeCV,2615.35
+845,93,XGBoost,2745.85
+846,94,index,4851.0
+847,94,Actual,3139.0
+848,94,Classic Lasso,2334.16
+849,94,Elasticnet,2332.69
+850,94,LassoCV,2327.38
+851,94,LinearRegression,2334.16
+852,94,RandomForest,2668.36
+853,94,RidgeCV,2334.16
+854,94,XGBoost,2806.73
+855,95,index,16044.0
+856,95,Actual,1502.15
+857,95,Classic Lasso,1025.38
+858,95,Elasticnet,1024.92
+859,95,LassoCV,1014.18
+860,95,LinearRegression,1025.39
+861,95,RandomForest,1003.15
+862,95,RidgeCV,1025.39
+863,95,XGBoost,1203.53
+864,96,index,6832.0
+865,96,Actual,1908.0
+866,96,Classic Lasso,1833.93
+867,96,Elasticnet,1833.97
+868,96,LassoCV,1827.81
+869,96,LinearRegression,1833.92
+870,96,RandomForest,1722.97
+871,96,RidgeCV,1833.92
+872,96,XGBoost,1859.76
+873,97,index,9606.0
+874,97,Actual,1337.0
+875,97,Classic Lasso,1438.95
+876,97,Elasticnet,1440.29
+877,97,LassoCV,1440.05
+878,97,LinearRegression,1438.81
+879,97,RandomForest,1590.59
+880,97,RidgeCV,1438.81
+881,97,XGBoost,1404.05
+882,98,index,19352.0
+883,98,Actual,991.63
+884,98,Classic Lasso,1439.89
+885,98,Elasticnet,1439.94
+886,98,LassoCV,1447.97
+887,98,LinearRegression,1440.07
+888,98,RandomForest,1531.9
+889,98,RidgeCV,1440.07
+890,98,XGBoost,1106.6
+891,99,index,17851.0
+892,99,Actual,1553.87
+893,99,Classic Lasso,1623.22
+894,99,Elasticnet,1623.93
+895,99,LassoCV,1621.77
+896,99,LinearRegression,1623.17
+897,99,RandomForest,1588.74
+898,99,RidgeCV,1623.17
+899,99,XGBoost,1607.14
+900,100,index,9767.0
+901,100,Actual,1133.0
+902,100,Classic Lasso,1112.12
+903,100,Elasticnet,1113.84
+904,100,LassoCV,1117.74
+905,100,LinearRegression,1112.03
+906,100,RandomForest,1120.83
+907,100,RidgeCV,1112.03
+908,100,XGBoost,1245.0
+909,101,index,7588.0
+910,101,Actual,872.0
+911,101,Classic Lasso,1095.26
+912,101,Elasticnet,1094.33
+913,101,LassoCV,1096.78
+914,101,LinearRegression,1095.29
+915,101,RandomForest,1576.51
+916,101,RidgeCV,1095.29
+917,101,XGBoost,1106.19
+918,102,index,16356.0
+919,102,Actual,1746.85
+920,102,Classic Lasso,1732.81
+921,102,Elasticnet,1731.79
+922,102,LassoCV,1750.44
+923,102,LinearRegression,1732.93
+924,102,RandomForest,1683.92
+925,102,RidgeCV,1732.93
+926,102,XGBoost,1644.83
+927,103,index,10450.0
+928,103,Actual,562.0
+929,103,Classic Lasso,705.66
+930,103,Elasticnet,705.33
+931,103,LassoCV,680.24
+932,103,LinearRegression,706.04
+933,103,RandomForest,568.03
+934,103,RidgeCV,706.04
+935,103,XGBoost,548.73
+936,104,index,14898.0
+937,104,Actual,2804.0
+938,104,Classic Lasso,2471.32
+939,104,Elasticnet,2470.31
+940,104,LassoCV,2462.78
+941,104,LinearRegression,2471.41
+942,104,RandomForest,2690.58
+943,104,RidgeCV,2471.41
+944,104,XGBoost,2766.15
+945,105,index,19748.0
+946,105,Actual,690.04
+947,105,Classic Lasso,949.97
+948,105,Elasticnet,950.95
+949,105,LassoCV,963.32
+950,105,LinearRegression,949.97
+951,105,RandomForest,697.14
+952,105,RidgeCV,949.97
+953,105,XGBoost,772.94
+954,106,index,15311.0
+955,106,Actual,971.0
+956,106,Classic Lasso,1001.31
+957,106,Elasticnet,1000.89
+958,106,LassoCV,1020.13
+959,106,LinearRegression,1001.19
+960,106,RandomForest,1323.32
+961,106,RidgeCV,1001.19
+962,106,XGBoost,1141.14
+963,107,index,11618.0
+964,107,Actual,854.0
+965,107,Classic Lasso,1105.76
+966,107,Elasticnet,1105.63
+967,107,LassoCV,1108.04
+968,107,LinearRegression,1105.69
+969,107,RandomForest,737.25
+970,107,RidgeCV,1105.69
+971,107,XGBoost,770.73
+972,108,index,3960.0
+973,108,Actual,550.0
+974,108,Classic Lasso,446.25
+975,108,Elasticnet,446.32
+976,108,LassoCV,449.68
+977,108,LinearRegression,446.21
+978,108,RandomForest,661.7
+979,108,RidgeCV,446.21
+980,108,XGBoost,567.17
+981,109,index,16774.0
+982,109,Actual,1488.96
+983,109,Classic Lasso,1021.97
+984,109,Elasticnet,1021.85
+985,109,LassoCV,1030.49
+986,109,LinearRegression,1021.89
+987,109,RandomForest,1232.45
+988,109,RidgeCV,1021.89
+989,109,XGBoost,1323.79
+990,110,index,17499.0
+991,110,Actual,813.45
+992,110,Classic Lasso,1094.41
+993,110,Elasticnet,1094.02
+994,110,LassoCV,1098.93
+995,110,LinearRegression,1094.51
+996,110,RandomForest,1140.3
+997,110,RidgeCV,1094.51
+998,110,XGBoost,1035.9
+999,111,index,7115.0
+1000,111,Actual,1975.0
+1001,111,Classic Lasso,1536.6
+1002,111,Elasticnet,1534.53
+1003,111,LassoCV,1544.61
+1004,111,LinearRegression,1536.89
+1005,111,RandomForest,1710.09
+1006,111,RidgeCV,1536.89
+1007,111,XGBoost,1856.14
+1008,112,index,10877.0
+1009,112,Actual,615.0
+1010,112,Classic Lasso,501.06
+1011,112,Elasticnet,501.81
+1012,112,LassoCV,510.29
+1013,112,LinearRegression,500.98
+1014,112,RandomForest,534.6
+1015,112,RidgeCV,500.98
+1016,112,XGBoost,548.88
+1017,113,index,15507.0
+1018,113,Actual,468.0
+1019,113,Classic Lasso,468.2
+1020,113,Elasticnet,467.07
+1021,113,LassoCV,467.54
+1022,113,LinearRegression,468.25
+1023,113,RandomForest,711.25
+1024,113,RidgeCV,468.25
+1025,113,XGBoost,496.88
+1026,114,index,18839.0
+1027,114,Actual,1261.09
+1028,114,Classic Lasso,1234.37
+1029,114,Elasticnet,1236.19
+1030,114,LassoCV,1249.09
+1031,114,LinearRegression,1234.16
+1032,114,RandomForest,976.96
+1033,114,RidgeCV,1234.16
+1034,114,XGBoost,1081.0
+1035,115,index,9975.0
+1036,115,Actual,2745.0
+1037,115,Classic Lasso,2252.74
+1038,115,Elasticnet,2252.28
+1039,115,LassoCV,2255.88
+1040,115,LinearRegression,2252.82
+1041,115,RandomForest,2234.45
+1042,115,RidgeCV,2252.82
+1043,115,XGBoost,2701.25
+1044,116,index,4730.0
+1045,116,Actual,1116.0
+1046,116,Classic Lasso,1180.07
+1047,116,Elasticnet,1179.23
+1048,116,LassoCV,1166.31
+1049,116,LinearRegression,1180.43
+1050,116,RandomForest,971.96
+1051,116,RidgeCV,1180.43
+1052,116,XGBoost,1125.58
+1053,117,index,8700.0
+1054,117,Actual,2389.0
+1055,117,Classic Lasso,2575.69
+1056,117,Elasticnet,2575.67
+1057,117,LassoCV,2565.51
+1058,117,LinearRegression,2575.64
+1059,117,RandomForest,2622.0
+1060,117,RidgeCV,2575.64
+1061,117,XGBoost,2463.63
+1062,118,index,7937.0
+1063,118,Actual,1562.0
+1064,118,Classic Lasso,1644.27
+1065,118,Elasticnet,1647.55
+1066,118,LassoCV,1637.02
+1067,118,LinearRegression,1644.08
+1068,118,RandomForest,1293.23
+1069,118,RidgeCV,1644.08
+1070,118,XGBoost,1561.0
+1071,119,index,7220.0
+1072,119,Actual,712.0
+1073,119,Classic Lasso,880.12
+1074,119,Elasticnet,880.49
+1075,119,LassoCV,897.27
+1076,119,LinearRegression,879.98
+1077,119,RandomForest,731.71
+1078,119,RidgeCV,879.98
+1079,119,XGBoost,669.94
+1080,120,index,10502.0
+1081,120,Actual,1351.0
+1082,120,Classic Lasso,1495.45
+1083,120,Elasticnet,1496.4
+1084,120,LassoCV,1502.62
+1085,120,LinearRegression,1495.31
+1086,120,RandomForest,1366.45
+1087,120,RidgeCV,1495.31
+1088,120,XGBoost,1327.39
+1089,121,index,19429.0
+1090,121,Actual,850.59
+1091,121,Classic Lasso,818.12
+1092,121,Elasticnet,819.08
+1093,121,LassoCV,823.76
+1094,121,LinearRegression,818.02
+1095,121,RandomForest,573.2
+1096,121,RidgeCV,818.02
+1097,121,XGBoost,707.73
+1098,122,index,2794.0
+1099,122,Actual,695.0
+1100,122,Classic Lasso,739.95
+1101,122,Elasticnet,741.02
+1102,122,LassoCV,722.27
+1103,122,LinearRegression,739.98
+1104,122,RandomForest,881.74
+1105,122,RidgeCV,739.98
+1106,122,XGBoost,842.62
+1107,123,index,8998.0
+1108,123,Actual,2101.0
+1109,123,Classic Lasso,2269.96
+1110,123,Elasticnet,2270.42
+1111,123,LassoCV,2261.62
+1112,123,LinearRegression,2269.97
+1113,123,RandomForest,1962.06
+1114,123,RidgeCV,2269.97
+1115,123,XGBoost,2151.03
+1116,124,index,5324.0
+1117,124,Actual,1217.0
+1118,124,Classic Lasso,1721.26
+1119,124,Elasticnet,1721.29
+1120,124,LassoCV,1726.89
+1121,124,LinearRegression,1721.15
+1122,124,RandomForest,1503.71
+1123,124,RidgeCV,1721.15
+1124,124,XGBoost,1223.24
+1125,125,index,15514.0
+1126,125,Actual,799.0
+1127,125,Classic Lasso,851.33
+1128,125,Elasticnet,851.8
+1129,125,LassoCV,857.67
+1130,125,LinearRegression,851.26
+1131,125,RandomForest,633.22
+1132,125,RidgeCV,851.26
+1133,125,XGBoost,757.08
+1134,126,index,383.0
+1135,126,Actual,610.0
+1136,126,Classic Lasso,763.51
+1137,126,Elasticnet,764.47
+1138,126,LassoCV,763.07
+1139,126,LinearRegression,763.41
+1140,126,RandomForest,730.04
+1141,126,RidgeCV,763.41
+1142,126,XGBoost,694.34
+1143,127,index,3261.0
+1144,127,Actual,328.0
+1145,127,Classic Lasso,327.81
+1146,127,Elasticnet,328.15
+1147,127,LassoCV,323.38
+1148,127,LinearRegression,327.86
+1149,127,RandomForest,346.63
+1150,127,RidgeCV,327.86
+1151,127,XGBoost,292.34
+1152,128,index,12839.0
+1153,128,Actual,438.0
+1154,128,Classic Lasso,512.39
+1155,128,Elasticnet,513.95
+1156,128,LassoCV,515.39
+1157,128,LinearRegression,512.3
+1158,128,RandomForest,351.6
+1159,128,RidgeCV,512.3
+1160,128,XGBoost,384.66
+1161,129,index,8662.0
+1162,129,Actual,1335.0
+1163,129,Classic Lasso,1470.76
+1164,129,Elasticnet,1470.73
+1165,129,LassoCV,1464.37
+1166,129,LinearRegression,1470.74
+1167,129,RandomForest,1481.59
+1168,129,RidgeCV,1470.74
+1169,129,XGBoost,1408.19
+1170,130,index,17575.0
+1171,130,Actual,2111.44
+1172,130,Classic Lasso,1842.08
+1173,130,Elasticnet,1843.75
+1174,130,LassoCV,1850.95
+1175,130,LinearRegression,1841.85
+1176,130,RandomForest,2132.38
+1177,130,RidgeCV,1841.85
+1178,130,XGBoost,1925.16
+1179,131,index,19519.0
+1180,131,Actual,651.12
+1181,131,Classic Lasso,584.73
+1182,131,Elasticnet,584.29
+1183,131,LassoCV,589.98
+1184,131,LinearRegression,584.72
+1185,131,RandomForest,704.01
+1186,131,RidgeCV,584.72
+1187,131,XGBoost,539.01
+1188,132,index,17002.0
+1189,132,Actual,987.56
+1190,132,Classic Lasso,1033.26
+1191,132,Elasticnet,1032.42
+1192,132,LassoCV,1034.5
+1193,132,LinearRegression,1033.34
+1194,132,RandomForest,1069.86
+1195,132,RidgeCV,1033.34
+1196,132,XGBoost,1102.79
+1197,133,index,17235.0
+1198,133,Actual,554.14
+1199,133,Classic Lasso,590.86
+1200,133,Elasticnet,591.26
+1201,133,LassoCV,587.22
+1202,133,LinearRegression,590.84
+1203,133,RandomForest,514.13
+1204,133,RidgeCV,590.84
+1205,133,XGBoost,450.84
+1206,134,index,19687.0
+1207,134,Actual,183.84
+1208,134,Classic Lasso,566.23
+1209,134,Elasticnet,566.47
+1210,134,LassoCV,580.38
+1211,134,LinearRegression,566.06
+1212,134,RandomForest,334.72
+1213,134,RidgeCV,566.06
+1214,134,XGBoost,281.44
+1215,135,index,11720.0
+1216,135,Actual,1505.0
+1217,135,Classic Lasso,1398.51
+1218,135,Elasticnet,1397.91
+1219,135,LassoCV,1399.76
+1220,135,LinearRegression,1398.49
+1221,135,RandomForest,1313.8
+1222,135,RidgeCV,1398.49
+1223,135,XGBoost,1469.44
+1224,136,index,9907.0
+1225,136,Actual,1476.0
+1226,136,Classic Lasso,1745.48
+1227,136,Elasticnet,1745.56
+1228,136,LassoCV,1742.79
+1229,136,LinearRegression,1745.5
+1230,136,RandomForest,1661.67
+1231,136,RidgeCV,1745.5
+1232,136,XGBoost,1628.25
+1233,137,index,10863.0
+1234,137,Actual,481.0
+1235,137,Classic Lasso,809.81
+1236,137,Elasticnet,809.74
+1237,137,LassoCV,822.1
+1238,137,LinearRegression,809.79
+1239,137,RandomForest,546.47
+1240,137,RidgeCV,809.79
+1241,137,XGBoost,514.85
+1242,138,index,10896.0
+1243,138,Actual,2359.0
+1244,138,Classic Lasso,2082.27
+1245,138,Elasticnet,2081.76
+1246,138,LassoCV,2081.66
+1247,138,LinearRegression,2082.27
+1248,138,RandomForest,2732.73
+1249,138,RidgeCV,2082.27
+1250,138,XGBoost,2594.46
+1251,139,index,3293.0
+1252,139,Actual,1109.0
+1253,139,Classic Lasso,950.32
+1254,139,Elasticnet,950.18
+1255,139,LassoCV,961.48
+1256,139,LinearRegression,950.32
+1257,139,RandomForest,1175.19
+1258,139,RidgeCV,950.32
+1259,139,XGBoost,1145.36
+1260,140,index,4289.0
+1261,140,Actual,813.0
+1262,140,Classic Lasso,967.45
+1263,140,Elasticnet,966.93
+1264,140,LassoCV,962.5
+1265,140,LinearRegression,967.48
+1266,140,RandomForest,836.41
+1267,140,RidgeCV,967.48
+1268,140,XGBoost,823.27
+1269,141,index,8538.0
+1270,141,Actual,668.0
+1271,141,Classic Lasso,852.62
+1272,141,Elasticnet,852.9
+1273,141,LassoCV,852.98
+1274,141,LinearRegression,852.53
+1275,141,RandomForest,695.04
+1276,141,RidgeCV,852.53
+1277,141,XGBoost,625.72
+1278,142,index,8100.0
+1279,142,Actual,2138.0
+1280,142,Classic Lasso,1741.83
+1281,142,Elasticnet,1740.51
+1282,142,LassoCV,1726.32
+1283,142,LinearRegression,1741.92
+1284,142,RandomForest,1911.93
+1285,142,RidgeCV,1741.92
+1286,142,XGBoost,2001.74
+1287,143,index,6378.0
+1288,143,Actual,708.0
+1289,143,Classic Lasso,1145.6
+1290,143,Elasticnet,1146.26
+1291,143,LassoCV,1147.52
+1292,143,LinearRegression,1145.53
+1293,143,RandomForest,946.38
+1294,143,RidgeCV,1145.53
+1295,143,XGBoost,854.21
+1296,144,index,4169.0
+1297,144,Actual,1365.0
+1298,144,Classic Lasso,1840.25
+1299,144,Elasticnet,1840.36
+1300,144,LassoCV,1863.95
+1301,144,LinearRegression,1840.12
+1302,144,RandomForest,1557.31
+1303,144,RidgeCV,1840.12
+1304,144,XGBoost,1577.04
+1305,145,index,14688.0
+1306,145,Actual,867.0
+1307,145,Classic Lasso,933.73
+1308,145,Elasticnet,934.56
+1309,145,LassoCV,925.74
+1310,145,LinearRegression,933.74
+1311,145,RandomForest,761.76
+1312,145,RidgeCV,933.74
+1313,145,XGBoost,844.91
+1314,146,index,3221.0
+1315,146,Actual,601.0
+1316,146,Classic Lasso,523.51
+1317,146,Elasticnet,525.45
+1318,146,LassoCV,525.29
+1319,146,LinearRegression,523.39
+1320,146,RandomForest,501.99
+1321,146,RidgeCV,523.39
+1322,146,XGBoost,571.48
+1323,147,index,6632.0
+1324,147,Actual,2412.0
+1325,147,Classic Lasso,2115.26
+1326,147,Elasticnet,2120.79
+1327,147,LassoCV,2102.48
+1328,147,LinearRegression,2115.07
+1329,147,RandomForest,2265.17
+1330,147,RidgeCV,2115.07
+1331,147,XGBoost,2350.16
+1332,148,index,17223.0
+1333,148,Actual,1523.5
+1334,148,Classic Lasso,1586.61
+1335,148,Elasticnet,1586.46
+1336,148,LassoCV,1584.04
+1337,148,LinearRegression,1586.66
+1338,148,RandomForest,1490.87
+1339,148,RidgeCV,1586.66
+1340,148,XGBoost,1579.59
+1341,149,index,16073.0
+1342,149,Actual,1509.95
+1343,149,Classic Lasso,1749.88
+1344,149,Elasticnet,1742.5
+1345,149,LassoCV,1756.54
+1346,149,LinearRegression,1750.19
+1347,149,RandomForest,1222.73
+1348,149,RidgeCV,1750.19
+1349,149,XGBoost,1375.16
+1350,150,index,14470.0
+1351,150,Actual,1206.0
+1352,150,Classic Lasso,1084.51
+1353,150,Elasticnet,1087.3
+1354,150,LassoCV,1093.83
+1355,150,LinearRegression,1084.33
+1356,150,RandomForest,1265.29
+1357,150,RidgeCV,1084.33
+1358,150,XGBoost,1301.87
+1359,151,index,3387.0
+1360,151,Actual,824.0
+1361,151,Classic Lasso,855.83
+1362,151,Elasticnet,856.34
+1363,151,LassoCV,842.76
+1364,151,LinearRegression,855.96
+1365,151,RandomForest,966.0
+1366,151,RidgeCV,855.96
+1367,151,XGBoost,912.2
+1368,152,index,5788.0
+1369,152,Actual,541.0
+1370,152,Classic Lasso,945.91
+1371,152,Elasticnet,946.19
+1372,152,LassoCV,941.1
+1373,152,LinearRegression,945.89
+1374,152,RandomForest,576.52
+1375,152,RidgeCV,945.89
+1376,152,XGBoost,528.27
+1377,153,index,19383.0
+1378,153,Actual,1576.36
+1379,153,Classic Lasso,1505.78
+1380,153,Elasticnet,1504.75
+1381,153,LassoCV,1522.78
+1382,153,LinearRegression,1505.69
+1383,153,RandomForest,1694.67
+1384,153,RidgeCV,1505.69
+1385,153,XGBoost,1614.24
+1386,154,index,9770.0
+1387,154,Actual,2825.0
+1388,154,Classic Lasso,2489.01
+1389,154,Elasticnet,2489.21
+1390,154,LassoCV,2496.78
+1391,154,LinearRegression,2488.83
+1392,154,RandomForest,2624.0
+1393,154,RidgeCV,2488.83
+1394,154,XGBoost,2796.44
+1395,155,index,12937.0
+1396,155,Actual,586.0
+1397,155,Classic Lasso,801.54
+1398,155,Elasticnet,801.85
+1399,155,LassoCV,799.4
+1400,155,LinearRegression,801.42
+1401,155,RandomForest,563.17
+1402,155,RidgeCV,801.42
+1403,155,XGBoost,518.94
+1404,156,index,9029.0
+1405,156,Actual,787.0
+1406,156,Classic Lasso,926.46
+1407,156,Elasticnet,928.37
+1408,156,LassoCV,935.35
+1409,156,LinearRegression,926.32
+1410,156,RandomForest,722.09
+1411,156,RidgeCV,926.32
+1412,156,XGBoost,833.2
+1413,157,index,3640.0
+1414,157,Actual,1239.0
+1415,157,Classic Lasso,1177.81
+1416,157,Elasticnet,1178.82
+1417,157,LassoCV,1161.61
+1418,157,LinearRegression,1177.88
+1419,157,RandomForest,1058.84
+1420,157,RidgeCV,1177.88
+1421,157,XGBoost,1143.39
+1422,158,index,8519.0
+1423,158,Actual,510.0
+1424,158,Classic Lasso,692.67
+1425,158,Elasticnet,693.5
+1426,158,LassoCV,699.1
+1427,158,LinearRegression,692.5
+1428,158,RandomForest,654.42
+1429,158,RidgeCV,692.5
+1430,158,XGBoost,534.55
+1431,159,index,4928.0
+1432,159,Actual,1147.0
+1433,159,Classic Lasso,1323.62
+1434,159,Elasticnet,1323.97
+1435,159,LassoCV,1322.9
+1436,159,LinearRegression,1323.54
+1437,159,RandomForest,1060.52
+1438,159,RidgeCV,1323.54
+1439,159,XGBoost,1073.93
+1440,160,index,19424.0
+1441,160,Actual,646.14
+1442,160,Classic Lasso,723.81
+1443,160,Elasticnet,723.52
+1444,160,LassoCV,720.06
+1445,160,LinearRegression,723.92
+1446,160,RandomForest,708.87
+1447,160,RidgeCV,723.92
+1448,160,XGBoost,622.33
+1449,161,index,10370.0
+1450,161,Actual,400.0
+1451,161,Classic Lasso,515.12
+1452,161,Elasticnet,515.41
+1453,161,LassoCV,518.28
+1454,161,LinearRegression,515.1
+1455,161,RandomForest,392.36
+1456,161,RidgeCV,515.1
+1457,161,XGBoost,397.77
+1458,162,index,12033.0
+1459,162,Actual,462.0
+1460,162,Classic Lasso,496.15
+1461,162,Elasticnet,495.41
+1462,162,LassoCV,510.5
+1463,162,LinearRegression,496.21
+1464,162,RandomForest,536.54
+1465,162,RidgeCV,496.21
+1466,162,XGBoost,450.49
+1467,163,index,20614.0
+1468,163,Actual,1995.86
+1469,163,Classic Lasso,1849.27
+1470,163,Elasticnet,1847.95
+1471,163,LassoCV,1848.11
+1472,163,LinearRegression,1849.49
+1473,163,RandomForest,1874.86
+1474,163,RidgeCV,1849.49
+1475,163,XGBoost,1875.04
+1476,164,index,14237.0
+1477,164,Actual,1372.0
+1478,164,Classic Lasso,1433.29
+1479,164,Elasticnet,1434.15
+1480,164,LassoCV,1420.53
+1481,164,LinearRegression,1433.21
+1482,164,RandomForest,1426.29
+1483,164,RidgeCV,1433.21
+1484,164,XGBoost,1358.32
+1485,165,index,1987.0
+1486,165,Actual,720.0
+1487,165,Classic Lasso,558.25
+1488,165,Elasticnet,557.91
+1489,165,LassoCV,544.82
+1490,165,LinearRegression,558.35
+1491,165,RandomForest,764.25
+1492,165,RidgeCV,558.35
+1493,165,XGBoost,703.91
+1494,166,index,15261.0
+1495,166,Actual,304.0
+1496,166,Classic Lasso,541.52
+1497,166,Elasticnet,541.31
+1498,166,LassoCV,547.58
+1499,166,LinearRegression,541.41
+1500,166,RandomForest,683.28
+1501,166,RidgeCV,541.41
+1502,166,XGBoost,527.52
+1503,167,index,18376.0
+1504,167,Actual,2299.7
+1505,167,Classic Lasso,1302.32
+1506,167,Elasticnet,1301.84
+1507,167,LassoCV,1321.56
+1508,167,LinearRegression,1302.41
+1509,167,RandomForest,1794.39
+1510,167,RidgeCV,1302.41
+1511,167,XGBoost,2056.0
+1512,168,index,6311.0
+1513,168,Actual,2266.0
+1514,168,Classic Lasso,1999.35
+1515,168,Elasticnet,1998.21
+1516,168,LassoCV,1999.99
+1517,168,LinearRegression,1999.4
+1518,168,RandomForest,2362.82
+1519,168,RidgeCV,1999.4
+1520,168,XGBoost,2135.18
+1521,169,index,8679.0
+1522,169,Actual,1324.0
+1523,169,Classic Lasso,1331.4
+1524,169,Elasticnet,1332.27
+1525,169,LassoCV,1330.37
+1526,169,LinearRegression,1331.34
+1527,169,RandomForest,1182.08
+1528,169,RidgeCV,1331.34
+1529,169,XGBoost,1300.89
+1530,170,index,14573.0
+1531,170,Actual,1344.0
+1532,170,Classic Lasso,1514.57
+1533,170,Elasticnet,1515.9
+1534,170,LassoCV,1521.57
+1535,170,LinearRegression,1514.43
+1536,170,RandomForest,1648.35
+1537,170,RidgeCV,1514.43
+1538,170,XGBoost,1608.93
+1539,171,index,4331.0
+1540,171,Actual,565.0
+1541,171,Classic Lasso,667.27
+1542,171,Elasticnet,666.87
+1543,171,LassoCV,666.96
+1544,171,LinearRegression,667.15
+1545,171,RandomForest,633.99
+1546,171,RidgeCV,667.15
+1547,171,XGBoost,552.54
+1548,172,index,9454.0
+1549,172,Actual,2022.0
+1550,172,Classic Lasso,1758.92
+1551,172,Elasticnet,1759.11
+1552,172,LassoCV,1754.44
+1553,172,LinearRegression,1758.93
+1554,172,RandomForest,1769.88
+1555,172,RidgeCV,1758.93
+1556,172,XGBoost,1904.83
+1557,173,index,12637.0
+1558,173,Actual,1377.0
+1559,173,Classic Lasso,2167.98
+1560,173,Elasticnet,2167.77
+1561,173,LassoCV,2164.23
+1562,173,LinearRegression,2167.98
+1563,173,RandomForest,2072.74
+1564,173,RidgeCV,2167.98
+1565,173,XGBoost,1514.19
+1566,174,index,12010.0
+1567,174,Actual,1551.0
+1568,174,Classic Lasso,1664.82
+1569,174,Elasticnet,1664.88
+1570,174,LassoCV,1679.42
+1571,174,LinearRegression,1664.69
+1572,174,RandomForest,1481.04
+1573,174,RidgeCV,1664.69
+1574,174,XGBoost,1445.28
+1575,175,index,2879.0
+1576,175,Actual,741.0
+1577,175,Classic Lasso,827.32
+1578,175,Elasticnet,827.73
+1579,175,LassoCV,809.04
+1580,175,LinearRegression,827.42
+1581,175,RandomForest,879.74
+1582,175,RidgeCV,827.42
+1583,175,XGBoost,877.89
+1584,176,index,20950.0
+1585,176,Actual,2005.55
+1586,176,Classic Lasso,1691.06
+1587,176,Elasticnet,1689.69
+1588,176,LassoCV,1689.64
+1589,176,LinearRegression,1691.08
+1590,176,RandomForest,1775.83
+1591,176,RidgeCV,1691.08
+1592,176,XGBoost,1869.78
+1593,177,index,13138.0
+1594,177,Actual,1107.0
+1595,177,Classic Lasso,1443.49
+1596,177,Elasticnet,1443.58
+1597,177,LassoCV,1447.62
+1598,177,LinearRegression,1443.35
+1599,177,RandomForest,1025.82
+1600,177,RidgeCV,1443.35
+1601,177,XGBoost,1064.66
+1602,178,index,10369.0
+1603,178,Actual,1787.0
+1604,178,Classic Lasso,1673.23
+1605,178,Elasticnet,1672.5
+1606,178,LassoCV,1668.65
+1607,178,LinearRegression,1673.32
+1608,178,RandomForest,1818.8
+1609,178,RidgeCV,1673.32
+1610,178,XGBoost,1891.49
+1611,179,index,12267.0
+1612,179,Actual,2347.0
+1613,179,Classic Lasso,1778.01
+1614,179,Elasticnet,1778.51
+1615,179,LassoCV,1763.89
+1616,179,LinearRegression,1778.03
+1617,179,RandomForest,1883.95
+1618,179,RidgeCV,1778.03
+1619,179,XGBoost,2002.69
+1620,180,index,15732.0
+1621,180,Actual,1329.0
+1622,180,Classic Lasso,1428.09
+1623,180,Elasticnet,1428.29
+1624,180,LassoCV,1428.62
+1625,180,LinearRegression,1428.06
+1626,180,RandomForest,1306.69
+1627,180,RidgeCV,1428.06
+1628,180,XGBoost,1223.4
+1629,181,index,15017.0
+1630,181,Actual,1377.0
+1631,181,Classic Lasso,1269.37
+1632,181,Elasticnet,1270.66
+1633,181,LassoCV,1285.83
+1634,181,LinearRegression,1269.23
+1635,181,RandomForest,1396.98
+1636,181,RidgeCV,1269.23
+1637,181,XGBoost,1297.06
+1638,182,index,16211.0
+1639,182,Actual,608.0
+1640,182,Classic Lasso,840.31
+1641,182,Elasticnet,840.65
+1642,182,LassoCV,844.87
+1643,182,LinearRegression,840.33
+1644,182,RandomForest,712.03
+1645,182,RidgeCV,840.33
+1646,182,XGBoost,713.17
+1647,183,index,15234.0
+1648,183,Actual,1447.0
+1649,183,Classic Lasso,1598.95
+1650,183,Elasticnet,1598.95
+1651,183,LassoCV,1596.61
+1652,183,LinearRegression,1598.88
+1653,183,RandomForest,1381.4
+1654,183,RidgeCV,1598.88
+1655,183,XGBoost,1479.79
+1656,184,index,3624.0
+1657,184,Actual,796.0
+1658,184,Classic Lasso,555.7
+1659,184,Elasticnet,556.4
+1660,184,LassoCV,549.72
+1661,184,LinearRegression,555.72
+1662,184,RandomForest,733.41
+1663,184,RidgeCV,555.72
+1664,184,XGBoost,736.04
+1665,185,index,14085.0
+1666,185,Actual,954.0
+1667,185,Classic Lasso,865.79
+1668,185,Elasticnet,868.4
+1669,185,LassoCV,871.45
+1670,185,LinearRegression,865.61
+1671,185,RandomForest,909.54
+1672,185,RidgeCV,865.61
+1673,185,XGBoost,965.0
+1674,186,index,4557.0
+1675,186,Actual,215.0
+1676,186,Classic Lasso,-12.69
+1677,186,Elasticnet,-12.8
+1678,186,LassoCV,-14.32
+1679,186,LinearRegression,-12.7
+1680,186,RandomForest,329.24
+1681,186,RidgeCV,-12.7
+1682,186,XGBoost,197.12
+1683,187,index,14339.0
+1684,187,Actual,1122.0
+1685,187,Classic Lasso,1390.41
+1686,187,Elasticnet,1390.48
+1687,187,LassoCV,1392.0
+1688,187,LinearRegression,1390.44
+1689,187,RandomForest,972.89
+1690,187,RidgeCV,1390.44
+1691,187,XGBoost,1070.62
+1692,188,index,5249.0
+1693,188,Actual,899.0
+1694,188,Classic Lasso,931.83
+1695,188,Elasticnet,932.06
+1696,188,LassoCV,948.28
+1697,188,LinearRegression,931.75
+1698,188,RandomForest,1061.11
+1699,188,RidgeCV,931.75
+1700,188,XGBoost,910.14
+1701,189,index,80.0
+1702,189,Actual,1379.0
+1703,189,Classic Lasso,1306.5
+1704,189,Elasticnet,1306.76
+1705,189,LassoCV,1339.12
+1706,189,LinearRegression,1306.39
+1707,189,RandomForest,1374.73
+1708,189,RidgeCV,1306.39
+1709,189,XGBoost,1353.65
+1710,190,index,34.0
+1711,190,Actual,1426.0
+1712,190,Classic Lasso,1722.1
+1713,190,Elasticnet,1721.31
+1714,190,LassoCV,1712.77
+1715,190,LinearRegression,1722.3
+1716,190,RandomForest,1348.91
+1717,190,RidgeCV,1722.3
+1718,190,XGBoost,1415.74
+1719,191,index,6463.0
+1720,191,Actual,761.0
+1721,191,Classic Lasso,1042.43
+1722,191,Elasticnet,1042.65
+1723,191,LassoCV,1058.31
+1724,191,LinearRegression,1042.32
+1725,191,RandomForest,702.99
+1726,191,RidgeCV,1042.32
+1727,191,XGBoost,714.45
+1728,192,index,14897.0
+1729,192,Actual,1167.0
+1730,192,Classic Lasso,952.74
+1731,192,Elasticnet,952.48
+1732,192,LassoCV,961.84
+1733,192,LinearRegression,952.72
+1734,192,RandomForest,1333.56
+1735,192,RidgeCV,952.72
+1736,192,XGBoost,1129.03
+1737,193,index,10780.0
+1738,193,Actual,905.0
+1739,193,Classic Lasso,737.61
+1740,193,Elasticnet,738.04
+1741,193,LassoCV,736.0
+1742,193,LinearRegression,737.51
+1743,193,RandomForest,783.33
+1744,193,RidgeCV,737.51
+1745,193,XGBoost,814.48
+1746,194,index,8510.0
+1747,194,Actual,415.0
+1748,194,Classic Lasso,639.48
+1749,194,Elasticnet,640.12
+1750,194,LassoCV,641.0
+1751,194,LinearRegression,639.37
+1752,194,RandomForest,408.66
+1753,194,RidgeCV,639.37
+1754,194,XGBoost,435.73
+1755,195,index,9172.0
+1756,195,Actual,2017.0
+1757,195,Classic Lasso,1957.92
+1758,195,Elasticnet,1950.09
+1759,195,LassoCV,1964.26
+1760,195,LinearRegression,1958.33
+1761,195,RandomForest,1389.95
+1762,195,RidgeCV,1958.33
+1763,195,XGBoost,1827.1
+1764,196,index,319.0
+1765,196,Actual,943.0
+1766,196,Classic Lasso,926.95
+1767,196,Elasticnet,926.74
+1768,196,LassoCV,925.61
+1769,196,LinearRegression,926.87
+1770,196,RandomForest,1087.01
+1771,196,RidgeCV,926.87
+1772,196,XGBoost,962.28
+1773,197,index,10684.0
+1774,197,Actual,958.0
+1775,197,Classic Lasso,1079.92
+1776,197,Elasticnet,1079.71
+1777,197,LassoCV,1074.62
+1778,197,LinearRegression,1079.96
+1779,197,RandomForest,1007.43
+1780,197,RidgeCV,1079.96
+1781,197,XGBoost,963.13
+1782,198,index,3881.0
+1783,198,Actual,1544.0
+1784,198,Classic Lasso,1348.53
+1785,198,Elasticnet,1347.98
+1786,198,LassoCV,1328.55
+1787,198,LinearRegression,1348.78
+1788,198,RandomForest,1458.0
+1789,198,RidgeCV,1348.78
+1790,198,XGBoost,1440.37
+1791,199,index,4354.0
+1792,199,Actual,278.0
+1793,199,Classic Lasso,380.2
+1794,199,Elasticnet,380.7
+1795,199,LassoCV,374.87
+1796,199,LinearRegression,380.14
+1797,199,RandomForest,354.06
+1798,199,RidgeCV,380.14
+1799,199,XGBoost,280.95

@@ -69,7 +69,7 @@ def predictPrice(selRegion, selSQFT):
              5 : "Greater than 3500"}
 
 
-    X, vocab, y = generateX_samp(ohe = True, target = "DOLLAR", numSamples = 30, region = selRegion, totsqft_cd = selSQFT)
+    X, vocab, y = generateX_samp(ohe = True, target = "DOLLAR", numSamples = 200, region = selRegion, totsqft_cd = selSQFT)
     
     print(X.shape)
     print(y.shape)
@@ -160,5 +160,7 @@ def predictPrice(selRegion, selSQFT):
     # newdf_grp.shape
 
     # newdf_grp.to_html()
-    
-    return newdf_grp.to_html(table_id = "results", classes = "table table-striped table-bordered table-sm")
+    newdf_grp.columns = ['Region', 'SQFT Range',"Classic Lasso","Elasticnet","LassoCV","LinearRegression","RandomForest",
+    "RidgeCV","XGBoost"]
+
+    return newdf_grp.to_html(table_id = "results", classes = "table table-striped table-bordered table-sm",index = False)
