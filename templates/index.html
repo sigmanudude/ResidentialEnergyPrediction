@@ -24,15 +24,8 @@
     integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
     crossorigin=""></script>    
 
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    $( function() {
-      $( "#tabs" ).tabs();
-    } );
-    </script> -->
-
+    
+    
     <script type="text/javascript" src="static/js/choropleth.js"></script>
     <!-- Plotly js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -55,11 +48,11 @@
               <nav>
                 <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                   <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" 
-                  role="tab" aria-controls="nav-home" aria-selected="true">Trends</a>
+                  role="tab" aria-controls="nav-home" aria-selected="true">The Story</a>
                   <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" 
-                  href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dashboard</a>
+                  href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Predict Price</a>
                   <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" 
-                  href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Data</a>
+                  href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Sample Data</a>
                   <!-- <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">About</a> -->
                 </div>
               </nav>
@@ -188,20 +181,17 @@
                     
                     <section class="row">
                       <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h5><strong>Subset of Sample Data</strong></h5>
                         <!-- display data on user request -->
-                        <p>In this section, the data used to generate charts is provided. 
-                          <br> Owing to the size of the data, it is not automatically displayed. To view the data please click the button below</p>
-                          <form>
-                              <button id="data-btn" type="submit" class="btn btn-default" 
-                              style="font-size:10px; background-color: steelblue;color:white;">View Data</button>
-                          </form>
-                          <hr/>
+                        <p>This section shows small subset of sample data used for arriving at prediction results.  
+                          <!-- <br> Owing to the size of the data, it is not automatically displayed. To view the data please click the button below</p> -->
+                          <!-- <hr/> -->
                           <!-- data display -->
                           <div class="row">
-                              <div class="w-75 col-xs-12 col-sm-12 col-md-6">
-                                  <h5><strong>Displaying Page-wise Data</strong></h5>
-                                  <p id="pageDetails"></p>
-                                  <p><form>
+                              <div class="w-75 col-xs-12 col-sm-12 col-md-12">
+<!--                                   
+                                  <p id="pageDetails"></p> -->
+                                  <!-- <p><form>
                                       <button id="data-btn-first" type="submit" class="btn btn-sm" 
                                       style="font-size:10px; background-color: steelblue;color:white;">< First ></First></button>
                                       <button id="data-btn-prev" type="submit" class="btn btn-sm" 
@@ -210,8 +200,9 @@
                                 style="font-size:10px; background-color: steelblue;color:white;">Next ></button>
                                 <button id="data-btn-last" type="submit" class="btn btn-sm" 
                                       style="font-size:10px; background-color: steelblue;color:white;">< Last ></Last></button>
-                                  </form></p>
-                                  <div id="dataTbl"></div>
+                                  </form></p> -->
+                                  <div id="dataTbl" class="table-responsive" style="overflow: scroll;height: 275px;"></div>
+                                  <!--  class="table-responsive" style="overflow: scroll;" -->
                               </div>
                           </div>
                         </div>
@@ -249,6 +240,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   
+  <!-- DataTable -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+
+    <script>$(document).ready(function () {
+      $('#sampMetaData').DataTable({
+      "scrollX": true,
+      "scrollY": 200,
+      });
+      $('.dataTables_length').addClass('bs-select');
+      });</script>
 
     <!-- custom JS  -->
     

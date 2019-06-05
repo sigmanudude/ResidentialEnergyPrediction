@@ -65,8 +65,8 @@ def predictPrice(selRegion, selSQFT):
              1 : "< 900",
              2 : "Between 900 to 1500",
              3 : "Between 1500 to 2500",
-             4 : "Between 2500 to 3500))",
-             5 : "Greater than 3500)"}
+             4 : "Between 2500 to 3500",
+             5 : "Greater than 3500"}
 
 
     X, vocab, y = generateX_samp(ohe = True, target = "DOLLAR", numSamples = 30, region = selRegion, totsqft_cd = selSQFT)
@@ -161,4 +161,4 @@ def predictPrice(selRegion, selSQFT):
 
     # newdf_grp.to_html()
     
-    return newdf_grp.to_html(table_id = "results", classes = "table table-striped")
+    return newdf_grp.to_html(table_id = "results", classes = "table table-striped table-bordered table-sm")
