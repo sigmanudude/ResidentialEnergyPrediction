@@ -152,6 +152,10 @@ def predictPrice(selRegion, selSQFT):
     newdf_grp = newdf[['REGIONNAME', "Classic Lasso","Elasticnet","LassoCV","LinearRegression","RandomForest",
     "RidgeCV","XGBoost", 'SQFT GROUP']].groupby(['REGIONNAME','SQFT GROUP']).agg(np.average)
 
+    newdf_grp['Min Price'] = newdf_grp[['Classic Lasso','Elasticnet','LassoCV','LinearRegression','RandomForest','RidgeCV','XGBoost']].min(axis = 1)
+    newdf_grp['Max Price'] = newdf_grp[['Classic Lasso','Elasticnet','LassoCV','LinearRegression','RandomForest','RidgeCV','XGBoost']].max(axis = 1)
+    newdf_grp['Median Price'] = newdf_grp[['Classic Lasso','Elasticnet','LassoCV','LinearRegression','RandomForest','RidgeCV','XGBoost']].mean(axis = 1)
+
     #round to 2 digits
     newdf_grp = newdf_grp.applymap(lambda r : f"${round(r, 2)}")
 
@@ -161,6 +165,6 @@ def predictPrice(selRegion, selSQFT):
 
     # newdf_grp.to_html()
     newdf_grp.columns = ['Region', 'SQFT Range',"Classic Lasso","Elasticnet","LassoCV","LinearRegression","RandomForest",
-    "RidgeCV","XGBoost"]
+    "RidgeCV","XGBoost", "Min. Price", "Max Price", "Median Price"]
 
     return newdf_grp.to_html(table_id = "results", classes = "table table-striped table-bordered table-sm",index = False)
