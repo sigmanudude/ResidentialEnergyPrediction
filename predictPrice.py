@@ -5,6 +5,7 @@ import numpy as np
 from numpy import arange
 import pandas as pd
 from pandas import set_option
+import math
 # from pandas.tools.plotting import scatter_matrix
 import os
 
@@ -57,7 +58,16 @@ from Cls_ml_models import ml_models_tuned
 def predictPrice(selRegion, selSQFT):
     
     # gobal variables
-    dataFilePath = "dataforfinalproject"    
+    dataFilePath = "dataforfinalproject"  
+    sampleFile = "InputSamples.csv"  
+
+    totsqt_names = {0 : "Any sqft",
+             1 : "< 900",
+             2 : "Between 900 to 1500",
+             3 : "Between 1500 to 2500",
+             4 : "Between 2500 to 3500))",
+             5 : "Greater than 3500)"}
+
 
     X, vocab, y = generateX_samp(ohe = True, target = "DOLLAR", numSamples = 30, region = selRegion, totsqft_cd = selSQFT)
     
@@ -92,9 +102,11 @@ def predictPrice(selRegion, selSQFT):
 
 
 
+    results_data = results_data.applymap(lambda r : round(r, 2))
 
     # save results into a CSV for further plotting / review
-    results_data.reset_index().to_csv(os.path.join(dataFilePath,"resultsdata.csv"), index = False)
+    results_data.reset_index(inplace = True)
+    results_data.to_csv(os.path.join(dataFilePath,"resultsdata.csv"), index = False)
     
     print(results_data)
 
@@ -107,5 +119,46 @@ def predictPrice(selRegion, selSQFT):
 
     # save the reshaped file to csv for plots
     results1.to_csv(os.path.join(dataFilePath,"resultsdata_1.csv"))
+
+    # Group results data by Region and SQFT range
+
+    # read the Input sample file
+    samp = pd.read_csv(os.path.join(dataFilePath, sampleFile), low_memory = False)
     
-    return results_data[['Classic Lasso','Elasticnet','LassoCV','LinearRegression','RandomForest','RidgeCV','XGBoost']].to_html(table_id = "results", classes = "table table-striped")
+    # merge the input file with results to get regin and sqft
+    newdf = pd.merge(samp[['index','REGIONNAME','TOTHSQFT']], results_data, on = "index")
+
+    # using histogram get bin edges dynamically
+    _, binVals = np.histogram(newdf.TOTHSQFT.values,bins = 10)
+
+    # from the bins determined, calculate the bins and bin labels
+    bins = [int(math.floor(binVals[i]/100))*100 for i in range(len(binVals))]
+    bins.append(bins[len(bins)-1]+ 100)
+    # print(bins)
+
+    bin_lbls = [f"{bins[i]} - {bins[i+1]}" for i in range(len(bins)) if(i < len(bins)-1 and bins[i] != bins[i+1])]
+    #print(bin_lbls)
+
+    # print(f"{len(bins)}, {len(bin_lbls)}")
+
+    # cut the df with bin groups
+    # newdf['SQFT GROUP'] = pd.cut(newdf.TOTHSQFT, labels = bin_lbls, bins = bins, duplicates = "drop")
+    # newdf
+
+    newdf['SQFT GROUP'] = totsqt_names[int(selSQFT)]
+
+    # newdf.columns
+    # group the data by region and sqft range, rest all into average
+    newdf_grp = newdf[['REGIONNAME', "Classic Lasso","Elasticnet","LassoCV","LinearRegression","RandomForest",
+    "RidgeCV","XGBoost", 'SQFT GROUP']].groupby(['REGIONNAME','SQFT GROUP']).agg(np.average)
+
+    #round to 2 digits
+    newdf_grp = newdf_grp.applymap(lambda r : f"${round(r, 2)}")
+
+    newdf_grp.reset_index(inplace = True)
+
+    # newdf_grp.shape
+
+    # newdf_grp.to_html()
+    
+    return newdf_grp.to_html(table_id = "results", classes = "table table-striped")
