@@ -115,7 +115,8 @@ function filterData(){
     console.log(data['PredictResults'])
         
     //    print the table sent by Flask
-         d3.select("#resPredict").html(data['PredictResults']); // Print the sample number selected
+         d3.select("#resPredict").html(data['PredictResults']); // Print the prediction selected
+         d3.select("#dataTbl").html(data['metadata']); // print the sample data
     //     Object.entries(data).forEach(([key, value]) => {
     //       if(key !== "sample" && key !== "WFREQ")
     //         metadata_panel.append("span")
