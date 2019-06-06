@@ -17,8 +17,7 @@ filter_by = {"yr" : 0, "cat" : all, "dist" :0}
 samplefile = "InputSamples.csv"
 datafilepath = "dataforfinalproject"
 
-# read sample csv
-sampdf = pd.read_csv(os.path.join(datafilepath, samplefile), low_memory = False)
+
 
 
 #################################################
@@ -48,8 +47,11 @@ def add_header(r):
 @app.route("/filterData")
 def filterData():
     """Return a json that can be used to populate filters."""
-    filt_dict = {} 
 
+    # read sample csv
+    sampdf = pd.read_csv(os.path.join(datafilepath, samplefile), low_memory = False)
+    
+    filt_dict = {} 
     # convert number of rows into dict with each sample number
     filt_dict['Sample'] = [f"Sample {i+1}" for i in range(sampdf.shape[0])]
 
@@ -61,11 +63,17 @@ def filterData():
 def predPrice(regVal, sqftVal):
     """Return a json that provides details of the metadata chosen and predicted price."""
     
+    
     resultsJSON = {}
-    sampdf.rename(columns = {"index":"SAMPLE #"}, inplace = True)
-    resultsJSON['metadata'] = sampdf.to_html(table_id = "sampMetaData",index_names = False, classes = "table table-striped table-bordered table-sm")
+    
     resultsJSON['PredictResults'] = predictPrice(int(regVal),int(sqftVal))
 
+    # read sample csv
+    sampdf = pd.read_csv(os.path.join(datafilepath, samplefile), low_memory = False)
+    sampdf.rename(columns = {"index":"SAMPLE #"}, inplace = True)
+    
+    resultsJSON['metadata'] = sampdf.to_html(table_id = "sampMetaData",index_names = False, classes = "table table-striped table-bordered table-sm")
+    
     return jsonify(resultsJSON)
 
 if __name__ == "__main__":
