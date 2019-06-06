@@ -43,10 +43,6 @@ from sklearn.feature_extraction import DictVectorizer
 #XGBoost libraries
 import xgboost as xgb
 
-# explain xgboost preiction and model
-import shap
-
-
 # import generateXdata.py to prepare the data
 # from generateXdata import generateX
 from generateXdata import generateX_samp
